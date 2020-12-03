@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/******************** HEADER ********************/
+header{
+    width: 100%;
+    padding: 0.5em 1em;
+    background-color: #030F26;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+.logotipo img{
+    width: 120px;
+    margin-right: 1em;
+}
+header form{
+    display: flex;
+    align-items: center;
+}
+header form input{
+    width: 55em;
+    height: 3.3em;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0 0.7em;
+}
+header form img{
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+}
+header div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2em;
+}
+header div.area-de-acesso{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+header div.area-de-acesso div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+header div.area-de-acesso input{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+header div.area-de-acesso input:hover, header div.area-de-acesso a:hover{
+    text-decoration: underline;
+}
+header a{
+    color: #fff;
+    text-decoration: none;
+}
+@media (max-width: 1200px){
+    header form input{
+        width: 40em;
+    }
+    header div.area-de-acesso{
+        margin-right: 0px;
+    }
+}
+@media (max-width: 960px){
+    header form input{
+        width: 30em;
+    }
+}
+/* ************************************** */
+nav{
+    font-family: 'Roboto', sans-serif;
+}
+nav a{
+    display: inline-block;
+    padding: 1em 2em;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+nav li:hover{
+    background-color: #acabab;
+}
+nav ol{
+    display: flex;
+}
+/**************** FOOTER ******************/
+footer{
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Rubik', sans-serif; */
+}
+footer section.vantagens ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #030F26;
+    color: #fff;
+    padding: 5em 2em;
+}
+footer section.vantagens ul li figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer section.vantagens ul li figcaption{
+    text-align: center;
+    margin-top: 15px;
+}
+footer section.rodape{
+    padding: 2em 3em 0;
+}
+footer section.rodape > ol{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 4em;
+}
+footer section.rodape li{
+    color: #000000;
+}
+footer section.rodape li img{
+    width: 30px;
+    margin: 0 10px 0 0;
+}
+ul.formas-de-pagamento{
+    display: flex;
+    flex-wrap: wrap;
+    width: 180px;
+}
+footer ul.formas-de-pagamento li img{
+    width: 50px;
+}
+ol.redes-sociais{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+li.destaque, p.destaque{
+    font-weight: 1000;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+ul, ol{
+    list-style: none;
+}
+footer a{
+    color: #000000;
+    text-decoration: none;
+}
+footer p{
+    text-align: center;
+}

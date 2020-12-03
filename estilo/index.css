@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+main{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+main img{
+    width: 100%;
+}
+main h2{
+    background-color: #030F26;
+    margin-top: -4px;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+main h2 a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-decoration: none;
+}
+main .banner{
+    margin-top: -5px;
+}
+.container-produtos-destaques{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+ol.produtos-destaques{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+ol.produtos-destaques li{
+    width: 33.4%;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+.seta-anterior, .seta-proximo{
+    position: absolute;
+    outline: none;
+    height: 50px;
+}
+.seta-proximo{
+    margin-left: 96.5%;
+}

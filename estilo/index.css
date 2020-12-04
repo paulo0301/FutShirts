@@ -2,13 +2,14 @@
 main{
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    background-color: #030F26;
 }
 main img{
     width: 100%;
 }
 main h2{
     background-color: #030F26;
-    margin-top: -4px;
+    /* margin-top: -4px; */
     padding: 0.5em 1em;
     text-align: center;
 }
@@ -18,18 +19,19 @@ main h2 a{
     font-weight: 300;
     text-decoration: none;
 }
-main .banner{
+/* main .banner{
     margin-top: -5px;
-}
+} */
 .container-produtos-destaques{
-    display: flex;
-    align-items: center;
+    display: block;
     width: 100%;
+    position: relative;
 }
 ol.produtos-destaques{
     display: flex;
     align-items: center;
     width: 100%;
+    z-index: -1;
 }
 ol.produtos-destaques li{
     width: 33.4%;
@@ -37,10 +39,14 @@ ol.produtos-destaques li{
     border-right: 1px solid #000;
 }
 .seta-anterior, .seta-proximo{
-    position: absolute;
     outline: none;
     height: 50px;
+    width: 50px;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
 }
 .seta-proximo{
-    margin-left: 96.5%;
+    float: right;
+    right: 0px;
 }

@@ -35,6 +35,8 @@ ol.produtos-destaques{
 }
 ol.produtos-destaques li{
     width: 33.4%;
+}
+ol.produtos-destaques li img{
     border-left: 1px solid #000;
     border-right: 1px solid #000;
 }

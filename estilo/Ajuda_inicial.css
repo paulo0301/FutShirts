@@ -1,0 +1,82 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    padding-bottom: 4em;
+}
+
+nav{
+    padding-left: 4em;
+}
+
+p#titulo{   
+    font-size: 25px;
+    color: white;
+    background-color: #030F26;
+    padding-left: 4em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+img{
+    max-width: 100px;
+    padding-top: 2em;
+}
+
+img#Email{
+    max-width: 115px;
+    padding-top: 3em;
+}
+
+p#texto{
+    font-size: 25px;
+    color: black;
+    padding-top: 0.5em;
+    padding-left: 4em;
+}
+
+div#container{
+    padding-top: 4em;
+    padding-left: 20em;
+    padding-right: 20em;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+}
+
+div#perguntas, div#email, div#whatsapp{
+    width: 210px;
+    height: 250px;
+    box-shadow: 1px 1px 5px grey;
+    color: #030F26;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    transition: all 0.5s;
+}
+
+div#perguntas p, div#email p, div#whatsapp p{
+    padding-bottom: 3em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+div#perguntas:hover, div#email:hover, div#whatsapp:hover{
+    cursor: pointer;
+    height: 300px;
+    transition: all 0.5s;
+}
+
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,59 @@
+div#email{
+    background-color: #030F26;
+    color: white;
+}
+
+p#titulo2{
+    font-size: 25px;
+    color: white;
+    background-color: #030F26;
+    padding-left: 4em;
+    margin-top: 3em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+form{
+    padding-top: 1em;
+    padding-left: 6.3em;
+}
+
+label{
+    color: #030F26;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+input#Input-nome, input#Input-email{
+    width: 40em;
+    height: 2.5em;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #030F26;
+    margin-bottom: 1em;
+    font-size: 20px;
+}
+
+input#enviar{
+    margin-top: 1em;
+    margin-left: 62em;
+    background-color: #334D01;
+    color: white;
+    border: 0;
+    width: 8em;
+    font-size: 1em;
+    height: 4em;
+    border-radius: 5%;
+}
+
+textarea{
+    margin-top: 1em;
+    width: 90%;
+    height: 10em;
+    font-size: 23px;
+    border: 1px solid #030F26;
+}
+
+input#enviar:hover{
+    cursor: pointer;
+}

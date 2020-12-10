@@ -2,18 +2,14 @@
     margin: 0 auto;
     padding: 0;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main{
     padding-bottom: 4em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav{
-    padding-left: 4em;
-}
-
-p#titulo{   
+main p#titulo{   
     font-size: 25px;
     color: white;
     background-color: #030F26;
@@ -22,24 +18,24 @@ p#titulo{
     padding-bottom: 0.25em;
 }
 
-img{
+main img{
     max-width: 100px;
     padding-top: 2em;
 }
 
-img#Email{
+main img#Email{
     max-width: 115px;
     padding-top: 3em;
 }
 
-p#texto{
+main p#texto{
     font-size: 25px;
     color: black;
     padding-top: 0.5em;
     padding-left: 4em;
 }
 
-div#container{
+main div#container{
     padding-top: 4em;
     padding-left: 20em;
     padding-right: 20em;
@@ -51,7 +47,7 @@ div#container{
 	align-content: stretch;
 }
 
-div#perguntas, div#email, div#whatsapp{
+main div#perguntas, main div#email, main div#whatsapp{
     width: 210px;
     height: 250px;
     box-shadow: 1px 1px 5px grey;
@@ -65,13 +61,13 @@ div#perguntas, div#email, div#whatsapp{
     transition: all 0.5s;
 }
 
-div#perguntas p, div#email p, div#whatsapp p{
+main div#perguntas p, main div#email p, main div#whatsapp p{
     padding-bottom: 3em;
     font-size: 1.2em;
     font-weight: bold;
 }
 
-div#perguntas:hover, div#email:hover, div#whatsapp:hover{
+main div#perguntas:hover, main div#email:hover, main div#whatsapp:hover{
     cursor: pointer;
     height: 300px;
     transition: all 0.5s;

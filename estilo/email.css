@@ -1,4 +1,4 @@
-div#email{
+main div#email{
     background-color: #030F26;
     color: white;
 }
@@ -13,7 +13,7 @@ p#titulo2{
     padding-bottom: 0.25em;
 }
 
-form{
+main form{
     padding-top: 1em;
     padding-left: 6.3em;
 }

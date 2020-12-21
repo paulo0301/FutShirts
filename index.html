@@ -9,6 +9,31 @@
     <title>Futshirt</title>
 </head>
 <body>
+    <div class="efeito">
+        <div class="login">
+            <input type="submit" id="fechar" value="x"/>
+            <form>
+                <div class="container">
+                    <h2>Já sou cliente</h2>
+                    <div>
+                        <label for="login">E-mail</label>
+                        <input type="email" id="login" required/>
+                    </div>
+                    
+                    <div>
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" required/>
+                    </div>
+                    
+                    <a href="">Esqueci minha senha</a>
+                </div>
+                <div class="container-entrar-cadastre-se">
+                    <input type="submit" id="entrar_login" value="Entrar">
+                    <a href="cadastro.html">Cadastre-se</a>
+                </div>
+            </form>
+        </div>
+    </div>
     <header>
         <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
         
@@ -23,7 +48,7 @@
                     <img src="imagens/avatar.svg" alt="user">
                 </figure>
                 <div>
-                    <input type="button" value="Entrar">
+                    <input type="submit" id="entrar" value="Entrar">
                     <a href="#">Cadastre-se</a>
                 </div>
             </div>
@@ -169,4 +194,5 @@
         </section>
     </footer>
 </body>
+<script src="js/login.js"></script>
 </html>

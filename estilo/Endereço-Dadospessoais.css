@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+    font-family: 'Roboto', sans-serif;
+    background-color: #E5E5E5;
+}
+main div.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18px;
+    background-color: #030F26;
+    color: #fff;
+    margin-bottom: 20px;
+}
+main .breadcrumbs{
+    display: inline-block;
+    overflow: hidden;
+
+}
+main .breadcrumbs a{
+    color: #000;
+    text-decoration: none;
+    background-color: #A2CDF2;
+    width: 200px;
+    text-align: center; 
+    outline: none;
+    line-height: 50px;
+    float: left;
+    position: relative;
+    font-weight: 600;
+}
+main .breadcrumbs a:first-child{
+    border-radius: 5px 0 0 5px;
+}
+main .breadcrumbs a:last-child{
+    border-radius: 0 5px 5px 0;
+}
+main .breadcrumbs a::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: -25px;
+    background-color: #A2CDF2;
+    transform: scale(0.707) rotate(45deg);
+    z-index: 1;
+    box-shadow: 3px -3px 0 2px #030F26;
+    border-radius: 0 5px 0 50px;
+}
+main .breadcrumbs a:last-child::after{
+    content: none;
+}
+main .breadcrumbs a:last-child{
+    width: 225px;
+}
+.breadcrumbs a.active,
+.breadcrumbs a:hover {
+    background: #77A1D9;
+    transition: all 1s;
+}
+.breadcrumbs a.active:after,
+.breadcrumbs a:hover:after {
+    background: #77A1D9;
+    transition: all 1s;
+}
+h2{
+    color: #FEFEFE;
+    font-size: 2.2em;
+}
+main img{
+    width: 140px;
+    height: 57px;
+}
+main figure{
+   margin-right: 12px;
+   display: flex;
+   justify-content: left;
+}
+.ender{
+   position: relative;
+   top:1em;
+   left: 15em;
+}
+.ender label{
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    text-align: right;
+    font-size: 1.7em;
+}​ 
+.ender input,::-webkit-input-placeholder{  
+    color: #9f9f9fab;
+}
+select:invalid{
+    color:  #9f9f9fab;
+}
+select:valid{
+    color:black;
+}
+.ender input, select, .dados input,select{
+    width: 40%;
+    height: 100%;
+    font-size: 1.7em;
+    background-color: transparent;
+    color: black;
+    outline: none;
+    padding: 9px;
+    margin-left: 0.5em;
+    margin-top:1.2em;
+    border: none;
+    border-bottom: 1px solid #030F26 ;
+}
+
+#cep{
+    width: 6.3em;
+}
+#num{
+    width: 3.2em;
+}
+.ender input[type="submit"]{
+    width: 150px;
+    height: 75px;
+    outline: none;
+    background-color:#334D01;
+    border: none;
+    border-radius: 6px;
+    margin: 1.4em 0 2.5em 8.7em;
+    color: #fefefe;
+}
+.ender input[type="submit"]:hover{
+    background-color: limegreen;
+    color: black;
+}
+/*---------------------------------------*/
+.dados{
+    position: relative;
+    left: 5em;
+    top:1em;
+}
+.dados label{
+    display: inline-block;
+    width: 300px;
+    padding: 15px;
+    text-align: right;
+    font-size: 1.7em;
+}
+#email,#tel,#password,#confpassword{
+    width: 14em;
+}
+#cpf{
+    width: 7.6em;
+}
+#nasc{
+    width: 6.1em;
+}
+.dados input[type="submit"]{
+    width: 175px;
+    height: 60px;
+    outline: none;
+    background-color:#334D01;
+    border: none;
+    border-radius: 6px;
+    margin: 1.4em 0 2.5em 12em;
+    color: #fefefe;
+}
+.dados input[type="submit"]:hover{
+    background-color: limegreen;
+    color: black;
+}
+

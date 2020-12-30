@@ -5,7 +5,157 @@
 main{
     width: 100%;
 }
-main img{
+main .banner img{
     width: 100%;
     vertical-align: middle;
+}
+main .seta{
+    width: 40px;
+    cursor: pointer;
+}
+main .container-carrosel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 5px;
+}
+main .carrosel{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 2px solid #000;
+}
+/* -------------------------------------------------------- */
+section.container-campeonatos{
+    background-image: linear-gradient(#fff 50%, #030F26 50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3em 0;
+}
+/* --------------------------------------------------------- */
+section.mais-populares{    
+    background-image: linear-gradient(#030F26 50%, #fff 50%);
+    padding: 0 1em;
+}
+section.mais-populares h2{
+    color: #fff;
+    width: 100%;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #fff;
+    font-size: 27px;
+}
+main div.container-produtos{
+    margin-top: 40px;
+}
+main div.container-produtos ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main div.item{
+    width: 288px;
+    background-color: #fff;
+    padding: 4px;
+    position: relative;
+    margin-bottom: 30px;
+}
+main div.foto-item{
+    position: relative;
+}
+main div.foto-item div{
+    width: 100%;
+    z-index: 2222;
+    position: absolute;
+    right: 0;
+}
+main div.foto-item img{
+    width: 280px;
+    z-index: -1;
+}
+main div.foto-item div input{
+    width: 30px;
+    height: 30px;
+    right: 0;
+    margin-right: 7px;
+    margin-top: 7px;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    background-image: url("../imagens/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+main div.foto-item div input:hover{
+    background-image: url("../imagens/heart_preenchido.svg");
+}
+div.info-item{
+    color: #000;
+}
+div.info-item .nome-item{
+    font-size: 20px;
+}
+div.info-item .preco .preco-item{
+    color: #4b4a4a;
+    text-decoration: line-through;
+    margin: 3px 0;
+}
+div.info-item .preco .preco-promocional-item{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 3px 0;
+}
+div.info-item .preco .parcela{
+    font-weight: 200;
+    margin: 3px 0;
+}
+section.mais-populares .tamanho-carrinho{
+    visibility: hidden;
+}
+main div.item:hover{
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.25);
+}
+main div.item:hover .tamanho-carrinho{
+    visibility: visible;
+}
+section.mais-populares select{
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 5px 0;
+}
+section.mais-populares .tamanho-carrinho button{
+    width: 100%;
+    background-color: #888888;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+section.mais-populares .tamanho-carrinho button img{
+    width: 30px;
+}
+/* -------------------------------------------------- */
+section.banner-2-elite{
+    background-image: linear-gradient(#fff 50%, #030F26 50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0em 0 4em;
+}
+/* ------------------------------------------------------ */
+section.banner-regiao{
+    background-image: linear-gradient(#030F26 50%, #fff 50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4em 0;
 }

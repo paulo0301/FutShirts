@@ -6,7 +6,6 @@ function mascara(t, mask){
     t.value += texto.substring(0,1);
     }
 }
-
 $(document).ready(function(){
     carregar_json('Estado');
     function carregar_json(id, cidade_id){
@@ -33,7 +32,6 @@ $(document).ready(function(){
         });
         
     }
-
     $(document).on('change', '#Estado', function(){
         var cidade_id = $(this).val();
         console.log(cidade_id);
@@ -43,3 +41,5 @@ $(document).ready(function(){
     });
 
 });
+
+document.querySelector

@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+
 }
 main{
     font-family: 'Roboto', sans-serif;
@@ -70,7 +71,7 @@ main .breadcrumbs a:last-child{
 }
 h2{
     color: #FEFEFE;
-    font-size: 2.2em;
+    font-size: 2.5em;
 }
 main img{
     width: 140px;
@@ -81,17 +82,17 @@ main figure{
    display: flex;
    justify-content: left;
 }
-.ender{
-   position: relative;
-   top:1em;
-   left: 15em;
+.ender,.dados{
+    margin: 0 auto;
+    padding-right: 6em;
+    width: 100%;
 }
 .ender label{
     display: inline-block;
-    width: 200px;
+    width: 30%;
     padding: 15px;
     text-align: right;
-    font-size: 1.7em;
+    font-size: 1.9em;
 }​ 
 .ender input,::-webkit-input-placeholder{  
     color: #9f9f9fab;
@@ -105,7 +106,7 @@ select:valid{
 .ender input, select, .dados input,select{
     width: 40%;
     height: 100%;
-    font-size: 1.7em;
+    font-size: 1.9em;
     background-color: transparent;
     color: black;
     outline: none;
@@ -123,13 +124,13 @@ select:valid{
     width: 3.2em;
 }
 .ender input[type="submit"]{
-    width: 150px;
-    height: 75px;
+    width: 180px;
+    height: 80px;
     outline: none;
     background-color:#334D01;
     border: none;
     border-radius: 6px;
-    margin: 1.4em 0 2.5em 8.7em;
+    margin: 1.4em 0 2.5em 13em;
     color: #fefefe;
 }
 .ender input[type="submit"]:hover{
@@ -137,20 +138,19 @@ select:valid{
     color: black;
 }
 /*---------------------------------------*/
-.dados{
-    position: relative;
-    left: 5em;
-    top:1em;
-}
+
 .dados label{
     display: inline-block;
-    width: 300px;
+    width: 30%;
     padding: 15px;
     text-align: right;
-    font-size: 1.7em;
+    font-size: 1.9em;
 }
 #email,#tel,#password,#confpassword{
     width: 14em;
+}
+#name{
+    width: 19em;
 }
 #cpf{
     width: 7.6em;
@@ -159,13 +159,13 @@ select:valid{
     width: 6.1em;
 }
 .dados input[type="submit"]{
-    width: 175px;
-    height: 60px;
+    width: 210px;
+    height: 75px;
     outline: none;
     background-color:#334D01;
     border: none;
     border-radius: 6px;
-    margin: 1.4em 0 2.5em 12em;
+    margin: 1.4em 0 2.5em 13em;
     color: #fefefe;
 }
 .dados input[type="submit"]:hover{

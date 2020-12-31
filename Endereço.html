@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="estilo/header-footer.css">
     <link rel="stylesheet" href="estilo/index.css">
     <link rel="stylesheet" href="estilo/Endereço-Dadospessoais.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <title>Futshirt</title>
 </head>
 <body>
@@ -79,39 +78,41 @@
                 <a href="#" class="active">Endereço</a>
             </div> 
         </div>
+    
         <article>
                 <form action="" class="ender">
-                    <div>
+                    <div class="dados_endereço">
                         <label for="cep">CEP</label>
                         <input type="text" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}"/>
                     </div>
-                    <div>
+                    <div class="dados_endereço">
                         <label for="UF">Estado</label>
                         <select id="Estado" required >
                             <option value="" class="sel" disabled="disabled" selected="selected">Selecione seu Estado</option> 
                         </select>
                     </div>
-                    <div>
+                    <div class="dados_endereço">
                         <label for="cid">Cidade</label>
                         <select id="Cidade" required>
                             <option value="" class="sel" disabled="disabled" selected="selected">Selecione sua Cidade</option>
                            
                         </select>
                     </div>
-                    <div>
+                    <div class="dados_endereço">
                         <label for="log">Logradouro</label>
                         <input type="text" id="log" placeholder="Digite seu Logradouro" autocomplete="off" >
                     </div>
-                    <div>
+                    <div class="dados_endereço">
                         <label for="num">Numero</label>
                         <input type="text" id="num" maxlength="4" placeholder="0000" autocomplete="off" required>
                     </div>
-                    <div>
+                    <div class="dados_endereço">
                         <label for="comp">Complemento</label>
                         <input type="text" id="comp" placeholder="Digite o Complemento" autocomplete="off"  >
                     </div>
                         <input type="submit" id="conf" value="Finalizar">
                 </form>
+            </article>
     </main>
     
     <footer>
@@ -205,5 +206,4 @@
     </footer>
 </body>
 <script src="js/login.js"></script>
-<script src="js/endereço-dadospessoais.js"></script>
 </html>

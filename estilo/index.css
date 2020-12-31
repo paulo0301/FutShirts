@@ -4,118 +4,158 @@
 }
 main{
     width: 100%;
-    font-family: 'Roboto', sans-serif;
 }
-main img{
+main .banner img{
     width: 100%;
     vertical-align: middle;
 }
-main h2{
-    background-color: #030F26;
-    padding: 0.5em 1em;
-    text-align: center;
+main .seta{
+    width: 40px;
+    cursor: pointer;
 }
-main h2 a{
+main .container-carrosel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 5px;
+}
+main .carrosel{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 2px solid #000;
+}
+/* -------------------------------------------------------- */
+section.container-campeonatos{
+    background-image: linear-gradient(#fff 50%, #030F26 50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3em 0;
+}
+/* --------------------------------------------------------- */
+section.mais-populares{    
+    background-image: linear-gradient(#030F26 50%, #fff 50%);
+    padding: 0 1em;
+}
+section.mais-populares h2{
     color: #fff;
-    text-transform: uppercase;
-    font-weight: 300;
-    text-decoration: none;
-}
-.container-produtos-destaques{
     width: 100%;
-    display: flex;
-    margin: 10px 0;
-    align-items: center;;
-    justify-content: space-between;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #fff;
+    font-size: 27px;
 }
-ol.produtos-destaques{
+main div.container-produtos{
+    margin-top: 40px;
+}
+main div.container-produtos ul{
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
 }
-ol.produtos-destaques li{
-    margin: 0 5px;
-}
-ol.produtos-destaques li img{
-    -webkit-box-shadow: 1px 1px 3px 1px #A2A2A2; 
-    box-shadow: 1px 1px 7px 1px #A2A2A2;
-}
-.seta-anterior, .seta-proximo{
-    outline: none;
-    width: 50px;
-}
-
-/* Área de login */
-div.efeito{
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    background-color: rgba(15, 15, 15, 0.70);
-    visibility: hidden;
-    position: fixed;
-}
-div.login{
-    background-color: white;
-    width: 28em;
-    height: 18em;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
-}
-form .container{
-    margin-left: 68px;
-}
-form .container div{
-    margin: 8px 0;
-}
-form .container input{
-    width: 19em;
-    padding: 8px 4px;
-    border-radius: 5px;
-}
-form .container h2{
-    margin-left: 48px;
-}
-a{
-    text-decoration: none;
-}
-.container-entrar-cadastre-se{
-    margin-top: 20px;
-    margin-left: 116px;
-}
-.container-entrar-cadastre-se input[type="submit"], form a{
-    background-color: #334D01;
-    color: white;
-    width: max-content;
-    padding: 0.5em 1em;
-    border: none;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 300;
-}
-form div.container a{
-    background-color: transparent;
-    padding: 0;
-    color: #3B5AC9;
-    text-decoration: underline;
-    font-size: 15px;
-    margin-left: 50px;
-}
-input[value="x"]{
-    background-color: transparent;
-    color: black;
-    border: none;
-    font-weight: 600;
-    font-size: 28px;
-    cursor: pointer;
+main div.item{
+    width: 288px;
+    background-color: #fff;
+    padding: 4px;
     position: relative;
+    margin-bottom: 30px;
+}
+main div.foto-item{
+    position: relative;
+}
+main div.foto-item div{
+    width: 100%;
+    z-index: 2222;
+    position: absolute;
+    right: 0;
+}
+main div.foto-item img{
+    width: 280px;
+    z-index: -1;
+}
+main div.foto-item div input{
+    width: 30px;
+    height: 30px;
+    right: 0;
+    margin-right: 7px;
+    margin-top: 7px;
+    position: absolute;
+    cursor: pointer;
     outline: none;
-    margin-bottom: 255px;
-    margin-right: 10px;
+    background-image: url("../imagens/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+main div.foto-item div input:hover{
+    background-image: url("../imagens/heart_preenchido.svg");
+}
+div.info-item{
+    color: #000;
+}
+div.info-item .nome-item{
+    font-size: 20px;
+}
+div.info-item .preco .preco-item{
+    color: #4b4a4a;
+    text-decoration: line-through;
+    margin: 3px 0;
+}
+div.info-item .preco .preco-promocional-item{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 3px 0;
+}
+div.info-item .preco .parcela{
+    font-weight: 200;
+    margin: 3px 0;
+}
+section.mais-populares .tamanho-carrinho{
+    visibility: hidden;
+}
+main div.item:hover{
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.25);
+}
+main div.item:hover .tamanho-carrinho{
+    visibility: visible;
+}
+section.mais-populares select{
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 5px 0;
+}
+section.mais-populares .tamanho-carrinho button{
+    width: 100%;
+    background-color: #888888;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+section.mais-populares .tamanho-carrinho button img{
+    width: 30px;
+}
+/* -------------------------------------------------- */
+section.banner-2-elite{
+    background-image: linear-gradient(#fff 50%, #030F26 50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0em 0 4em;
+}
+/* ------------------------------------------------------ */
+section.banner-regiao{
+    background-image: linear-gradient(#030F26 50%, #fff 50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4em 0;
 }

@@ -10,11 +10,11 @@ main .banner img{
     height: 80%;
     vertical-align: middle;
 }
-main .seta{
+/* main .seta{
     width: 20px;
     cursor: pointer;
-}
-main .container-carrosel{
+} */
+/* main .container-carrosel{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,10 +27,11 @@ main .carrosel{
     width: 100%;
     border-bottom: 2px solid #000;
 }
+ */
 main .carrosel img{
     width: 50px;
 }
-/* -------------------------------------------------------- */
+    /* -------------------------------------------------------- */
 section.container-campeonatos{
     background-image: linear-gradient(#fff 50%, #030F26 50%);
     display: flex;

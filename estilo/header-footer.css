@@ -110,10 +110,10 @@ header a{
     }
 }
 /* ************************************** */
-nav{
+header+nav{
     font-family: 'Roboto', sans-serif;
 }
-nav a{
+header+nav a{
     display: inline-block;
     padding: 1em 2em;
     color: #000000;
@@ -122,10 +122,10 @@ nav a{
     font-weight: bold;
     font-size: 15px;
 }
-nav li:hover{
+header+nav li:hover{
     background-color: #acabab;
 }
-nav ol{
+header+nav ol{
     display: flex;
 }
 /**************** FOOTER ******************/

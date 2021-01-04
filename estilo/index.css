@@ -40,7 +40,18 @@ section.container-campeonatos{
     padding: 3em 0;
 }
 section.container-campeonatos img{
-    width: 95%;
+    width: 100%;
+}
+section.container-campeonatos a{
+    background-color: red;
+    width: 17em;
+    border-radius: 40px;
+    transition: all 1s; 
+}
+section.container-campeonatos a:hover {
+    width: 18em;
+    background-color: blue;
+    transition: all 1s;
 }
 /* --------------------------------------------------------- */
 section.mais-populares{    

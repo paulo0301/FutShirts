@@ -11,11 +11,9 @@ main h2{
 }
 main nav{
     background-image: linear-gradient(to right,#030F26 60px, #fff 20%);
-    width: 250px;
-    min-width: 170px;
-    height: 100%;
+    min-width: 200px;
     border-right: 1px solid #030F26;
-    padding: 120px 0 40%;
+    padding: 120px 0 0;
 }
 main nav a{
     color: #000;
@@ -107,7 +105,7 @@ main section.container-meus-dados input[type="submit"], main section.container-e
     cursor: pointer;
 }
 
-/* SECTION ENDERECOS */
+/*********************** SECTION ENDERECOS *************************/
 main section.container-enderecos{
     width: 100%;
 }
@@ -124,7 +122,66 @@ main section.container-enderecos form.panel input[type="submit"]{
 }
 main section h3.accordion{
     cursor: pointer;
+    margin-bottom: 20px;
 }
 main section.container-enderecos form.panel{
     display: none;
+}
+
+/************************* SECTION MEUS PEDIDOS **********************/
+main section.container-meus-pedidos{
+    width: 100%;
+}
+main section.container-meus-pedidos .container-pedido, main section.container-meus-favoritos .container-favorito{
+    display: flex;
+    margin: 50px 0 20px 150px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao, main section.container-meus-favoritos .container-favorito .container-descricao{
+    margin-left: 20px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao p, main section.container-meus-favoritos .container-favorito .container-descricao p{
+    margin-bottom: 30px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .titulo, main section.container-meus-favoritos .container-favorito .container-descricao .titulo{
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .data-de-compra, main section.container-meus-favoritos .container-favorito .container-descricao .data-de-compra{
+    font-weight: 500;
+    font-size: 20px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .status, main section.container-meus-favoritos .container-favorito .container-descricao .status{
+    font-size: 20px;
+    font-weight: 400;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .status .recebido, main section.container-meus-favoritos .container-favorito .container-descricao .status .recebido{
+    color: green;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .status .nao-recebido, main section.container-meus-favoritos .container-favorito .container-descricao .status .nao-recebido{
+    color: red;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .preco, main section.container-meus-favoritos .container-favorito .container-descricao .preco{
+    font-weight: bold;
+    font-size: 23px;
+}
+
+/************************* SECTION MEUS FAVORITOS **********************/
+main section.container-meus-favoritos{
+    width: 100%;
+}
+main section.container-meus-favoritos button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-top: 37px;
+    cursor: pointer;
+}
+main section.container-meus-favoritos .lixeira{
+    width: 40px;
+}
+
+/************************* SECTION MEUS CARTOES **********************/
+main section.container-meus-cartoes{
+    width: 100%;
 }

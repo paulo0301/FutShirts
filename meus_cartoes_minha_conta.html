@@ -141,27 +141,32 @@
                         </div>
                     </div>
                 </div>
-
-                <h3 class="accordion">Adicionar cartão <img src="imagens/seta_direita.svg" alt="seta para direita"></h3>
-                <form class="panel" action="">
-                    <div>
-                        <label for="numero-cartao">Número do cartão</label>
-                        <input type="text" id="numero-cartao" required>
-                    </div>
-                    <div>
-                        <label for="nome-titular">Nome do titular</label>
-                        <input type="text" id="nome-titular" required>
-                    </div>
-                    <div>
-                        <label for="vencimento">Vencimento</label>
-                        <input type="text" id="vencimento" required>
-                    </div>
-                    <div>
-                        <label for="codigo-seguranca">Código de segurança</label>
-                        <input type="text" id="codigo-seguranca" required>
-                    </div>
-                    <input type="submit" value="Adicionar cartão">
-                </form>
+                
+                <div class="accordion">
+                    <input type="checkbox" id="chck1">
+                    <label for="chck1">Adicionar cartão</label>
+                    
+                    
+                    <form class="panel" action="">
+                        <div>
+                            <label for="numero-cartao">Número do cartão</label>
+                            <input type="text" id="numero-cartao" required>
+                        </div>
+                        <div>
+                            <label for="nome-titular">Nome do titular</label>
+                            <input type="text" id="nome-titular" required>
+                        </div>
+                        <div>
+                            <label for="vencimento">Vencimento</label>
+                            <input type="text" id="vencimento" required>
+                        </div>
+                        <div>
+                            <label for="codigo-seguranca">Código de segurança</label>
+                            <input type="text" id="codigo-seguranca" required>
+                        </div>
+                        <input type="submit" value="Adicionar cartão">
+                    </form>
+                </div>
             </section>
         </div>
     </main>
@@ -256,7 +261,7 @@
         </section>
     </footer>
 </body>
-<script>
+<!-- <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
     
@@ -270,6 +275,6 @@
             }
         });
     }
-</script>
+</script> -->
 <script src="js/login.js"></script>
 </html>

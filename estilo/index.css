@@ -27,11 +27,11 @@ main .carrosel{
     width: 100%;
     border-bottom: 2px solid #000;
 }
- */
+*/
 main .carrosel img{
     width: 50px;
 }
-    /* -------------------------------------------------------- */
+/* -------------------------------------------------------- */
 section.container-campeonatos{
     background-image: linear-gradient(#fff 50%, #030F26 50%);
     display: flex;
@@ -39,20 +39,28 @@ section.container-campeonatos{
     justify-content: space-around;
     padding: 3em 0;
 }
-section.container-campeonatos img{
-    width: 100%;
-}
-section.container-campeonatos a{
+.campeonato{
     background-color: red;
+}
+.container-campeonatos a{
     width: 17em;
     border-radius: 40px;
     transition: all 1s; 
+    display: inline-block;
+    border-radius: 0;
 }
-section.container-campeonatos a:hover {
+.container-campeonatos img{
+    width: 100%;    
+}
+.container-campeonatos:hover > a{
+    opacity: 0.5;
+}
+.container-campeonatos:hover > a:hover{
+    opacity: 1;
     width: 18em;
-    background-color: blue;
     transition: all 1s;
 }
+
 /* --------------------------------------------------------- */
 section.mais-populares{    
     background-image: linear-gradient(#030F26 50%, #fff 50%);
@@ -76,22 +84,22 @@ main div.container-produtos ul{
 }
 main div.item{
     width: 288px;
-    background-color: #fff;
     padding: 4px;
     position: relative;
     margin-bottom: 30px;
+    transition: all .8s;
 }
 main div.foto-item{
     position: relative;
+    width: 100%;
 }
 main div.foto-item div{
-    width: 100%;
     z-index: 2222;
     position: absolute;
     right: 0;
 }
 main div.foto-item img{
-    width: 280px;
+    width: 100%;
     z-index: -1;
 }
 main div.foto-item div input{
@@ -184,6 +192,14 @@ section.banner-regiao{
     justify-content: space-around;
     padding: 4em 0;
     text-align: center;
+}
+
+section.banner-regiao:hover > a{
+    opacity: 0.7;
+}
+
+section.banner-regiao:hover > a:hover{
+    opacity: 1;
 }
 
 section.banner-regiao img{

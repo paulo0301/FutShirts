@@ -91,8 +91,77 @@
             <section class="container-meus-cartoes">
                 <h3>Meus cartões</h3>
                 
-                
-                
+                <div class="cartoes-cadastrados">
+                    <div class="cartao-cadastrado">
+                        <div>
+                            <figure class="bandeira">
+                                <img src="imagens/mastercard.svg" alt="">
+                            </figure>
+                            <div class="informacoes-cartao">
+                                <p class="informacao-1">Terminado em 0000</p>
+                                <p class="informacao-2">Mastercard</p>
+                                <p class="informacao-3">Vencimento em XX/XXXX</p>
+                            </div>
+                        </div>
+                        <div class="lixeira-editar">
+                            <button><img src="imagens/editar.svg" alt=""></button>
+                            <button><img src="imagens/lixeira.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="cartao-cadastrado">
+                        <div>
+                            <figure class="bandeira">
+                                <img src="imagens/mastercard.svg" alt="">
+                            </figure>
+                            <div class="informacoes-cartao">
+                                <p class="informacao-1">Terminado em 0000</p>
+                                <p class="informacao-2">Mastercard</p>
+                                <p class="informacao-3">Vencimento em XX/XXXX</p>
+                            </div>
+                        </div>
+                        <div class="lixeira-editar">
+                            <button><img src="imagens/editar.svg" alt=""></button>
+                            <button><img src="imagens/lixeira.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="cartao-cadastrado">
+                        <div>
+                            <figure class="bandeira">
+                                <img src="imagens/mastercard.svg" alt="">
+                            </figure>
+                            <div class="informacoes-cartao">
+                                <p class="informacao-1">Terminado em 0000</p>
+                                <p class="informacao-2">Mastercard</p>
+                                <p class="informacao-3">Vencimento em XX/XXXX</p>
+                            </div>
+                        </div>
+                        <div class="lixeira-editar">
+                            <button><img src="imagens/editar.svg" alt=""></button>
+                            <button><img src="imagens/lixeira.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="accordion">Adicionar cartão <img src="imagens/seta_direita.svg" alt="seta para direita"></h3>
+                <form class="panel" action="">
+                    <div>
+                        <label for="numero-cartao">Número do cartão</label>
+                        <input type="text" id="numero-cartao" required>
+                    </div>
+                    <div>
+                        <label for="nome-titular">Nome do titular</label>
+                        <input type="text" id="nome-titular" required>
+                    </div>
+                    <div>
+                        <label for="vencimento">Vencimento</label>
+                        <input type="text" id="vencimento" required>
+                    </div>
+                    <div>
+                        <label for="codigo-seguranca">Código de segurança</label>
+                        <input type="text" id="codigo-seguranca" required>
+                    </div>
+                    <input type="submit" value="Adicionar cartão">
+                </form>
             </section>
         </div>
     </main>
@@ -187,5 +256,20 @@
         </section>
     </footer>
 </body>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
 <script src="js/login.js"></script>
 </html>

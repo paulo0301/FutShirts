@@ -185,3 +185,77 @@ main section.container-meus-favoritos .lixeira{
 main section.container-meus-cartoes{
     width: 100%;
 }
+main section.container-meus-cartoes .cartoes-cadastrados{
+    width: 80%;
+    margin: 2em auto;
+    border: 2px solid #030F26;
+    border-radius: 5px;
+    padding: 1em 2em;
+}
+.cartoes-cadastrados .cartao-cadastrado{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #030F26;
+}
+.cartoes-cadastrados .cartao-cadastrado > div{
+    display: flex;
+    align-items: center;
+}
+.cartoes-cadastrados .cartao-cadastrado .bandeira{
+    margin-right: 10px;
+}
+.cartoes-cadastrados .cartao-cadastrado .bandeira img{
+    width: 100px;
+    vertical-align: middle;
+}
+.cartao-cadastrado .lixeira-editar button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.cartao-cadastrado .lixeira-editar img{
+    width: 35px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-1{
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.container-meus-cartoes form{
+    width: 80%;
+    margin: 0 auto;
+    display: none;
+}
+.container-meus-cartoes form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.container-meus-cartoes form div label{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.container-meus-cartoes form div input{
+    width: 50%;
+    padding: 2px 3px;
+    font-size: 17px;
+    border: none;
+    border-bottom: 1px solid #030F26;
+    outline: none;
+}
+.container-meus-cartoes form input[type="submit"]{
+    padding: 8px 20px;
+    font-weight: 600;
+    background-color: #334D01;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

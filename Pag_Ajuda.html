@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
-    <link rel="stylesheet" type="text/css" href="estilo/Ajuda_inicial.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="estilo/Ajuda_inicial.css" media="screen"/> 
     <link rel="stylesheet" href="estilo/header-footer.css">
     <title>Futshirt</title>
 </head>
@@ -16,30 +16,30 @@
             </a>
         </div>
         <div class="header-principal">
-        <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
-        
-        <form action="" class="barra-de-pesquisa">
-            <input type="text" name="buscar" id="buscar" placeholder="Buscar">
-            <img src="./imagens/ampliacao.svg" alt="">
-        </form>
-        
-        <div>
-            <div class="area-de-acesso">
-                <figure>
-                    <img src="imagens/avatar.svg" alt="user">
-                </figure>
-                <div>
-                    <input type="submit" id="entrar" value="Entrar">
-                    <a href="#">Cadastre-se</a>
-                </div>
-            </div>
+            <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
             
-            <a href="#">
-                <figure class="sacola">
-                    <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
-                </figure>
-            </a>
-        </div>
+            <form action="" class="barra-de-pesquisa">
+                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
+                <img src="./imagens/ampliacao.svg" alt="">
+            </form>
+            
+            <div>
+                <div class="area-de-acesso">
+                    <figure>
+                        <img src="imagens/avatar.svg" alt="user">
+                    </figure>
+                    <div>
+                        <input type="submit" id="entrar" value="Entrar">
+                        <a href="#">Cadastre-se</a>
+                    </div>
+                </div>
+                
+                <a href="#">
+                    <figure class="sacola">
+                        <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
+                    </figure>
+                </a>
+            </div>
         </div>
     </header>
     
@@ -80,6 +80,69 @@
             </a>
         </div>
         
+        <div class="container-questions">
+            <div class="pergunta">
+                <input type="checkbox" id="pg1">
+                <label for="pg1">Quais as formas de pagamento aceitas?</label>
+                <p>Atualmente, a FutShirt está aceitando apenas cartões de qualquer bandeira ou boleto</p>
+            </div>
+            
+            <div class="pergunta">  
+                <input type="checkbox" id="pg2">
+                <label for="pg2">Qual o prazo para a aprovação do pedido?</label>
+                <p>Os pedidos demoram até 24 horas para serem confirmados</p>
+            </div>
+            
+            <div class="pergunta">
+                <input type="checkbox" id="pg3">
+                <label for="pg3">Prazo de entrega do meu pedido?</label>
+                <p>Depende da sua localização, contudo, podemos estimar assim que for informado o CEP na compra</p>
+            </div>
+            
+            <div class="pergunta">
+                <input type="checkbox" id="pg4">
+                <label for="pg4">Como acompanhar meu pedido?</label>
+                <p>Assim que a compra for confirmada, será enviado, por e-mail, um código de rastreio dos correios</p>
+            </div>
+            
+            <div class="pergunta">
+                <input type="checkbox" id="pg5">
+                <label for="pg5">Posso cancelar meu pedido?</label>
+                <p>Sim e, para isso, deve ser feito um comunicado em meus pedidos antes que o pedido seja confirmado e enviado</p>
+            </div>
+            
+            <div class="pergunta">
+                <input type="checkbox" id="pg6">
+                <label for="pg6">Posso trocar meu pedido?</label>
+                <p>Sim e, para isso, deve ser feito um comunicado em meus pedidos antes que o pedido seja confirmado e enviado </p>
+            </div>
+            
+            <div class="pergunta">
+                <input type="checkbox" id="pg7">
+                <label for="pg7">Posso alterar meus dados após criar uma conta?</label>
+                <p>Sim, basta ir em sua conta e apertar o botão "editar"</p>
+            </div>
+        </div>
+        <!-- ------------------------------------------------------------------------------------------ -->
+        <div class="container-enviar-email">
+            <p class="titulo2">Nos informe o ocorrido</p>
+            
+            <form method="POST" action="recebedados.html">
+                <div>
+                    <label for="nome">Nome completo</label><br/>
+                    <input type="text" id="input-nome" name="nome"/>
+                </div>
+                <div>
+                    <label for="email">Email</label><br/>
+                    <input type="email" id="input-email" name="email"/>
+                </div>
+                <div>
+                    <label for="ocorrido">O que houve?</label><br/>
+                    <textarea id="ocorridotext"></textarea><br/>
+                </div>
+                <input type="submit" id="enviar" value="Enviar"/>
+            </form>
+        </div>
     </main>    
     
     

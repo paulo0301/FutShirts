@@ -24,20 +24,20 @@ main .container a div div{
     background-repeat: no-repeat;
     background-position: center;
 }
-main .container a div:hover{
+main .container a div:hover, main .container a div.active{
     color: white !important;
     background-color: #030F26;
 }
 main #perguntas .imagem-interrogacao{
     background-image: url("../imagens/question.svg");
 }
-main #perguntas:hover .imagem-interrogacao{
+main #perguntas:hover .imagem-interrogacao, main #perguntas .active{
     background-image: url("../imagens/question2.svg");
 }
 main #email .imagem-email{
     background-image: url("../imagens/Email.svg");
 }
-main #email:hover .imagem-email{
+main #email:hover .imagem-email, main #email .active{
     background-image: url("../imagens/Email2.svg");
 }
 main #whatsapp .imagem-whatsapp{
@@ -56,16 +56,21 @@ main p.texto{
 
 main div.container{
     padding-top: 4em;
-    padding-left: 20em;
-    padding-right: 20em;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     align-content: stretch;
 }
-
+main div.container a{
+    margin: 0 60px;
+}
+main div.container a:first-child{
+    margin-left: 0;
+}
+main div.container a:last-child{
+    margin-right: 0;
+}
 main div#perguntas, main div#email, main div#whatsapp{
     width: 210px;
     height: 250px;
@@ -85,16 +90,14 @@ main div#perguntas p, main div#email p, main div#whatsapp p{
     font-size: 1.2em;
     font-weight: bold;
 }
-
 a{
     text-decoration: none;
 }
-
 /* CONTAINER QUESTOES */
 div.container-questions{
     width: 80%;
     margin: 3em auto 0;
-    /* display: none; */
+    display: none;
 }
 div.pergunta{
     color: #000;
@@ -150,13 +153,15 @@ div.container-questions input:checked ~ p{
 }
 
 /* CONTAINER EMAIL */
-
+main .container-enviar-email{
+    margin-top: 3em;
+    display: none;
+}
 main .container-enviar-email p.titulo2{
     font-size: 25px;
     color: white;
     font-weight: 300;
     background-color: #030F26;
-    margin-top: 3em;
     padding: 0.6em 0 0.6em 4em;
 }
 main .container-enviar-email form{

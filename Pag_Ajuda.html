@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
-    <link rel="stylesheet" type="text/css" href="estilo/Ajuda_inicial.css" media="screen"/> 
+    <link rel="stylesheet" type="text/css" href="estilo/Ajuda_inicial.css" media="screen"/>
     <link rel="stylesheet" href="estilo/header-footer.css">
     <title>Futshirt</title>
 </head>
@@ -17,12 +17,12 @@
         </div>
         <div class="header-principal">
             <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
-            
+
             <form action="" class="barra-de-pesquisa">
                 <input type="text" name="buscar" id="buscar" placeholder="Buscar">
                 <img src="./imagens/ampliacao.svg" alt="">
             </form>
-            
+
             <div>
                 <div class="area-de-acesso">
                     <figure>
@@ -33,7 +33,7 @@
                         <a href="#">Cadastre-se</a>
                     </div>
                 </div>
-                
+
                 <a href="#">
                     <figure class="sacola">
                         <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
@@ -42,7 +42,7 @@
             </div>
         </div>
     </header>
-    
+
     <nav>
         <ol>
             <li><a href="#">Masculino</a></li>
@@ -50,28 +50,28 @@
             <li><a href="#">Infantil</a></li>
         </ol>
     </nav>
-    
+
     <main>
         <p class="titulo">Ajuda</p>
-        
+
         <p class="texto">Tire suas dúvidas por onde preferir</p>
-        
-        
+
+
         <div class="container">
-            <a href="Pag_Ajuda_Perguntas.html">
+            <a>
                 <div id="perguntas">
                     <div class="imagem-interrogacao"></div>
                     <p id="p_perg">Perguntas Frequentes</p>
                 </div>
             </a>
-            
-            <a href="Pag_Ajuda_Email.html">
+
+            <a>
                 <div id="email">
                     <div class="imagem-email"></div>
                     <p id="p_email">Via Email</p>
                 </div>
             </a>
-            
+
             <a href="Pag_Ajuda_Whatsapp.html">
                 <div id="whatsapp">
                     <div class="imagem-whatsapp"></div>
@@ -79,44 +79,44 @@
                 </div>
             </a>
         </div>
-        
-        <div class="container-questions">
+
+        <div class="container-questions" style="display: none;">
             <div class="pergunta">
                 <input type="checkbox" id="pg1">
                 <label for="pg1">Quais as formas de pagamento aceitas?</label>
                 <p>Atualmente, a FutShirt está aceitando apenas cartões de qualquer bandeira ou boleto</p>
             </div>
-            
-            <div class="pergunta">  
+
+            <div class="pergunta">
                 <input type="checkbox" id="pg2">
                 <label for="pg2">Qual o prazo para a aprovação do pedido?</label>
                 <p>Os pedidos demoram até 24 horas para serem confirmados</p>
             </div>
-            
+
             <div class="pergunta">
                 <input type="checkbox" id="pg3">
                 <label for="pg3">Prazo de entrega do meu pedido?</label>
                 <p>Depende da sua localização, contudo, podemos estimar assim que for informado o CEP na compra</p>
             </div>
-            
+
             <div class="pergunta">
                 <input type="checkbox" id="pg4">
                 <label for="pg4">Como acompanhar meu pedido?</label>
                 <p>Assim que a compra for confirmada, será enviado, por e-mail, um código de rastreio dos correios</p>
             </div>
-            
+
             <div class="pergunta">
                 <input type="checkbox" id="pg5">
                 <label for="pg5">Posso cancelar meu pedido?</label>
                 <p>Sim e, para isso, deve ser feito um comunicado em meus pedidos antes que o pedido seja confirmado e enviado</p>
             </div>
-            
+
             <div class="pergunta">
                 <input type="checkbox" id="pg6">
                 <label for="pg6">Posso trocar meu pedido?</label>
                 <p>Sim e, para isso, deve ser feito um comunicado em meus pedidos antes que o pedido seja confirmado e enviado </p>
             </div>
-            
+
             <div class="pergunta">
                 <input type="checkbox" id="pg7">
                 <label for="pg7">Posso alterar meus dados após criar uma conta?</label>
@@ -124,9 +124,9 @@
             </div>
         </div>
         <!-- ------------------------------------------------------------------------------------------ -->
-        <div class="container-enviar-email">
+        <div class="container-enviar-email" style="display: none;">
             <p class="titulo2">Nos informe o ocorrido</p>
-            
+
             <form method="POST" action="recebedados.html">
                 <div>
                     <label for="nome">Nome completo</label><br/>
@@ -143,9 +143,9 @@
                 <input type="submit" id="enviar" value="Enviar"/>
             </form>
         </div>
-    </main>    
-    
-    
+    </main>
+
+
     <footer>
         <section class="vantagens">
             <ul>
@@ -236,4 +236,38 @@
         </section>
     </footer>
 </body>
+<script>
+    var quadroPergunta = document.querySelector("div#perguntas");
+    var quadroEmail = document.querySelector("div#email")
+    var containerPerguntas = document.querySelector("div.container-questions");
+    var containerEmail = document.querySelector("div.container-enviar-email");
+
+    quadroPergunta.addEventListener("click", () => {
+        quadroEmail.classList.remove("active");
+        quadroEmail.childNodes[1].classList.remove("active");
+        quadroPergunta.classList.toggle("active");
+        quadroPergunta.childNodes[1].classList.toggle("active");
+
+        if(containerPerguntas.style.display == "none"){
+            containerPerguntas.style.display = "block";
+        }
+        else containerPerguntas.style.display = "none";
+
+        containerEmail.style.display = "none";
+    })
+
+    quadroEmail.addEventListener("click", () => {
+        quadroPergunta.classList.remove("active");
+        quadroPergunta.childNodes[1].classList.remove("active");
+        quadroEmail.classList.toggle("active");
+        quadroEmail.childNodes[1].classList.toggle("active");
+
+        if(containerEmail.style.display == "none"){
+            containerEmail.style.display = "block";
+        }
+        else containerEmail.style.display = "none";
+
+        containerPerguntas.style.display = "none";
+    })
+</script>
 </html>

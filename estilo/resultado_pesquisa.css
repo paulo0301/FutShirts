@@ -1,54 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
-    font-family: 'Roboto', sans-serif;
-}
 main{
-    width: 100%;
-}
-main .banner img{
-    width: 100%;
-    height: 80%;
-    vertical-align: middle;
-}
-main .carrosel img{
-    width: 50px;
-}
-/* -------------------------------------------------------- */
-section.container-campeonatos{
-    background-image: linear-gradient(#fff 50%, #030F26 50%);
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 3em 0;
 }
-.campeonato{
-    background-color: red;
-}
-.container-campeonatos a{
-    width: 17em;
-    border-radius: 40px;
-    transition: all 1s; 
-    display: inline-block;
-    border-radius: 0;
-}
-.container-campeonatos img{
-    width: 100%;    
-}
-.container-campeonatos:hover > a{
-    opacity: 0.5;
-}
-.container-campeonatos:hover > a:hover{
-    opacity: 1;
-    width: 18em;
-    transition: all 1s;
-}
-
-/* --------------------------------------------------------- */
-section.mais-populares{    
-    background-image: linear-gradient(#030F26 50%, #fff 50%);
-    padding: 0 1em;
-}
-section.mais-populares h2{
+section.container-resultado-pesquisa h2{
     color: #fff;
     width: 100%;
     padding: 0 0 5px 0;
@@ -63,6 +16,7 @@ main div.container-produtos ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 main div.item{
     width: 288px;
@@ -122,7 +76,7 @@ div.info-item .preco .parcela{
     font-weight: 200;
     margin: 3px 0;
 }
-section.mais-populares .tamanho-carrinho{
+section.container-resultado-pesquisa .tamanho-carrinho{
     visibility: hidden;
 }
 main div.item:hover{
@@ -131,7 +85,7 @@ main div.item:hover{
 main div.item:hover .tamanho-carrinho{
     visibility: visible;
 }
-section.mais-populares select{
+section.container-resultado-pesquisa select{
     width: 100%;
     text-align: center;
     height: 40px;
@@ -140,7 +94,7 @@ section.mais-populares select{
     cursor: pointer;
     margin: 5px 0;
 }
-section.mais-populares .tamanho-carrinho button{
+section.container-resultado-pesquisa .tamanho-carrinho button{
     width: 100%;
     background-color: #888888;
     border: none;
@@ -150,40 +104,62 @@ section.mais-populares .tamanho-carrinho button{
     align-items: center;
     justify-content: center;
 }
-section.mais-populares .tamanho-carrinho button img{
+section.container-resultado-pesquisa .tamanho-carrinho button img{
     width: 30px;
 }
-/* -------------------------------------------------- */
-section.banner-2-elite{
-    background-image: linear-gradient(#fff 50%, #030F26 50%);
+
+/* ---------------------------------------------------------------- */
+section.lista-filtros{
+    min-width: 16em;
+}
+div.container-filtros{
+    padding: 1em;
+    width: 100%;
+}
+div.container-filtros > input{
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+div.container-filtros > input:checked + label::after{
+    content: "-";
+}
+div.container-filtros > input:checked ~ div{
+    display: block;
+}
+div.container-filtros > label{
+    font-size: 20px;
+    font-weight: 700;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 0em 0 4em;
-    text-align: center;
+    justify-content: space-between;
+    cursor: pointer;
 }
-
-section.banner-2-elite img{
-    width: 75%;
+div.container-filtros > label::after{
+    content: "+";
 }
-/* ------------------------------------------------------ */
-section.banner-regiao{
-    background-image: linear-gradient(#030F26 50%, #fff 50%);
+div.container-filtros div{
+    display: none;
+}
+div.container-filtros div form{
+    display: flex;
+    flex-direction: column;
+    max-height: 15em;
+    overflow-y: scroll;
+}
+div.container-filtros div form label{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 4em 0;
-    text-align: center;
+    margin: 5px 0;
 }
-
-section.banner-regiao:hover > a{
-    opacity: 0.7;
+div.container-filtros div form label input{
+    margin-right: 5px;
 }
-
-section.banner-regiao:hover > a:hover{
-    opacity: 1;
+::-webkit-scrollbar {
+    width: 7px;
 }
-
-section.banner-regiao img{
-    width: 80%;
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #030F26; 
 }

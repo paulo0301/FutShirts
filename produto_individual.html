@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./Glider.js-master/glider.css"> -->
+    <link rel="stylesheet" href="estilo/header-footer.css">
+    <link rel="stylesheet" href="estilo/produto_individual.css">
+    <title>Futshirt</title>
+</head>
+<body>
+    <div class="efeito">
+        <div class="login">
+            <input type="submit" id="fechar" value="x"/>
+            <form>
+                <div class="container">
+                    <h2>Já sou cliente</h2>
+                    <div>
+                        <label for="login">E-mail</label>
+                        <input type="email" id="login" required/>
+                    </div>
+                    
+                    <div>
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" required/>
+                    </div>
+                    
+                    <a href="">Esqueci minha senha</a>
+                </div>
+                <div class="container-entrar-cadastre-se">
+                    <input type="submit" id="entrar_login" value="Entrar">
+                    <a href="Dadospessoais.html">Cadastre-se</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <header>
+        <div class="link-atendimento">
+            <a href="Pag_Ajuda.html">
+                <img src="imagens/question-mark-inside-a-circle.svg" alt="">
+                <p>Atendimento</p>
+            </a>
+        </div>
+        <div class="header-principal">
+            <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
+            
+            <form action="" class="barra-de-pesquisa">
+                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
+                <img src="./imagens/ampliacao.svg" alt="">
+            </form>
+            
+            <div>
+                <div class="area-de-acesso">
+                    <figure>
+                        <img src="imagens/avatar.svg" alt="user">
+                    </figure>
+                    <div>
+                        <input type="submit" id="entrar" value="Entrar">
+                        <a href="Dadospessoais.html">Cadastre-se</a>
+                    </div>
+                </div>
+                
+                <a href="#">
+                    <figure class="sacola">
+                        <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="#">Masculino</a></li>
+            <li><a href="#">Feminino</a></li>
+            <li><a href="#">Infantil</a></li>
+        </ol>
+    </nav>
+    
+    <main>
+        <div>
+            <div class="fotos-item">
+                <figure class="fotos-laterais">
+                    <img src="imagens/camisaroubo.png" alt="camisa flamengo">
+                    <img src="imagens/camisaroubo.png" alt="camisa flamengo">
+                    <img src="imagens/camisaroubo.png" alt="camisa flamengo">
+                    <img src="imagens/camisaroubo.png" alt="camisa flamengo">   
+                </figure>
+                <figure class="foto-principal">
+                    <img src="imagens/camisagrande.png" alt="camisa flamengo">
+                </figure>
+            </div>
+            <div class="informaçoes-compra-item">
+                <p class="titulo">Camisa Flamengo Home Masculina 2020</p>
+                <p class="status">Status - <span class="disponivel">Disponível</span></p>
+                
+                <p class="preco">R$ 219,99</p>
+                <p class="parcelas-preco">5x de R$ 43,98</p>
+                
+                <div class="tamanho">
+                    <p>Tamanho</p>
+                    <ol>
+                        <li><a href="#">PP</a></li>
+                        <li><a href="#">P</a></li>
+                        <li><a href="#">M</a></li>
+                        <li><a href="#">G</a></li>
+                        <li><a href="#">GG</a></li>
+                        <li><a href="#">EG</a></li>
+                        <li><a href="#">EEG</a></li>
+                    </ol>
+                </div>
+                
+                <div class="avaliacoes">
+                    <p>Avaliações</p>
+                    <div>
+                        <span class="nota">3.5</span>
+                        <div class="container-estrelas">
+                            <figure>
+                                <img src="imagens/estrela1.svg" alt="">
+                                <img src="imagens/estrela1.svg" alt="">
+                                <img src="imagens/estrela1.svg" alt="">
+                                <img src="imagens/estrela2.svg" alt="">
+                                <img src="imagens/estrela3.svg" alt="">
+                            </figure>
+                            <span class="qtd-avaliaçoes">5000 Avaliações</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container-comprar">
+                    <button id="comprar">Comprar</button>
+                    <span class="adicionar-dejeso" title="Adicionar a lista de desejos"></span>
+                </div>
+                <button class="adicionar-item-carrinho"><img src="imagens/sacola-de-compras.svg" alt=""> Adicionar ao carrinho</button>
+                <div class="consulta-prazo">
+                    <p>Consulte o prazo de entrega</p>
+                    <form action="">
+                        <input type="text" placeholder="Insira o CEP" name="cep" id="cep">
+                        <input type="button" value="Consultar">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="itens-relacionados">
+            <h2>Você também pode gostar</h2>
+            <div class="container-produtos">
+                <ul class="lista-produtos">
+                    <!--  -->
+                    <li>
+                        <div class="item">
+                            <div class="foto-item">
+                                <div>
+                                    <input type="button" value="">
+                                </div>
+                                <a href="#">
+                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                </a>
+                            </div>
+                            <a href="#">
+                                <div class="info-item">
+                                    <p class="nome-item">Camisa Adidas Flamengo</p>
+                                    <span class="preco">
+                                        <p class="preco-item">R$ 249,99</p>
+                                        <p class="preco-promocional-item">R$ 219,90</p>
+                                        <p class="parcelas">5x de R$ 43,98</p>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="tamanho-carrinho">
+                                <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div class="item">
+                            <div class="foto-item">
+                                <div>
+                                    <input type="button" value="">
+                                </div>
+                                <a href="#">
+                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                </a>
+                            </div>
+                            <a href="#">
+                                <div class="info-item">
+                                    <p class="nome-item">Camisa Adidas Flamengo</p>
+                                    <span class="preco">
+                                        <p class="preco-item">R$ 249,99</p>
+                                        <p class="preco-promocional-item">R$ 219,90</p>
+                                        <p class="parcelas">5x de R$ 43,98</p>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="tamanho-carrinho">
+                                <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div class="item">
+                            <div class="foto-item">
+                                <div>
+                                    <input type="button" value="">
+                                </div>
+                                <a href="#">
+                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                </a>
+                            </div>
+                            <a href="#">
+                                <div class="info-item">
+                                    <p class="nome-item">Camisa Adidas Flamengo</p>
+                                    <span class="preco">
+                                        <p class="preco-item">R$ 249,99</p>
+                                        <p class="preco-promocional-item">R$ 219,90</p>
+                                        <p class="parcelas">5x de R$ 43,98</p>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="tamanho-carrinho">
+                                <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div class="item">
+                            <div class="foto-item">
+                                <div>
+                                    <input type="button" value="">
+                                </div>
+                                <a href="#">
+                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                </a>
+                            </div>
+                            <a href="#">
+                                <div class="info-item">
+                                    <p class="nome-item">Camisa Adidas Flamengo</p>
+                                    <span class="preco">
+                                        <p class="preco-item">R$ 249,99</p>
+                                        <p class="preco-promocional-item">R$ 219,90</p>
+                                        <p class="parcelas">5x de R$ 43,98</p>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="tamanho-carrinho">
+                                <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="informacoes-produto">
+            <div>
+                <p><b>Descricão</b></p>
+                <p>Outro patamar de manto! Chegou a nova Camisa do Flamengo I 20/21 Torcedor Adidas. Inspirada no uniforme de 1987 e 1992, a nova camisa titular do Flamengo traz listras Rubro-Negras mais grossas e com trechos do hino do Mengão estampados. Tua glória é lutar! Garanta a sua Camisa I do Flamengo 2020 Adidas!</p>
+            </div>
+            <div class="nome">
+                <p><b>Nome:</b> Flamengo Home Masculina - 2020</p>
+            </div>
+            <div>
+                <p><b>Time:</b> Flamengo RJ</p>
+                <p><b>Clube:</b> Nacional</p>
+                <p><b>Indicada para:</b> Jogo</p>
+                <p><b>Gênero:</b> Masculino</p>
+            </div>
+            <div>
+                <p><b>Tipo:</b> Torcedor</p>
+                <p><b>Material:</b> Poliéster</p>
+                <p><b>Gola:</b> tradicional</p>
+                <p><b>Manga:</b> Manga curta</p>
+            </div>
+            <div>
+                <p><b>Escudo:</b> Bordado</p>
+                <p><b>Número:</b> Sem número</p>
+                <p><b>Origem:</b> Nacional</p>
+                <p><b>Marca:</b> Adidas</p>
+            </div>
+        </div>
+        
+        <div class="container-avaliacoes">
+            <div class="avaliacao">
+                <div>
+                    <p>Avaliação do produto</p>
+                    <p><span>97</span>% Recomendações</p>
+                </div>
+                <div>
+                    <span class="nota">3.5</span>
+                    <div class="container-estrelas">
+                        <figure>
+                            <img src="imagens/estrela1.svg" alt="">
+                            <img src="imagens/estrela1.svg" alt="">
+                            <img src="imagens/estrela1.svg" alt="">
+                            <img src="imagens/estrela2.svg" alt="">
+                            <img src="imagens/estrela3.svg" alt="">
+                        </figure>
+                        <span class="qtd-avaliaçoes">5000 Avaliações</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-comentario">
+                <figure class="container-estrelas">
+                    <img src="imagens/estrela1.svg" alt="">
+                    <img src="imagens/estrela1.svg" alt="">
+                    <img src="imagens/estrela1.svg" alt="">
+                    <img src="imagens/estrela2.svg" alt="">
+                    <img src="imagens/estrela3.svg" alt="">
+                </figure>
+                <p class="texto-comentario">Ótima camisa, recomendo 100%.</p>
+                <div>
+                    <p class="nome-comentario">Matheus Alberto</p>
+                    <span class="data-comentario">01 dez 2020</span>
+                </div> 
+                <p class="recomendacao-positiva">Recomendo este produto</p>
+            </div>
+            
+            <div class="container-comentario">
+                <figure class="container-estrelas">
+                    <img src="imagens/estrela1.svg" alt="">
+                    <img src="imagens/estrela1.svg" alt="">
+                    <img src="imagens/estrela1.svg" alt="">
+                    <img src="imagens/estrela2.svg" alt="">
+                    <img src="imagens/estrela3.svg" alt="">
+                </figure>
+                <p class="texto-comentario">Ótima camisa, recomendo 100%.</p>
+                <div>
+                    <p class="nome-comentario">Matheus Alberto</p>
+                    <span class="data-comentario">01 dez 2020</span>
+                </div> 
+                <p class="recomendacao-positiva">Recomendo este produto</p>
+            </div>
+            
+            <div class="todos-comentarios">
+                <button id="todos-comentarios">Todos os comentários</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <section class="vantagens">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="imagens/bags.svg" alt="">
+                        <figcaption>FRETE GRÁTIS PARA TODO O BRASIL</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/tag.svg" alt="">
+                        <figcaption>DESCONTO NA PRIMEIRA COMPRA</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/trophy.svg" alt="">
+                        <figcaption>MATERIAL DE EXCELÊNCIA</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/credit-card.svg" alt="">
+                        <figcaption>PARCELAMOS EM X VEZES</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/football-shirt.svg" alt="">
+                        <figcaption>PERSONALIZE COMO QUISER</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+        <section class="rodape">
+            <ol>
+                <li>
+                    <ol>
+                        <li class="destaque">Institucional</li>
+                        <li><a href="#">Nossos termos</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Quem somos</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li class="destaque">Ajuda</li>
+                        <li><a href="#">Política de ajuda</a></li>
+                        <li><a href="#">Portal de ajuda</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li class="destaque"><a href="./Pag_Ajuda.html">Contato</a></li>
+                        <li><a href="#">Atendimento</a></li>
+                        <li><a href="./Pag_Ajuda_Whatsapp.html">WhatsApp (88) 8888-8888</a></li>
+                        <li><a href="#">Televendas (88) 8888-8888</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="./Pag_Ajuda_Email.html">Enviar e-mail</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li class="destaque">Formas de Pagamento</li>
+                        <li>
+                            <ul class="formas-de-pagamento">
+                                <li><img src="imagens/boleto.svg" alt=""></li>
+                                <li><img src="imagens/visa.svg" alt=""></li>
+                                <li><img src="imagens/mastercard.svg" alt=""></li>
+                                <li><img src="imagens/elo.svg" alt=""></li>
+                                <li><img src="imagens/hipercard.svg" alt=""></li>
+                                <li><img src="imagens/paypal.svg" alt=""></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p class="destaque">Redes Sociais</p>
+                    <ol class="redes-sociais">
+                        <li><a href="#"><img src="imagens/logotipo-do-instagram.svg" alt=""></a></li>
+                        <li><a href="#"><img src="imagens/facebook.svg" alt=""></a></li>
+                        <li><a href="#"><img src="imagens/twitter.svg" alt=""></a></li>
+                    </ol>
+                </li>
+            </ol>
+            <p class="destaque">Copyright ©2020 FutShirt Todos direitos reservados</p>
+        </section>
+    </footer>
+</body>
+<script src="js/login.js"></script>
+<!-- <script src="./Glider.js-master/glider.js"></script>
+    <script src="js/config_glider.js"></script> -->
+    </html>

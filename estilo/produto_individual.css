@@ -1,0 +1,350 @@
+main > div:first-child{
+    display: flex;
+    padding: 0 3em;
+}
+div.fotos-item{
+    display: flex;
+}
+div.fotos-item img{
+    cursor: pointer;
+}
+div.fotos-item .fotos-laterais{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    margin-left: 10px;
+}
+div.fotos-item .fotos-laterais img{
+    margin: 9px 0;
+}
+div.fotos-item .foto-principal{
+    margin-left: 10px;
+}
+/*  */
+div.informaçoes-compra-item{
+    margin: 0 25px;
+}
+div.informaçoes-compra-item .titulo{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+div.informaçoes-compra-item .status{
+    font-weight: 700;
+}
+div.informaçoes-compra-item .status span{
+    color: green;
+}
+div.informaçoes-compra-item .preco{
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 25px;
+}
+div.informaçoes-compra-item .parcelas-preco{
+    font-size: 15px;
+    font-weight: 400;
+}
+div.informaçoes-compra-item .tamanho{
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+div.informaçoes-compra-item .tamanho p{
+    font-weight: 700;
+}
+div.informaçoes-compra-item .tamanho ol{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    width: 20em;
+}
+div.informaçoes-compra-item .tamanho li{
+    margin: 1em 5px;
+    box-sizing: content-box;
+}
+div.informaçoes-compra-item .tamanho a{
+    padding: 0.8em 1.2em;
+    box-sizing: content-box;
+    border: 2px solid #030F26;
+    color: #030F26;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.avaliacoes p{
+    font-weight: 700;
+    font-size: 18px;
+}
+.avaliacoes > div{
+    display: flex;
+    align-items: center;
+}
+.avaliacoes > div > span{
+    font-size: 45px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+.avaliacoes > div > div figure img{
+    width: 30px;
+}
+.container-comprar{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.container-comprar button, div.consulta-prazo input[type="button"]{
+    background-color: #334D01;
+    padding: 0.5em 5em;
+    border: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 3px;
+}
+.container-comprar span{
+    background-image: url("../imagens/heart.svg");
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.adicionar-item-carrinho{
+    border-radius: 3px;
+    border: none;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    padding: 0.4em 4em;
+    color: #fff;
+    font-size: 18px;
+    background-color: #030F26;
+}
+.adicionar-item-carrinho img{
+    margin-right: 7px;
+}
+/*  */
+div.consulta-prazo{
+    width: 22em;
+    margin-top: 2.5em;
+}
+div.consulta-prazo form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.consulta-prazo p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+div.consulta-prazo input[type="text"]{
+    padding: 4px 2px;
+    font-size: 20px;
+    text-align: center;
+}
+div.consulta-prazo input[type="button"]{
+    padding: 0.4em 1em;
+}
+/*  */
+.itens-relacionados{
+    margin-top: 50px;
+}
+.itens-relacionados h2{
+    color: #000;
+    width: 94%;
+    margin-left: 3%;
+    padding: 0 0 5px 0px;
+    border-bottom: 1px solid #000;
+    font-size: 25px;
+    font-weight: 500;
+}
+main div.container-produtos{
+    margin-top: 40px;
+}
+main div.container-produtos ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main div.item{
+    width: 288px;
+    padding: 4px;
+    position: relative;
+    margin-bottom: 30px;
+    transition: all .8s;
+}
+main div.foto-item{
+    position: relative;
+    width: 100%;
+}
+main div.foto-item div{
+    z-index: 2222;
+    position: absolute;
+    right: 0;
+}
+main div.foto-item img{
+    width: 100%;
+    z-index: -1;
+}
+main div.foto-item div input{
+    width: 30px;
+    height: 30px;
+    right: 0;
+    margin-right: 7px;
+    margin-top: 7px;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    background-image: url("../imagens/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+main div.foto-item div input:hover{
+    background-image: url("../imagens/heart_preenchido.svg");
+}
+div.info-item{
+    color: #000;
+}
+div.info-item .nome-item{
+    font-size: 20px;
+}
+div.info-item .preco .preco-item{
+    color: #4b4a4a;
+    text-decoration: line-through;
+    margin: 3px 0;
+}
+div.info-item .preco .preco-promocional-item{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 3px 0;
+}
+div.info-item .preco .parcela{
+    font-weight: 200;
+    margin: 3px 0;
+}
+.itens-relacionados .tamanho-carrinho{
+    visibility: hidden;
+}
+main div.item:hover{
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.25);
+}
+main div.item:hover .tamanho-carrinho{
+    visibility: visible;
+}
+.itens-relacionados select{
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 5px 0;
+}
+.itens-relacionados .tamanho-carrinho button{
+    width: 100%;
+    background-color: #888888;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.itens-relacionados .tamanho-carrinho button img{
+    width: 30px;
+}
+/*  */
+.informacoes-produto{
+    padding: 0 3em;
+    font-size: 20px;
+    text-align: justify;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.informacoes-produto div.nome{
+    display: block;
+    width: 100%;
+}
+.informacoes-produto p{
+    margin: 5px 0;
+}
+/*  */
+.container-avaliacoes{
+    padding: 3em 3.5em 1em;
+    margin-left: 5px;
+    position: relative;
+}
+.container-avaliacoes > div{
+    padding-bottom: 1em;
+    border-bottom: 2px solid #030F26;
+}
+.container-avaliacoes > div:last-child{
+    border: none;
+    padding-bottom: 0;
+}
+.container-avaliacoes .avaliacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container-avaliacoes .avaliacao div p{
+    font-size: 26px;
+    font-weight: 500;
+}
+.container-avaliacoes .avaliacao div p span{
+    font-size: 50px;   
+}
+.container-avaliacoes .avaliacao > div:nth-child(2){
+    margin-right: 10em;
+    display: flex;
+    align-items: center;
+}
+.container-avaliacoes .avaliacao > div:nth-child(2) > span{
+    font-size: 60px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.container-avaliacoes .container-comentario{
+    margin: 40px 0;
+}
+.container-avaliacoes .container-comentario .container-estrelas{
+    margin: 0 0 5px 0;
+}
+.container-avaliacoes .container-comentario .container-estrelas img{
+    width: 30px;
+}
+.container-avaliacoes .container-comentario .texto-comentario{
+    font-size: 25px;
+    font-weight: 300;
+}
+.container-avaliacoes .container-comentario > div{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.container-avaliacoes .container-comentario .nome-comentario{
+    font-weight: 700;
+    font-size: 22px;
+    margin-right: 10px;
+}
+.container-avaliacoes .container-comentario .recomendacao-positiva{
+    font-weight: 700;
+    color: green;
+}
+.container-avaliacoes div.todos-comentarios{
+    height: 4em;
+}   
+.container-avaliacoes #todos-comentarios{
+    border: none;
+    background-color: #030F26;
+    padding: 0.6em 1.5em;
+    font-size: 19px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 55px;
+}

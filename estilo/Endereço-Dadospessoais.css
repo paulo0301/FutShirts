@@ -20,7 +20,8 @@ main div.cabecalho{
 }
 main .breadcrumbs{
     display: inline-block;
-    overflow: hidden;
+    overflow: hidde;
+    margin: 15px 0;
 }
 main .breadcrumbs a{
     color: #000;

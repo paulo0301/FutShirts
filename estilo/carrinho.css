@@ -1,0 +1,125 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p#titulo{
+    font-size: 25px;
+    color: white;
+    background-color: #030F26;
+    padding-left: 4em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    font-weight: none;
+}
+
+div#container{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+    align-content: stretch;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid grey;
+}
+
+figure{
+    padding-left: 2em;
+}
+
+figure img{
+    max-width: 225px;
+}
+
+div#interna{
+    padding-right: 40em;
+}
+
+div#interna p#name{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+div#interna p#desc{
+    padding-top: 1em;
+    font-size: 0.9em;
+}
+
+div#interna img{
+    margin-top: 8em;
+    max-width: 30px;
+}
+
+div#right{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+    align-content: stretch;
+    
+    padding-right: 3em;
+}
+
+div#right img{
+    max-width: 1em;
+}
+
+div#right div#quant{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: stretch;
+}
+
+div#right p#valor{
+    padding-top: 8em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+div#tt{
+    padding-right: 3em;
+    padding-top: 2em;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: stretch;
+}
+
+div#tt p#txt{
+    font-size: 1.2em;
+}
+
+p#valor-total{
+    padding-left: 1em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+p#parcela{
+    text-align: right;
+    font-size: 1em;
+    padding-right: 3em;
+}
+
+button#confirmar{
+    width: 12em;
+    height: 3em;
+    color: white;
+    background-color: #334D01;
+    border: none;
+    font-size: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 70em;
+    border-radius: 5px;
+}

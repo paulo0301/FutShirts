@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/header-footer.css">
+    <link rel="stylesheet" href="estilo/Paginasadm.css">
+    <title>Futshirt</title>
+</head>
+<body>
+    <div class="efeito">
+        <div class="login">
+            <input type="submit" id="fechar" value="x"/>
+            <form>
+                <div class="container">
+                    <h2>Já sou cliente</h2>
+                    <div>
+                        <label for="login">E-mail</label>
+                        <input type="email" id="login" required/>
+                    </div>
+                    
+                    <div>
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" required/>
+                    </div>
+                    
+                    <a href="">Esqueci minha senha</a>
+                </div>
+                <div class="container-entrar-cadastre-se">
+                    <input type="submit" id="entrar_login" value="Entrar">
+                    <a href="cadastro.html">Cadastre-se</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <header>
+        <div class="link-atendimento">
+            <a href="Pag_Ajuda.html">
+                <img src="imagens/question-mark-inside-a-circle.svg" alt="">
+                <p>Atendimento</p>
+            </a>
+        </div>
+        <div class="header-principal">
+        <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
+        
+        <form action="" class="barra-de-pesquisa">
+            <input type="text" name="buscar" id="buscar" placeholder="Buscar">
+            <img src="./imagens/ampliacao.svg" alt="">
+        </form>
+        
+        <div>
+            <div class="area-de-acesso">
+                <figure>
+                    <img src="imagens/avatar.svg" alt="user">
+                </figure>
+                <div>
+                    <input type="submit" id="entrar" value="Entrar">
+                    <a href="#">Cadastre-se</a>
+                </div>
+            </div>
+            
+            <a href="#">
+                <figure class="sacola">
+                    <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
+                </figure>
+            </a>
+        </div>
+        </div>
+    </header>
+    <nav>
+        <ol>
+            <li><a href="#">Masculino</a></li>
+            <li><a href="#">Feminino</a></li>
+            <li><a href="#">Infantil</a></li>
+        </ol>
+    </nav>
+    
+    <main>
+        <h2>Gerenciar produtos</h2>
+        <div class="Conteudo">
+                <nav>
+                    <ol>
+                        <li><a href="#" class="active"><img src="imagens/gerenciaprod.svg"  alt="">Geren. Produtos</a></li>
+                        <li><a href="#"><img src="imagens/gerenciapedi.svg" alt="">Geren. Pedidos</a></li>
+                    </ol>
+                </nav>
+                <section class="container_conteudo">
+                    <div class="titulo_produto">
+                        <h3>Produtos</h3>
+                        <figure>
+                            <img src="imagens/titleprod.svg">
+                        </figure>
+                    </div>
+                    <div class="pesquisa">
+                        <form action="" id="pesquisacamisa">
+                            <input type="text" id="barrapesquisa" placeholder="Buscar">
+                        </form>
+                    </div>
+               
+                    <div class="camisa_imagens">
+                        
+                            <div class="camisa">
+                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                            </div>
+                            <div class="camisa">
+                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                            </div>
+                            <div class="camisa">
+                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                            </div>
+                            <div class="camisa">
+                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>$ 219,90</b></p>
+                            </div>
+                            <div class="camisa">
+                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                            </div>
+                            <div class="camisa">
+                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                            </div>
+                            <div class="camisa">
+                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                            </div>
+                            <div class="camisa">
+                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                            </div>
+                    </div> 
+
+                    <section class="adicionarprod">
+                        <div class="titulo2">
+                            <h3>Adicionar Produto</h3>
+                            <figure>
+                                <img src="imagens/titulo2.svg">
+                            </figure>
+                        </div>  
+        
+                        <div class="formadicionar">
+                            <form action="" class="adicionar">
+                                <div>
+                                    <label for="name">Nome</label>
+                                    <input type="text" id="name" placeholder="Nome da camisa" autocomplete="off" >
+                                </div>
+                                
+                                <div>
+                                    <label>Descrição</label>
+                                    <input type="text" placeholder="Descrição da camisa" autocomplete="off" >
+                                </div>
+                                <div class="selectseparado">
+
+                                    <label>Categoria</label>
+                                    <select id="categoria">
+                                        <option value="">Categorias:</option>
+                                        <option value="">Masculina</option>
+                                        <option value="">Feminina</option>
+                                        <option value="">Infantil</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label>Time</label>
+                                    <input type="text" placeholder="Nome do time" autocomplete="off">
+                                </div>
+                                <div class="formjunto">
+                                    <div>
+                                        <label>Clube</label>
+                                        <select id="clube" >
+                                            <option value="">Relevância</option>
+                                            <option value="">Internacional</option>
+                                            <option value="">Nacional</option>
+                                            <option value="">Regional</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="seljunto1">
+                                        <label>Indicada para</label>
+                                        <select id="Indicação">
+                                            <option value="">Recomendado para</option>
+                                            <option value="" >Jogo</option>
+                                            <option value="">Corrida</option>
+                                            <option value="">Lazer</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="formjunto">
+                                    <div>
+                                        <label>Gênero</label>
+                                        <select id="genero">
+                                            <option value="">Escolha um gênero</option>
+                                            <option value="">Masculino</option>
+                                            <option value="">Feminino</option>
+                                            <option value="">Unisex</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="seljunto2">
+                                        <label>Tipo</label>
+                                        <select id="Indicação" >
+                                            <option value="">Selecione um tipo</option>
+                                            <option value="">Trocedor</option>
+                                            <option value="">Atleta</option>
+                                        </select>
+                                    </div> 
+
+                                    </div>
+                                <div class="formjunto">
+                                    <div>
+                                        <label>Gola</label>
+                                        <select id="gola" >
+                                            <option value="">Tamanho da gola</option>
+                                            <option value="">Tradicional</option>
+                                            <option value="">Longa</option>
+                                            <option value="">Media</option>
+                                            <option value="">Curta</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="seljunto3">
+                                        <label>Manga</label>
+                                        <select id="Indicação" >
+                                            <option value="">Tamanho da manga</option>
+                                            <option value="">Curta</option>
+                                            <option value="">Media</option>
+                                            <option value="">Longa</option>
+                                        </select>
+                                    </div>    
+                                </div>
+                               <div>
+                                    <label>Material</label>
+                                    <input type="text" placeholder="Material da camisa" autocomplete="off">
+                                </div>
+                                <div>
+                                    <label>Escudo</label>
+                                    <input type="text" placeholder="Estilo do escudo" autocomplete="off">
+                                </div>
+                                <div>
+                                    <label>Numero</label>
+                                    <input type="text" placeholder="Número da camisa" autocomplete="off" maxlength="4">
+                                </div>
+                                <div>
+                                    <label>Origem</label>
+                                    <input type="text" placeholder="Origem da camisa" autocomplete="off" >
+                                </div>
+                                <div>
+                                    <label>Marca</label>
+                                    <input type="text" placeholder="Marca da camisa" autocomplete="off">
+                                </div>
+                                <div>
+                                    <label>Quantidades de itens</label>
+                                    <input type="text" placeholder="Camisas disponiveis" autocomplete="off" >
+                                </div>
+                                <div class="formjunto">
+                                    <div>
+                                        <label>Preço</label>
+                                        <input type="text" placeholder="Preço da camisa" autocomplete="off" >
+                                    </div> 
+
+                                    <div class="seljunto4">
+                                        <label>Nº de parcelas</label></br>
+                                        <select id="parcelas">
+                                            <option value="">Nº de parcelas</option>
+                                            <option value="">1X sem juros</option>
+                                            <option value="">2X sem juros</option>
+                                            <option value="">3X sem juros</option>
+                                            <option value="">4X sem juros</option>
+                                            <option value="">5X sem juros</option>
+                                            <option value="">6X com juros</option>
+                                            <option value="">7X com juros</option>
+                                            <option value="">8X com juros</option>
+                                            <option value="">9X com juros</option>
+                                            <option value="">10 com juros</option>
+                                        </select>
+                                    </div>
+                            </form>
+                           
+                        </div>
+                    </section>
+                    <div class="tamanho">
+                        <p class="ptamanho">Tamanho disponiveis</p>
+                        <ul class="tamanho_escolha">
+                            <li id="tamanho1">PP</li>
+                            <li class="tamanho2">P</li>
+                            <li class="tamanho3">M</li>
+                            <li class="tamanho4">G</li>
+                            <li class="tamanho5">GG</li>
+                            <li class="tamanho6">EG</li>
+                            <li class="tamanho7">EGG</li>
+                        </ul>
+                        </div>
+                        <div class="button_selecionar">
+                            <form class="button_selecionar">
+                                <div>
+                                    <label>Selecione o arquivo</label>
+                                    <input type="file" id="selecioneimagem">
+                                <div>
+                                    <input type="submit" value="Adicionar produto">
+                            </form>
+                        </div>
+                </section>
+               
+                    </div>
+    </main>
+    
+    <footer>
+        <section class="vantagens">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="imagens/bags.svg" alt="">
+                        <figcaption>FRETE GRÁTIS PARA TODO O BRASIL</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/tag.svg" alt="">
+                        <figcaption>DESCONTO NA PRIMEIRA COMPRA</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/trophy.svg" alt="">
+                        <figcaption>MATERIAL DE EXCELÊNCIA</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/credit-card.svg" alt="">
+                        <figcaption>PARCELAMOS EM X VEZES</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/football-shirt.svg" alt="">
+                        <figcaption>PERSONALIZE COMO QUISER</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+        <section class="rodape">
+            <ol>
+                <li>
+                    <ol>
+                        <li class="destaque">Institucional</li>
+                        <li><a href="#">Nossos termos</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Quem somos</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li class="destaque">Ajuda</li>
+                        <li><a href="#">Política de ajuda</a></li>
+                        <li><a href="#">Portal de ajuda</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li class="destaque"><a href="./Pag_Ajuda.html">Contato</a></li>
+                        <li><a href="#">Atendimento</a></li>
+                        <li><a href="./Pag_Ajuda_Whatsapp.html">WhatsApp (88) 8888-8888</a></li>
+                        <li><a href="#">Televendas (88) 8888-8888</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="./Pag_Ajuda_Email.html">Enviar e-mail</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li class="destaque">Formas de Pagamento</li>
+                        <li>
+                            <ul class="formas-de-pagamento">
+                                <li><img src="imagens/boleto.svg" alt=""></li>
+                                <li><img src="imagens/visa.svg" alt=""></li>
+                                <li><img src="imagens/mastercard.svg" alt=""></li>
+                                <li><img src="imagens/elo.svg" alt=""></li>
+                                <li><img src="imagens/hipercard.svg" alt=""></li>
+                                <li><img src="imagens/paypal.svg" alt=""></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p class="destaque">Redes Sociais</p>
+                    <ol class="redes-sociais">
+                        <li><a href="#"><img src="imagens/logotipo-do-instagram.svg" alt=""></a></li>
+                        <li><a href="#"><img src="imagens/facebook.svg" alt=""></a></li>
+                        <li><a href="#"><img src="imagens/twitter.svg" alt=""></a></li>
+                    </ol>
+                </li>
+            </ol>
+            <p class="destaque">Copyright ©2020 FutShirt Todos direitos reservados</p>
+        </section>
+    </footer>
+</body>
+<script src="js/login.js"></script>
+</html>

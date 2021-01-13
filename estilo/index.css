@@ -7,13 +7,14 @@ main{
 }
 main .banner img{
     width: 100%;
+    height: 80%;
     vertical-align: middle;
 }
-main .seta{
-    width: 40px;
+/* main .seta{
+    width: 20px;
     cursor: pointer;
-}
-main .container-carrosel{
+} */
+/* main .container-carrosel{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,13 +27,31 @@ main .carrosel{
     width: 100%;
     border-bottom: 2px solid #000;
 }
-/* -------------------------------------------------------- */
+ */
+main .carrosel img{
+    width: 50px;
+}
+    /* -------------------------------------------------------- */
 section.container-campeonatos{
     background-image: linear-gradient(#fff 50%, #030F26 50%);
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 3em 0;
+}
+section.container-campeonatos img{
+    width: 100%;
+}
+section.container-campeonatos a{
+    background-color: red;
+    width: 17em;
+    border-radius: 40px;
+    transition: all 1s; 
+}
+section.container-campeonatos a:hover {
+    width: 18em;
+    background-color: blue;
+    transition: all 1s;
 }
 /* --------------------------------------------------------- */
 section.mais-populares{    
@@ -44,7 +63,8 @@ section.mais-populares h2{
     width: 100%;
     padding: 0 0 5px 0;
     border-bottom: 1px solid #fff;
-    font-size: 27px;
+    font-size: 25px;
+    font-weight: 300;
 }
 main div.container-produtos{
     margin-top: 40px;
@@ -150,6 +170,11 @@ section.banner-2-elite{
     align-items: center;
     justify-content: space-around;
     padding: 0em 0 4em;
+    text-align: center;
+}
+
+section.banner-2-elite img{
+    width: 75%;
 }
 /* ------------------------------------------------------ */
 section.banner-regiao{
@@ -158,4 +183,9 @@ section.banner-regiao{
     align-items: center;
     justify-content: space-around;
     padding: 4em 0;
+    text-align: center;
+}
+
+section.banner-regiao img{
+    width: 80%;
 }

@@ -19,6 +19,11 @@ conf.onclick = function(){
         alert("As senhas não conferem!");
     }
 }
+
+var date = document.getElementById("nasc"+"");
+var validdate = date.substring(4,6);
+
+if(vali)
 $(document).ready(function(){
     carregar_json('Estado');
     function carregar_json(id, cidade_id){

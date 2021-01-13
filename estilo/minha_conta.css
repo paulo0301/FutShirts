@@ -1,0 +1,261 @@
+main > div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+/***************************** MENU DO LADO ESQUERDO *********************/
+main h2{
+    background-color: #030F26;
+    color: #fff;
+    width: 100%;   
+}
+main nav{
+    background-image: linear-gradient(to right,#030F26 60px, #fff 20%);
+    min-width: 200px;
+    border-right: 1px solid #030F26;
+    padding: 120px 0 0;
+}
+main nav a{
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+main nav a img{
+    margin-right: 4px;
+    width: 30px;
+    padding: 0 15px;
+    box-sizing: content-box;
+}
+main nav a:hover, main nav a.active{
+    background-color: #030F26;
+    color: #fff;
+}
+/************************** SECTION MEUS DADOS *****************************/
+main section.container-meus-dados{
+    width: 100%;
+}
+main section h3{
+    background-color: #77A1D9;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    font-size: 23px;
+    height: 50px;
+    padding-left: 20px;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+main h3 img{
+    width: 15px;
+}
+main section.container-meus-dados .dados{
+    display: flex;
+    width: 85%;
+    border-radius: 8px;
+    margin: 2em auto;
+    justify-content: center;
+    border: 1px solid #030F26;
+}
+main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
+    padding: 3em 5em;
+} 
+main section.container-meus-dados .dados .dados-acesso form:nth-child(3){
+    margin-top: 50px;
+}
+main section.container-meus-dados .dados div div, main section.container-enderecos div{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+main .dados h4{
+    font-size: 900;
+    font-size: 22px;
+}
+main .dados input[type="text"], main .dados input[type="email"], main .dados input[type="password"], main section.container-enderecos input[type="text"]{
+    width: 22em;
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #030F26
+}
+main .dados label, main section.container-enderecos label{
+    font-size: 19px;
+    font-weight: 500;
+}
+main section.container-meus-dados .dados div div .container-sexo{
+    flex-direction: row;
+    margin: 0;
+}
+main section.container-meus-dados .dados div div .container-sexo label{
+    margin: 0 10px;
+}
+main section.container-meus-dados input[type="submit"], main section.container-enderecos input[type="submit"]{
+    padding: 10px;
+    background-color: #334D01;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 400;
+    float: right;
+    cursor: pointer;
+}
+
+/*********************** SECTION ENDERECOS *************************/
+main section.container-enderecos{
+    width: 100%;
+}
+main section.container-enderecos form{
+    width: 50%;
+    padding-left: 80px;
+}
+main section.container-enderecos input[type="submit"]{
+    margin-right: 175px;
+    margin-top: 10px;
+}
+main section.container-enderecos form.panel input[type="submit"]{
+    margin-bottom: 20px;
+}
+main section h3.accordion{
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+main section.container-enderecos form.panel{
+    display: none;
+}
+
+/************************* SECTION MEUS PEDIDOS **********************/
+main section.container-meus-pedidos{
+    width: 100%;
+}
+main section.container-meus-pedidos .container-pedido, main section.container-meus-favoritos .container-favorito{
+    display: flex;
+    margin: 50px 0 20px 150px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao, main section.container-meus-favoritos .container-favorito .container-descricao{
+    margin-left: 20px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao p, main section.container-meus-favoritos .container-favorito .container-descricao p{
+    margin-bottom: 30px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .titulo, main section.container-meus-favoritos .container-favorito .container-descricao .titulo{
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .data-de-compra, main section.container-meus-favoritos .container-favorito .container-descricao .data-de-compra{
+    font-weight: 500;
+    font-size: 20px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .status, main section.container-meus-favoritos .container-favorito .container-descricao .status{
+    font-size: 20px;
+    font-weight: 400;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .status .recebido, main section.container-meus-favoritos .container-favorito .container-descricao .status .recebido{
+    color: green;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .status .nao-recebido, main section.container-meus-favoritos .container-favorito .container-descricao .status .nao-recebido{
+    color: red;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .preco, main section.container-meus-favoritos .container-favorito .container-descricao .preco{
+    font-weight: bold;
+    font-size: 23px;
+}
+
+/************************* SECTION MEUS FAVORITOS **********************/
+main section.container-meus-favoritos{
+    width: 100%;
+}
+main section.container-meus-favoritos button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-top: 37px;
+    cursor: pointer;
+}
+main section.container-meus-favoritos .lixeira{
+    width: 40px;
+}
+
+/************************* SECTION MEUS CARTOES **********************/
+main section.container-meus-cartoes{
+    width: 100%;
+}
+main section.container-meus-cartoes .cartoes-cadastrados{
+    width: 80%;
+    margin: 2em auto;
+    border: 2px solid #030F26;
+    border-radius: 5px;
+    padding: 1em 2em;
+}
+.cartoes-cadastrados .cartao-cadastrado{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #030F26;
+}
+.cartoes-cadastrados .cartao-cadastrado > div{
+    display: flex;
+    align-items: center;
+}
+.cartoes-cadastrados .cartao-cadastrado .bandeira{
+    margin-right: 10px;
+}
+.cartoes-cadastrados .cartao-cadastrado .bandeira img{
+    width: 100px;
+    vertical-align: middle;
+}
+.cartao-cadastrado .lixeira-editar button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.cartao-cadastrado .lixeira-editar img{
+    width: 35px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-1{
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.container-meus-cartoes form{
+    width: 80%;
+    margin: 0 auto;
+    display: none;
+}
+.container-meus-cartoes form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.container-meus-cartoes form div label{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.container-meus-cartoes form div input{
+    width: 50%;
+    padding: 2px 3px;
+    font-size: 17px;
+    border: none;
+    border-bottom: 1px solid #030F26;
+    outline: none;
+}
+.container-meus-cartoes form input[type="submit"]{
+    padding: 8px 20px;
+    font-weight: 600;
+    background-color: #334D01;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

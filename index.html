@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Glider.js-master/glider.css">
     <link rel="stylesheet" href="estilo/header-footer.css">
     <link rel="stylesheet" href="estilo/index.css">
     <title>Futshirt</title>
@@ -29,7 +30,7 @@
                 </div>
                 <div class="container-entrar-cadastre-se">
                     <input type="submit" id="entrar_login" value="Entrar">
-                    <a href="cadastro.html">Cadastre-se</a>
+                    <a href="Dadospessoais.html">Cadastre-se</a>
                 </div>
             </form>
         </div>
@@ -56,7 +57,7 @@
                     </figure>
                     <div>
                         <input type="submit" id="entrar" value="Entrar">
-                        <a href="#">Cadastre-se</a>
+                        <a href="Dadospessoais.html">Cadastre-se</a>
                     </div>
                 </div>
                 
@@ -77,53 +78,41 @@
     </nav>
     
     <main>
-<<<<<<< HEAD
-        
-        <div class="banner">
-            <a href="#"><img src="imagens/banner.png" alt=""></a>
-        </div>
-        
-        <h2><a href="#">Lançamentos</a></h2>
-        
-        <div class="container-produtos-destaques">
-            <input type="image" src="imagens/anterior.svg" class="seta-anterior" alt="seta-anterior">
-            <ol class="produtos-destaques">
-                <li><a href="#"><img src="imagens/camisa1.png" alt=""></a></li>
-                <li><a href="#"><img src="imagens/camisa2.png" alt=""></a></li>
-                <li><a href="#"><img src="imagens/camisa3.png" alt=""></a></li>
-            </ol>
-            <input type="image" src="imagens/proximo.svg" class="seta-proximo" alt="seta-proximo">
-        </div>
-        
-        <div class="banner">
-            <a href="#">
-                <img src="imagens/banner2.png" alt="">
-            </a>
-        </div>
-=======
         <section class="banner">
             <a href="#"><img src="imagens/banner2.png" alt=""></a>
         </section>
         <section>
-            <div class="container-carrosel">
-                <img src="./imagens/anterior.svg" class="seta prev" alt="seta anterior">
-                <div class="carrosel">
-                    <a href=""><img src="imagens/flamengo.png" alt=""></a>
-                    <a href=""><img src="imagens/corinthians.png" alt=""></a>
-                    <a href=""><img src="imagens/flamengo.png" alt=""></a>
-                    <a href=""><img src="imagens/corinthians.png" alt=""></a>
-                    <a href=""><img src="imagens/flamengo.png" alt=""></a>
-                    <a href=""><img src="imagens/corinthians.png" alt=""></a>
-                    <a href=""><img src="imagens/flamengo.png" alt=""></a>
-                    <a href=""><img src="imagens/corinthians.png" alt=""></a>
-                    <a href=""><img src="imagens/flamengo.png" alt=""></a>
-                    <a href=""><img src="imagens/corinthians.png" alt=""></a>
-                    <a href=""><img src="imagens/flamengo.png" alt=""></a>
+            <div class="glider-contain">
+                <div class="glider">
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
+                    <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
                 </div>
-                <img src="./imagens/proximo.svg" class="seta next" alt="seta próximo">
+                
+                <button aria-label="Previous" class="glider-prev">«</button>
+                <button aria-label="Next" class="glider-next">»</button>
+                <div role="tablist" class="dots"></div>
             </div>
         </section>
->>>>>>> 0197b8b3ae0d375b9ed2748fee282265f58708b5
         
         <section class="container-campeonatos">
             <a href="#"><img src="imagens/brasileirao.png" alt=""></a>
@@ -137,39 +126,6 @@
             
             <div class="container-produtos">
                 <ul class="lista-produtos">
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
-                                </div>
-                                <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
-                                </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
-                                </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
-                            </div>
-                        </div>
-                    </li>
                     <!--  -->
                     <li>
                         <div class="item">
@@ -309,12 +265,12 @@
                 </ul>
             </div>
         </section>
-
+        
         <section class="banner-2-elite">
             <a href="#"><img src="./imagens/banner_elite.png" alt=""></a>
             <a href="#"><img src="./imagens/banner_elite.png" alt=""></a>
         </section>
-
+        
         <section class="banner-regiao">
             <a href="#"><img src="./imagens/selecao.png" alt=""></a>
             <a href="#"><img src="./imagens/internacional.png" alt=""></a>
@@ -413,4 +369,6 @@
     </footer>
 </body>
 <script src="js/login.js"></script>
+<script src="./Glider.js-master/glider.js"></script>
+<script src="js/config_glider.js"></script>
 </html>

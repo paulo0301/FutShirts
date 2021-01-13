@@ -47,7 +47,7 @@
             <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
             
             <form action="" class="barra-de-pesquisa">
-                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
+                <input type="text" name="buscar" id="buscar" placeholder="Buscar" value="Flamengo">
                 <img src="./imagens/ampliacao.svg" alt="">
             </form>
             
@@ -79,1663 +79,1724 @@
     </nav>
     
     <main>
-        
-        <section class="lista-filtros">
-            <div class="container-filtros">
-                <input type="checkbox" id="categorias">
-                <label for="categorias">Categorias</label>
-
-                <div>
-                    <form action="">
-                        <label for="camisas-clássicas"><input type="checkbox" name="categorias" id="camisas-clássicas">Camisas clássicas</label>
-                        <label for="clubes-brasileiros"><input type="checkbox" name="categorias" id="clubes-brasileiros">Clubes brasileiros</label>
-                        <label for="clubes-regionais"><input type="checkbox" name="categorias" id="clubes-regionais">Clubes regionais</label>
-                        <label for="casual"><input type="checkbox" name="categorias" id="casual">Casual</label>
-                        <label for="camisas-personalizadas"><input type="checkbox" name="categorias" id="camisas-personalizadas">Camisas personalizadas</label>
-                        <label for="clubes-internacionais"><input type="checkbox" name="categorias" id="clubes-internacionais">Clubes internacionais</label>
-                    </form>
+        <div class="barra-informacoes-pesquisa">
+            <span class="texto-pesquisado">Flamengo</span>
+            <span class="itens-disponiveis-pesquisado">160 produto(s) encontrado(s)</span>
+            <div>
+                <label for="requisito-ordenacao">Ordenar por</label>
+                <select name="requisitos-ordenacao" id="requisitos-ordenacao">
+                    <option value="Relevância">Relevância</option>
+                    <option value="mais-populares">Mais populares</option>
+                    <option value="menor-preco">Menor preço</option>
+                    <option value="maior-preco">Maior preço</option>
+                </select>
+            </div>
+        </div>
+        <div class="filtros-resultado">
+            <section class="lista-filtros">
+                <div class="container-filtro">
+                    <input type="checkbox" id="categorias" checked>
+                    <label for="categorias">Categorias</label>
+                    
+                    <div>
+                        <form action="">
+                            <label for="camisas-clássicas"><input type="checkbox" name="categorias" id="camisas-clássicas">Camisas clássicas</label>
+                            <label for="clubes-brasileiros"><input type="checkbox" name="categorias" id="clubes-brasileiros">Clubes brasileiros</label>
+                            <label for="clubes-regionais"><input type="checkbox" name="categorias" id="clubes-regionais">Clubes regionais</label>
+                            <label for="casual"><input type="checkbox" name="categorias" id="casual">Casual</label>
+                            <label for="camisas-personalizadas"><input type="checkbox" name="categorias" id="camisas-personalizadas">Camisas personalizadas</label>
+                            <label for="clubes-internacionais"><input type="checkbox" name="categorias" id="clubes-internacionais">Clubes internacionais</label>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="container-resultado-pesquisa">
-            <div class="container-produtos">
-                <ul class="lista-produtos">
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                <!--  -->
+                <div class="container-filtro">
+                    <input type="checkbox" id="tamanho" checked>
+                    <label for="tamanho">Tamanho</label>
+                    
+                    <div>
+                        <ol>
+                            <li><a href="#">PP</a></li>
+                            <li><a href="#">P</a></li>
+                            <li><a href="#">M</a></li>
+                            <li><a href="#">G</a></li>
+                            <li><a href="#">GG</a></li>
+                            <li><a href="#">EG</a></li>
+                            <li><a href="#">EEG</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="container-filtro">
+                    <input type="checkbox" id="marcas" checked>
+                    <label for="marcas">Marcas</label>
+                    
+                    <div>
+                        <form action="">
+                            <label for="adidas"><input type="checkbox" name="marcas" id="adidas">Adidas</label>
+                            <label for="nike"><input type="checkbox" name="marcas" id="nike">Nike</label>
+                            <label for="puma"><input type="checkbox" name="marcas" id="puma">Puma</label>
+                            <label for="umbro"><input type="checkbox" name="marcas" id="umbro">Umbro</label>
+                            <label for="new-era"><input type="checkbox" name="marcas" id="new-era">New Era</label>
+                            <label for="all-mix"><input type="checkbox" name="marcas" id="all-mix">All Mix</label>
+                        </form>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="container-filtro">
+                    <input type="checkbox" id="idade" checked>
+                    <label for="idade">Idade</label>
+                    
+                    <div>
+                        <form action="">
+                            <label for="adulto"><input type="checkbox" name="categorias" id="adulto">Adulto</label>
+                            <label for="infantil"><input type="checkbox" name="categorias" id="infantil">Infantil</label>
+                        </form>
+                    </div>
+                </div>
+                <!--  -->
+                
+            </section>
+            
+            <section class="container-resultado-pesquisa">
+                <div class="container-produtos">
+                    <ul class="lista-produtos">
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="item">
-                            <div class="foto-item">
-                                <div>
-                                    <input type="button" value="">
+                        </li>
+                        <!--  -->
+                        <li>
+                            <div class="item">
+                                <div class="foto-item">
+                                    <div>
+                                        <input type="button" value="">
+                                    </div>
+                                    <a href="#">
+                                        <img src="./imagens/camisa_flamengo.png" alt="">
+                                    </a>
                                 </div>
                                 <a href="#">
-                                    <img src="./imagens/camisa_flamengo.png" alt="">
+                                    <div class="info-item">
+                                        <p class="nome-item">Camisa Adidas Flamengo</p>
+                                        <span class="preco">
+                                            <p class="preco-item">R$ 249,99</p>
+                                            <p class="preco-promocional-item">R$ 219,90</p>
+                                            <p class="parcelas">5x de R$ 43,98</p>
+                                        </span>
+                                    </div>
                                 </a>
-                            </div>
-                            <a href="#">
-                                <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                <div class="tamanho-carrinho">
+                                    <select name="tamanho" id="tamanho">
+                                        <option value="0">Selecione o tamanho</option>
+                                        <option value="PP">PP</option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">G</option>
+                                    </select>
+                                    <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                                 </div>
-                            </a>
-                            <div class="tamanho-carrinho">
-                                <select name="tamanho" id="tamanho">
-                                    <option value="0">Selecione o tamanho</option>
-                                    <option value="PP">PP</option>
-                                    <option value="P">P</option>
-                                    <option value="M">M</option>
-                                    <option value="G">G</option>
-                                    <option value="GG">G</option>
-                                </select>
-                                <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
     
     <footer>

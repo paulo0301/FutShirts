@@ -123,3 +123,13 @@ button#confirmar{
     margin-left: 70em;
     border-radius: 5px;
 }
+
+button#confirmar:hover{
+    background-color: #1a2702;
+    cursor: pointer;
+}
+
+button#confirmar a{
+    color: white;
+    text-decoration: none;
+}

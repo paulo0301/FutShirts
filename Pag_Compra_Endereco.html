@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg" href="imagens/logo.svg" />
         <link rel="stylesheet" href="estilo/header-footer.css" media="screen" />
-        <link rel="stylesheet" href="estilo/carrinho.css" media="screen" />
+        <link rel="stylesheet" href="estilo/compender.css" media="screen" />
         <title>Futshirt</title>
     </head>
     <body>
@@ -42,39 +42,54 @@
         </nav>
 
         <main>
-            <p id="titulo">Carrinho</p>
+            <p id="titulo">Confirme seu endereço</p>
 
             <div id="container">
-                <figure>
-                    <img src="imagens/barcelona.jpg" alt="foto do produto" />
-                </figure>
-
-                <div id="interna">
-                    <p id="name">Camisa do Barcelona</p>
-                    <p id="desc">Modelo da camisa do Barcelona</p>
-                    <p id="desc-dois">2020/2021</p>
-
-                    <img src="imagens/image 25.png" />
+                <div id="cabecalho">
+                    <p id="titulo-dois">Endereço para entrega</p> <img src="imagens/editar.svg" />
                 </div>
 
-                <div id="right">
-                    <div id="quant">
-                        <p id="soma">+</p><p>1</p><p id="menos">-</p>
+                <div id="Endereco">
+                    <p id="Rua">Rua Fulano e Sicrano 0000</p>
+                    <p id="Info-um">Natal - Rio Grande do Norte - CEP 00000-000</p>
+                    <p id="Info-dois">Usuário - 00 00000-0000</p>
+                </div>
+    
+                <div id="Custo">
+                    <p id="texto">Custo de Envio</p><p id="custo">R$100,00</p>
+                </div>
+    
+                <div id="bloco">
+                    <figure>
+                        <img src="imagens/barcelona.jpg" alt="foto do produto" />
+                    </figure>
+    
+                    <div id="interna">
+                        <p id="name">Camisa do Barcelona</p>
+                        <p id="desc">Modelo da camisa do Barcelona</p>
+                        <p id="desc-dois">2020/2021</p>
+                        <p id="valor">R$ 100,00</p>
                     </div>
-                    <p id="valor">R$ 100,00</p>
                 </div>
+
+                <button id="confirmar">Continuar a compra</button>
+
             </div>
 
-
-            <div id="tt">
-                <p id="txt">Total dos produtos</p><p id="valor-total">R$100,00</p>
+            <div id="container-dois">
+               <h3>Resumo da compra</h3>
+                <div id="um">
+                    <p id="txt">Produto(s) R$</p><p id="valor">100,00</p>
+                </div>
+                <div id="dois">
+                    <p id="txt-dois">Frete R$</p><p id="valorf">100,00</p>
+                </div>
+               <div id="tres">
+                    <p id="txt-tres">Total R$</p><p id="total">200,00</p>
+               </div>
             </div>
-            <p id="parcela">em até 10x</p>
-
-            <button id="confirmar"><a href="Pag_Compra_Endereco.html">Continuar a compra</a></button>
-
-            <br/>
         </main>
+
 
         <footer>
             <section class="vantagens">

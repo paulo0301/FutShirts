@@ -1,0 +1,170 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p#titulo{
+    font-size: 25px;
+    color: white;
+    background-color: #030F26;
+    padding-left: 4em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    font-weight: none;
+}
+
+#container{
+    width: 65%;
+    height: 50em;
+    float: left;
+}
+
+#container-dois{
+    width: 35%;
+    height: 50em;
+    float: right;
+    font-size: 1em;
+    border-left: 1px solid grey;
+}
+
+div#cabecalho{
+    margin-top: 2em;
+    background-color: #77A1D9;
+    color: white;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+}
+
+div#cabecalho p{
+    font-size: 25px;
+    font-weight: none;
+    margin-left: 4em;
+}
+
+div#cabecalho img{
+    max-width: 30px;
+    margin-left: 1em;
+}
+
+div#container-dois h3{
+    margin-top: 1.5em;
+    margin-left: 1em;
+    font-size: 1.3em;
+}
+
+div#container-dois div#um{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+    align-content: stretch;
+    margin-top: 1em;
+    margin-right: 10em;
+} 
+
+div#container-dois div#dois{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+    align-content: stretch;
+    margin-top: 1em;
+    padding-bottom: 0.8em;
+    padding-right: 10em;
+    border-bottom: 1px solid grey;
+}
+
+div#container-dois div#tres{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+    align-content: stretch;
+    margin-top: 0.2em;
+    margin-right: 10em;
+}
+
+div#Endereco{
+    margin-top: 1em;
+    padding-left: 6em;
+}
+
+#Rua{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+#Custo{
+    margin-top: 1em;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: stretch;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+div#bloco{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+    align-content: stretch;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid grey;
+}
+
+figure{
+    padding-left: 2em;
+}
+
+figure img{
+    max-width: 175px;
+}
+
+div#interna{
+    padding-right: 20em;
+    margin-right: 5em;
+}
+
+div#interna p#name{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+div#interna p#desc{
+    padding-top: 1em;
+    font-size: 0.9em;
+}
+
+button#confirmar{
+    width: 12em;
+    height: 3em;
+    color: white;
+    background-color: #334D01;
+    border: none;
+    font-size: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 40em;
+    border-radius: 5px;
+}
+
+button#confirmar:hover{
+    background-color: #1a2702;
+    cursor: pointer;
+}

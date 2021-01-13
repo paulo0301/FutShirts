@@ -36,7 +36,7 @@ main nav a:hover, main nav a.active{
 main section.container-meus-dados{
     width: 100%;
 }
-main section h3{
+main section h3, main .accordion > label{
     background-color: #77A1D9;
     color: #fff;
     display: flex;
@@ -114,15 +114,36 @@ main section.container-enderecos form{
     padding-left: 80px;
 }
 main section.container-enderecos input[type="submit"]{
-    margin-right: 175px;
+    float: none;
     margin-top: 10px;
 }
 main section.container-enderecos form.panel input[type="submit"]{
     margin-bottom: 20px;
 }
-main section h3.accordion{
-    cursor: pointer;
-    margin-bottom: 20px;
+main section .accordion > label{
+    margin: 0 0 20px 0;
+}
+main section .accordion > label::after{
+    content: "\276F";
+    text-align: center;
+    transition: all .35s;
+}
+main section .accordion > label:hover{
+    background-color: #5088d3;
+}
+main section .accordion > input{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+main section .accordion > input:checked + label{
+    background-color: #5088d3;
+}
+main section .accordion > input:checked + label::after{
+    transform: rotate(90deg);
+}
+main section .accordion > input:checked ~ form.panel{
+    display: block;
 }
 main section.container-enderecos form.panel{
     display: none;

@@ -139,13 +139,14 @@ footer section.vantagens ul{
     align-items: center;
     background-color: #030F26;
     color: #fff;
-    padding: 5em 2em;
+    padding: 3em 2em;
 }
 footer section.vantagens ul li figure{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 70%;
 }
 footer section.vantagens ul li figcaption{
     text-align: center;
@@ -158,13 +159,12 @@ footer section.rodape > ol{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
 }
 footer section.rodape li{
     color: #000000;
 }
 footer section.rodape li img{
-    width: 30px;
     margin: 0 10px 0 0;
 }
 ul.formas-de-pagamento{
@@ -180,10 +180,14 @@ ol.redes-sociais{
     align-items: center;
     justify-content: space-around;
 }
+ol.redes-sociais a img{
+    width: 26px;
+}
 li.destaque, p.destaque{
     font-weight: 1000;
-    font-size: 1em;
+    font-size: 14px;
     text-transform: uppercase;
+    margin-bottom: 8px;
 }
 ul, ol{
     list-style: none;

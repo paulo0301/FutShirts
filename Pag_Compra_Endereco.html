@@ -1,15 +1,47 @@
-<!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg" href="imagens/logo.svg" />
-        <link rel="stylesheet" href="estilo/header-footer.css" media="screen" />
-        <link rel="stylesheet" href="estilo/compender.css" media="screen" />
-        <title>Futshirt</title>
-    </head>
-    <body>
-        <header>
-            <a href=""><figure class="logotipo"><img src="imagens/logo.png" alt="logotipo"></figure></a>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/header-footer.css">
+    <link rel="stylesheet" href="estilo/compender.css">
+    <title>Futshirt</title>
+</head>
+<body>
+    <div class="efeito">
+        <div class="login">
+            <input type="submit" id="fechar" value="x"/>
+            <form>
+                <div class="container">
+                    <h2>Já sou cliente</h2>
+                    <div>
+                        <label for="login">E-mail</label>
+                        <input type="email" id="login" required/>
+                    </div>
+                    
+                    <div>
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" required/>
+                    </div>
+                    
+                    <a href="">Esqueci minha senha</a>
+                </div>
+                <div class="container-entrar-cadastre-se">
+                    <input type="submit" id="entrar_login" value="Entrar">
+                    <a href="Dadospessoais.html">Cadastre-se</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <header>
+        <div class="link-atendimento">
+            <a href="Pag_Ajuda.html">
+                <img src="imagens/question-mark-inside-a-circle.svg" alt="">
+                <p>Atendimento</p>
+            </a>
+        </div>
+        <div class="header-principal">
+            <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
             
             <form action="" class="barra-de-pesquisa">
                 <input type="text" name="buscar" id="buscar" placeholder="Buscar">
@@ -22,163 +54,166 @@
                         <img src="imagens/avatar.svg" alt="user">
                     </figure>
                     <div>
-                        <input type="button" value="Entrar">
-                        <a href="#">Cadastre-se</a>
+                        <input type="submit" id="entrar" value="Entrar">
+                        <a href="Dadospessoais.html">Cadastre-se</a>
                     </div>
                 </div>
                 
-                <figure class="sacola">
-                    <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
-                </figure>
-            </div>
-        </header>
-
-        <nav>
-            <ol>
-                <li><a href="#">Masculino</a></li>
-                <li><a href="#">Feminino</a></li>
-                <li><a href="#">Infantil</a></li>
-            </ol>
-        </nav>
-
-        <main>
-            <p id="titulo">Confirme seu endereço</p>
-
-            <div id="container">
-                <div id="cabecalho">
-                    <p id="titulo-dois">Endereço para entrega</p> <img src="imagens/editar.svg" />
-                </div>
-
-                <div id="Endereco">
-                    <p id="Rua">Rua Fulano e Sicrano 0000</p>
-                    <p id="Info-um">Natal - Rio Grande do Norte - CEP 00000-000</p>
-                    <p id="Info-dois">Usuário - 00 00000-0000</p>
-                </div>
-    
-                <div id="Custo">
-                    <p id="texto">Custo de Envio</p><p id="custo">R$100,00</p>
-                </div>
-    
-                <div id="bloco">
-                    <figure>
-                        <img src="imagens/barcelona.jpg" alt="foto do produto" />
+                <a href="#">
+                    <figure class="sacola">
+                        <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
                     </figure>
+                </a>
+            </div>
+        </div>
+    </header>
     
-                    <div id="interna">
-                        <p id="name">Camisa do Barcelona</p>
-                        <p id="desc">Modelo da camisa do Barcelona</p>
-                        <p id="desc-dois">2020/2021</p>
-                        <p id="valor">R$ 100,00</p>
-                    </div>
-                </div>
-
-                <button id="confirmar">Continuar a compra</button>
-
+    <nav>
+        <ol>
+            <li><a href="#">Masculino</a></li>
+            <li><a href="#">Feminino</a></li>
+            <li><a href="#">Infantil</a></li>
+        </ol>
+    </nav>
+    
+    <main>
+        <p id="titulo">Confirme seu endereço</p>
+        
+        <div id="container">
+            <div id="cabecalho">
+                <p id="titulo-dois">Endereço para entrega</p> <img src="imagens/editar.svg" />
             </div>
-
-            <div id="container-dois">
-               <h3>Resumo da compra</h3>
-                <div id="um">
-                    <p id="txt">Produto(s) R$</p><p id="valor">100,00</p>
-                </div>
-                <div id="dois">
-                    <p id="txt-dois">Frete R$</p><p id="valorf">100,00</p>
-                </div>
-               <div id="tres">
-                    <p id="txt-tres">Total R$</p><p id="total">200,00</p>
-               </div>
+            
+            <div id="Endereco">
+                <p id="Rua">Rua Fulano e Sicrano 0000</p>
+                <p id="Info-um">Natal - Rio Grande do Norte - CEP 00000-000</p>
+                <p id="Info-dois">Usuário - 00 00000-0000</p>
             </div>
-        </main>
-
-
-        <footer>
-            <section class="vantagens">
-                <ul>
-                    <li>
-                        <figure>
-                            <img src="imagens/bags.svg" alt="">
-                            <figcaption>FRETE GRÁTIS PARA TODO O BRASIL</figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="imagens/tag.svg" alt="">
-                            <figcaption>DESCONTO NA PRIMEIRA COMPRA</figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="imagens/trophy.svg" alt="">
-                            <figcaption>MATERIAL DE EXCELÊNCIA</figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="imagens/credit-card.svg" alt="">
-                            <figcaption>PARCELAMOS EM X VEZES</figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <img src="imagens/football-shirt.svg" alt="">
-                            <figcaption>PERSONALIZE COMO QUISER</figcaption>
-                        </figure>
-                    </li>
-                </ul>
-            </section>
-            <section class="rodape">
-                <ol>
-                    <li>
-                        <ol>
-                            <li class="destaque">Institucional</li>
-                            <li><a href="#">Nossos termos</a></li>
-                            <li><a href="#">Política de privacidade</a></li>
-                            <li><a href="#">Quem somos</a></li>
-                        </ol>
-                    </li>
-                    <li>
-                        <ol>
-                            <li class="destaque">Ajuda</li>
-                            <li><a href="#">Política de ajuda</a></li>
-                            <li><a href="#">Portal de ajuda</a></li>
-                        </ol>
-                    </li>
-                    <li>
-                        <ol>
-                            <li class="destaque">Contato</li>
-                            <li><a href="#">Atendimento</a></li>
-                            <li><a href="#">WhatsApp (88) 8888-8888</a></li>
-                            <li><a href="#">Televendas (88) 8888-8888</a></li>
-                            <li><a href="#">Chat</a></li>
-                            <li><a href="#">Enviar e-mail</a></li>
-                        </ol>
-                    </li>
-                    <li>
-                        <ol>
-                            <li class="destaque">Formas de Pagamento</li>
-                            <li>
-                                <ul class="formas-de-pagamento">
-                                    <li><img src="imagens/boleto.svg" alt=""></li>
-                                    <li><img src="imagens/visa.svg" alt=""></li>
-                                    <li><img src="imagens/mastercard.svg" alt=""></li>
-                                    <li><img src="imagens/elo.svg" alt=""></li>
-                                    <li><img src="imagens/hipercard.svg" alt=""></li>
-                                    <li><img src="imagens/paypal.svg" alt=""></li>
-                                </ul>
-                            </li>
-                        </ol>
-                    </li>
-                    <li>
-                        <p class="destaque">Redes Sociais</p>
-                        <ol class="redes-sociais">
-                            <li><a href="#"><img src="imagens/logotipo-do-instagram.svg" alt=""></a></li>
-                            <li><a href="#"><img src="imagens/facebook.svg" alt=""></a></li>
-                            <li><a href="#"><img src="imagens/twitter.svg" alt=""></a></li>
-                        </ol>
-                    </li>
-                </ol>
-                <p class="destaque">Copyright ©2020 FutShirt Todos direitos reservados</p>
-            </section>
-        </footer>
-    </body>
+            
+            <div id="Custo">
+                <p id="texto">Custo de Envio</p><p id="custo">R$100,00</p>
+            </div>
+            
+            <div id="bloco">
+                <figure>
+                    <img src="imagens/barcelona.jpg" alt="foto do produto" />
+                </figure>
+                
+                <div id="interna">
+                    <p id="name">Camisa do Barcelona</p>
+                    <p id="desc">Modelo da camisa do Barcelona</p>
+                    <p id="desc-dois">2020/2021</p>
+                    <p id="valor">R$ 100,00</p>
+                </div>
+            </div>
+            
+            <button id="confirmar">Continuar a compra</button>
+            
+        </div>
+        
+        <div id="container-dois">
+            <h3>Resumo da compra</h3>
+            <div id="um">
+                <p id="txt">Produto(s) R$</p><p id="valor">100,00</p>
+            </div>
+            <div id="dois">
+                <p id="txt-dois">Frete R$</p><p id="valorf">100,00</p>
+            </div>
+            <div id="tres">
+                <p id="txt-tres">Total R$</p><p id="total">200,00</p>
+            </div>
+        </div>
+    </main>
+    
+    
+    <footer>
+        <section class="vantagens">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="imagens/bags.svg" alt="">
+                        <figcaption>FRETE GRÁTIS PARA TODO O BRASIL</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/tag.svg" alt="">
+                        <figcaption>DESCONTO NA PRIMEIRA COMPRA</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/trophy.svg" alt="">
+                        <figcaption>MATERIAL DE EXCELÊNCIA</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/credit-card.svg" alt="">
+                        <figcaption>PARCELAMOS EM X VEZES</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="imagens/football-shirt.svg" alt="">
+                        <figcaption>PERSONALIZE COMO QUISER</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+        <section class="rodape">
+            <ol>
+                <li>
+                    <ol>
+                        <li class="destaque">Institucional</li>
+                        <li><a href="#">Nossos termos</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Quem somos</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li class="destaque">Ajuda</li>
+                        <li><a href="#">Política de ajuda</a></li>
+                        <li><a href="#">Portal de ajuda</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li class="destaque">Contato</li>
+                        <li><a href="#">Atendimento</a></li>
+                        <li><a href="#">WhatsApp (88) 8888-8888</a></li>
+                        <li><a href="#">Televendas (88) 8888-8888</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Enviar e-mail</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <ol>
+                        <li class="destaque">Formas de Pagamento</li>
+                        <li>
+                            <ul class="formas-de-pagamento">
+                                <li><img src="imagens/boleto.svg" alt=""></li>
+                                <li><img src="imagens/visa.svg" alt=""></li>
+                                <li><img src="imagens/mastercard.svg" alt=""></li>
+                                <li><img src="imagens/elo.svg" alt=""></li>
+                                <li><img src="imagens/hipercard.svg" alt=""></li>
+                                <li><img src="imagens/paypal.svg" alt=""></li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <p class="destaque">Redes Sociais</p>
+                    <ol class="redes-sociais">
+                        <li><a href="#"><img src="imagens/logotipo-do-instagram.svg" alt=""></a></li>
+                        <li><a href="#"><img src="imagens/facebook.svg" alt=""></a></li>
+                        <li><a href="#"><img src="imagens/twitter.svg" alt=""></a></li>
+                    </ol>
+                </li>
+            </ol>
+            <p class="destaque">Copyright ©2020 FutShirt Todos direitos reservados</p>
+        </section>
+    </footer>
+</body>
 </html>

@@ -13,19 +13,16 @@ h2#titulo{
     padding: 0.3em 0 0.3em 2em;
 }
 
-div#container{
+div.container-produto{
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
-    align-content: stretch;
     width: 95%;
     margin: 2em auto;
     padding-bottom: 1em;
     border-bottom: 2px solid grey;
 }
-div#container > div:first-child{
+div.container-produto > div:first-child{
     display: flex;
 }
 main figure img{

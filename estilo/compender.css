@@ -1,170 +1,143 @@
-*{
-    margin: 0 auto;
-    padding: 0;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-p#titulo{
-    font-size: 25px;
+main h2{
+    font-size: 27px;
     color: white;
     background-color: #030F26;
-    padding-left: 4em;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    font-weight: none;
+    padding-left: 1.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    font-weight: 500;
 }
-
-#container{
-    width: 65%;
-    height: 50em;
-    float: left;
+main .lado-esquerdo{
+    width: 75%;
 }
-
-#container-dois{
-    width: 35%;
-    height: 50em;
-    float: right;
-    font-size: 1em;
-    border-left: 1px solid grey;
+main .container-comprar-enderecos{
+    display: flex;
 }
-
-div#cabecalho{
+main .lado-esquerdo .cabecalho{
     margin-top: 2em;
     background-color: #77A1D9;
     color: white;
+    font-size: 18px;
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
+    padding: 0.4em 2.5em;
 	align-items: center;
-	align-content: stretch;
 }
-
-div#cabecalho p{
-    font-size: 25px;
-    font-weight: none;
-    margin-left: 4em;
+main .lado-esquerdo .cabecalho img{
+    width: 30px;
+    margin-left: 10px;
 }
-
-div#cabecalho img{
-    max-width: 30px;
-    margin-left: 1em;
+main .container-endereco{
+    padding: 1em 0 2em 2.7em;
 }
-
-div#container-dois h3{
-    margin-top: 1.5em;
-    margin-left: 1em;
-    font-size: 1.3em;
+main .container-endereco #rua{
+    font-weight: 500;
+    font-size: 23px;
 }
-
-div#container-dois div#um{
+main .container-custo-envio{
+    width: 92%;
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: center;
-    align-content: stretch;
-    margin-top: 1em;
-    margin-right: 10em;
-} 
-
-div#container-dois div#dois{
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: center;
-    align-content: stretch;
-    margin-top: 1em;
-    padding-bottom: 0.8em;
-    padding-right: 10em;
-    border-bottom: 1px solid grey;
-}
-
-div#container-dois div#tres{
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: center;
-    align-content: stretch;
-    margin-top: 0.2em;
-    margin-right: 10em;
-}
-
-div#Endereco{
-    margin-top: 1em;
-    padding-left: 6em;
-}
-
-#Rua{
-    font-size: 1.3em;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 1em;
+    font-size: 24px;
+    margin: 5px auto;
     font-weight: bold;
-    margin-bottom: 0.5em;
+    border-bottom: 2px solid grey;   
 }
-
-#Custo{
-    margin-top: 1em;
+/*  */
+div.container-produto{
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: center;
-    align-content: stretch;
-    font-size: 1.3em;
-    font-weight: bold;
-}
-
-div#bloco{
-    display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
-    align-content: stretch;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    border-bottom: 1px solid grey;
+    width: 92%;
+    margin: 2em auto;
+    padding-bottom: 1em;
 }
-
-figure{
-    padding-left: 2em;
+div.container-produto > div:first-child{
+    display: flex;
 }
-
-figure img{
-    max-width: 175px;
+main .lado-esquerdo figure img{
+    max-width: 225px;
+    margin-right: 20px;
 }
-
-div#interna{
-    padding-right: 20em;
-    margin-right: 5em;
+div.descricao-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-
-div#interna p#name{
+div.descricao-item div.nome{
+    margin-bottom: 3em;
+}
+div.descricao-item div.nome p{
     font-size: 1.25em;
     font-weight: bold;
 }
-
-div#interna p#desc{
-    padding-top: 1em;
+div.descricao-item div.nome p:last-child{
+    font-weight: 300;
+}
+div.descricao-item p#desc{
     font-size: 0.9em;
 }
 
-button#confirmar{
-    width: 12em;
-    height: 3em;
-    color: white;
-    background-color: #334D01;
-    border: none;
-    font-size: 1em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 40em;
-    border-radius: 5px;
+div.descricao-item img{
+    max-width: 35px;
+}
+div.container-tamanho p, div.container-genero p{
+    font-weight: 400;
+    font-size: 18px;
+}
+div.container-tamanho span, div.container-genero span{
+    font-weight: 700;
+    font-weight: 18px;
+}
+div#right{
+    display: flex;
+	flex-direction: column;
+    justify-content: flex-end;
+    height: 200px;
+}
+div#right p#valor{
+    font-size: 25px;
+    font-weight: bold;
 }
 
-button#confirmar:hover{
-    background-color: #1a2702;
+/*  */
+main .lado-direito{
+    border-left: 1px solid grey;
+    padding: 2em 1em;
+    width: 25%;
+}
+main .lado-direito h3{
+    font-size: 23px;
+    font-weight: 500;
+    padding: 0.5em 0;
+}
+main .lado-direito div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 21px;
+    font-weight: 300;
+    margin: 7px 0;
+}
+main .lado-direito .container-valor-frete{
+    border-bottom: 1px solid grey;
+    padding-bottom: 3px;
+}
+/*  */
+main .container-bt{
+    width: 92%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto 2em;
+}
+main .container-bt button{
+    background-color: #334D01;
+    border: none;
+    padding: .7em 1em;
+    font-size: 18px;
+    color: #fff;
     cursor: pointer;
+    outline: none;
+    border-radius: 4px;
 }

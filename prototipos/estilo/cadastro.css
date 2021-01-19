@@ -1,0 +1,185 @@
+main div.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 20px;
+    height: 4.5em;
+    background-color: #030F26;
+    color: #fff;
+    margin-bottom: 20px;
+}
+main .breadcrumbs{
+    display: inline-block;
+    overflow: hidde;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+main .breadcrumbs a{
+    color: #000;
+    text-decoration: none;
+    background-color: #A2CDF2;
+    width: 175px;
+    text-align: center; 
+    outline: none;
+    line-height: 50px;
+    float: left;
+    position: relative;
+    font-weight: 600;
+    padding-left: 2rem;
+}
+main .breadcrumbs a:first-child{
+    border-radius: 5px 0 0 5px;
+    padding-left: 0;
+}
+main .breadcrumbs a:last-child{
+    border-radius: 0 5px 5px 0;
+    padding-left: 0;
+}
+main .breadcrumbs a::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: -25px;
+    background-color: #A2CDF2;
+    transform: scale(0.707) rotate(45deg);
+    z-index: 1;
+    box-shadow: 3px -3px 0 2px #030F26;
+    border-radius: 0 5px 0 50px;
+}
+main .breadcrumbs a:last-child::after{
+    content: none;
+}
+main .breadcrumbs a:last-child{
+    width: 200px;
+}
+.breadcrumbs a.active,
+.breadcrumbs a:hover {
+    background: #77A1D9;
+    transition: all 1s;
+}
+.breadcrumbs a.active:after,
+.breadcrumbs a:hover:after {
+    background: #77A1D9;
+    transition: all 1s;
+}
+h2{
+    color: #FEFEFE;
+    font-size: 1.8rem;
+    font-weight: 500px;
+}
+.dados{
+    text-align: right;
+}
+
+.dados-cadastro{
+    text-align: right;
+    padding-right: 40%;
+}
+
+.dados-cadastro label{
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.dados-cadastro .dados-preencher{
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+.dados-preencher > input{
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.dados-preencher > input:focus{
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.dados-preencher > select{
+    color: black;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    width: 20rem;
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid black;
+    color: rgba(red, green, blue, 1);
+}
+
+.dados-preencher > select:focus{
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.dados input[type=submit]{    
+    font-size: 1.1rem;
+    width: 170px;
+    height: 50px;
+    outline: none;
+    background-color:#334D01;
+    border: none;
+    border-radius: 6px;
+    color: #fefefe; 
+    margin: 1rem 51% 1rem 0;
+}
+.dados input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #273a03;
+}
+
+/* Confirmar Cadastro */
+.instrucoes-cadastro{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.7rem;
+}
+.confirmar-cadastro{
+    margin: 2rem 1rem;
+}
+
+.confirmar-cadastro > input{
+    padding-top: 30px;
+    text-align: center;
+    width: 4rem;
+    height: 5rem;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 0 .2rem;
+    font-size: 2.2rem;
+}
+
+.confirmar-cadastro > input:focus{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+.instrucoes-cadastro input[type=submit]{    
+    font-size: 1.1rem;
+    width: 170px;
+    height: 50px;
+    outline: none;
+    background-color:#334D01;
+    border: none;
+    border-radius: 6px;
+    color: #fefefe; 
+    margin: 1.5rem 0;
+}
+.instrucoes-cadastro input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #273a03;
+}
+

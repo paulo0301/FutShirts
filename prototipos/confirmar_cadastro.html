@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/header-footer.css">
     <link rel="stylesheet" href="estilo/index.css">
-    <link rel="stylesheet" href="estilo/Endereço-Dadospessoais.css">
-    <link rel="stylesheet" href="estilo/confcadastro.css">
+    <link rel="stylesheet" href="estilo/cadastro.css">
     <title>Futshirt</title>
 </head>
 <body>
@@ -44,30 +43,30 @@
             </a>
         </div>
         <div class="header-principal">
-        <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
-        
-        <form action="" class="barra-de-pesquisa">
-            <input type="text" name="buscar" id="buscar" placeholder="Buscar">
-            <img src="./imagens/ampliacao.svg" alt="">
-        </form>
-        
-        <div>
-            <div class="area-de-acesso">
-                <figure>
-                    <img src="imagens/avatar.svg" alt="user">
-                </figure>
-                <div>
-                    <input type="submit" id="entrar" value="Entrar">
-                    <a href="#">Cadastre-se</a>
-                </div>
-            </div>
+            <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
             
-            <a href="#">
-                <figure class="sacola">
-                    <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
-                </figure>
-            </a>
-        </div>
+            <form action="" class="barra-de-pesquisa">
+                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
+                <img src="./imagens/ampliacao.svg" alt="">
+            </form>
+            
+            <div>
+                <div class="area-de-acesso">
+                    <figure>
+                        <img src="imagens/avatar.svg" alt="user">
+                    </figure>
+                    <div>
+                        <input type="submit" id="entrar" value="Entrar">
+                        <a href="#">Cadastre-se</a>
+                    </div>
+                </div>
+                
+                <a href="#">
+                    <figure class="sacola">
+                        <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
+                    </figure>
+                </a>
+            </div>
         </div>
     </header>
     <nav>
@@ -88,24 +87,25 @@
                 <a href="#">Endereço</a>
             </div> 
         </div>
-    
+        
         <section>
-            <div  class="orientação">
-                <p><b>Digite o código que enviamos por email</b></br>Para confirmar de que se trata de seu</br>email,
+            <div  class="instrucoes-cadastro">
+                <p>
+                    <b>Digite o código que enviamos por email</b></br>Para confirmar de que se trata de seu</br>email,
                     enviamos para</br><b>usuario@email.com.</b> Caso não o</br>encontre, confira sua pasta de spam.
                 </p>
-            
-            <form action="" name="F1">
-                <input type="text" name="codigo1" maxlength="1" required onkeyUp="javascript:jumpto('codigo1','codigo2')">
-                <input type="text" name="codigo2" maxlength="1" required onkeyUp="javascript:jumpto('codigo2','codigo3')">
-                <input type="text" name="codigo3" maxlength="1" required onkeyUp="javascript:jumpto('codigo3','codigo4')">
-                <input type="text" name="codigo4" maxlength="1" required onkeyUp="javascript:jumpto('codigo4','codigo5')">
-                <input type="text" name="codigo5" maxlength="1" required onkeyUp="javascript:jumpto('codigo5','codigo6')">
-                <input type="text" name="codigo6" maxlength="1" required onkeyUp="javascript:jumpto('codigo6','codigo1')">
-            
-            </form>
-            <input type="submit" value="Confirmar">
-        </div>
+                
+                <form action="" class="confirmar-cadastro" name="F1">
+                    <input type="text" name="codigo1" maxlength="1" required onkeyUp="javascript:jumpto('codigo1','codigo2')">
+                    <input type="text" name="codigo2" maxlength="1" required onkeyUp="javascript:jumpto('codigo2','codigo3')">
+                    <input type="text" name="codigo3" maxlength="1" required onkeyUp="javascript:jumpto('codigo3','codigo4')">
+                    <input type="text" name="codigo4" maxlength="1" required onkeyUp="javascript:jumpto('codigo4','codigo5')">
+                    <input type="text" name="codigo5" maxlength="1" required onkeyUp="javascript:jumpto('codigo5','codigo6')">
+                    <input type="text" name="codigo6" maxlength="1" required onkeyUp="javascript:jumpto('codigo6','codigo1')">
+                    
+                </form>
+                <input type="submit" value="Confirmar">
+            </div>
         </section>
     </main>
     

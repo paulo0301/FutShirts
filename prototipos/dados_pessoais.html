@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/header-footer.css">
-    <link rel="stylesheet" href="estilo/Endereço-Dadospessoais.css">
+    <link rel="stylesheet" href="estilo/cadastro.css">
     <title>Futshirt</title>
 </head>
 <body>
@@ -42,30 +42,30 @@
             </a>
         </div>
         <div class="header-principal">
-        <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
-        
-        <form action="" class="barra-de-pesquisa">
-            <input type="text" name="buscar" id="buscar" placeholder="Buscar">
-            <img src="./imagens/ampliacao.svg" alt="">
-        </form>
-        
-        <div>
-            <div class="area-de-acesso">
-                <figure>
-                    <img src="imagens/avatar.svg" alt="user">
-                </figure>
-                <div>
-                    <input type="submit" id="entrar" value="Entrar">
-                    <a href="#">Cadastre-se</a>
-                </div>
-            </div>
+            <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
             
-            <a href="#">
-                <figure class="sacola">
-                    <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
-                </figure>
-            </a>
-        </div>
+            <form action="" class="barra-de-pesquisa">
+                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
+                <img src="./imagens/ampliacao.svg" alt="">
+            </form>
+            
+            <div>
+                <div class="area-de-acesso">
+                    <figure>
+                        <img src="imagens/avatar.svg" alt="user">
+                    </figure>
+                    <div>
+                        <input type="submit" id="entrar" value="Entrar">
+                        <a href="#">Cadastre-se</a>
+                    </div>
+                </div>
+                
+                <a href="#">
+                    <figure class="sacola">
+                        <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
+                    </figure>
+                </a>
+            </div>
         </div>
     </header>
     <nav>
@@ -86,37 +86,51 @@
             </div> 
         </div>
         <article>
-                <form action="" class="dados">
-                    <div class="dados_pessoais">
-                        <label for="name">Nome Completo</label>
+            <form action="" class="dados">
+                <div class="dados-cadastro">
+                    <label for="name">Nome Completo</label>
+                    <div class="dados-preencher">
                         <input type="text" id="name" placeholder="Digite seu nome completo" autocomplete="off" required>
                     </div>
-                    <div class="dados_pessoais">
-                        <label for="email">Email</label>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="email">Email</label>
+                    <div class="dados-preencher">
                         <input type="email" id="email" placeholder="Digite seu email" autocomplete="off" required >
                     </div>
-                    <div class="dados_pessoais">
-                        <label for="tel">Telefone</label>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="tel">Telefone</label>
+                    <div class="dados-preencher">
                         <input type="tel" id="tel" onkeypress="mascara(this, '## #####-####')" placeholder="(00) 00000-0000" maxlength="13" autocomplete="off" required >
                     </div>
-                    <div class="dados_pessoais">
-                        <label for="cpf">CPF</label>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="cpf">CPF</label>
+                    <div class="dados-preencher">
                         <input type="text" id="cpf" onkeypress="mascara(this, '###.###.###-##')" placeholder="000.000.000-00" maxlength="14" autocomplete="off" required >
                     </div>
-                    <div class="dados_pessoais">
-                        <label for="nasc">Data de nascimento</label>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="nasc">Data de nascimento</label>
+                    <div class="dados-preencher">
                         <input type="text" id="nasc" onkeypress="mascara(this, '##/##/####')" placeholder="00/00/0000" maxlength="10"  autocomplete="off" required>
                     </div>
-                    <div class="dados_pessoais">
-                        <label for="senha">Senha</label>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="senha">Senha</label>
+                    <div class="dados-preencher">
                         <input type="password" id="password" placeholder="Digite sua senha" autocomplete="off" required >
                     </div>
-                    <div class="dados_pessoais">
-                        <label for="confsenha">Confirmar senha</label>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="confsenha">Confirmar senha</label>
+                    <div class="dados-preencher">     
                         <input type="password" id="confpassword" placeholder="Digite novamente sua senha" autocomplete="off" required>
                     </div>
-                        <input type="submit" id="conf" value="Prosseguir">
-                </form>
+                </div>
+                <input type="submit" id="conf" value="Prosseguir">
+            </form>
         </article>
     </main>
     

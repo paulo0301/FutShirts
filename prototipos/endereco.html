@@ -5,7 +5,7 @@
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/header-footer.css">
-    <link rel="stylesheet" href="estilo/Endereço-Dadospessoais.css">
+    <link rel="stylesheet" href="estilo/cadastro.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
     <title>Futshirt</title>
@@ -89,35 +89,46 @@
         </div>
     
         <article>
-                <form action="" class="ender">
-                    <div class="dados_endereço">
+                <form action="" class="dados">
+                    <div class="dados-cadastro">
                         <label for="cep">CEP</label>
-                        <input type="text" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}"/>
+                        <div class="dados-preencher">                            
+                            <input type="text" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}"/>
+                        </div>
                     </div>
-                    <div class="dados_endereço">
+                    <div class="dados-cadastro">
                         <label for="UF">Estado</label>
-                        <select id="Estado" required >
-                            <option value="" class="sel" disabled="disabled" selected="selected">Selecione seu Estado</option> 
-                        </select>
+                        <div class="dados-preencher">
+                            <select id="Estado" required >
+                                <option value="" class="sel" disabled="disabled" selected="selected">Selecione seu Estado</option> 
+                            </select>
+                        </div>
                     </div>
-                    <div class="dados_endereço">
+                    <div class="dados-cadastro">
                         <label for="cid">Cidade</label>
-                        <select id="Cidade" required>
-                            <option value="" class="sel" disabled="disabled" selected="selected">Selecione sua Cidade</option>
-                           
-                        </select>
+                        <div class="dados-preencher">                            
+                            <select id="Cidade" required>
+                                <option value="" class="sel" disabled="disabled" selected="selected">Selecione sua Cidade</option> 
+                            </select>
+                        </div>
                     </div>
-                    <div class="dados_endereço">
+                    <div class="dados-cadastro">
                         <label for="log">Logradouro</label>
-                        <input type="text" id="log" placeholder="Digite seu Logradouro" autocomplete="off" >
+                        <div class="dados-preencher">
+                            <input type="text" id="log" placeholder="Digite seu Logradouro" autocomplete="off" >
+                        </div>
                     </div>
-                    <div class="dados_endereço">
+                    <div class="dados-cadastro">
                         <label for="num">Numero</label>
-                        <input type="text" id="num" maxlength="4" placeholder="0000" autocomplete="off" required>
+                        <div class="dados-preencher">                            
+                            <input type="text" id="num" maxlength="4" placeholder="0000" autocomplete="off" required>
+                        </div>
                     </div>
-                    <div class="dados_endereço">
+                    <div class="dados-cadastro">
                         <label for="comp">Complemento</label>
-                        <input type="text" id="comp" placeholder="Digite o Complemento" autocomplete="off"  >
+                        <div class="dados-preencher">
+                            <input type="text" id="comp" placeholder="Digite o Complemento" autocomplete="off"  >
+                        </div>
                     </div>
                         <input type="submit" id="conf" value="Finalizar">
                 </form>

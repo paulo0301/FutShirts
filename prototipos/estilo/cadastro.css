@@ -1,14 +1,3 @@
-main div.cabecalho{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 50px;
-    padding-right: 20px;
-    height: 4.5em;
-    background-color: #030F26;
-    color: #fff;
-    margin-bottom: 20px;
-}
 main .breadcrumbs{
     display: inline-block;
     overflow: hidde;
@@ -64,11 +53,6 @@ main .breadcrumbs a:last-child{
 .breadcrumbs a:hover:after {
     background: #77A1D9;
     transition: all 1s;
-}
-h2{
-    color: #FEFEFE;
-    font-size: 1.8rem;
-    font-weight: 500px;
 }
 .dados{
     text-align: right;

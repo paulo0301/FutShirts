@@ -79,87 +79,95 @@
     
     <main>
         <div class="cabecalho">
-            <h2>Minha Conta</h2>
-        </div> 
+            <h2>Minha conta</h2>
+        </div>
         <div>
             <nav>
                 <ol>
                     <li><a href="meus_dados.html" ><img src="imagens/carteirinha.svg" alt="">Meus dados</a></li>
-                    <li><a href="enderecos_minha_conta.html" class="active"><img src="imagens/enderecos.svg" alt="">Endereços</a></li>
+                    <li><a href="enderecos_minha_conta.html" ><img src="imagens/enderecos.svg" alt="">Endereços</a></li>
                     <li><a href="meus_pedidos.html"><img src="imagens/camisa_pedidos.svg" alt="">Meus pedidos</a></li>
-                    <li><a href="meus_favoritos.html"><img src="imagens/estrela.svg" alt="">Favoritos</a></li>
-                    <li><a href="meus_cartoes.html"><img src="imagens/cartoes.svg" alt="">Meus cartões</a></li>
+                    <li><a href="meus_favoritos.html" ><img src="imagens/estrela.svg" alt="">Favoritos</a></li>
+                    <li><a href="meus_cartoes.html" class="active"><img src="imagens/cartoes.svg" alt="">Meus cartões</a></li>
                 </ol>
             </nav>
-            <section class="container-enderecos">
-                <h3>Endereços</h3>
+            <section class="container-meus-cartoes ">
+                <h3>Meus cartões</h3>
                 
-                <form action="">
-                    <div>
-                        <label for="cep">CEP</label>
-                        <input type="text" id="cep" required value="00000-000">
+                <div class="cartoes-cadastrados">
+                    <div class="cartao-cadastrado">
+                        <div>
+                            <figure class="bandeira">
+                                <img src="imagens/mastercard.svg" alt="">
+                            </figure>
+                            <div class="informacoes-cartao">
+                                <p class="informacao-1">Terminado em 0000</p>
+                                <p class="informacao-2">Mastercard</p>
+                                <p class="informacao-3">Vencimento em XX/XXXX</p>
+                            </div>
+                        </div>
+                        <div class="lixeira-editar">
+                            <button><img src="imagens/editar.svg" alt=""></button>
+                            <button><img src="imagens/lixeira-de-reciclagem.svg" alt=""></button>
+                        </div>
                     </div>
-                    <div>
-                        <label for="logradouro">Logradouro</label>
-                        <input type="text" id="logradouro" required value="Rua das Flores">
+                    <div class="cartao-cadastrado">
+                        <div>
+                            <figure class="bandeira">
+                                <img src="imagens/mastercard.svg" alt="">
+                            </figure>
+                            <div class="informacoes-cartao">
+                                <p class="informacao-1">Terminado em 0000</p>
+                                <p class="informacao-2">Mastercard</p>
+                                <p class="informacao-3">Vencimento em XX/XXXX</p>
+                            </div>
+                        </div>
+                        <div class="lixeira-editar">
+                            <button><img src="imagens/editar.svg" alt=""></button>
+                            <button><img src="imagens/lixeira-de-reciclagem.svg" alt=""></button>
+                        </div>
                     </div>
-                    <div>
-                        <label for="bairro">Bairro</label>
-                        <input type="text" id="bairro" required value="Tirol">
+                    <div class="cartao-cadastrado">
+                        <div>
+                            <figure class="bandeira">
+                                <img src="imagens/mastercard.svg" alt="">
+                            </figure>
+                            <div class="informacoes-cartao">
+                                <p class="informacao-1">Terminado em 0000</p>
+                                <p class="informacao-2">Mastercard</p>
+                                <p class="informacao-3">Vencimento em XX/XXXX</p>
+                            </div>
+                        </div>
+                        <div class="lixeira-editar">
+                            <button><img src="imagens/editar.svg" alt=""></button>
+                            <button><img src="imagens/lixeira-de-reciclagem.svg" alt=""></button>
+                        </div>
                     </div>
-                    <div>
-                        <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" required value="Natal">
-                    </div>
-                    <div>
-                        <label for="estado">Estado</label>
-                        <input type="text" id="estado" required value="Rio Grande do Norte">
-                    </div>
-                    <div>
-                        <label for="numero">Número</label>
-                        <input type="text" id="numero" required value="000">
-                    </div>
-                    <div>
-                        <label for="complemento">Complemento</label>
-                        <input type="text" id="complemento" required value="Próximo ao Midway">
-                    </div>
-                    <input type="submit" value="Salvar alterações">
-                </form>
+                </div>
                 
                 <div class="accordion cursor-pointer">
                     <input type="checkbox" id="chck1">
-                    <label for="chck1">Adicionar endereço</label>
+                    <label for="chck1">Adicionar cartão</label>
+                    
                     
                     <form class="panel" action="">
                         <div>
-                            <label for="cep">CEP</label>
-                            <input type="text" id="cep" required>
+                            <label for="numero-cartao">Número do cartão</label>
+                            <input type="text" id="numero-cartao" required>
                         </div>
                         <div>
-                            <label for="logradouro">Logradouro</label>
-                            <input type="text" id="logradouro" required>
+                            <label for="nome-titular">Nome do titular</label>
+                            <input type="text" id="nome-titular" required>
                         </div>
                         <div>
-                            <label for="bairro">Bairro</label>
-                            <input type="text" id="bairro" required>
+                            <label for="vencimento">Vencimento</label>
+                            <input type="text" id="vencimento" required>
                         </div>
                         <div>
-                            <label for="cidade">Cidade</label>
-                            <input type="text" id="cidade" required>
+                            <label for="codigo-seguranca">Código de segurança</label>
+                            <input type="text" id="codigo-seguranca" required>
                         </div>
-                        <div>
-                            <label for="estado">Estado</label>
-                            <input type="text" id="estado" required>
-                        </div>
-                        <div>
-                            <label for="numero">Número</label>
-                            <input type="text" id="numero" required>
-                        </div>
-                        <div>
-                            <label for="complemento">Complemento</label>
-                            <input type="text" id="complemento" required>   
-                        </div>
-                        <input type="submit" value="Salvar alterações">
+                        <input type="submit" value="Adicionar cartão">
                     </form>
                 </div>
             </section>
@@ -256,7 +264,7 @@
         </section>
     </footer>
 </body>
-<script>
+<!-- <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
     
@@ -270,6 +278,6 @@
             }
         });
     }
-</script>
+</script> -->
 <script src="js/login.js"></script>
 </html>

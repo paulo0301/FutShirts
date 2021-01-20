@@ -1,16 +1,7 @@
-main h2{
-    font-size: 27px;
-    color: white;
-    background-color: #030F26;
-    padding-left: 1.5em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    font-weight: 500;
-}
 main .lado-esquerdo{
     width: 75%;
 }
-main .lado-esquerdo .cabecalho{
+main .lado-esquerdo .topico-pagina{
     margin-top: 2em;
     background-color: #77A1D9;
     color: white;
@@ -20,7 +11,7 @@ main .lado-esquerdo .cabecalho{
     align-items: center;
     margin-bottom: 10px;
 }
-main .lado-esquerdo .cabecalho img{
+main .lado-esquerdo .topico-pagina img{
     width: 30px;
     margin-left: 10px;
 }

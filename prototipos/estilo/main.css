@@ -1,0 +1,27 @@
+main div.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 20px;
+    height: 4.5em;
+    background-color: #030F26;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+div.cabecalho h2{
+    color: #FEFEFE;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+
+/* PERSONALIZE */
+.nm-b{
+    margin-bottom: 0;
+}
+
+.cursor-pointer{
+    cursor: pointer !important;
+}

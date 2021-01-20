@@ -9,13 +9,10 @@ main{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main p.titulo{   
+main h2.titulo{   
     font-size: 25px;
     color: white;
-    background-color: #030F26;
-    padding-left: 4em;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
+    background-color: #030F26
 }
 main .container a div div{
     margin-top: 20px;
@@ -32,26 +29,28 @@ main #perguntas .imagem-interrogacao{
     background-image: url("../imagens/question.svg");
 }
 main #perguntas:hover .imagem-interrogacao, main #perguntas .active{
+    transition: all 1s;
     background-image: url("../imagens/question2.svg");
 }
 main #email .imagem-email{
     background-image: url("../imagens/Email.svg");
 }
 main #email:hover .imagem-email, main #email .active{
+    transition: all 1s;
     background-image: url("../imagens/Email2.svg");
 }
-main #whatsapp .imagem-whatsapp{
+main .whatsapp-perguntas .imagem-whatsapp{
     background-image: url("../imagens/whatsapp.svg");
 }
-main #whatsapp:hover .imagem-whatsapp{
+main .whatsapp-perguntas:hover .imagem-whatsapp{
+    transition: all 1s;
     background-image: url("../imagens/whatsapp2.svg");
 }
 
 main p.texto{
     font-size: 25px;
     color: black;
-    padding-top: 0.5em;
-    padding-left: 4em;
+    margin-left: 10%;
 }
 
 main div.container{
@@ -63,29 +62,24 @@ main div.container{
     align-content: stretch;
 }
 main div.container a{
-    margin: 0 60px;
+    margin: 0 5rem;
 }
-main div.container a:first-child{
-    margin-left: 0;
-}
-main div.container a:last-child{
-    margin-right: 0;
-}
-main div#perguntas, main div#email, main div#whatsapp{
-    width: 210px;
-    height: 250px;
+main div#perguntas, main div#email, main div.whatsapp-perguntas{
+    width: 250px;
+    height: 280px;
     box-shadow: 1px 1px 5px grey;
     color: #030F26;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     align-content: stretch;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
-main div#perguntas p, main div#email p, main div#whatsapp p{
+main div#perguntas p, main div#email p, main div.whatsapp-perguntas p{
     padding-bottom: 3em;
     font-size: 1.2em;
     font-weight: bold;
@@ -162,7 +156,7 @@ main .container-enviar-email p.titulo2{
     color: white;
     font-weight: 300;
     background-color: #030F26;
-    padding: 0.6em 0 0.6em 4em;
+    padding: 1rem 0 1rem 10%;
 }
 main .container-enviar-email form{
     width: 60%;
@@ -183,11 +177,12 @@ main .container-enviar-email form input[type="text"], main .container-enviar-ema
     height: 2em;
     outline: none;
     border: none;
-    border-bottom: 2px solid #030F26;
+    border-bottom: 1px solid black;
     margin-bottom: 1em;
     font-size: 20px;
     background-color: transparent;
 }
+
 main .container-enviar-email input#enviar{
     margin-top: 1em;
     background-color: #334D01;
@@ -208,5 +203,7 @@ main .container-enviar-email textarea{
     width: 100%;
     height: 10em;
     font-size: 23px;
-    border: 1px solid #030F26;
+    border: 1px solid black;
+    outline: none;
+    padding: 0.5rem;
 }

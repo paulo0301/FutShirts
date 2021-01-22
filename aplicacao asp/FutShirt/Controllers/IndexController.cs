@@ -8,7 +8,7 @@ namespace FutShirt.Controllers
 {
     public class IndexController : Controller
     {
-        // GET: Index
+        // GET: Inde
         public ActionResult Index()
         {
             return View();

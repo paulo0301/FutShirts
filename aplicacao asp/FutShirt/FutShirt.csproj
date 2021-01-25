@@ -316,6 +316,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CadastroController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -333,6 +334,7 @@
     <Content Include="Scripts\main_js\Glider.js-master\package.json" />
     <Content Include="Scripts\main_js\Glider.js-master\README.md" />
     <Content Include="Scripts\main_js\Glider.js-master\yarn.lock" />
+    <Content Include="Views\Cadastro\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FutShirt.Models
 {
-    public class Cadastro
+    public class Usuarios
     {
         //Cadastro dados pessoais
         private int id;

@@ -13,5 +13,17 @@ namespace FutShirt.Controllers
         {
             return View();
         }
+
+        // GET: Cadastro Endereço
+        public ActionResult ConfirmarCadastro()
+        {
+            return View();
+        }
+
+        // GET: Cadastrar Endereco
+        public ActionResult CadastrarEndereco()
+        {
+            return View();
+        }
     }
 }

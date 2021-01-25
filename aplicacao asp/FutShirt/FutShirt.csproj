@@ -335,6 +335,8 @@
     <Content Include="Scripts\main_js\Glider.js-master\README.md" />
     <Content Include="Scripts\main_js\Glider.js-master\yarn.lock" />
     <Content Include="Views\Cadastro\Index.cshtml" />
+    <Content Include="Views\Cadastro\ConfirmarCadastro.cshtml" />
+    <Content Include="Views\Cadastro\CadastrarEndereco.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

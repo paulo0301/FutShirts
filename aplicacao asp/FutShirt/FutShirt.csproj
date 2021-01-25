@@ -219,6 +219,14 @@
     <Content Include="Scripts\main_js\confcadastro.js" />
     <Content Include="Scripts\main_js\config_glider.js" />
     <Content Include="Scripts\main_js\endereço-dadospessoais.js" />
+    <Content Include="Scripts\main_js\Glider.js-master\.gitignore" />
+    <Content Include="Scripts\main_js\Glider.js-master\glider-compat.min.js" />
+    <Content Include="Content\glider.css" />
+    <Content Include="Scripts\main_js\Glider.js-master\glider.js" />
+    <Content Include="Scripts\main_js\Glider.js-master\glider.min.css" />
+    <Content Include="Scripts\main_js\Glider.js-master\glider.min.js" />
+    <Content Include="Scripts\main_js\Glider.js-master\index.html" />
+    <Content Include="Scripts\main_js\Glider.js-master\LICENSE.txt" />
     <Content Include="Scripts\main_js\login.js" />
     <Content Include="Scripts\main_js\Pagadm.js" />
     <Content Include="Scripts\popper-utils.js" />
@@ -308,10 +316,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CadastroController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +330,14 @@
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Views\Index\Index.cshtml" />
+    <Content Include="Scripts\main_js\Glider.js-master\.editorconfig" />
+    <Content Include="Scripts\main_js\Glider.js-master\package-lock.json" />
+    <Content Include="Scripts\main_js\Glider.js-master\package.json" />
+    <Content Include="Scripts\main_js\Glider.js-master\README.md" />
+    <Content Include="Scripts\main_js\Glider.js-master\yarn.lock" />
+    <Content Include="Views\Cadastro\Index.cshtml" />
+    <Content Include="Views\Cadastro\ConfirmarCadastro.cshtml" />
+    <Content Include="Views\Cadastro\CadastrarEndereco.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -329,7 +347,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

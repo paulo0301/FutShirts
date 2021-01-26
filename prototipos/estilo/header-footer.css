@@ -238,6 +238,7 @@ header+nav ol{
 /**************** FOOTER ******************/
 footer{
     font-family: 'Roboto', sans-serif; 
+    /* display: none; */
 }
 footer section.vantagens ul{
     display: flex;
@@ -305,7 +306,41 @@ footer a{
 footer p{
     text-align: center;
 }
-
+@media (max-width: 700px){
+    footer section.vantagens ul li figure{
+        width: 100%;
+    }
+    footer section.vantagens ul li figure img{
+        width: 50px;
+    }
+    footer section.vantagens ul li figcaption{
+        font-size: 12px;
+    }
+    footer section.vantagens ul{
+        padding: 2em 5px;
+    }
+    footer section.rodape > ol{
+        flex-direction: column;
+    }
+    footer section.rodape > ol > li{
+        margin: 0 0 15px 0;
+    }
+    footer ol.redes-sociais{
+        justify-content: flex-start;
+    }
+    ol li p.destaque{
+        text-align: left;
+    }
+}
+@media (max-width: 500px){
+    footer section.vantagens ul{
+        flex-direction: column;
+    }
+    footer section.vantagens ul li{
+        margin: 12px 0;
+        border-bottom: 1px solid #fff;
+    }
+}
 /* Área de login */
 div.efeito{
     display: flex;
@@ -319,6 +354,7 @@ div.efeito{
     background-color: rgba(15, 15, 15, 0.70);
     visibility: hidden;
     position: fixed;
+    overflow: hidden;
 }
 div.login{
     background-color: white;

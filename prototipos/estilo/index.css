@@ -13,6 +13,12 @@ main .banner img{
 main .carrosel img{
     width: 50px;
 }
+.glider-prev{
+    padding-left: 5px;
+}
+.glider-next{
+    padding-right: 5px;
+}
 /* -------------------------------------------------------- */
 section.container-campeonatos{
     background-image: linear-gradient(#fff 50%, #030F26 50%);
@@ -32,16 +38,16 @@ section.container-campeonatos{
     border-radius: 0;
 }
 .container-campeonatos img{
-    width: 100%;    
+    max-width: 100%;    
 }
 .container-campeonatos:hover > a{
-    opacity: 0.5;
+    opacity: 0.85;
 }
 .container-campeonatos:hover > a:hover{
     opacity: 1;
-    width: 18em;
-    transition: all 1s;
-}
+    transform: scale(1.1);
+    transition: all 0.5s;
+    }
 
 /* --------------------------------------------------------- */
 section.mais-populares{    

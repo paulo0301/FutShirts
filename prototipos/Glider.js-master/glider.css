@@ -1,5 +1,5 @@
 .glider-contain {
-  width: 90%;
+  width: 85%;
   margin: 2em auto;
   position: relative;
 }
@@ -34,7 +34,6 @@
 }
 .glider-slide {
   user-select: none;
-  justify-content:  ;
   align-content: center;
   width: 100%;
 }
@@ -76,7 +75,7 @@
 }
 .glider-next.disabled,
 .glider-prev.disabled {
-  opacity: .25;
+  opacity: .5;
   color: #666;
   cursor: default;
 }

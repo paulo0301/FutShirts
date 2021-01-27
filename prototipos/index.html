@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Glider.js-master/glider.css">
+    <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css”>
     <link rel="stylesheet" href="estilo/header-footer.css">
     <link rel="stylesheet" href="estilo/index.css">
     <title>Futshirt</title>
@@ -35,19 +36,25 @@
             </form>
         </div>
     </div>
+    <!-- ***************************************************************** -->
     <header>
         <div class="link-atendimento">
-            <a href="Pag_Ajuda.html">
+            <a href="ajuda.html">
                 <img src="imagens/question-mark-inside-a-circle.svg" alt="">
                 <p>Atendimento</p>
             </a>
         </div>
         <div class="header-principal">
+            
+            <div class="menu-hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            
             <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
             
-            <form action="" class="barra-de-pesquisa">
-                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
-                <img src="./imagens/ampliacao.svg" alt="">
+            <form action="" class="barra-de-pesquisa01">
+                <input type="text" name="buscar" placeholder="Buscar">
+                <button class="bt-pesquisa"><img src="./imagens/ampliacao.svg" alt=""/></button>
             </form>
             
             <div>
@@ -68,22 +75,51 @@
                 </a>
             </div>
         </div>
+        <form action="" class="barra-de-pesquisa02">
+            <input type="text" name="buscar" placeholder="Buscar">
+            <button class="bt-pesquisa"><img src="./imagens/ampliacao.svg" alt=""/></button>
+        </form>
     </header>
-    <nav>
+    <!--  -->
+    <nav id="navegacao01">
         <ol>
             <li><a href="#">Masculino</a></li>
             <li><a href="#">Feminino</a></li>
             <li><a href="#">Infantil</a></li>
         </ol>
     </nav>
-    
+    <!--  -->
+    <nav id="navegacao02" style="left: -100%;">
+        <div class="area-conteudo">
+            <div class="area-de-acesso02">
+                <div>
+                    <input type="submit" id="entrar2" value="Entrar">
+                    <a href="dados_pessoais.html">Cadastre-se</a>
+                </div>
+            </div>
+            <ol class="nav-categorias">
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Feminino</a></li>
+                <li><a href="#">Infantil</a></li>
+            </ol>
+            <ol class="nav-outros">
+                <li class="atendimento">
+                    <a href="ajuda.html">
+                        <img src="imagens/question-mark-inside-a-circle.svg" alt=""/>
+                        <p>Atendimento</p>
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <div class="area-fechar-nav"></div>
+    </nav>
     <main>
         <section class="banner">
             <a href="#"><img src="imagens/banner2.png" alt=""></a>
         </section>
         <section>
             <div class="glider-contain">
-                <div class="glider">
+                <div class="glider" id="glider01">
                     <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
                     <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
                     <div><a href="#"><img src="imagens/flamengo.png" alt=""></a></div>
@@ -108,20 +144,23 @@
                     <div><a href="#"><img src="imagens/corinthians.png" alt=""></a></div>
                 </div>
                 
-                <button aria-label="Previous" class="glider-prev">«</button>
-                <button aria-label="Next" class="glider-next">»</button>
+                <button aria-label="Previous" class="glider-prev"><i class="fas fa-angle-left"></i></button>
+                <button aria-label="Next" class="glider-next"><i class="fas fa-angle-right"></i></button>
                 <div role="tablist" class="dots"></div>
             </div>
         </section>
         
-        <section class="container-campeonatos">
+        <section class="container-campeonatos glider-slide" id="glider02">
             <a href="#"><img src="imagens/brasileirao.png" alt=""></a>
             <a href="#"><img src="imagens/champions_league.png" alt=""></a>
             <a href="#"><img src="imagens/euro2020.png" alt=""></a>
             <a href="#"><img src="imagens/premier_league.png" alt=""></a>
+
+            <!-- <button aria-label="Previous" class="glider-prev"><i class="fas fa-angle-left"></i></button>
+            <button aria-label="Next" class="glider-next"><i class="fas fa-angle-right"></i></button> -->
         </section>
         
-        <section class="mais-populares">
+        <section class="mais-populares" style="display: none;">
             <h2>Mais Populares</h2>
             
             <div class="container-produtos">
@@ -368,7 +407,8 @@
         </section>
     </footer>
 </body>
-<script src="js/login.js"></script>
+<script src="js/main.js"></script>
 <script src="./Glider.js-master/glider.js"></script>
 <script src="js/config_glider.js"></script>
+<script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>
 </html>

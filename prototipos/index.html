@@ -13,7 +13,9 @@
 <body>
     <div class="efeito">
         <div class="login">
-            <input type="submit" id="fechar" value="x"/>
+            <button id="fechar" onclick="fechar()">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <form>
                 <div class="container">
                     <h2>Já sou cliente</h2>
@@ -29,6 +31,7 @@
                     
                     <a href="">Esqueci minha senha</a>
                 </div>
+                
                 <div class="container-entrar-cadastre-se">
                     <input type="submit" id="entrar_login" value="Entrar">
                     <a href="dados_pessoais.html">Cadastre-se</a>
@@ -39,46 +42,35 @@
     <!-- ***************************************************************** -->
     <header>
         <div class="link-atendimento">
-            <a href="ajuda.html">
-                <img src="imagens/question-mark-inside-a-circle.svg" alt="">
-                <p>Atendimento</p>
-            </a>
+            <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
+            <p><a href="ajuda.html">Atendimento</a></p>
         </div>
+        
         <div class="header-principal">
             
             <div class="menu-hamburger">
                 <i class="fas fa-bars"></i>
             </div>
             
-            <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
+            <h1><a href=""><img src="imagens/logo.svg" alt="logotipo"></a></h1>
             
-            <form action="" class="barra-de-pesquisa01">
+            <form action="" class="barra-de-pesquisa">
                 <input type="text" name="buscar" placeholder="Buscar">
-                <button class="bt-pesquisa"><img src="./imagens/ampliacao.svg" alt=""/></button>
+                <input class="bt-pesquisa" type="submit" value="">
             </form>
             
             <div>
                 <div class="area-de-acesso">
-                    <figure>
-                        <img src="imagens/avatar.svg" alt="user">
-                    </figure>
+                    <img src="imagens/avatar.svg" alt="user">
                     <div>
-                        <input type="submit" id="entrar" value="Entrar">
+                        <button id="entrar" onclick="abrir()">Entrar</button>
                         <a href="dados_pessoais.html">Cadastre-se</a>
                     </div>
                 </div>
                 
-                <a href="#">
-                    <figure class="sacola">
-                        <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
-                    </figure>
-                </a>
+                <a href="carrinho.html" class="sacola"><img src="imagens/sacola-de-compras.svg" alt="sacola de compras"/></a>
             </div>
         </div>
-        <form action="" class="barra-de-pesquisa02">
-            <input type="text" name="buscar" placeholder="Buscar">
-            <button class="bt-pesquisa"><img src="./imagens/ampliacao.svg" alt=""/></button>
-        </form>
     </header>
     <!--  -->
     <nav id="navegacao01">
@@ -89,11 +81,11 @@
         </ol>
     </nav>
     <!--  -->
-    <nav id="navegacao02" style="left: -100%;">
+    <nav id="navegacao02">
         <div class="area-conteudo">
             <div class="area-de-acesso02">
                 <div>
-                    <input type="submit" id="entrar2" value="Entrar">
+                    <button onclick="abrir()">Entrar</button>
                     <a href="dados_pessoais.html">Cadastre-se</a>
                 </div>
             </div>
@@ -103,17 +95,16 @@
                 <li><a href="#">Infantil</a></li>
             </ol>
             <ol class="nav-outros">
-                <li class="atendimento">
-                    <a href="ajuda.html">
-                        <img src="imagens/question-mark-inside-a-circle.svg" alt=""/>
-                        <p>Atendimento</p>
-                    </a>
+                <li class="link-atendimento">
+                    <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
+                    <p><a href="ajuda.html">Atendimento</a></p>
                 </li>
             </ol>
         </div>
         <div class="area-fechar-nav"></div>
     </nav>
-    <main>
+    <!--  -->
+    <main style="display: none;">
         <section class="banner">
             <a href="#"><img src="imagens/banner2.png" alt=""></a>
         </section>
@@ -146,7 +137,6 @@
                 
                 <button aria-label="Previous" class="glider-prev" id="glider-prev01"><i class="fas fa-angle-left"></i></button>
                 <button aria-label="Next" class="glider-next" id="glider-next01"><i class="fas fa-angle-right"></i></button>
-                <div role="tablist" class="dots"></div>
             </div>
         </section>
         

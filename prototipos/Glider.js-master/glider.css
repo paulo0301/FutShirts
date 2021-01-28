@@ -71,7 +71,7 @@
 }
 .glider-next {
   right: -23px;
-  left: auto;
+  left: auto;           
 }
 .glider-next.disabled,
 .glider-prev.disabled {

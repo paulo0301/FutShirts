@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css”>
     <link rel="stylesheet" href="estilo/header-footer.css">
     <link rel="stylesheet" href="estilo/Paginasadm.css">
     <title>Futshirt</title>
@@ -34,48 +35,83 @@
             </form>
         </div>
     </div>
+    <!-- ***************************************************************** -->
     <header>
         <div class="link-atendimento">
-            <a href="Pag_Ajuda.html">
+            <a href="ajuda.html">
                 <img src="imagens/question-mark-inside-a-circle.svg" alt="">
                 <p>Atendimento</p>
             </a>
         </div>
         <div class="header-principal">
-        <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
-        
-        <form action="" class="barra-de-pesquisa">
-            <input type="text" name="buscar" id="buscar" placeholder="Buscar">
-            <img src="./imagens/ampliacao.svg" alt="">
-        </form>
-        
-        <div>
-            <div class="area-de-acesso">
-                <figure>
-                    <img src="imagens/avatar.svg" alt="user">
-                </figure>
-                <div>
-                    <input type="submit" id="entrar" value="Entrar">
-                    <a href="#">Cadastre-se</a>
-                </div>
+            
+            <div class="menu-hamburger">
+                <i class="fas fa-bars"></i>
             </div>
             
-            <a href="#">
-                <figure class="sacola">
-                    <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
-                </figure>
-            </a>
+            <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
+            
+            <form action="" class="barra-de-pesquisa01">
+                <input type="text" name="buscar" placeholder="Buscar">
+                <button class="bt-pesquisa"><img src="./imagens/ampliacao.svg" alt=""/></button>
+            </form>
+            
+            <div>
+                <div class="area-de-acesso">
+                    <figure>
+                        <img src="imagens/avatar.svg" alt="user">
+                    </figure>
+                    <div>
+                        <input type="submit" id="entrar" value="Entrar">
+                        <a href="dados_pessoais.html">Cadastre-se</a>
+                    </div>
+                </div>
+                
+                <a href="#">
+                    <figure class="sacola">
+                        <img src="imagens/sacola-de-compras.svg" alt="sacola de compras">
+                    </figure>
+                </a>
+            </div>
         </div>
-        </div>
+        <form action="" class="barra-de-pesquisa02">
+            <input type="text" name="buscar" placeholder="Buscar">
+            <button class="bt-pesquisa"><img src="./imagens/ampliacao.svg" alt=""/></button>
+        </form>
     </header>
-    <nav>
+    <!--  -->
+    <nav id="navegacao01">
         <ol>
             <li><a href="#">Masculino</a></li>
             <li><a href="#">Feminino</a></li>
             <li><a href="#">Infantil</a></li>
         </ol>
     </nav>
-    
+    <!--  -->
+    <nav id="navegacao02" style="left: -100%;">
+        <div class="area-conteudo">
+            <div class="area-de-acesso02">
+                <div>
+                    <input type="submit" id="entrar2" value="Entrar">
+                    <a href="dados_pessoais.html">Cadastre-se</a>
+                </div>
+            </div>
+            <ol class="nav-categorias">
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Feminino</a></li>
+                <li><a href="#">Infantil</a></li>
+            </ol>
+            <ol class="nav-outros">
+                <li class="atendimento">
+                    <a href="ajuda.html">
+                        <img src="imagens/question-mark-inside-a-circle.svg" alt=""/>
+                        <p>Atendimento</p>
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <div class="area-fechar-nav"></div>
+    </nav>
     <main>
         <h2>Gerenciar Pedidos</h2>
         <div class="itens">
@@ -576,6 +612,7 @@
         </section>
     </footer>
 </body>
+<script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>
 <script src="js/Pagadm.js"></script>
 <script src="js/main.js"></script>
 </html>

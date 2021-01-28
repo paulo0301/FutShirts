@@ -36,19 +36,25 @@
             </form>
         </div>
     </div>
-    <header>
+     <!-- ***************************************************************** -->
+     <header>
         <div class="link-atendimento">
-            <a href="Pag_Ajuda.html">
+            <a href="ajuda.html">
                 <img src="imagens/question-mark-inside-a-circle.svg" alt="">
                 <p>Atendimento</p>
             </a>
         </div>
         <div class="header-principal">
+            
+            <div class="menu-hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            
             <a href=""><figure class="logotipo"><img src="imagens/logo.svg" alt="logotipo"></figure></a>
             
-            <form action="" class="barra-de-pesquisa">
-                <input type="text" name="buscar" id="buscar" placeholder="Buscar" value="Flamengo">
-                <img src="./imagens/ampliacao.svg" alt="">
+            <form action="" class="barra-de-pesquisa01">
+                <input type="text" name="buscar" placeholder="Buscar">
+                <button class="bt-pesquisa"><img src="./imagens/ampliacao.svg" alt=""/></button>
             </form>
             
             <div>
@@ -58,7 +64,7 @@
                     </figure>
                     <div>
                         <input type="submit" id="entrar" value="Entrar">
-                        <a href="Dadospessoais.html">Cadastre-se</a>
+                        <a href="dados_pessoais.html">Cadastre-se</a>
                     </div>
                 </div>
                 
@@ -69,15 +75,44 @@
                 </a>
             </div>
         </div>
+        <form action="" class="barra-de-pesquisa02">
+            <input type="text" name="buscar" placeholder="Buscar">
+            <button class="bt-pesquisa"><img src="./imagens/ampliacao.svg" alt=""/></button>
+        </form>
     </header>
-    <nav>
+    <!--  -->
+    <nav id="navegacao01">
         <ol>
             <li><a href="#">Masculino</a></li>
             <li><a href="#">Feminino</a></li>
             <li><a href="#">Infantil</a></li>
         </ol>
     </nav>
-    
+    <!--  -->
+    <nav id="navegacao02" style="left: -100%;">
+        <div class="area-conteudo">
+            <div class="area-de-acesso02">
+                <div>
+                    <input type="submit" id="entrar2" value="Entrar">
+                    <a href="dados_pessoais.html">Cadastre-se</a>
+                </div>
+            </div>
+            <ol class="nav-categorias">
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Feminino</a></li>
+                <li><a href="#">Infantil</a></li>
+            </ol>
+            <ol class="nav-outros">
+                <li class="atendimento">
+                    <a href="ajuda.html">
+                        <img src="imagens/question-mark-inside-a-circle.svg" alt=""/>
+                        <p>Atendimento</p>
+                    </a>
+                </li>
+            </ol>
+        </div>
+        <div class="area-fechar-nav"></div>
+    </nav>
     <main>
         <div class="barra-informacoes-pesquisa">
             <span class="texto-pesquisado">Flamengo</span>

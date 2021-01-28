@@ -1,5 +1,6 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "FutShirt";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -8,228 +9,66 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg" href="~/Content/Images/logo-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/Content/header-footer.css">
     <link rel="stylesheet" href="~/Content/main.css">
     <link rel="stylesheet" href="~/Content/cadastro.css">
-    <title>Futshirt</title>
 </head>
 <body>
-    <div class="efeito">
-        <div class="login">
-            <input type="submit" id="fechar" value="x" />
-            <form>
-                <div class="container">
-                    <h2>Já sou cliente</h2>
-                    <div>
-                        <label for="login">E-mail</label>
-                        <input type="email" id="login" required />
-                    </div>
-
-                    <div>
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha" required />
-                    </div>
-
-                    <a href="">Esqueci minha senha</a>
-                </div>
-                <div class="container-entrar-cadastre-se">
-                    <input type="submit" id="entrar_login" value="Entrar">
-                    <a href="cadastro.html">Cadastre-se</a>
-                </div>
-            </form>
+    <div class="cabecalho">
+        <h2>Dados Pessoais</h2>
+        <div class="breadcrumbs">
+            <a href="#" class="active">Dados Pessoais</a>
+            <a href="#">Confirmar Email</a>
+            <a href="#">Endereço</a>
         </div>
     </div>
-    <header>
-        <div class="link-atendimento">
-            <a href="Pag_Ajuda.html">
-                <img src="~/Content/Images/question-mark-inside-a-circle.svg" alt="">
-                <p>Atendimento</p>
-            </a>
-        </div>
-        <div class="header-principal">
-            <a href=""><figure class="logotipo"><img src="~/Content/Images/logo.svg" alt="logotipo"></figure></a>
-
-            <form action="" class="barra-de-pesquisa">
-                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
-                <img src="~/Content/Images/~/Content/Images/ampliacao.svg" alt="">
-            </form>
-
-            <div>
-                <div class="area-de-acesso">
-                    <figure>
-                        <img src="~/Content/Images/avatar.svg" alt="user">
-                    </figure>
-                    <div>
-                        <input type="submit" id="entrar" value="Entrar">
-                        <a href="#">Cadastre-se</a>
-                    </div>
+    <article>
+        <form action="@Url.Action("ConfirmarCadastro", "Cadastro")" class="dados">
+            <div class="dados-cadastro">
+                <label for="name">Nome Completo</label>
+                <div class="dados-preencher">
+                    <input type="text" id="name" name="nome" placeholder="Digite seu nome completo" autocomplete="off" required>
                 </div>
-
-                <a href="#">
-                    <figure class="sacola">
-                        <img src="~/Content/Images/sacola-de-compras.svg" alt="sacola de compras">
-                    </figure>
-                </a>
             </div>
-        </div>
-    </header>
-    <nav>
-        <ol>
-            <li><a href="#">Masculino</a></li>
-            <li><a href="#">Feminino</a></li>
-            <li><a href="#">Infantil</a></li>
-        </ol>
-    </nav>
-
-    <main>
-        <div class="cabecalho">
-            <h2>Dados Pessoais</h2>
-            <div class="breadcrumbs">
-                <a href="#" class="active">Dados Pessoais</a>
-                <a href="#">Confirmar Email</a>
-                <a href="#">Endereço</a>
+            <div class="dados-cadastro">
+                <label for="email">Email</label>
+                <div class="dados-preencher">
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+                </div>
             </div>
-        </div>
-        <article>
-            <form action="" class="dados">
-                <div class="dados-cadastro">
-                    <label for="name">Nome Completo</label>
-                    <div class="dados-preencher">
-                        <input type="text" id="name" placeholder="Digite seu nome completo" autocomplete="off" required>
-                    </div>
+            <div class="dados-cadastro">
+                <label for="tel">Telefone</label>
+                <div class="dados-preencher">
+                    <input type="tel" id="tel" name="telefone" onkeypress="mascara(this, '## #####-####')" placeholder="(00) 00000-0000" maxlength="13" autocomplete="off" required>
                 </div>
-                <div class="dados-cadastro">
-                    <label for="email">Email</label>
-                    <div class="dados-preencher">
-                        <input type="email" id="email" placeholder="Digite seu email" autocomplete="off" required>
-                    </div>
+            </div>
+            <div class="dados-cadastro">
+                <label for="cpf">CPF</label>
+                <div class="dados-preencher">
+                    <input type="text" id="cpf" name="cpf" onkeypress="mascara(this, '###.###.###-##')" placeholder="000.000.000-00" maxlength="14" autocomplete="off" required>
                 </div>
-                <div class="dados-cadastro">
-                    <label for="tel">Telefone</label>
-                    <div class="dados-preencher">
-                        <input type="tel" id="tel" onkeypress="mascara(this, '## #####-####')" placeholder="(00) 00000-0000" maxlength="13" autocomplete="off" required>
-                    </div>
+            </div>
+            <div class="dados-cadastro">
+                <label for="nasc">Data de nascimento</label>
+                <div class="dados-preencher">
+                    <input type="text" id="nasc" name="data_nascimento" onkeypress="mascara(this, '##/##/####')" placeholder="00/00/0000" maxlength="10" autocomplete="off" required>
                 </div>
-                <div class="dados-cadastro">
-                    <label for="cpf">CPF</label>
-                    <div class="dados-preencher">
-                        <input type="text" id="cpf" onkeypress="mascara(this, '###.###.###-##')" placeholder="000.000.000-00" maxlength="14" autocomplete="off" required>
-                    </div>
+            </div>
+            <div class="dados-cadastro">
+                <label for="senha">Senha</label>
+                <div class="dados-preencher">
+                    <input type="password" id="password" name="senha" placeholder="Digite sua senha" autocomplete="off" required>
                 </div>
-                <div class="dados-cadastro">
-                    <label for="nasc">Data de nascimento</label>
-                    <div class="dados-preencher">
-                        <input type="text" id="nasc" onkeypress="mascara(this, '##/##/####')" placeholder="00/00/0000" maxlength="10" autocomplete="off" required>
-                    </div>
+            </div>
+            <div class="dados-cadastro">
+                <label for="confsenha">Confirmar senha</label>
+                <div class="dados-preencher">
+                    <input type="password" id="confpassword" name="confsenha" placeholder="Digite novamente sua senha" autocomplete="off" required>
                 </div>
-                <div class="dados-cadastro">
-                    <label for="senha">Senha</label>
-                    <div class="dados-preencher">
-                        <input type="password" id="password" placeholder="Digite sua senha" autocomplete="off" required>
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="confsenha">Confirmar senha</label>
-                    <div class="dados-preencher">
-                        <input type="password" id="confpassword" placeholder="Digite novamente sua senha" autocomplete="off" required>
-                    </div>
-                </div>
-                <input type="submit" id="conf" value="Prosseguir">
-            </form>
-        </article>
-    </main>
-
-    <footer>
-        <section class="vantagens">
-            <ul>
-                <li>
-                    <figure>
-                        <img src="~/Content/Images/bags.svg" alt="">
-                        <figcaption>FRETE GRÁTIS PARA TODO O BRASIL</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="~/Content/Images/tag.svg" alt="">
-                        <figcaption>DESCONTO NA PRIMEIRA COMPRA</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="~/Content/Images/trophy.svg" alt="">
-                        <figcaption>MATERIAL DE EXCELÊNCIA</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="~/Content/Images/credit-card.svg" alt="">
-                        <figcaption>PARCELAMOS EM X VEZES</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="~/Content/Images/football-shirt.svg" alt="">
-                        <figcaption>PERSONALIZE COMO QUISER</figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </section>
-        <section class="rodape">
-            <ol>
-                <li>
-                    <ol>
-                        <li class="destaque">Institucional</li>
-                        <li><a href="#">Nossos termos</a></li>
-                        <li><a href="#">Política de privacidade</a></li>
-                        <li><a href="#">Quem somos</a></li>
-                    </ol>
-                </li>
-                <li>
-                    <ol>
-                        <li class="destaque">Ajuda</li>
-                        <li><a href="#">Política de ajuda</a></li>
-                        <li><a href="#">Portal de ajuda</a></li>
-                    </ol>
-                </li>
-                <li>
-                    <ol>
-                        <li class="destaque"><a href="./Pag_Ajuda.html">Contato</a></li>
-                        <li><a href="#">Atendimento</a></li>
-                        <li><a href="./Pag_Ajuda_Whatsapp.html">WhatsApp (88) 8888-8888</a></li>
-                        <li><a href="#">Televendas (88) 8888-8888</a></li>
-                        <li><a href="#">Chat</a></li>
-                        <li><a href="./Pag_Ajuda_Email.html">Enviar e-mail</a></li>
-                    </ol>
-                </li>
-                <li>
-                    <ol>
-                        <li class="destaque">Formas de Pagamento</li>
-                        <li>
-                            <ul class="formas-de-pagamento">
-                                <li><img src="~/Content/Images/boleto.svg" alt=""></li>
-                                <li><img src="~/Content/Images/visa.svg" alt=""></li>
-                                <li><img src="~/Content/Images/mastercard.svg" alt=""></li>
-                                <li><img src="~/Content/Images/elo.svg" alt=""></li>
-                                <li><img src="~/Content/Images/hipercard.svg" alt=""></li>
-                                <li><img src="~/Content/Images/paypal.svg" alt=""></li>
-                            </ul>
-                        </li>
-                    </ol>
-                </li>
-                <li>
-                    <p class="destaque">Redes Sociais</p>
-                    <ol class="redes-sociais">
-                        <li><a href="#"><img src="~/Content/Images/logotipo-do-instagram.svg" alt=""></a></li>
-                        <li><a href="#"><img src="~/Content/Images/facebook.svg" alt=""></a></li>
-                        <li><a href="#"><img src="~/Content/Images/twitter.svg" alt=""></a></li>
-                    </ol>
-                </li>
-            </ol>
-            <p class="destaque">Copyright ©2020 FutShirt Todos direitos reservados</p>
-        </section>
-    </footer>
-    <script src="~/Scripts/main_js/login.js"></script>
-    <script src="~/Scripts/main_js/endereço-dadospessoais.js"></script>
+            </div>
+            <input type="submit" id="conf" value="Prosseguir">
+        </form>
+    </article>
 </body>
-
 </html>
+<script src="~/Scripts/main_js/login.js"></script>
+<script src="~/Scripts/main_js/endereço-dadospessoais.js"></script>

@@ -51,12 +51,12 @@ section.container-campeonatos{
 .container-campeonatos img{
     max-width: 100%;    
 }
-.container-campeonatos:hover > a{
+.container-campeonatos:hover  a{
     opacity: 0.85;
 }
-.container-campeonatos:hover > a:hover{
+.container-campeonatos:hover a:hover{
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(0.98);
     transition: all 0.5s;
     }
 
@@ -87,9 +87,6 @@ main div.item{
     position: relative;
     margin-bottom: 30px;
     transition: all .8s;
-}
-main div.item:hover{
-    transform: scale(1.05);
 }
 main div.foto-item{
     position: relative;
@@ -210,4 +207,9 @@ section.banner-regiao:hover > a:hover{
 
 section.banner-regiao img{
     width: 80%;
+}
+/* -------------------------------------- */
+.owl-item{
+    display: flex;
+    justify-content: center;
 }

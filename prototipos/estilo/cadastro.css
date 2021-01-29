@@ -54,26 +54,26 @@ main .breadcrumbs a:last-child{
     background: #77A1D9;
     transition: all 1s;
 }
-.dados{
+main .dados{
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+main .dados-cadastro{
     text-align: right;
 }
 
-.dados-cadastro{
-    text-align: right;
-    padding-right: 40%;
-}
-
-.dados-cadastro label{
+main .dados-cadastro label{
     font-size: 1.5rem;
     display: inline-block;
 }
 
-.dados-cadastro .dados-preencher{
+main .dados-cadastro .dados-preencher{
     display: inline-block;
     margin: 1rem 0;
 }
 
-.dados-preencher > input{
+main .dados-preencher > input{
     font-size: 1.4rem;
     margin-left: 1rem;
     width: 20rem;
@@ -82,14 +82,14 @@ main .breadcrumbs a:last-child{
     border-bottom: 1px solid black;
 }
 
-.dados-preencher > input:focus{
+main .dados-preencher > input:focus{
     border: none;
     border-bottom: 1px solid black;
     box-shadow: 0 0 0 0;
     outline: 0;
 }
 
-.dados-preencher > select{
+main .dados-preencher > select{
     color: black;
     font-size: 1.4rem;
     margin-left: 1rem;
@@ -100,14 +100,19 @@ main .breadcrumbs a:last-child{
     color: rgba(red, green, blue, 1);
 }
 
-.dados-preencher > select:focus{
+main .dados-preencher > select:focus{
     border: none;
     border-bottom: 1px solid black;
     box-shadow: 0 0 0 0;
     outline: 0;
 }
-
-.dados input[type=submit]{    
+.bt-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+}
+main .dados input[type=submit]{    
     font-size: 1.1rem;
     width: 170px;
     height: 50px;
@@ -115,26 +120,47 @@ main .breadcrumbs a:last-child{
     background-color:#334D01;
     border: none;
     border-radius: 6px;
-    color: #fefefe; 
-    margin: 1rem 51% 1rem 0;
+    color: #fefefe;
 }
-.dados input[type="submit"]:hover{
+main .dados input[type="submit"]:hover{
     cursor: pointer;
     background-color: #273a03;
 }
-
+@media (max-width: 875px){
+    main .breadcrumbs{
+        display: none;
+    }
+}
+@media (max-width: 640px){
+    main .dados-cadastro label{
+        display: block;
+    }
+    main .dados-cadastro{
+        text-align: left;
+        margin-bottom: 1em;
+    }
+    main .dados-preencher > input{
+        margin: 0;
+    }
+    main .dados-cadastro .dados-preencher{
+        margin: 0;
+    }
+    main .dados-preencher > select{
+        margin: 0;
+    }
+}
 /* Confirmar Cadastro */
-.instrucoes-cadastro{
+main .instrucoes-cadastro{
     width: 80%;
     margin: 0 auto;
     text-align: center;
     font-size: 1.7rem;
 }
-.confirmar-cadastro{
+main .confirmar-cadastro{
     margin: 2rem 1rem;
 }
 
-.confirmar-cadastro > input{
+main .confirmar-cadastro > input{
     padding-top: 30px;
     text-align: center;
     width: 4rem;
@@ -145,13 +171,13 @@ main .breadcrumbs a:last-child{
     font-size: 2.2rem;
 }
 
-.confirmar-cadastro > input:focus{
+main .confirmar-cadastro > input:focus{
     border: none;
     border-bottom: 1px solid black;
     outline: none;
 }
 
-.instrucoes-cadastro input[type=submit]{    
+main .instrucoes-cadastro input[type=submit]{    
     font-size: 1.1rem;
     width: 170px;
     height: 50px;
@@ -162,8 +188,31 @@ main .breadcrumbs a:last-child{
     color: #fefefe; 
     margin: 1.5rem 0;
 }
-.instrucoes-cadastro input[type="submit"]:hover{
+main .instrucoes-cadastro input[type="submit"]:hover{
     cursor: pointer;
     background-color: #273a03;
 }
-
+@media (max-width: 610px){
+    main .confirmar-cadastro > input{
+        width: 3rem;
+    }
+    main .instrucoes-cadastro{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 485px){
+    main .confirmar-cadastro > input{
+        width: 2rem;
+        font-size: 2rem;
+    }
+}
+@media (max-width: 365px){
+    main .confirmar-cadastro > input{
+        width: 1.8rem;
+    }
+}
+@media (max-width: 342px){
+    main .confirmar-cadastro > input{
+        width: 1.6rem;
+    }
+}

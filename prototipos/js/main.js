@@ -1,15 +1,10 @@
-document.querySelector("input#entrar").onclick = function abrir(){
+function abrir(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-    document.querySelector('.efeito').style.visibility = "visible";
+    document.querySelector('.efeito').style.display = "flex";
 }
-document.querySelector("input#entrar2").onclick = function abrir(){
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    document.querySelector('.efeito').style.visibility = "visible";
-}
-document.querySelector("input#fechar").onclick = function fechar(){
-    document.querySelector('.efeito').style.visibility = "hidden";
+function fechar(){
+    document.querySelector('.efeito').style.display = "none";
 }
 
 
@@ -18,8 +13,8 @@ var menuLado = document.querySelector("#navegacao02");
 var fecharMenu = document.querySelector(".area-fechar-nav");
 
 btMenu.addEventListener('click', () => {
-    menuLado.style.left = "0";
+    menuLado.classList.add("mostrar-menu");
 })
 fecharMenu.addEventListener('click', () => {
-    menuLado.style.left = "-100%";
+    menuLado.classList.remove("mostrar-menu");
 })

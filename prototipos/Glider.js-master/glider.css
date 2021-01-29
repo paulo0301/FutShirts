@@ -1,6 +1,6 @@
 .glider-contain {
-  width: 85%;
-  margin: 2em auto;
+  width: 100%;
+  margin: 0 auto;
   position: relative;
 }
 .glider {
@@ -34,11 +34,12 @@
 }
 .glider-slide {
   user-select: none;
+  justify-content: center;
   align-content: center;
   width: 100%;
 }
 .glider-slide img {
-  max-width: 60px;
+  max-width: 100%;
 }
 .glider::-webkit-scrollbar {
   opacity: 0;
@@ -75,13 +76,12 @@
 }
 .glider-next.disabled,
 .glider-prev.disabled {
-  opacity: .5;
+  opacity: .25;
   color: #666;
   cursor: default;
 }
 .glider-slide {
-  min-width: 50px;
-  margin: 0 10px;
+  min-width: 150px;
 }
 .glider-hide {
   opacity: 0;

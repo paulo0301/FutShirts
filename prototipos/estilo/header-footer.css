@@ -127,6 +127,11 @@ i.fa-bars{
     }
 }
 @media (max-width: 745px){
+    header{
+        position: fixed; 
+        bottom: 0;
+        width: 100%;
+    }
     div.link-atendimento, #navegacao01, header div.area-de-acesso{
         display: none;
     }

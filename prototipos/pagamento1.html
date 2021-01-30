@@ -4,6 +4,7 @@
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css”>
+    <link rel="stylesheet" href="estilo/main.css">
     <link rel="stylesheet" href="estilo/header-footer.css">
     <link rel="stylesheet" href="estilo/processo_compra.css">
     <title>Futshirt</title>
@@ -102,11 +103,13 @@
         <div class="area-fechar-nav"></div>
     </nav>
     <main>
-        <h2>Forma de pagamento</h2>
+        <div class="cabecalho">
+            <h2>Forma de pagamento</h2>
+        </div>
         
         <div class="container-formas-pagamento">
             <div class="lado-esquerdo">
-                <div class="cabecalho">
+                <div class="topico-pagina">
                     <h3>Cartões</h3>
                     <a href="#">
                         <img src="imagens/editar.svg"/>
@@ -155,7 +158,7 @@
                 </div>
 
 
-                <div class="cabecalho">
+                <div class="topico-pagina">
                     <h3>Outras formas de pagamento</h3>
                 </div>
 
@@ -171,9 +174,6 @@
                     </div>
                 </div>
 
-                <div class="container-bt">
-                    <a href="pagamento2.html">Continuar a compra</a>
-                </div>
                 
             </div>
             
@@ -184,13 +184,16 @@
                     <p>Produtos(2)</p>
                     <p id="valorProdutos">R$ 100,00</p>
                 </div>
-                <div class="container-valor-frete">
+                <div class="container-valor-frete bd-bt">
                     <p>Frete</p>
                     <p id="valorFrete">R$ 100,00</p>
                 </div>
                 <div>
                     <p>Total</p>
                     <p id="valorTotal"><b>R$ 300,00</b></p>
+                </div>
+                <div class="container-bt">
+                    <a href="pagamento2.html">Continuar a compra</a>
                 </div>
             </div>
         </div>

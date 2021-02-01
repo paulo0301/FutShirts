@@ -18,6 +18,22 @@ main .lado-esquerdo .topico-pagina img{
 main .container-comprar-enderecos, main .container-formas-pagamento, main .container-forma-pagamento-parcelas, main .container-revise-compra{
     display: flex;
 }
+@media (max-width: 1000px){   
+    main .lado-esquerdo{
+        width: 60%;
+    }
+}
+@media (max-width: 600px){
+    main .container-comprar-enderecos, main .container-formas-pagamento, main .container-forma-pagamento-parcelas, main .container-revise-compra{
+        flex-direction: column;
+    }   
+    main .lado-esquerdo{
+        width: 100%;
+    }
+    main .lado-esquerdo .topico-pagina{
+        padding: 0.4em 3%;
+    }
+}
 /* --------------------------------------- */
 main .container-endereco{
     padding: 1em 0 2em 2.7em;
@@ -58,7 +74,7 @@ div.descricao-item{
     justify-content: flex-start;
 }
 div.descricao-item div.nome{
-    margin-bottom: 3em;
+    margin-bottom: 2%;
 }
 div.descricao-item div.nome p{
     font-size: 1.25em;
@@ -74,11 +90,14 @@ div.descricao-item p#desc{
 div.descricao-item img{
     max-width: 35px;
 }
-div.container-tamanho p, div.container-genero p{
+div.container-tamanho, div.container-cor, div.container-qtd{
+    margin: 4px 0;
+}
+div.container-tamanho p, div.container-cor p, div.container-qtd p{
     font-weight: 400;
     font-size: 18px;
 }
-div.container-tamanho span, div.container-genero span{
+div.container-tamanho span, div.container-cor span, div.container-qtd span{
     font-weight: 700;
     font-weight: 18px;
 }
@@ -91,6 +110,37 @@ div#right{
 div#right p#valor{
     font-size: 25px;
     font-weight: bold;
+}
+@media (max-width: 1000px){
+    div.container-produto{
+        flex-wrap: wrap;
+    }
+    div#right{
+        height: max-content;
+        text-align: right;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    
+    @media (max-width: 600px){
+        main .container-endereco{
+            padding: 0 0 1em 0;
+            padding-left: 3%;
+        }
+        main .lado-esquerdo figure img{
+            max-width: 180px;
+        }
+    }
+    @media (max-width: 430px){
+        main .lado-esquerdo figure img{
+            max-width: 180px;
+        }
+    }
+}
+@media (max-width: 340px){
+    div#right p#valor{
+        font-size: 20px;
+    }
 }
 /* ---------------------------------------- */
 .cartoes-cadastrados .cartao-cadastrado{
@@ -198,9 +248,19 @@ main .lado-direito .bd-bt{
     border-bottom: 1px solid grey;
     padding-bottom: 3px;
 }
+@media (max-width: 1000px){
+    main .lado-direito{
+        width: 40%;
+    }
+}
+@media (max-width: 600px){
+    main .lado-direito{
+        width: 100%;
+    }
+}
 /*  */
 main .container-bt{
-    width: 92%;
+    width: 100%;
     display: flex !important;
     justify-content: flex-end !important;
     margin: 1.5em auto 2em !important;
@@ -214,4 +274,7 @@ main .container-bt a, main .container-bt button{
     cursor: pointer;
     outline: none;
     border-radius: 4px;
+}
+main div.cabecalho{
+    margin-bottom: 0;
 }

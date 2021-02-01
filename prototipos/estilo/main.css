@@ -4,7 +4,7 @@ main div.cabecalho{
     align-items: center;
     padding-left: 50px;
     padding-right: 20px;
-    height: 4.5em;
+    height: 4em;
     background-color: #030F26;
     color: #fff;
     border-top: 1px solid #fff;
@@ -17,9 +17,12 @@ div.cabecalho h2{
     font-weight: 500;
 }
 
-@media (max-width: 420px){
+@media (max-width: 430px){
     main div.cabecalho{
         padding-left: 1em;
+    }
+    div.cabecalho{
+        font-size: 1.2rem;
     }
 }
 /* PERSONALIZE */

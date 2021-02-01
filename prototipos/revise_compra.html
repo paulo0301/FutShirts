@@ -4,6 +4,7 @@
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css”>
+    <link rel="stylesheet" href="estilo/main.css">
     <link rel="stylesheet" href="estilo/header-footer.css">
     <link rel="stylesheet" href="estilo/processo_compra.css">
     <title>Futshirt</title>
@@ -102,7 +103,9 @@
         <div class="area-fechar-nav"></div>
     </nav>
     <main>
-        <h2>Revise sua compra</h2>
+        <div class="cabecalho">
+            <h2>Revise sua compra</h2>
+        </div>
         
         <div class="container-revise-compra">
             <div class="lado-esquerdo">
@@ -121,12 +124,17 @@
                                 
                                 <div class="container-tamanho">
                                     <p>Tamanho</p>
-                                    <span>P</span>
+                                    <span id="tamanhoEscolhido">P</span>
                                 </div>
                                 
-                                <div class="container-genero">
-                                    <p>Gênero</p>
-                                    <span>Masculino</span>
+                                <div class="container-cor">
+                                    <p>Cor</p>
+                                    <span id="corEscolhida">Vermelho e preto</span>
+                                </div>
+
+                                <div class="container-qtd">
+                                    <p>Quantidade</p>
+                                    <span id="qtdEscolhida">1</span>
                                 </div>
                             </div>
                         </div>
@@ -150,12 +158,17 @@
                                 
                                 <div class="container-tamanho">
                                     <p>Tamanho</p>
-                                    <span>P</span>
+                                    <span id="tamanhoEscolhido">P</span>
                                 </div>
                                 
-                                <div class="container-genero">
-                                    <p>Gênero</p>
-                                    <span>Masculino</span>
+                                <div class="container-cor">
+                                    <p>Cor</p>
+                                    <span id="corEscolhida">Vermelho e preto</span>
+                                </div>
+
+                                <div class="container-qtd">
+                                    <p>Quantidade</p>
+                                    <span id="qtdEscolhida">1</span>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +180,7 @@
                     <!--  -->
                 </div>
 
-                <div class="cabecalho">
+                <div class="topico-pagina">
                     <h3>Detalhes de pagamento</h3>
                 </div>
 

@@ -1,231 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+.bg-default{
+    background-color: #030F26 !important;
 }
-/******************** HEADER ********************/
-header div.header-principal{
-    width: 100%;
-    padding: 1em;
-    background-color: #030F26;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
+.header-ul li{
+    list-style: none;
 }
-.link-atendimento{
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 4px 20px 4px 0;
-}
-.link-atendimento a{
-    display: flex;
-    align-items: center;
-    color: #000000;
-    font-size: 18px;
-}
-.link-atendimento img, #navegacao02 .nav-outros img{
-    width: 16px;
-    margin-right: 5px;
-}
-h1 img{
-    width: 80px;
-    margin-right: 1em;
-}
-header form{
-    display: flex;
-    align-items: center;
-}
-header form input[type='text']{
-    width: 50em;
-    height: 3em;
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 0 0.7em;
-    outline: none;
-    border-right: none;
-}
-header .bt-pesquisa{
-    background: url("../imagens/ampliacao.svg") no-repeat center;
-    position: relative;
-    cursor: pointer;
-    background-color: transparent;
-    height: 3em;
-    width: 3em;
-    border: 1px solid #fff;
-    border-left: none;
-    outline: none;
-}
-header div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-right: 1em;
-}
-header div.area-de-acesso{
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-}
-header div.area-de-acesso img{
-    width: 32px;
-}
-
-header .sacola img{
-    width: 32px;
-}
-header div.area-de-acesso div{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 5px;
-}
-header div.area-de-acesso button, .area-de-acesso02 button{
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    outline: none;
-    cursor: pointer;
+.fs-8{
     font-size: 14px;
 }
-header div.area-de-acesso button:hover, header div.area-de-acesso a:hover{
-    text-decoration: underline;
-}
-header a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-}
-#navegacao02, .menu-hamburger{
-    display: none;
-}
-.mostrar-menu{
-    left: 0 !important;
-}
-i.fa-bars{
-    font-size: 30px;
-}
-
-@media (max-width: 1200px){
-    header form input[type='text']{
-        width: 40em;
-    }
-    header div.area-de-acesso{
-        margin-right: 0px;
-    }
-}
-@media (max-width: 960px){
-    header form input[type='text']{
-        width: 30em;
-    }
-}
-@media (max-width: 745px){
-    header{
-        position: fixed; 
-        bottom: 0;
-        width: 100%;
-    }
-    div.link-atendimento, #navegacao01, header div.area-de-acesso{
-        display: none;
-    }
-    .header-principal{
-        flex-wrap: wrap;
-    }
-    header .barra-de-pesquisa{
-        order: 1;
-        width: 100%;
-    }
-    header .barra-de-pesquisa input[type='text']{
-        width: 100%;
-    }
-    #navegacao02{
-        display: flex;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: 222;
-        left: -100%;
-        transition: 0.8s all;
-    }
-    #navegacao02 .area-conteudo{
-        width: 80%;
-        background-color: #fff;
-    }
-    .area-de-acesso02{
-        font-size: 18px;
-        color: #fff;
-        background-color: #030F26;
-        padding: 20px 10px 8px 10px;
-    }
-    .area-de-acesso02 a{
-        color: #fff;
-        font-weight: bold;
-    }
-    .area-de-acesso02 button{
-        display: block;
-        font-size: 18px;
-        margin-bottom: 8px;
-        font-weight: bold;
-    }
-    .area-conteudo .nav-categorias{
-        padding: 10px;
-    }
-    .area-conteudo .nav-categorias li a{
-        padding: 6px 0;
-        display: inline-block;
-        width: 100%;
-        color: #000000;
-        font-weight: bold;
-        border-bottom: 1px solid #030F26;
-    }
-    .menu-hamburger{
-        display: inline-block;
-    }
-    h1 img{
-        margin: 0;
-        width: 60px;
-    }
-    header div{
-        margin: 0;
-    }
-    .nav-outros{
-        padding: 10px;
-    }
-    .nav-outros .link-atendimento{
-        padding: 0;
-        justify-content: flex-start;
-    }
-    .area-fechar-nav{
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 20%;
-    }
-}
-/* ************************************** */
-header+nav{
-    font-family: 'Roboto', sans-serif;
-}
-header+nav a{
-    display: inline-block;
-    padding: 1em 2em;
-    color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 15px;
-}
-header+nav li:hover{
-    background-color: #acabab;
-}
-header+nav ol{
-    display: flex;
+.menu-bottom{
+    position: fixed; bottom: 0; left: 0; width: 100%; margin: 0; z-index: 9999;
 }
 /**************** FOOTER ******************/
 footer{
@@ -306,7 +89,7 @@ footer p{
         width: 50px;
     }
     footer section.vantagens ul li figcaption{
-        font-size: 12px;
+        font-size: 15px;
     }
     footer section.vantagens ul{
         padding: 2em 5px;
@@ -330,7 +113,6 @@ footer p{
     }
     footer section.vantagens ul li{
         margin: 12px 0;
-        border-bottom: 1px solid #fff;
     }
 }
 /* Área de login */

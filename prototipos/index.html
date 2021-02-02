@@ -14,6 +14,33 @@
     <title>Futshirt</title>
 </head>
 <body>
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModal">Entrar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Email</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Senha</label>
+                            <input type="password" class="form-control" id="recipient-name">
+                        </div>
+                    </form>
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-secondary" href="dados_pessoais.html">Cadastre-se</a>
+                    <button type="button" class="btn bg-login text-white">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <nav class="navbar-collapse navbar-expand-sm bg-default text-white">
             <div class="container-fluid">
@@ -29,7 +56,7 @@
                         <li class="nav-item d-flex col-6">
                             <img class="me-2 w-25" src="imagens/avatar.svg" alt="user">
                             <div class="d-flex flex-column">
-                                <button class="fs-8 nav-item p-0 text-start bg-default border-0 text-white">Entrar</button>
+                                <button class="fs-8 nav-item p-0 text-start bg-default border-0 text-white" data-bs-toggle="modal" data-bs-target="#login">Entrar</button>
                                 <a class="fs-8 nav-link nav-item p-0 text-white" href="dados_pessoais.html">Cadastre-se</a>
                             </div>
                         </li>

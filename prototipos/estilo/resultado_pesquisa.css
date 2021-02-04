@@ -1,3 +1,6 @@
+main *{
+    font-family: 'Roboto', sans-serif;
+}
 main div.filtros-resultado{
     display: flex;
 }
@@ -122,7 +125,7 @@ div.container-filtro > input{
     position: absolute;
 }
 div.container-filtro > input:checked + label::after{
-    content: "-";
+    content: "\f068";
 }
 div.container-filtro > input:checked ~ div{
     display: block;
@@ -136,7 +139,7 @@ div.container-filtro > label{
     cursor: pointer;
 }
 div.container-filtro > label::after{
-    content: "+";
+    content: "";
 }
 div.container-filtro div{
     display: none;
@@ -197,4 +200,44 @@ div.container-filtro div ol li a{
 .barra-informacoes-pesquisa select{
     background-color: #c1c1c175;
     text-align: center;
+}
+#mostrarFiltros{
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    display: none;
+    align-items: center;
+}
+#mostrarFiltros i{
+    margin-right: 5px;
+}
+
+@media (max-width: 768px){
+    section.container-resultado-pesquisa .tamanho-carrinho{
+        display: none;
+    }
+    .itens-disponiveis-pesquisado{
+        text-align: center;
+    }
+    .barra-informacoes-pesquisa > div{
+        text-align: right;
+    }
+    .barra-informacoes-pesquisa{
+        padding-bottom: 5px;
+    }
+}
+@media (max-width: 550px){
+    .texto-pesquisado, .itens-disponiveis-pesquisado{
+        display: none;
+    }
+    .lista-filtros{
+        transition: all 1s;
+        position: absolute;
+        right: 100%;
+    }
+    #mostrarFiltros{
+        display: flex;
+    }
 }

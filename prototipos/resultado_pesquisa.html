@@ -40,7 +40,7 @@
         </div>
     </div>
     <!-- ***************************************************************** -->
-    <header>
+    <header style="display: none;">
         <div class="link-atendimento">
             <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
             <p><a href="ajuda.html">Atendimento</a></p>
@@ -73,7 +73,7 @@
         </div>
     </header>
     <!--  -->
-    <nav id="navegacao01">
+    <nav id="navegacao01" style="display: none;">
         <ol>
             <li><a href="#">Masculino</a></li>
             <li><a href="#">Feminino</a></li>
@@ -81,7 +81,7 @@
         </ol>
     </nav>
     <!--  -->
-    <nav id="navegacao02">
+    <nav id="navegacao02" style="display: none;">
         <div class="area-conteudo">
             <div class="area-de-acesso02">
                 <div>
@@ -107,6 +107,7 @@
         <div class="barra-informacoes-pesquisa">
             <span class="texto-pesquisado">Flamengo</span>
             <span class="itens-disponiveis-pesquisado">160 produto(s) encontrado(s)</span>
+            <button id="mostrarFiltros"><i class="fas fa-filter"></i> Filtros</button>
             <div>
                 <label for="requisito-ordenacao">Ordenar por</label>
                 <select name="requisitos-ordenacao" id="requisitos-ordenacao">
@@ -1914,5 +1915,6 @@
         </section>
     </footer>
 </body>
+<script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 </html>

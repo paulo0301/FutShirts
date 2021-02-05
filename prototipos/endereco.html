@@ -42,22 +42,17 @@
         </div>
     </div>
     <!-- ***************************************************************** -->
-    <header>
+    <header id="header-desktop">
         <div class="link-atendimento">
             <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
             <p><a href="ajuda.html">Atendimento</a></p>
         </div>
         
         <div class="header-principal">
-            
-            <div class="menu-hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-            
             <h1><a href=""><img src="imagens/logo.svg" alt="logotipo"></a></h1>
             
             <form action="" class="barra-de-pesquisa">
-                <input type="text" name="buscar" placeholder="Buscar">
+                <input type="search" name="buscar" placeholder="Buscar">
                 <input class="bt-pesquisa" type="submit" value="">
             </form>
             
@@ -73,38 +68,14 @@
                 <a href="carrinho.html" class="sacola"><img src="imagens/sacola-de-compras.svg" alt="sacola de compras"/></a>
             </div>
         </div>
-    </header>
-    <!--  -->
-    <nav id="navegacao01">
-        <ol>
-            <li><a href="#">Masculino</a></li>
-            <li><a href="#">Feminino</a></li>
-            <li><a href="#">Infantil</a></li>
-        </ol>
-    </nav>
-    <!--  -->
-    <nav id="navegacao02">
-        <div class="area-conteudo">
-            <div class="area-de-acesso02">
-                <div>
-                    <button onclick="abrir()">Entrar</button>
-                    <a href="dados_pessoais.html">Cadastre-se</a>
-                </div>
-            </div>
-            <ol class="nav-categorias">
+        <nav id="navegacao01">
+            <ol>
                 <li><a href="#">Masculino</a></li>
                 <li><a href="#">Feminino</a></li>
                 <li><a href="#">Infantil</a></li>
             </ol>
-            <ol class="nav-outros">
-                <li class="link-atendimento">
-                    <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
-                    <p><a href="ajuda.html">Atendimento</a></p>
-                </li>
-            </ol>
-        </div>
-        <div class="area-fechar-nav"></div>
-    </nav>
+        </nav>
+    </header>
     <main>
         <div class="cabecalho">
             <h2>Endereço</h2>
@@ -114,54 +85,54 @@
                 <a href="#" class="active">Endereço</a>
             </div> 
         </div>
-    
+        
         <article>
-                <form action="" class="dados">
-                    <div class="dados-cadastro">
-                        <label for="cep">CEP</label>
-                        <div class="dados-preencher">                            
-                            <input type="text" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}"/>
-                        </div>
+            <form action="" class="dados">
+                <div class="dados-cadastro">
+                    <label for="cep">CEP</label>
+                    <div class="dados-preencher">                            
+                        <input type="text" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}"/>
                     </div>
-                    <div class="dados-cadastro">
-                        <label for="UF">Estado</label>
-                        <div class="dados-preencher">
-                            <select id="Estado" required >
-                                <option value="" class="sel" disabled="disabled" selected="selected">Selecione seu Estado</option> 
-                            </select>
-                        </div>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="UF">Estado</label>
+                    <div class="dados-preencher">
+                        <select id="Estado" required >
+                            <option value="" class="sel" disabled="disabled" selected="selected">Selecione seu Estado</option> 
+                        </select>
                     </div>
-                    <div class="dados-cadastro">
-                        <label for="cid">Cidade</label>
-                        <div class="dados-preencher">                            
-                            <select id="Cidade" required>
-                                <option value="" class="sel" disabled="disabled" selected="selected">Selecione sua Cidade</option> 
-                            </select>
-                        </div>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="cid">Cidade</label>
+                    <div class="dados-preencher">                            
+                        <select id="Cidade" required>
+                            <option value="" class="sel" disabled="disabled" selected="selected">Selecione sua Cidade</option> 
+                        </select>
                     </div>
-                    <div class="dados-cadastro">
-                        <label for="log">Logradouro</label>
-                        <div class="dados-preencher">
-                            <input type="text" id="log" placeholder="Digite seu Logradouro" autocomplete="off" >
-                        </div>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="log">Logradouro</label>
+                    <div class="dados-preencher">
+                        <input type="text" id="log" placeholder="Digite seu Logradouro" autocomplete="off" >
                     </div>
-                    <div class="dados-cadastro">
-                        <label for="num">Numero</label>
-                        <div class="dados-preencher">                            
-                            <input type="text" id="num" maxlength="4" placeholder="0000" autocomplete="off" required>
-                        </div>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="num">Numero</label>
+                    <div class="dados-preencher">                            
+                        <input type="text" id="num" maxlength="4" placeholder="0000" autocomplete="off" required>
                     </div>
-                    <div class="dados-cadastro">
-                        <label for="comp">Complemento</label>
-                        <div class="dados-preencher">
-                            <input type="text" id="comp" placeholder="Digite o Complemento" autocomplete="off"  >
-                        </div>
+                </div>
+                <div class="dados-cadastro">
+                    <label for="comp">Complemento</label>
+                    <div class="dados-preencher">
+                        <input type="text" id="comp" placeholder="Digite o Complemento" autocomplete="off"  >
                     </div>
-                    <div class="bt-container">
-                        <input type="submit" id="conf" value="Finalizar">
-                    </div>
-                </form>
-            </article>
+                </div>
+                <div class="bt-container">
+                    <input type="submit" id="conf" value="Finalizar">
+                </div>
+            </form>
+        </article>
     </main>
     
     <footer>

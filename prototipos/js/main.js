@@ -7,17 +7,21 @@ function fechar(){
     document.querySelector('.efeito').style.display = "none";
 }
 
+$(document).ready(function(){
+    getSizeScreen();
+});
 
-var btMenu = document.querySelector(".menu-hamburger");
-var menuLado = document.querySelector("#navegacao02");
-var fecharMenu = document.querySelector(".area-fechar-nav");
+$(window).resize(function() {
+    getSizeScreen();
+});
 
-btMenu.addEventListener('click', () => {
-    menuLado.classList.add("mostrar-menu");
-})
-fecharMenu.addEventListener('click', () => {
-    menuLado.classList.remove("mostrar-menu");
-})
+function getSizeScreen(){
+    if($( window ).width() < 900){
+        $('header').load('navegacao_mobile.html #header-mobile');
+    } else {
+        $('header').load('navegacao_desktop.html #header-desktop');   
+    }
+}
 
 $(document).ready(function(){
     /////////////////////////////////////

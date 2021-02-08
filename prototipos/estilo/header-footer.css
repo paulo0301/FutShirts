@@ -244,7 +244,7 @@ footer a{
 footer p{
     text-align: center;
 }
-@media (max-width: 700px){
+@media (max-width: 765px){
     footer section.vantagens ul li figure{
         width: 100%;
     }

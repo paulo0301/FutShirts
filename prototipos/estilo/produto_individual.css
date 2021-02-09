@@ -1,3 +1,6 @@
+main{
+    margin-top: 50px;
+}
 main > div:first-child{
     display: flex;
     padding: 0 3em;
@@ -11,14 +14,20 @@ div.fotos-item img{
 div.fotos-item .fotos-laterais{
     display: flex;
     flex-direction: column;
-    justify-content: top;
-    margin-left: 10px;
+    justify-content: space-between;
+    max-height: 504px;
 }
 div.fotos-item .fotos-laterais img{
-    margin: 9px 0;
+    max-width: 110px;
 }
 div.fotos-item .foto-principal{
     margin-left: 10px;
+    vertical-align: middle;
+    max-height: 504px;
+    max-width: 540px;
+}
+div.fotos-item .foto-principal img{
+    max-width: 100%;
 }
 /*  */
 div.informaçoes-compra-item{
@@ -122,6 +131,34 @@ div.informaçoes-compra-item .tamanho a{
 .adicionar-item-carrinho img{
     margin-right: 7px;
 }
+@media (max-width: 1150px){
+    main > div:first-child{
+        padding: 0 10px;
+    }
+}
+@media (max-width: 950px){
+    main > div:first-child{
+        flex-direction: column;
+    }
+    div.fotos-item{
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-bottom: 10px;
+    }
+    div.fotos-item .foto-principal{
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    div.fotos-item .fotos-laterais{
+        flex-direction: row;
+        max-width: 540px;
+        justify-content: space-between;
+    }
+    div.fotos-item .fotos-laterais img{
+        margin: 0 4px;
+    }
+}
+
 /*  */
 div.consulta-prazo{
     width: 22em;
@@ -178,7 +215,7 @@ main div.foto-item{
     width: 100%;
 }
 main div.foto-item div{
-    z-index: 2222;
+    z-index: 2;
     position: absolute;
     right: 0;
 }
@@ -186,7 +223,7 @@ main div.foto-item img{
     width: 100%;
     z-index: -1;
 }
-main div.foto-item div input{
+main div.foto-item div button{
     width: 30px;
     height: 30px;
     right: 0;
@@ -195,36 +232,43 @@ main div.foto-item div input{
     position: absolute;
     cursor: pointer;
     outline: none;
-    background-image: url("../imagens/heart.svg");
     background-repeat: no-repeat;
     background-position: center;
     border: none;
     background-color: transparent;
 }
-main div.foto-item div input:hover{
-    background-image: url("../imagens/heart_preenchido.svg");
+main div.foto-item div button::after{
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    font-size: 30px;
+    z-index: 222;
+    color: #4d4d4d;
+    cursor: auto;
 }
-div.info-item{
+main div.foto-item div button:hover{
+    font-weight: 900;
+}
+div.info-item *{
     color: #000;
 }
-div.info-item .nome-item{
+div.info-item .nome-item a{
     font-size: 20px;
 }
-div.info-item .preco .preco-item{
+div.info-item .preco .preco-item a{
     color: #4b4a4a;
     text-decoration: line-through;
     margin: 3px 0;
 }
-div.info-item .preco .preco-promocional-item{
+div.info-item .preco .preco-promocional-item a{
     font-weight: bold;
     font-size: 20px;
     margin: 3px 0;
 }
-div.info-item .preco .parcela{
+div.info-item .preco .parcela a{
     font-weight: 200;
     margin: 3px 0;
 }
-.itens-relacionados .tamanho-carrinho{
+section.container-resultado-pesquisa .tamanho-carrinho{
     visibility: hidden;
 }
 main div.item:hover{
@@ -233,7 +277,7 @@ main div.item:hover{
 main div.item:hover .tamanho-carrinho{
     visibility: visible;
 }
-.itens-relacionados select{
+.tamanho-carrinho select{
     width: 100%;
     text-align: center;
     height: 40px;
@@ -242,7 +286,7 @@ main div.item:hover .tamanho-carrinho{
     cursor: pointer;
     margin: 5px 0;
 }
-.itens-relacionados .tamanho-carrinho button{
+.tamanho-carrinho button{
     width: 100%;
     background-color: #888888;
     border: none;
@@ -252,8 +296,8 @@ main div.item:hover .tamanho-carrinho{
     align-items: center;
     justify-content: center;
 }
-.itens-relacionados .tamanho-carrinho button img{
-    width: 30px;
+.tamanho-carrinho button img{
+    width: 30px !important;
 }
 /*  */
 .informacoes-produto{
@@ -335,7 +379,9 @@ main div.item:hover .tamanho-carrinho{
     color: green;
 }
 .container-avaliacoes div.todos-comentarios{
-    height: 4em;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }   
 .container-avaliacoes #todos-comentarios{
     border: none;
@@ -345,6 +391,68 @@ main div.item:hover .tamanho-carrinho{
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    position: absolute;
-    right: 55px;
+}
+/*  */
+@media (max-width: 470px){
+    div.fotos-item .fotos-laterais img{
+        max-width: 80px;
+    }
+    div.informaçoes-compra-item{
+        margin: 0 5px;
+    }
+    .informacoes-produto{
+        padding: 0 15px;
+    }
+    div.consulta-prazo{
+        margin-top: 1em;
+        text-align: right;
+        max-width: 100%;
+        padding-right: 10px;
+    }
+    div.consulta-prazo form{
+        flex-direction: column;
+        align-items: flex-end;
+        
+    }
+    div.consulta-prazo form input{
+        margin: 5px 0;
+        border: 1px solid #030F26;
+    }
+    .container-avaliacoes .avaliacao{
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .container-avaliacoes{
+        padding: 3em 10px 1em;
+        margin-left: 0;
+    }
+    .container-avaliacoes .avaliacao > div:nth-child(2){
+        margin-right: 0;
+    }
+    .container-avaliacoes .avaliacao div p{
+        font-size: 20px;
+    }
+    .container-avaliacoes .avaliacao div p span{
+        font-size: 35px;
+    }
+    .container-avaliacoes .avaliacao > div:nth-child(2) > span{
+        font-size: 45px;
+    }
+    .container-estrelas img{
+        max-width: 25px;
+    }
+    div.informaçoes-compra-item .tamanho ol{
+        max-width: 290px;
+    }
+}
+@media (max-width: 355px){
+    div.fotos-item .fotos-laterais img{
+        max-width: 65px;
+    }
+}
+
+/*  */
+.owl-item{
+    display: flex;
+    justify-content: center;
 }

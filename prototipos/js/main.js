@@ -16,7 +16,7 @@ $(window).resize(function() {
 });
 
 function getSizeScreen(){
-    if($( window ).width() < 900){
+    if($( window ).width() < 746){
         $('header').load('navegacao_mobile.html #header-mobile');
     } else {
         $('header').load('navegacao_desktop.html #header-desktop');   

@@ -91,21 +91,24 @@
                 <div class="dados-cadastro">
                     <label for="cep">CEP</label>
                     <div class="dados-preencher">                            
-                        <input type="text" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}"/>
+                        <i class="fas fa-map-marker-alt icon"></i>
+                        <input type="text" class="input-field" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}"/>
                     </div>
                 </div>
                 <div class="dados-cadastro">
                     <label for="UF">Estado</label>
                     <div class="dados-preencher">
-                        <select id="Estado" required >
+                        <i class="fas fa-map-marked-alt icon"></i>
+                        <select id="Estado" class="select-field" required >
                             <option value="" class="sel" disabled="disabled" selected="selected">Selecione seu Estado</option> 
                         </select>
                     </div>
                 </div>
                 <div class="dados-cadastro">
                     <label for="cid">Cidade</label>
-                    <div class="dados-preencher">                            
-                        <select id="Cidade" required>
+                    <div class="dados-preencher">     
+                        <i class="fas fa-map-marked-alt icon"></i>                       
+                        <select id="Cidade" class="select-field" required>
                             <option value="" class="sel" disabled="disabled" selected="selected">Selecione sua Cidade</option> 
                         </select>
                     </div>
@@ -113,19 +116,22 @@
                 <div class="dados-cadastro">
                     <label for="log">Logradouro</label>
                     <div class="dados-preencher">
-                        <input type="text" id="log" placeholder="Digite seu Logradouro" autocomplete="off" >
+                        <i class="fas fa-road icon"></i>
+                        <input type="text" id="log" class="input-field placeholder="Digite seu Logradouro" autocomplete="off" >
                     </div>
                 </div>
                 <div class="dados-cadastro">
                     <label for="num">Numero</label>
-                    <div class="dados-preencher">                            
-                        <input type="text" id="num" maxlength="4" placeholder="0000" autocomplete="off" required>
+                    <div class="dados-preencher">  
+                        <i class="fas fa-home icon"></i>                          
+                        <input type="text" id="num" class="input-field maxlength="4" placeholder="0000" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="dados-cadastro">
                     <label for="comp">Complemento</label>
                     <div class="dados-preencher">
-                        <input type="text" id="comp" placeholder="Digite o Complemento" autocomplete="off"  >
+                        <i class="fas fa-info icon  "></i>
+                        <input type="text" id="comp" class="input-field placeholder="Digite o Complemento" autocomplete="off"  >
                     </div>
                 </div>
                 <div class="bt-container">

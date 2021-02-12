@@ -1,3 +1,4 @@
+*{box-sizing: border-box;}
 main div.cabecalho{
     display: flex;
     justify-content: space-between;

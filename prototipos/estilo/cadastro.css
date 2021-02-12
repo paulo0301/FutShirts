@@ -138,6 +138,10 @@ main .dados input[type="submit"]:hover{
     main .breadcrumbs{
         display: none;
     }
+    main .dados{
+        max-width: 30rem;
+        margin: 0 auto
+    }
 }
 @media (max-width: 640px){
     main .dados-cadastro label{

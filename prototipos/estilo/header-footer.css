@@ -345,9 +345,11 @@ form div.container a{
     background-color: transparent;
     padding: 0;
     color: #3B5AC9;
-    text-decoration: underline;
     font-size: 15px;
     margin-left: 50px;
+}
+form div.container a{
+    text-decoration: underline;
 }
 button#fechar{
     background-color: transparent;

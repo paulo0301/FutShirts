@@ -1,7 +1,9 @@
 function abrir(){
+    if($(window).width() > 746){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     document.querySelector('.efeito').style.display = "flex";
+    }
 }
 function fechar(){
     document.querySelector('.efeito').style.display = "none";
@@ -18,6 +20,7 @@ $(window).resize(function() {
 function getSizeScreen(){
     if($( window ).width() < 746){
         $('header').load('navegacao_mobile.html #header-mobile');
+        document.querySelector('.efeito').style.display = "none";
     } else {
         $('header').load('navegacao_desktop.html #header-desktop');   
     }

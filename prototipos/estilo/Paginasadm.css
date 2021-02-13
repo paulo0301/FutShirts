@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 
 }
 main>div{
@@ -43,6 +44,10 @@ main nav a:hover, main nav a.active{
     background-color: #030F26;
     color: #fff;
 }
+.listresp{
+    display: none;
+}
+
 .titulo_produto{
     background-color: #77A1D9;
     color: #fff;
@@ -60,8 +65,8 @@ main nav a:hover, main nav a.active{
     margin-left: 15px;
 }
 .pesquisa input{
-    width: 95.5%;
-    height: 40px;
+    width: 94%;
+    height: 15px;
     padding: 0.8em;
     margin-top:20px;
     margin-left: 25px;
@@ -79,19 +84,236 @@ main nav a:hover, main nav a.active{
 .camisa_imagens{
     display: flex;
     flex-wrap: wrap;
+    max-width:1150px;
+    align-items: center;
     justify-content: space-between;
+    -webkit-justify-content: center;
     padding: 10px 25px;
 }
+
 .camisa img{
     width: 250px;
     height: 220px;
     margin-top: 13px;
+    margin-left: 15px;
+    display: block;
 }
+
 .camisa_descrição{
     font-size: 15px;
     font-weight: 300;
     font-style: normal;
+    margin-left:20px;
 }
+main #mais{   
+    display:none;
+    font-size: 1.1rem;
+    width: 150px;
+    height: 35px;
+    position: relative;
+    left: 83%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    outline: none;
+    background-color:#334D01;
+    border: none;
+    border-radius: 6px;
+    color: #fefefe;
+}
+main #mais:hover{
+    cursor: pointer;
+    background-color: #273a03;
+}
+
+@media (max-width : 1328px){
+    .ultmais{
+          display:none;
+     }
+     main #mais{
+         display: block;
+     }
+}
+
+@media (max-width : 1060px){
+    .pesquisa input{
+        width: 90%;
+        margin: 20px 0 0 35px;
+
+    }
+    .camisa_imagens{
+        justify-content: space-around;
+    }
+    main #mais{
+        left: 80%;
+    }
+}
+@media (max-width : 799px){
+    .camisa img{
+        width: 220px;
+    }
+    .pesquisa input{
+        width: 85%;
+    }
+    main #mais{
+        left: 70%;
+        width: 135px;
+    }
+}
+@media (max-width:745px){
+    .camisa img{
+        width:175px;
+        height:175px;
+    }
+}
+@media (max-width : 645px){
+    .camisa img{
+       width: 215px;
+       height: 188px;
+    }
+    
+    .list{
+        display:none;
+    }
+
+    main nav {
+        min-width: 55px;
+    }
+    .listresp{
+        display: block;
+    }
+    main #mais{
+        left: 63%;
+    }
+}
+@media (max-width : 585px){
+    .camisa img{
+        width: 300px;
+        height: 280px;
+    }
+    
+}
+@media (max-width : 411px){
+    .titulo_produto {
+        width: 100%;
+    }
+    .titulo2{
+        width: 100%;
+    }
+    .pesquisa input{
+        width: 285px;
+        margin: 8px 2px 4px 37px;
+    }
+    .camisa img{
+        width: 260px;
+        height: 250px;
+    }
+    main #mais{
+        left: 58%;
+    }
+    .adicionarprod input[type = text]{
+        width: 255px;
+    }
+    .formjunto #preco{
+        width: 255px;
+    }
+    .container_conteudo .button_selecionar label{
+        padding:0.7em;
+    }
+    .button_selecionar #adicionarprod{
+        margin-top: 30px;
+        margin-right: 30px;
+    }
+}
+@media (max-width : 375px){
+    
+    
+    .pesquisa input{
+        width: 240px;
+        margin: 2px 2px 4px 33px;
+    }
+    .camisa img{
+        width: 240px;
+        height: 250px;
+    }
+    main #mais{
+        left: 53%;
+    }
+   
+    .tamanho .tamanho_escolha{
+        width: 250px;
+    }
+    .tamanho .tamanho_escolha li{
+        width: 70px;
+        height: 40px;
+    }
+    .pesquisa .botão_submit #deletar{
+        width: 100px;
+        height: 30px;
+        font-size: 11px;
+
+    }
+    .pesquisa .botão_submit #Desativar{
+        width: 110px;
+        height: 30px;
+        font-size: 11px;
+    }
+    
+}
+@media (max-width : 360px){
+    
+    .pesquisa input{
+        width: 235px;
+        margin: 2px 2px 4px 24px;
+    }
+    .camisa img{
+        width: 240px;
+        height: 250px;
+    }
+    main #mais{
+        left: 50%;
+    }
+    .button_selecionar #adicionarprod{
+        margin-right: 40px;
+    }
+    .adicionarprod input[type = text]{
+        width: 235px;
+    }
+    .formjunto #preco{
+        width: 235px;
+    }
+   
+    
+}
+@media (max-width : 320px){
+   
+    .pesquisa input{
+        width:225px;
+    }
+    .camisa img{
+        width: 200px;
+        height: 220px;
+    }
+    main #mais{
+        left: 45%;
+    }
+    .adicionarprod input[type = text]{
+        width: 220px;
+    }
+    .formjunto #preco{
+        width: 220px;
+    }
+    .tamanho .tamanho_escolha{
+        width: 230px;
+    }
+    .tamanho .tamanho_escolha li{
+        width: 60px;
+        height: 40px;
+    }
+    .button_selecionar #adicionarprod{
+        margin-right: 15px;
+    }
+}
+
 .titulo2{
     background-color: #77A1D9;
     color: #fff;
@@ -210,6 +432,9 @@ main nav a:hover, main nav a.active{
 .formadicionar select:valid{
     color: black;
 }
+.formadicionar #name{
+    width: 200px;
+}
 .tamanho{
     padding-left: 2em;
 }
@@ -235,8 +460,8 @@ main nav a:hover, main nav a.active{
     padding-top: 0.8em;
     margin: 6px 6px;
     text-align: center;
-    width: 60px;
-    height: 48px;
+    width: 50px;
+    height: 45px;
 }
 .tamanho_escolha li:hover,.tamanho_escolha li:visited{
     background-color: #030f23;
@@ -270,8 +495,20 @@ main nav a:hover, main nav a.active{
     height: 50px;
 }
 .button_selecionar input[type="submit"]:hover{
-    background-color: limegreen;
-    color: black;
+    cursor: pointer;
+    background-color: #273a03;
+}
+@media (max-width : 930px){
+    .formjunto{
+        display: block;
+    }
+    .seljunto1,.seljunto2,.seljunto3{
+        padding:8px 0;
+     }
+     .seljunto4{
+        padding:8px 0;
+    }
+    
 }
 /*************************Listar produtos***********************/
 .botão_submit{
@@ -284,23 +521,29 @@ main nav a:hover, main nav a.active{
     height: 50px;
     border-radius: 5px;
     border: none;
-    cursor: pointer;
     background-color: #7D0101;
     font-size: 17px;
     font-weight: 400;
     color: white;
+}
+.botão_submit #deletar:hover{
+    cursor: pointer;
+    background-color: rgb(95, 3, 3);
 }
 .botão_submit #Desativar{
     width:170px;
     height: 50px;
     text-align: center;
     border: none;
-    cursor: pointer;
     font-size: 17px;
     font-weight: 400;
     border-radius: 5px;
     background-color: #4A5F7C;
     color: white;
+}
+.botão_submit #Desativar:hover{
+    cursor: pointer;
+    background-color: #2f4058;
 }
 .voltar{
     position: relative;
@@ -310,8 +553,8 @@ main nav a:hover, main nav a.active{
 }
 .voltar .linkvoltar{
     background-color: #334D01;
-    width: 120px;
-    height: 50px;
+    width: 130px;
+    height: 45px;
     text-align: center;
     padding-top: 0.6em;
     border: none;
@@ -319,15 +562,23 @@ main nav a:hover, main nav a.active{
     cursor: pointer;
 }
 .voltar .linkvoltar:hover{
-    background-color: limegreen;
+    cursor: pointer;
+    background-color: #273a03;
 }
 .voltar .linkvoltar a{
     color: white;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 400;
 }
 /******************************Visalizar produto*************************/
-
+.container-fluid {
+    padding: 0;
+    display: none;
+  }
+  
+  #mainSlider .carousel-inner, #mainSlider .carousel-item {
+    height: 90vh;
+  }
 .Informaçãoproduto{
     display: flex;
     justify-content: space-between;
@@ -335,6 +586,7 @@ main nav a:hover, main nav a.active{
 .foto{
     display: flex;
     flex-wrap: wrap;
+    
     margin-left: 40px;
     margin-top: 60px;
 }
@@ -345,6 +597,7 @@ main nav a:hover, main nav a.active{
     justify-content: space-between;
     
 }
+
 .fotonormal img{
     height: 170px;
     margin-left: 25px;
@@ -419,6 +672,7 @@ main nav a:hover, main nav a.active{
     background-color: #030f23;
     color: white;
 }
+
 .descriçãoproduto{
     padding:5em 4em;
 }
@@ -551,8 +805,8 @@ main nav a:hover, main nav a.active{
     cursor: pointer;
 }
 .submitvisual #voltar:hover{
-    background-color: limegreen;
-    color: white;
+    cursor: pointer;
+    background-color: #273a03;
     
 }
 .submitvisual #deletar{
@@ -567,8 +821,8 @@ main nav a:hover, main nav a.active{
     border-radius: 7px;
 }
 .submitvisual #deletar:hover{
-    background-color: red;
-    color: white;
+    cursor: pointer;
+    background-color: rgb(95, 3, 3);
 }
 .submitvisual #Salvar{
     background-color: #334D01;
@@ -583,10 +837,153 @@ main nav a:hover, main nav a.active{
     border-radius: 7px;
 }
 .submitvisual #Salvar:hover{
-    background-color: limegreen;
-    color: white;
+    cursor: pointer;
+    background-color: #273a03;
 }
-/******************************************Gerenciar Pordutos*************************/
+
+@media (max-width : 1319px){
+    .foto{
+        flex-direction: column-reverse;
+    }
+    .fotonormal{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-top: 20px;
+    }
+    .fotonormal img{
+        width: 187px;
+        height: 180px;
+        margin-left:10px
+    }
+    .informação_adicional{
+        display: block;
+        padding-left: 5em;
+    }
+    
+}
+@media (max-width : 1125px){
+    .foto{
+        margin-left: 5px;
+    }
+    .informaçãocamisa{
+        margin-right: 5px;
+    }
+}
+@media (max-width: 1004px){
+    .foto{
+        display: none;
+    }
+    .container-fluid {
+        display: block;
+    }
+}
+@media (max-width : 980px){
+    .Informaçãoproduto{
+        display: block;
+    }
+    .container-fluid{
+        padding-top: 1em;
+    }
+    .container-fluid img{
+      height: 600px;
+    }
+    .informaçãocamisa{
+        padding-left: 4em;
+        width: 75%;
+    }
+    .informaçãocamisa .nomecamisa{
+        font-size: 40px;
+    }
+    .informaçãocamisa .quantitens{
+        font-size: 25px;
+    }
+    .informaçãocamisa .preçoitem{
+        font-size: 35px;
+    }
+}
+@media (max-width: 850px){
+    .submitvisual{
+        display: block;
+    }
+    .submitvisual .deletar_salvar{
+        display: block;
+        padding-top: 1.5em;
+    }
+    .submitvisual #deletar{
+        width:160px;
+        font-size:20px
+    }
+    .submitvisual #Salvar{
+        width: 170px;
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width : 411px){
+    .container-fluid{
+        height: 425px;
+    }
+    .container-fluid img{
+        height: 420px;
+      }
+      .informaçãocamisa{
+          width: 90%;
+          padding-left: 1.5em;
+      }
+      .descriçãoproduto{
+          padding:3em 1.5em;
+      }
+      .informação_adicional{
+         width: 385px;
+         padding-left: 60px;
+      }
+      .infor1{
+          display: block;
+          width: 80%;
+      }
+      .infor2 {
+        display: block;
+        width: 78%;
+
+    }
+    .infor3{
+        display: block;
+        width: 70%;
+    }
+    
+    .submitvisual #Salvar{
+       margin-top: 20px;
+       margin-left: 0;
+    }
+}
+
+@media (max-width : 375px){
+    .informação_adicional{
+        width: 375px;
+    }
+}
+@media (max-width : 360px){
+    .container-fluid{
+        height: 380px;
+    }
+    .container-fluid img{
+        height: 370px;
+    }
+    .informação_adicional{
+        width: 360px;
+    }
+    
+}
+@media (max-width : 320px){
+    .informação_adicional{
+        width: 310px;
+    }
+    .infor1 #time{
+        width: 240px;
+    }
+}
+/******************************************Gerenciar pedidos*************************/
 
 .pedidos_titulo1{
     display: flex;
@@ -596,7 +993,7 @@ main nav a:hover, main nav a.active{
     display: flex;
     align-items: center;
     margin-top: 10px;
-    font-size: 27px;
+    font-size: 23px;
     height: 50px;
     padding-left: 20px;
     padding-right: 30px;
@@ -641,6 +1038,7 @@ main nav a:hover, main nav a.active{
 .pedido_datavalor{
     margin-top: 50px;
 }
+
 .inforpedido .nomecpf{
     font-size: 17px;
     font-weight: 400;
@@ -780,5 +1178,112 @@ main nav a:hover, main nav a.active{
     font-size: 17px;
     font-weight: 700;
 }
+@media (max-width: 1300px){
+    .outro_foto .img2{
+        margin-left:38px ;
+    }
+}
+
+@media (max-width:930px){
+   
+    .pedido_foto{
+        display: block;
+    }
+    .pedido_datavalor{
+        margin-top: 130px;
+    }
+    .pedido_foto .fotousi{
+        margin-left: 20px;
+    }
+    .outroped{
+        display: block;
+    }
+    .status{
+       margin-top:75px;
+    }
+   
+}
+@media (max-width:810px){
+    .pedido{
+       display: block;
+    }
+    .pedido_ultimo{
+        display: block;
+
+    }
+    .pedido_datavalor{
+        margin-top: 30px;
+        margin-left:30px ;
+    }
+    .pedido_foto figure .fotousi{
+        width: 50%;
+    }
+    .conf_cancel{
+        margin-left:30px;
+    }
+    .conf_cancel img{
+        width: 40px;
+    }
+    .list{
+        display:none;
+    }
+
+    main nav {
+        min-width: 55px;
+    }
+    .listresp{
+        display: block;
+    }
+    .statuspedido {
+        float: left;
+        left: 28px;
+        bottom: 0;
+        top: 24px;
+     }
+    .status{
+        margin-left: 33px;
+    }
+}
+@media (max-width : 560px){
+    .informação_outroped{
+        margin-left: 25px;
+    }
+    .informação_ultoutroped{
+        margin-left: 0;
+    }
+    .statuspedido {
+       float: left;
+       left: 28px;
+       bottom: 0;
+       top: 24px;
+    }
+    .preço{
+        margin-left: 0;
+    }
+}
+@media (max-width : 411px){
+    .pedidos_titulo1{
+        font-size: 20px;
+    }
+    .informação_outroped .generopreço{
+        display: block;
+    }
+    .informação_outroped .generopreço .indic{
+        margin-left: 2px;
+    }
+    .informação_outroped .generopreço .preço{
+        margin-left: 2px;
+    }
+    .status{
+        margin-top: 40px;
+    }
+}
+@media (max-width : 375px){
+    .pedidos_titulo1{
+        font-size: 20px;
+    }
+}
+
+/**********************************Responsividade////////////////////////////*
 
 

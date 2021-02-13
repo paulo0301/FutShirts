@@ -71,7 +71,7 @@
             </div>
         </div>
     </header>
-    <!--  -->
+   
     <nav id="navegacao01">
         <ol>
             <li><a href="#">Masculino</a></li>
@@ -79,7 +79,6 @@
             <li><a href="#">Infantil</a></li>
         </ol>
     </nav>
-    <!--  -->
     <nav id="navegacao02">
         <div class="area-conteudo">
             <div class="area-de-acesso02">
@@ -105,10 +104,13 @@
     <main>
         <h2>Gerenciar produtos</h2>
         <div class="Conteudo">
-                <nav>
+               <nav>
                     <ol>
-                        <li><a href="#" class="active"><img src="imagens/gerenciaprod.svg"  alt="">Geren. Produtos</a></li>
-                        <li><a href="#"><img src="imagens/gerenciapedi.svg" alt="">Geren. Pedidos</a></li>
+                        <li class="list"><a href="#" class="active"><img src="imagens/gerenciaprod.svg"  alt="">Geren. Produtos</a></li>
+                        <li class="list"><a href="#"><img src="imagens/gerenciapedi.svg" alt="">Geren. Pedidos</a></li>
+                        <li class="listresp"><a href="#"><img src="imagens/gerenciaprod.svg"  alt=""></a></li>
+                        <li class="listresp"><a href="#"><img src="imagens/gerenciapedi.svg" alt=""></a></li>
+                        
                     </ol>
                 </nav>
                 <section class="container_conteudo">
@@ -126,41 +128,64 @@
                
                     <div class="camisa_imagens">
                         
-                            <div class="camisa">
+                        <div class="camisa">
+                            <div class="camresp">
                                 <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
                                 <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
                             </div>
-                            <div class="camisa">
+                        </div>
+                        <div class="camisa">
+                            <div class="camresp">
                                 <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
                                 <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
                             </div>
-                            <div class="camisa">
+                        </div>
+                        <div class="camisa">
+                            <div class="camresp">
                                 <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
                                 <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
                             </div>
-                            <div class="camisa">
-                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
-                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>$ 219,90</b></p>
-                            </div>
-                            <div class="camisa">
+                        </div>
+                        <div class="camisa">
+                            <div class="camresp">
                                 <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
                                 <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
                             </div>
-                            <div class="camisa">
+                        </div>
+                        <div class="camisa">
+                            <div class="camresp">
                                 <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
                                 <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
                             </div>
+                        </div>
                             <div class="camisa">
-                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
-                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                                <div class="camresp">
+                                    <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                    <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                                </div>
                             </div>
-                            <div class="camisa">
-                                <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
-                                <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                            <div class="ultmais">
+                                <div class="camisa">
+                                    <div class="camresp">
+                                        <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                        <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                                    </div>
+                                </div>
                             </div>
-                    </div> 
+                            <div class="ultmais">
+                                <div class="camisa">
+                                    <div class="camresp">
+                                        <img src="imagens/camisaroubo2.png" alt="Camisa flamengo">
+                                        <p class="camisa_descrição">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <button id="mais" onclick="vermais()">Ver mais</button>
 
-                    <section class="adicionarprod">
+                    
+
+                   <section class="adicionarprod">
                         <div class="titulo2">
                             <h3>Adicionar Produto</h3>
                             <figure>
@@ -285,7 +310,7 @@
                                 <div class="formjunto">
                                     <div>
                                         <label>Preço</label>
-                                        <input type="text" placeholder="Preço da camisa" autocomplete="off" >
+                                        <input type="text" id="preco" placeholder="Preço da camisa" autocomplete="off" >
                                     </div> 
 
                                     <div class="seljunto4">
@@ -304,6 +329,7 @@
                                             <option value="">10 com juros</option>
                                         </select>
                                     </div>
+                                </div>
                             </form>
                            
                         </div>
@@ -323,14 +349,14 @@
                         <div class="button_selecionar">
                             <form class="button_selecionar">
                                 <div>
-                                    <label>Selecione o arquivo</label>
-                                    <input type="file" id="selecioneimagem">
+                                    <label for="selecioneimagem">Selecione o arquivo</label>
+                                    <input type="file" id="selecioneimagem" multiple>
                                 <div>
-                                    <input type="submit" value="Adicionar produto">
+                                    <input type="submit" id="adicionarprod" value="Adicionar produto">
                             </form>
                         </div>
                 </section>
-               
+            
                     </div>
     </main>
     

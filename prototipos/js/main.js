@@ -40,3 +40,23 @@ $(document).ready(function(){
         }
     })
 });
+
+    
+function vermais(){
+    var ultmais = document.getElementsByClassName("ultmais")[0];
+    var ultmais1 = document.getElementsByClassName("ultmais")[1];
+
+    if(ultmais.style.display == "none"){
+        ultmais.style.display = "block";
+        ultmais1.style.display = "block";
+        document.getElementById("mais").innerText= "Ver menos"
+    } 
+    else{
+        ultmais.style.display = "none";
+        ultmais1.style.display = "none";
+        document.getElementById("mais").innerText= "Ver mais";
+    }
+    
+}
+
+

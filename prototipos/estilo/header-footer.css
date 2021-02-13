@@ -168,7 +168,7 @@ header > nav a{
     font-size: 15px;
 }
 header > nav li:hover{
-    background-color: #acabab;
+    background-color: #dadada;
 }
 header > #navegacao01 ol{
     display: flex;

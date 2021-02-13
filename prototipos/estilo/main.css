@@ -44,7 +44,7 @@ div.cabecalho h2{
     margin-right: 0.5rem;
 }
 .voltar-index a:hover{
-    background-color: #acabab;
+    background-color: #dadada;
     cursor: pointer;
 }
 .container-mobile{
@@ -128,6 +128,24 @@ form .login-buttons > input, form .login-buttons > a {
 }
 form .login-buttons > input:hover, form .login-buttons > a:hover {
     background-color: #253603;
+}
+
+.navegacao-mobile a{
+    text-align: center;
+    display: block;
+    padding: 1em 2em;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 1px solid black;
+}
+.navegacao-mobile a:hover{
+    background-color: #dadada;
+    cursor: pointer;
+}.navegacao-mobile i{
+    margin-right: 0.5rem;
 }
 /*/////////////*/
 

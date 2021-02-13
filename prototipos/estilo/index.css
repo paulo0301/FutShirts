@@ -80,8 +80,7 @@ main div.container-produtos ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-main div.item{
+}main div.item{
     width: 288px;
     padding: 4px;
     position: relative;

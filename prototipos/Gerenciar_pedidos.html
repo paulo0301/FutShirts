@@ -78,8 +78,10 @@
         <div class="itens">
             <nav>
                 <ol>
-                    <li><a href="#"><img src="imagens/gerenciaprod.svg"  alt="">Geren. Produtos</a></li>
-                    <li><a href="#"  class="active"><img src="imagens/gerenciapedi.svg" alt="">Geren. Pedidos</a></li>
+                    <li class="list"><a href="#" class="active"><img src="imagens/gerenciaprod.svg"  alt="">Geren. Produtos</a></li>
+                    <li class="list"><a href="#"><img src="imagens/gerenciapedi.svg" alt="">Geren. Pedidos</a></li>
+                    <li class="listresp"><a href="#"><img src="imagens/gerenciaprod.svg"  alt=""></a></li>
+                    <li class="listresp"><a href="#"><img src="imagens/gerenciapedi.svg" alt=""></a></li>
                 </ol>
             </nav>
             <section class="itens_listar">
@@ -95,11 +97,11 @@
                         <img src="imagens/titulo2.svg">
                     </figure>
                 </div>
-                
+                <section class="container.pedido">
                 <div class="pedido">
                     <div class="pedido_foto">
                         <figure>
-                            <img src="imagens/foto_miniatura.svg" alt="foto produto">
+                            <img class="fotousi" src="imagens/foto_miniatura.svg" alt="foto produto">
                         </figure>
                         <div>
                             <div class="inforpedido">
@@ -138,7 +140,7 @@
                     <div class="pedido">
                         <div class="pedido_foto">
                             <figure>
-                                <img src="imagens/foto_miniatura.svg" alt="foto produto">
+                                <img  class="fotousi" src="imagens/foto_miniatura.svg" alt="foto produto">
                             </figure>
                             <div>
                                 <div class="inforpedido">
@@ -172,12 +174,12 @@
                                     <img src="imagens/iconecancel 1.svg" alt="Cancelar">
                                 </figure>
                             </div>
-                        </div>
+                        </div></section>
                         
                         <div class="pedido">
                             <div class="pedido_foto">
                                 <figure>
-                                    <img src="imagens/foto_miniatura.svg" alt="foto produto">
+                                    <img  class="fotousi" src="imagens/foto_miniatura.svg" alt="foto produto">
                                 </figure>
                                 <div>
                                     <div class="inforpedido">
@@ -216,7 +218,7 @@
                             <div class="pedido_ultimo">
                                 <div class="pedido_foto">
                                     <figure>
-                                        <img src="imagens/foto_miniatura.svg" alt="foto produto">
+                                        <img  class="fotousi"  src="imagens/foto_miniatura.svg" alt="foto produto">
                                     </figure>
                                     <div>
                                         <div class="inforpedido">
@@ -257,7 +259,7 @@
                                         <figure>
                                             <img src="imagens/foto_miniatura.svg" alt="foto produto">
                                         </figure>
-                                        <div>
+                                        <div class="informação_outroped">
                                             <div class="outronome">
                                                 <p class="nomeoutro"><b>Camisa Barcelona 2020/2021</b></br>Modelo da camisa do barcelona 2020/2021</p>
                                             </div> 
@@ -278,7 +280,7 @@
                                         <figure>
                                             <img src="imagens/foto_miniatura.svg" alt="foto produto"  class="img2">
                                         </figure>
-                                        <div>
+                                        <div class="informação_outroped">
                                             <div class="outronome">
                                                 <p class="nomeoutro"><b>Camisa Barcelona 2020/2021</b></br>Modelo da camisa do barcelona 2020/2021</p>
                                             </div> 
@@ -299,7 +301,7 @@
                                         <figure>
                                             <img src="imagens/foto_miniatura.svg" alt="foto produto">
                                         </figure>
-                                        <div>
+                                        <div class="informação_outroped">
                                             <div class="outronome">
                                                 <p class="nomeoutro"><b>Camisa Barcelona 2020/2021</b></br>Modelo da camisa do barcelona 2020/2021</p>
                                             </div> 
@@ -329,7 +331,8 @@
                                         <figure>
                                             <img src="imagens/foto_miniatura.svg" alt="foto produto">
                                         </figure>
-                                        <div>
+                                    </div>
+                                        <div class="informação_ultoutroped">
                                             <div class="inforpedido">
                                                 <p class="nomecpf"><b>Fulano de Tal</b></br>000.000.000-00</p>
                                                 
@@ -345,7 +348,7 @@
                                                     <p class="imgc"><b>0000 0000 00000 0000</b></br>mastercard</br>Vencimento 00/0000</p>
                                                 </div>
                                             </div>
-                                        </div>
+                                       
                                         
                                         <div class="pedido_datavalor">
                                             
@@ -370,7 +373,8 @@
                                             <figure>
                                                 <img src="imagens/foto_miniatura.svg" alt="foto produto">
                                             </figure>
-                                            <div>
+                                        </div>
+                                            <div class="informação_ultoutroped">
                                                 <div class="inforpedido">
                                                     <p class="nomecpf"><b>Fulano de Tal</b></br>000.000.000-00</p>
                                                     
@@ -385,8 +389,9 @@
                                                         
                                                         <p class="imgc"><b>0000 0000 00000 0000</b></br>mastercard</br>Vencimento 00/0000</p>
                                                     </div>
-                                                </div>
                                             </div>
+                                    
+                                            
                                             
                                             <div class="pedido_datavalor">
                                                 <p class="datahora"><b>Data de compra</b></br>06/01/2021 - 20:53</p>
@@ -403,7 +408,10 @@
                                                     <img src="imagens/iconeconf.svg" alt="confirmar" class="conf">
                                                 </figure>
                                             </div>
+                                           
                                         </div>
+                                       
+                                    
                                         
                                         <div  class="pedidos_titulo1">
                                             <h3>Pedidos Concluídos</h3>
@@ -417,7 +425,8 @@
                                                 <figure>
                                                     <img src="imagens/foto_miniatura.svg" alt="foto produto">
                                                 </figure>
-                                                <div>
+                                            </div>
+                                                
                                                     <div class="inforpedido">
                                                         <p class="nomecpf"><b>Fulano de Tal</b></br>000.000.000-00</p>
                                                         
@@ -432,8 +441,8 @@
                                                             
                                                             <p class="imgc"><b>0000 0000 00000 0000</b></br>mastercard</br>Vencimento 00/0000</p>
                                                         </div>
-                                                    </div>
-                                                </div>
+                                                    
+                                                
                                                 
                                                 <div class="pedido_datavalor">
                                                     <p class="datahora"><b>Data de compra</b></br>06/01/2021 - 20:53</p>
@@ -451,7 +460,8 @@
                                                     <figure>
                                                         <img src="imagens/foto_miniatura.svg" alt="foto produto">
                                                     </figure>
-                                                    <div>
+                                                </div>
+                                                  
                                                         <div class="inforpedido">
                                                             <p class="nomecpf"><b>Fulano de Tal</b></br>000.000.000-00</p>
                                                             
@@ -465,9 +475,8 @@
                                                                 </figure>
                                                                 
                                                                 <p class="imgc"><b>0000 0000 00000 0000</b></br>mastercard</br>Vencimento 00/0000</p>
-                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    
                                                     
                                                     <div class="pedido_datavalor">
                                                         <p class="datahora"><b>Data de compra</b></br>06/01/2021 - 20:53</p>
@@ -479,7 +488,7 @@
                                                     
                                                     <p class="status"><b>Status do pedido</b></br>Pedido concluido em 12/01/2021</p>
                                                 </div>
-                                            </section>
+                                           
                                         </div>
                                         
                                     </main>

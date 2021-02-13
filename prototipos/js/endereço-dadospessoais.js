@@ -6,13 +6,12 @@ function mascara(t, mask){
     t.value += texto.substring(0,1);
     }
 }
-var conf = document.getElementById("conf");
-
-conf.onclick = function(){
+ function proseg(){
+    var conf = document.getElementById("conf");
     var senha = document.getElementById("password").value;
     var confSenha = document.getElementById("confpassword").value;
 
-    if(senha == confSenha && senha.length >= 6){
+    if(senha == confSenha){
         alert('Aguarde o codigo de confirmação para validar o cadastro!');
     }
     else {

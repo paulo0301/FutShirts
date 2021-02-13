@@ -42,22 +42,17 @@
         </div>
     </div>
     <!-- ***************************************************************** -->
-    <header>
+    <header id="header-desktop">
         <div class="link-atendimento">
             <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
             <p><a href="ajuda.html">Atendimento</a></p>
         </div>
         
         <div class="header-principal">
-            
-            <div class="menu-hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-            
             <h1><a href=""><img src="imagens/logo.svg" alt="logotipo"></a></h1>
             
             <form action="" class="barra-de-pesquisa">
-                <input type="text" name="buscar" placeholder="Buscar">
+                <input type="search" name="buscar" placeholder="Buscar">
                 <input class="bt-pesquisa" type="submit" value="">
             </form>
             
@@ -73,39 +68,15 @@
                 <a href="carrinho.html" class="sacola"><img src="imagens/sacola-de-compras.svg" alt="sacola de compras"/></a>
             </div>
         </div>
-    </header>
-    <!--  -->
-    <nav id="navegacao01">
-        <ol>
-            <li><a href="#">Masculino</a></li>
-            <li><a href="#">Feminino</a></li>
-            <li><a href="#">Infantil</a></li>
-        </ol>
-    </nav>
-    <!--  -->
-    <nav id="navegacao02">
-        <div class="area-conteudo">
-            <div class="area-de-acesso02">
-                <div>
-                    <button onclick="abrir()">Entrar</button>
-                    <a href="dados_pessoais.html">Cadastre-se</a>
-                </div>
-            </div>
-            <ol class="nav-categorias">
+        <nav id="navegacao01">
+            <ol>
                 <li><a href="#">Masculino</a></li>
                 <li><a href="#">Feminino</a></li>
                 <li><a href="#">Infantil</a></li>
             </ol>
-            <ol class="nav-outros">
-                <li class="link-atendimento">
-                    <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
-                    <p><a href="ajuda.html">Atendimento</a></p>
-                </li>
-            </ol>
-        </div>
-        <div class="area-fechar-nav"></div>
-    </nav>
-    <!--  -->
+        </nav>
+    </header>
+    <!-- MAIN -->
     <main>
         <section class="banner">
             <a href="#"><img src="imagens/banner2.png" alt=""></a>
@@ -159,22 +130,22 @@
                         <div class="item">
                             <div class="foto-item">
                                 <div>
-                                    <input type="button" value="">
+                                    <button id="addDesejos"></button>
                                 </div>
                                 <a href="#">
                                     <img src="./imagens/camisa_flamengo.png" alt="">
                                 </a>
                             </div>
-                            <a href="#">
+                            <div>
                                 <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                    <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                    <div class="preco">
+                                        <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                        <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                        <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="tamanho-carrinho">
                                 <select name="tamanho" id="tamanho">
                                     <option value="0">Selecione o tamanho</option>
@@ -193,22 +164,22 @@
                         <div class="item">
                             <div class="foto-item">
                                 <div>
-                                    <input type="button" value="">
+                                    <button id="addDesejos"></button>
                                 </div>
                                 <a href="#">
                                     <img src="./imagens/camisa_flamengo.png" alt="">
                                 </a>
                             </div>
-                            <a href="#">
+                            <div>
                                 <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                    <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                    <div class="preco">
+                                        <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                        <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                        <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="tamanho-carrinho">
                                 <select name="tamanho" id="tamanho">
                                     <option value="0">Selecione o tamanho</option>
@@ -227,22 +198,22 @@
                         <div class="item">
                             <div class="foto-item">
                                 <div>
-                                    <input type="button" value="">
+                                    <button id="addDesejos"></button>
                                 </div>
                                 <a href="#">
                                     <img src="./imagens/camisa_flamengo.png" alt="">
                                 </a>
                             </div>
-                            <a href="#">
+                            <div>
                                 <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                    <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                    <div class="preco">
+                                        <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                        <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                        <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="tamanho-carrinho">
                                 <select name="tamanho" id="tamanho">
                                     <option value="0">Selecione o tamanho</option>
@@ -261,22 +232,22 @@
                         <div class="item">
                             <div class="foto-item">
                                 <div>
-                                    <input type="button" value="">
+                                    <button id="addDesejos"></button>
                                 </div>
                                 <a href="#">
                                     <img src="./imagens/camisa_flamengo.png" alt="">
                                 </a>
                             </div>
-                            <a href="#">
+                            <div>
                                 <div class="info-item">
-                                    <p class="nome-item">Camisa Adidas Flamengo</p>
-                                    <span class="preco">
-                                        <p class="preco-item">R$ 249,99</p>
-                                        <p class="preco-promocional-item">R$ 219,90</p>
-                                        <p class="parcelas">5x de R$ 43,98</p>
-                                    </span>
+                                    <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                    <div class="preco">
+                                        <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                        <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                        <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                             <div class="tamanho-carrinho">
                                 <select name="tamanho" id="tamanho">
                                     <option value="0">Selecione o tamanho</option>

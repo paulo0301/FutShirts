@@ -70,38 +70,40 @@
                 <a href="carrinho.html" class="sacola"><img src="imagens/sacola-de-compras.svg" alt="sacola de compras"/></a>
             </div>
         </div>
-    </header>
-    <!--  -->
-    <nav id="navegacao01">
-        <ol>
-            <li><a href="#">Masculino</a></li>
-            <li><a href="#">Feminino</a></li>
-            <li><a href="#">Infantil</a></li>
-        </ol>
-    </nav>
-    <!--  -->
-    <nav id="navegacao02">
-        <div class="area-conteudo">
-            <div class="area-de-acesso02">
+        <header id="header-desktop">
+            <div class="link-atendimento">
+                <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
+                <p><a href="ajuda.html">Atendimento</a></p>
+            </div>
+            
+            <div class="header-principal">
+                <h1><a href=""><img src="imagens/logo.svg" alt="logotipo"></a></h1>
+                
+                <form action="" class="barra-de-pesquisa">
+                    <input type="search" name="buscar" placeholder="Buscar">
+                    <input class="bt-pesquisa" type="submit" value="">
+                </form>
+                
                 <div>
-                    <button onclick="abrir()">Entrar</button>
-                    <a href="dados_pessoais.html">Cadastre-se</a>
+                    <div class="area-de-acesso">
+                        <img src="imagens/avatar.svg" alt="user">
+                        <div>
+                            <button id="entrar" onclick="abrir()">Entrar</button>
+                            <a href="dados_pessoais.html">Cadastre-se</a>
+                        </div>
+                    </div>
+                    
+                    <a href="carrinho.html" class="sacola"><img src="imagens/sacola-de-compras.svg" alt="sacola de compras"/></a>
                 </div>
             </div>
-            <ol class="nav-categorias">
-                <li><a href="#">Masculino</a></li>
-                <li><a href="#">Feminino</a></li>
-                <li><a href="#">Infantil</a></li>
-            </ol>
-            <ol class="nav-outros">
-                <li class="link-atendimento">
-                    <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
-                    <p><a href="ajuda.html">Atendimento</a></p>
-                </li>
-            </ol>
-        </div>
-        <div class="area-fechar-nav"></div>
-    </nav>
+            <nav id="navegacao01">
+                <ol>
+                    <li><a href="#">Masculino</a></li>
+                    <li><a href="#">Feminino</a></li>
+                    <li><a href="#">Infantil</a></li>
+                </ol>
+            </nav>
+        </header>
     <main>
         <div class="cabecalho">
             <h2>Forma de pagamento</h2>
@@ -260,4 +262,5 @@
     </footer>
 </body>
 <script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </html>

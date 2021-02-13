@@ -39,22 +39,17 @@
         </div>
     </div>
     <!-- ***************************************************************** -->
-    <header>
+    <header id="header-desktop">
         <div class="link-atendimento">
             <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
             <p><a href="ajuda.html">Atendimento</a></p>
         </div>
         
         <div class="header-principal">
-            
-            <div class="menu-hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-            
             <h1><a href=""><img src="imagens/logo.svg" alt="logotipo"></a></h1>
             
             <form action="" class="barra-de-pesquisa">
-                <input type="text" name="buscar" placeholder="Buscar">
+                <input type="search" name="buscar" placeholder="Buscar">
                 <input class="bt-pesquisa" type="submit" value="">
             </form>
             
@@ -70,38 +65,14 @@
                 <a href="carrinho.html" class="sacola"><img src="imagens/sacola-de-compras.svg" alt="sacola de compras"/></a>
             </div>
         </div>
-    </header>
-    <!--  -->
-    <nav id="navegacao01">
-        <ol>
-            <li><a href="#">Masculino</a></li>
-            <li><a href="#">Feminino</a></li>
-            <li><a href="#">Infantil</a></li>
-        </ol>
-    </nav>
-    <!--  -->
-    <nav id="navegacao02">
-        <div class="area-conteudo">
-            <div class="area-de-acesso02">
-                <div>
-                    <button onclick="abrir()">Entrar</button>
-                    <a href="dados_pessoais.html">Cadastre-se</a>
-                </div>
-            </div>
-            <ol class="nav-categorias">
+        <nav id="navegacao01">
+            <ol>
                 <li><a href="#">Masculino</a></li>
                 <li><a href="#">Feminino</a></li>
                 <li><a href="#">Infantil</a></li>
             </ol>
-            <ol class="nav-outros">
-                <li class="link-atendimento">
-                    <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
-                    <p><a href="ajuda.html">Atendimento</a></p>
-                </li>
-            </ol>
-        </div>
-        <div class="area-fechar-nav"></div>
-    </nav>
+        </nav>
+    </header>
     <main>
         <div class="cabecalho">
             <h2>Confirme seu endereço</h2>
@@ -149,7 +120,7 @@
                                     <p>Cor</p>
                                     <span id="corEscolhida">Vermelho e preto</span>
                                 </div>
-
+                                
                                 <div class="container-qtd">
                                     <p>Quantidade</p>
                                     <span id="qtdEscolhida">1</span>
@@ -183,7 +154,7 @@
                                     <p>Cor</p>
                                     <span id="corEscolhida">Vermelho e preto</span>
                                 </div>
-
+                                
                                 <div class="container-qtd">
                                     <p>Quantidade</p>
                                     <span id="qtdEscolhida">1</span>
@@ -314,4 +285,5 @@
     </footer>
 </body>
 <script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </html>

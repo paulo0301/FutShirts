@@ -55,57 +55,66 @@ main .breadcrumbs a:last-child{
     transition: all 1s;
 }
 main .dados{
-    max-width: max-content;
-    margin: 0 auto;
+    max-width: 30rem;
+    margin: 0 auto 0 20%;
 }
 
 main .dados-cadastro{
-    text-align: right;
+    text-align: left;
 }
 
 main .dados-cadastro label{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: inline-block;
 }
 
-main .dados-cadastro .dados-preencher{
-    display: inline-block;
-    margin: 1rem 0;
-}
-
-main .dados-preencher > input{
+main .dados-cadastro .dados-preencher {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+main .dados-preencher .icon {
+    padding: 12px 0; 
+    min-width: 50px;
+    text-align: center;
     font-size: 1.4rem;
-    margin-left: 1rem;
-    width: 20rem;
+    font-weight: 600;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-right: none;
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+main .dados-preencher .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 1.2rem;
     height: 3rem;
-    border: none;
-    border-bottom: 1px solid black;
-}
-
-main .dados-preencher > input:focus{
-    border: none;
-    border-bottom: 1px solid black;
-    box-shadow: 0 0 0 0;
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+  }
+  
+  main .dados-preencher .input-field:focus {
     outline: 0;
-}
+  }
 
-main .dados-preencher > select{
-    color: black;
-    font-size: 1.4rem;
-    margin-left: 1rem;
-    width: 20rem;
+  main .dados-preencher .select-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 1.2rem;
     height: 3rem;
-    border: none;
-    border-bottom: 1px solid black;
-    color: rgba(red, green, blue, 1);
-}
-
-main .dados-preencher > select:focus{
-    border: none;
-    border-bottom: 1px solid black;
-    box-shadow: 0 0 0 0;
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+  }
+  
+  main .dados-preencher .select-field:focus {
     outline: 0;
-}
+  }
 .bt-container{
     display: flex;
     width: 100%;
@@ -129,6 +138,10 @@ main .dados input[type="submit"]:hover{
 @media (max-width: 875px){
     main .breadcrumbs{
         display: none;
+    }
+    main .dados{
+        max-width: 30rem;
+        margin: 0 auto
     }
 }
 @media (max-width: 640px){

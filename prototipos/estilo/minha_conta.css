@@ -32,6 +32,11 @@ main nav a:hover, main nav a.active{
     background-color: #030F26;
     color: #fff;
 }
+@media (max-width: 745px){
+    main nav{
+        display: none;
+    }
+}
 /************************** SECTION MEUS DADOS *****************************/
 main div.cabecalho{
     margin-bottom: 0;
@@ -63,9 +68,6 @@ main section.container-meus-dados .dados{
 }
 main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
     padding: 3em 2em 3em 1.5em;
-} 
-main section.container-meus-dados .dados .dados-acesso form:nth-child(3){
-    margin-top: 50px;
 }
 main section.container-meus-dados .dados div div, main section.container-enderecos div{
     display: flex;
@@ -106,13 +108,34 @@ main section.container-meus-dados input[type="submit"], main section.container-e
     float: right;
     cursor: pointer;
 }
-
+@media (max-width: 1105px){
+    main section.container-meus-dados .dados{
+        flex-wrap: wrap;
+    }
+    main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
+        padding: 0 2em 3em 1.5em;
+    }
+}
+@media (max-width: 455px){
+    main section.container-meus-dados .dados{
+        width: 100%;
+        justify-content: center;
+        width: 100%;
+    }
+    main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
+        padding: 0 1em 1em;
+        width: 100%;
+    }
+    main .dados input[type="text"], main .dados input[type="email"], main .dados input[type="password"], main section.container-enderecos input[type="text"]{
+        width: 100%;
+    }
+}
 /*********************** SECTION ENDERECOS *************************/
 main section.container-enderecos{
     width: 100%;
 }
 main section.container-enderecos form{
-    width: 50%;
+    width: max-content;
     padding-left: 1.2em;
 }
 main section.container-enderecos input[type="submit"]{
@@ -151,7 +174,12 @@ main section .accordion > input:checked ~ form.panel{
 main section.container-enderecos form.panel{
     display: none;
 }
-
+@media (max-width: 460px){
+    main section.container-enderecos form{
+        width: 100%;
+        padding: 0 1em 0;
+    }
+}
 /************************* SECTION MEUS PEDIDOS **********************/
 main section.container-meus-pedidos{
     width: 100%;
@@ -189,7 +217,19 @@ main section.container-meus-pedidos .container-pedido .container-descricao .prec
     font-weight: bold;
     font-size: 23px;
 }
-
+@media (max-width: 455px){
+    main section.container-meus-pedidos .container-pedido figure img, main section.container-meus-favoritos .container-favorito figure img{
+        max-width: 150px;
+    }
+    main section.container-meus-pedidos .container-pedido .container-descricao p, main section.container-meus-favoritos .container-favorito .container-descricao p{
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 370px){
+    main section.container-meus-pedidos .container-pedido figure img, main section.container-meus-favoritos .container-favorito figure img{
+        max-width: 120px;
+    }
+}
 /************************* SECTION MEUS FAVORITOS **********************/
 main section.container-meus-favoritos{
     width: 100%;
@@ -204,7 +244,11 @@ main section.container-meus-favoritos button{
 main section.container-meus-favoritos .lixeira{
     width: 40px;
 }
-
+@media (max-width: 455px){
+    main section.container-meus-favoritos button{
+        margin-top: 0;
+    }
+}
 /************************* SECTION MEUS CARTOES **********************/
 main section.container-meus-cartoes{
     width: 100%;
@@ -250,8 +294,8 @@ main section.container-meus-cartoes .cartoes-cadastrados{
 }
 
 .container-meus-cartoes form{
-    width: 80%;
-    margin: 0 auto;
+    width: max-content;
+    margin: 0 1.5em;
     display: none;
 }
 .container-meus-cartoes form div{
@@ -264,8 +308,8 @@ main section.container-meus-cartoes .cartoes-cadastrados{
     font-size: 18px;
     margin-bottom: 3px;
 }
-.container-meus-cartoes form div input{
-    width: 50%;
+.container-meus-cartoes form div input[type="text"]{
+    width: 22em;
     padding: 2px 3px;
     font-size: 17px;
     border: none;
@@ -280,4 +324,34 @@ main section.container-meus-cartoes .cartoes-cadastrados{
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+@media (max-width: 510px){
+    main section.container-meus-cartoes .cartoes-cadastrados{
+        width: 100%;
+    }
+}
+@media (max-width: 425px){
+    .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-1, .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-2, .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-3{
+        font-size: 15px;
+    }
+    .container-meus-cartoes form{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .container-meus-cartoes form div input[type="text"]{
+        width: 100%;
+    }
+}
+@media (max-width: 375px){
+    .cartoes-cadastrados .cartao-cadastrado > div{
+        align-items: flex-start;
+    }
+}
+/* bt submit */
+main .bt-submit-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    flex-direction: row !important;
+    margin: 0 !important;
 }

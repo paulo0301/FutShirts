@@ -4,37 +4,43 @@ main > div{
     height: 100%;
 }
 /***************************** MENU DO LADO ESQUERDO *********************/
-main h2{
+main div h2{
     background-color: #030F26;
     color: #fff;
     width: 100%;   
 }
-main nav{
+main div nav{
     background-image: linear-gradient(to right,#030F26 60px, #fff 20%);
     min-width: 200px;
     border-right: 1px solid #030F26;
     padding: 120px 0 0;
 }
-main nav a{
+main div nav a{
     color: #000;
     font-weight: bold;
     display: flex;
     align-items: center;
     padding: 8px 0;
 }
-main nav a img{
+main div nav a img{
     margin-right: 4px;
     width: 30px;
     padding: 0 15px;
     box-sizing: content-box;
 }
-main nav a:hover, main nav a.active{
+main div nav a:hover, main div nav a.active{
     background-color: #030F26;
     color: #fff;
 }
+nav.voltar-index{
+    display: none;
+}
 @media (max-width: 745px){
-    main nav{
+    main div nav{
         display: none;
+    }
+    nav.voltar-index{
+        display: block;
     }
 }
 /************************** SECTION MEUS DADOS *****************************/

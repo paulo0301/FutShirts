@@ -66,4 +66,10 @@ function vermais(){
     
 }
 
+function trocaimg(){
+    var trc = document.getElementsByClassName("cami").style.src;
+    trc = "imagens/camisamarcada.png";
+
+}
+
 

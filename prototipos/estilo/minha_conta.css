@@ -50,18 +50,6 @@ main div.cabecalho{
 main section.container-meus-dados{
     width: 100%;
 }
-main section h3, main .accordion > label{
-    background-color: #77A1D9;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    margin-top: 70px;
-    font-size: 23px;
-    height: 50px;
-    padding-left: 20px;
-    justify-content: space-between;
-    padding-right: 30px;
-}
 main h3 img{
     width: 15px;
 }
@@ -151,35 +139,7 @@ main section.container-enderecos input[type="submit"]{
 main section.container-enderecos form.panel input[type="submit"]{
     margin-bottom: 20px;
 }
-main section .accordion > label{
-    margin: 0 0 20px 0;
-    cursor: inherit;
-}
-main section .accordion > label::after{
-    content: "\276F";
-    text-align: center;
-    transition: all .35s;
-}
-main section .accordion > label:hover{
-    background-color: #5088d3;
-}
-main section .accordion > input{
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-main section .accordion > input:checked + label{
-    background-color: #5088d3;
-}
-main section .accordion > input:checked + label::after{
-    transform: rotate(90deg);
-}
-main section .accordion > input:checked ~ form.panel{
-    display: block;
-}
-main section.container-enderecos form.panel{
-    display: none;
-}
+
 @media (max-width: 460px){
     main section.container-enderecos form{
         width: 100%;

@@ -11,13 +11,72 @@ main div.cabecalho{
     border-top: 1px solid #fff;
     margin-bottom: 20px;
 }
-
 div.cabecalho h2{
     color: #FEFEFE;
     font-size: 1.8rem;
     font-weight: 500;
 }
-
+main .cabecalho-topico, main .accordion > label{
+    background-color: #77A1D9;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    font-size: 23px !important;
+    height: 50px;
+    padding-left: 20px;
+    font-weight: 500;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+main section .cabecalho-topico{
+    justify-content: start;
+}
+main .cabecalho-topico button{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+main .cabecalho-topico img, main .cabecalho-topico button{
+    width: 28px;
+    height: 28px;
+}
+.accordion{
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0 !important;
+}
+main section .accordion > label{
+    margin: 0;
+    cursor: pointer;
+}
+main section .accordion > label::after{
+    content: "\276F";
+    text-align: center;
+    transition: all .35s;
+}
+main section .accordion > label:hover{
+    background-color: #5088d3;
+}
+main section .accordion > input{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+main section .accordion > input:checked + label{
+    background-color: #5088d3;
+}
+main section .accordion > input:checked + label::after{
+    transform: rotate(90deg);
+}
+main section .accordion > input:checked ~ .panel{
+    display: block;
+}
+main .panel{
+    display: none;
+}
 @media (max-width: 430px){
     main div.cabecalho{
         padding-left: 1em;

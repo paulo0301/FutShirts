@@ -511,12 +511,17 @@ main #mais:hover{
 }
 /*************************Listar produtos***********************/
 .botão_submit{
-    position:relative;
-    float: right;
-    margin-right: 25px;
+    display: flex;
+    width: 84%;
+    margin: 0 auto;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 .botão_submit #deletar{
     width:160px;
+    margin-right: 15px;
     height: 50px;
     border-radius: 5px;
     border: none;
@@ -546,15 +551,19 @@ main #mais:hover{
 }
 .voltar{
     display: flex;
-    padding-right: 2em;
     justify-content: flex-end;
-    margin: 0 0 2em 0;
+    margin-left: 15px;
 }
 .voltar .linkvoltar{
     background-color: #334D01;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
-    padding: 0.7rem 2.5rem;
+    width: 100px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 400;
     border-radius: 5px;
     color: white;
     cursor: pointer;
@@ -562,6 +571,12 @@ main #mais:hover{
 .voltar .linkvoltar:hover{
     cursor: pointer;
     background-color: #273a03;
+}
+.container-input-cb{
+    width: 100%;
+    position: absolute;
+    width: max-content;
+    padding: 6px 0 0 12px;
 }
 /******************************Visalizar produto*************************/
 section.info-camisa{

@@ -545,29 +545,23 @@ main #mais:hover{
     background-color: #2f4058;
 }
 .voltar{
-    position: relative;
-    float: right;
-    padding: 4em 3em;
-    
+    display: flex;
+    padding-right: 2em;
+    justify-content: flex-end;
+    margin: 0 0 2em 0;
 }
 .voltar .linkvoltar{
     background-color: #334D01;
-    width: 130px;
-    height: 45px;
     text-align: center;
-    padding-top: 0.6em;
     border: none;
-    border-radius: 7px;
+    padding: 0.7rem 2.5rem;
+    border-radius: 5px;
+    color: white;
     cursor: pointer;
 }
 .voltar .linkvoltar:hover{
     cursor: pointer;
     background-color: #273a03;
-}
-.voltar .linkvoltar a{
-    color: white;
-    font-size: 22px;
-    font-weight: 400;
 }
 /******************************Visalizar produto*************************/
 section.info-camisa{

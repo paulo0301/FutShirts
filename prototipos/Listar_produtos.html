@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css”>
+    <link rel="stylesheet" href="estilo/main.css">
     <link rel="stylesheet" href="estilo/header-footer.css">
     <link rel="stylesheet" href="estilo/Paginasadm.css">
     <title>Futshirt</title>
@@ -74,87 +75,99 @@
         </nav>
     </header>
     <main>
-        <h2>Gerenciar produtos - Listar todos</h2>
-        <div class="Conteudo">
+        <div class="cabecalho">
+            <h2>Gerenciar produtos - Listar todos</h2>
+        </div>
+        <div class="conteudo">
             <nav>
                 <ol>
                     <li class="list"><a href="#" class="active"><img src="imagens/gerenciaprod.svg"  alt="">Geren. Produtos</a></li>
-                        <li class="list"><a href="#"><img src="imagens/gerenciapedi.svg" alt="">Geren. Pedidos</a></li>
-                        <li class="listresp"><a href="#"><img src="imagens/gerenciaprod.svg"  alt=""></a></li>
-                        <li class="listresp"><a href="#"><img src="imagens/gerenciapedi.svg" alt=""></a></li>
+                    <li class="list"><a href="#"><img src="imagens/gerenciapedi.svg" alt="">Geren. Pedidos</a></li>
                 </ol>
             </nav>
             <section class="container_conteudo">
-                <div class="titulo_produto">
+                <div class="cabecalho-topico">
                     <h3>Produtos</h3>
-                    <figure>
-                        <img src="imagens/titleprod.svg">
-                    </figure>
+                    <button><img src="imagens/titleprod.svg" alt=""></button>
                 </div>
                 <div class="pesquisa">
                     <form action="" id="pesquisacamisa">
-                        <div class="botão_submit">
-                            <input type="submit" id="deletar" value="Deletar produtos">
-                            <input type="submit" id="Desativar" value="Desativar produtos">
-                        </div>
                         <input type="text" id="barrapesquisa" placeholder="Buscar">
                     </form>
                 </div>
                 
-                <div class="camisa_imagens">
+                <form action="#">
+                    <div class="botão_submit">
+                        <input type="submit" id="deletar" value="Deletar produtos">
+                        <input type="submit" id="Desativar" value="Desativar produtos">
+                    </div>
                     
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo" onclick="trocaimg()">
-                        <p class="camisa_descrição" name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>
-                    <div class="camisa">
-                        <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
-                        <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
-                    </div>    
-                </div> 
-                
+                    
+                    <div class="camisa_imagens">    
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição" name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>
+                        <div class="camisa">
+                            <input type="checkbox" name="cami" id="cami01">
+                            <img src="imagens/camisadesmarcada.png" alt="Camisa flamengo">
+                            <p class="camisa_descrição"  name="cami">Camisa adidas Falmengo</br><b>R$ 219,90</b></p>
+                        </div>    
+                    </div> 
+                </form>
                 <div class="voltar">
-                    <p class="linkvoltar"><a href="Gerenciar_produtos.html">Voltar</a></p>
+                    <a class="linkvoltar" href="Gerenciar_produtos.html">Voltar</a>
                 </div>
                 
             </section>

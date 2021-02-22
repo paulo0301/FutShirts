@@ -32,14 +32,14 @@ main .cabecalho-topico, main .accordion > label{
 main section .cabecalho-topico{
     justify-content: start;
 }
-main .cabecalho-topico button{
+main .cabecalho-topico button, main .cabecalho-topico a{
     background: none;
     outline: none;
     border: none;
     cursor: pointer;
     margin-left: 10px;
 }
-main .cabecalho-topico img, main .cabecalho-topico button{
+main .cabecalho-topico img, main .cabecalho-topico button, main .cabecalho-topico a{
     width: 28px;
     height: 28px;
 }

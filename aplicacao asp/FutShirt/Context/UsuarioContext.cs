@@ -9,7 +9,11 @@ namespace FutShirt.Context
 {
     public class UsuarioContext : DbContext
     {
-        public UsuarioContext() : base("Asp_Net_MVC_FS") { }
+        public UsuarioContext() : base("FutShirt")
+        {
+            Database.SetInitializer<UsuarioContext>(
+            new DropCreateDatabaseIfModelChanges<UsuarioContext>());
+        }
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Cartao> Cartaos { get; set; }

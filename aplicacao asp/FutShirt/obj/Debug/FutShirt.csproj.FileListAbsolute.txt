@@ -314,3 +314,7 @@ C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\vbc.exe.
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\vbc.rsp
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\VBCSCompiler.exe
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.SqlServer.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.xml
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.SqlServer.xml

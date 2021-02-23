@@ -1,6 +1,6 @@
 main .breadcrumbs{
     display: inline-block;
-    overflow: hidde;
+    overflow: hidden;
     margin: 15px 0;
     font-size: 1rem;
 }
@@ -176,7 +176,7 @@ main .confirmar-cadastro{
 main .confirmar-cadastro > input{
     padding-top: 30px;
     text-align: center;
-    width: 4rem;
+    width: 18rem;
     height: 5rem;
     border: none;
     border-bottom: 1px solid black;

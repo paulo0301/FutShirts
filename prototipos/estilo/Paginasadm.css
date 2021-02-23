@@ -4,11 +4,15 @@
     margin: 0;
     padding: 0;
 }
-
 p {
     margin: 0 !important;
 }
-
+button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 main .conteudo {
     width: 100%;
     display: flex;
@@ -797,51 +801,32 @@ section.info-camisa .avaliacao>label {
 .itens_listar {
     width: 100%;
 }
-
-.pedido {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.pedido{
     border-bottom: 1px solid #030f23;
-    padding: 25px 25px 10px 25px;
 }
-
-.pedido .pedido_foto {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 13px;
-}
-
-.pedido .conf_cancel {
-    margin-right: 10px;
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.pedido_ultimo {
+.pedido > div{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 25px 25px 10px 25px;
 }
-
-.pedido_ultimo .pedido_foto {
+.pedido:last-child{
+    border-bottom: none;
+}
+.pedido .pedido_foto{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 13px;
+    margin-right: 13px;
+}
+.pedido .pedido_foto > div{
+    margin-left: 6px;
+}
+.pedido .pedido_datavalor button:hover{
+    text-decoration: underline;
 }
 
-.pedido_ultimo .conf_cancel {
-    margin-right: 10px;
-    margin-top: 120px;
+div.itens-pedido{
+    padding: 0 25px;
 }
-
-.pedido_datavalor {
-    margin-top: 50px;
-}
-
 .inforpedido .nomecpf {
     font-size: 17px;
     font-weight: 400;
@@ -877,7 +862,7 @@ section.info-camisa .avaliacao>label {
 }
 
 .imgcartao img {
-    margin-left: 20px;
+    margin-right: 3px;
 }
 
 .imgcartao .imgc b {
@@ -898,7 +883,7 @@ section.info-camisa .avaliacao>label {
 .pedido_datavalor .totalped {
     font-size: 14px;
     font-weight: 300;
-}
+}   
 
 .pedido_datavalor .totalped b {
     font-size: 17px;
@@ -913,58 +898,47 @@ section.info-camisa .avaliacao>label {
     font-size: 23px;
     font-weight: 500;
 }
-
-.outroped {
+/*  */
+.itens-pedido{
     display: flex;
     flex-wrap: wrap;
 }
-
-.outro_foto {
+.item-pedido{
     display: flex;
     flex-wrap: wrap;
-    padding-top: 2.5em;
+    padding-top: 1em;
 }
 
-.outro_foto img {
+.item-pedido img {
     width: 125px;
-    margin-left: 38px;
 }
 
-.outro_foto .img2 {
-    margin-left: 120px;
-}
-
-.outronome {
+.item-pedido .nome {
     display: flex;
     flex-wrap: wrap;
 }
 
-.outronome p {
-    font-size: 14px;
+.item-pedido .nome p {
+    font-size: 15px;
     padding-bottom: 12px;
     padding-left: 12px;
 }
 
-.outronome p b {
-    font-size: 24px;
+.item-pedido .nome p b{
+    font-size: 20px;
 }
 
-.tamanhotipo {
+.tamanho-genero {
     display: flex;
 }
 
-.tamanhotipo p {
+.tamanho-genero p {
     padding-left: 12px;
 }
 
-.generopreço {
-    display: flex;
-    padding-top: 0.8em;
-}
-
-.generopreço p {
-    padding-left: 12px;
-    padding-bottom: 12px;
+.container-preco {
+    margin-top: 10px;
+    margin-left: 12px;
 }
 
 .tipo {
@@ -980,37 +954,20 @@ section.info-camisa .avaliacao>label {
     margin-left: 10px;
     font-size: 23px;
 }
-
-.statuspedido {
-    position: relative;
-    float: right;
-    left: 120px;
-    bottom: 15px;
-    font-size: 12px;
-    font-weight: 300;
-    border-bottom: 1px solid #030f23;
+/*  */
+.containerStatusPedido{
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 500;
 }
-
-.statuspedido b {
-    font-size: 17px;
-    font-weight: 700;
-}
-
-.pedido_ultimo .conf {
-    margin-right: 35px;
-}
-
-.status {
-    font-size: 13px;
-    font-weight: 300;
-    position: relative;
-    right: 4px;
-    bottom: 15px;
-}
-
-.status b {
-    font-size: 17px;
-    font-weight: 700;
+.containerStatusPedido select{
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 4px;
+    outline: none;
 }
 
 @media (max-width: 1300px) {

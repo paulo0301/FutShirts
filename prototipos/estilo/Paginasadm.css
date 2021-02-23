@@ -1,48 +1,60 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://kit.fontawesome.com/27079de5c2.js');
-*{
+* {
     margin: 0;
     padding: 0;
 }
-main .conteudo{
+
+p {
+    margin: 0 !important;
+}
+
+main .conteudo {
     width: 100%;
     display: flex;
 }
-main .conteudo > div{
+
+main .conteudo>div {
     width: 100%;
 }
-section.container_conteudo{
+
+section.container_conteudo {
     width: 100%;
 }
-main div.cabecalho{
+
+main div.cabecalho {
     margin-bottom: 0;
 }
-main nav{
-    background-image: linear-gradient(to right,#030F26 60px, #fff 20%);
+
+main nav {
+    background-image: linear-gradient(to right, #030F26 60px, #fff 20%);
     min-width: 220px;
     border-right: 1px solid #030F26;
     padding: 120px 0 0;
 }
-main nav a{
+
+main nav a {
     color: #000;
     font-weight: bold;
     display: flex;
     align-items: center;
     padding: 8px 0;
 }
-main nav a img{
+
+main nav a img {
     margin-right: 4px;
     width: 30px;
     padding: 0 15px;
     box-sizing: content-box;
 }
-main nav a:hover, main nav a.active{
+
+main nav a:hover,
+main nav a.active {
     background-color: #030F26;
     color: #fff;
 }
 
-.titulo_produto{
+.titulo_produto {
     background-color: #77A1D9;
     color: #fff;
     display: flex;
@@ -53,19 +65,24 @@ main nav a:hover, main nav a.active{
     padding-left: 20px;
     padding-right: 30px;
 }
-.titulo_produto img{
+
+.titulo_produto img {
     width: 28px;
     margin-left: 15px;
     vertical-align: middle;
 }
+
+
 /* Barra de pesquisa */
-main form.barra-de-pesquisa{
+
+main form.barra-de-pesquisa {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 12px;
 }
-main form input[type='search']{
+
+main form input[type='search'] {
     width: 85%;
     height: 3em;
     background-color: transparent;
@@ -75,7 +92,8 @@ main form input[type='search']{
     outline: none;
     border-right: none;
 }
-main .bt-pesquisa{
+
+main .bt-pesquisa {
     background: url("../imagens/ampliacaoPreto.svg") no-repeat center;
     position: relative;
     cursor: pointer;
@@ -86,8 +104,11 @@ main .bt-pesquisa{
     border-left: none;
     outline: none;
 }
+
+
 /*  */
-.camisa_imagens{
+
+.camisa_imagens {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 40px;
@@ -96,42 +117,48 @@ main .bt-pesquisa{
     padding: 10px 25px;
     margin: 0 auto 40px;
 }
-.camresp{
+
+.camresp {
     display: flex;
     flex-direction: column;
     justify-content: start;
 }
-.camisa img{
+
+.camisa img {
     width: 250px;
     height: 220px;
     display: block;
 }
-.camisa_descrição{
+
+.camisa_descrição {
     font-size: 18px;
     font-weight: 400;
 }
 
-@media (max-width : 1328px){
-    .ultmais{
-        display:none;
-    }
-}
-@media (max-width : 799px){
-    .camisa img{
-        width: 220px;
-    }
-}
-@media (max-width:745px){
-    .camisa img{
-        width:175px;
-        height:175px;
-    }
-    main div > nav{
+@media (max-width: 1328px) {
+    .ultmais {
         display: none;
     }
 }
-@media (max-width : 645px){
-    .camisa img{
+
+@media (max-width: 799px) {
+    .camisa img {
+        width: 220px;
+    }
+}
+
+@media (max-width:745px) {
+    .camisa img {
+        width: 175px;
+        height: 175px;
+    }
+    main div>nav {
+        display: none;
+    }
+}
+
+@media (max-width: 645px) {
+    .camisa img {
         width: 215px;
         height: 188px;
     }
@@ -139,107 +166,108 @@ main .bt-pesquisa{
         min-width: 55px;
     }
 }
-@media (max-width : 585px){
-    .camisa img{
+
+@media (max-width: 585px) {
+    .camisa img {
         width: 300px;
         height: 280px;
     }
 }
-@media (max-width : 411px){
+
+@media (max-width: 411px) {
     .titulo_produto {
         width: 100%;
     }
-    .titulo2{
+    .titulo2 {
         width: 100%;
     }
-    .pesquisa input{
+    .pesquisa input {
         width: 285px;
         margin: 8px 2px 4px 37px;
     }
-    .camisa img{
+    .camisa img {
         width: 260px;
         height: 250px;
     }
-    .adicionarprod input[type = text]{
+    .adicionarprod input[type=text] {
         width: 255px;
     }
-    .formjunto #preco{
+    .formjunto #preco {
         width: 255px;
     }
-    .container_conteudo .button_selecionar label{
-        padding:0.7em;
+    .container_conteudo .button_selecionar label {
+        padding: 0.7em;
     }
-    .button_selecionar #adicionarprod{
+    .button_selecionar #adicionarprod {
         margin-top: 30px;
         margin-right: 30px;
     }
 }
-@media (max-width : 375px){
-    .camisa img{
+
+@media (max-width: 375px) {
+    .camisa img {
         width: 240px;
         height: 250px;
     }
-    .tamanho .tamanho_escolha{
+    .tamanho .tamanho_escolha {
         width: 250px;
     }
-    .tamanho .tamanho_escolha li{
+    .tamanho .tamanho_escolha li {
         width: 70px;
         height: 40px;
     }
-    .pesquisa .botão_submit #deletar{
+    .pesquisa .botão_submit #deletar {
         width: 100px;
         height: 30px;
         font-size: 11px;
-        
     }
-    .pesquisa .botão_submit #Desativar{
+    .pesquisa .botão_submit #Desativar {
         width: 110px;
         height: 30px;
         font-size: 11px;
     }
-    
 }
-@media (max-width : 360px){
-    .camisa img{
+
+@media (max-width: 360px) {
+    .camisa img {
         width: 240px;
         height: 250px;
     }
-    .button_selecionar #adicionarprod{
+    .button_selecionar #adicionarprod {
         margin-right: 40px;
     }
-    .adicionarprod input[type = text]{
+    .adicionarprod input[type=text] {
         width: 235px;
     }
-    .formjunto #preco{
+    .formjunto #preco {
         width: 235px;
     }
-    
-    
 }
-@media (max-width : 320px){
-    .camisa img{
+
+@media (max-width: 320px) {
+    .camisa img {
         width: 200px;
         height: 220px;
     }
-    .adicionarprod input[type = text]{
+    .adicionarprod input[type=text] {
         width: 220px;
     }
-    .formjunto #preco{
+    .formjunto #preco {
         width: 220px;
     }
-    .tamanho .tamanho_escolha{
+    .tamanho .tamanho_escolha {
         width: 230px;
     }
-    .tamanho .tamanho_escolha li{
+    .tamanho .tamanho_escolha li {
         width: 60px;
         height: 40px;
     }
-    .button_selecionar #adicionarprod{
+    .button_selecionar #adicionarprod {
         margin-right: 15px;
     }
 }
 
-.titulo2{
+.titulo2 {
     background-color: #77A1D9;
     color: #fff;
     display: flex;
@@ -251,24 +279,32 @@ main .bt-pesquisa{
     padding-left: 20px;
     padding-right: 30px;
 }
-.titulo2 img{
+
+.titulo2 img {
     width: 30px;
     height: 35px;
 }
+
+
 /*************************Form junto**********************************/
-.adicionarprod{
+
+.adicionarprod {
     width: 100%;
 }
-.formjunto{
+
+.formjunto {
     display: flex;
 }
-.formjunto select:invalid{
+
+.formjunto select:invalid {
     color: rgb(159, 159, 159, 0.6);
 }
-.formjunto select:hover{
+
+.formjunto select:hover {
     color: #030f23;
 }
-.formjunto select{
+
+.formjunto select {
     width: 225px;
     display: block;
     background-color: transparent;
@@ -279,7 +315,8 @@ main .bt-pesquisa{
     color: #030f23;
     border-bottom: 1px solid #030f23;
 }
-.formjunto input[type ="text"]{
+
+.formjunto input[type="text"] {
     width: 315px;
     height: 29.4px;
     display: block;
@@ -291,25 +328,33 @@ main .bt-pesquisa{
     color: rgb(159, 159, 159, 0.6);
     border-bottom: 1px solid #030F26;
 }
-.formjunto label{
+
+.formjunto label {
     font-size: 28px;
     font-weight: 500;
 }
-.seljunto1,.seljunto2,.seljunto3{
+
+.seljunto1,
+.seljunto2,
+.seljunto3 {
     padding-left: 220px;
     margin-bottom: 1em;
 }
-.seljunto4{
-    padding-left:125px;
+
+.seljunto4 {
+    padding-left: 125px;
     margin-bottom: 1em;
 }
-.selectseparado select:invalid{
+
+.selectseparado select:invalid {
     color: rgb(159, 159, 159, 0.6);
 }
-.selectseparado select:hover{
+
+.selectseparado select:hover {
     color: #030f23;
 }
-.selectseparado select{
+
+.selectseparado select {
     width: 225px;
     display: block;
     background-color: transparent;
@@ -319,27 +364,31 @@ main .bt-pesquisa{
     font-weight: 400;
     color: #030f23;
     margin-bottom: 1em;
-    border-bottom: 1px solid #030f23;  
+    border-bottom: 1px solid #030f23;
 }
+
+
 /*****************************form separado***************************/
 
-.formadicionar{
+.formadicionar {
     width: 100%;
     height: 100%;
     padding-left: 35px;
     padding-top: 20px;
 }
-.formadicionar label{
+
+.formadicionar label {
     font-size: 20px;
     font-weight: 500;
 }
-.formadicionar ::placeholder{
+
+.formadicionar ::placeholder {
     font-size: 24px;
     font-weight: 400;
     color: rgb(159, 159, 159, 0.6);
 }
 
-.formadicionar input{
+.formadicionar input {
     width: 315px;
     height: 100%;
     display: block;
@@ -352,31 +401,38 @@ main .bt-pesquisa{
     border: none;
     border-bottom: 1px solid #030F26;
 }
-.formadicionar option:invalid{
-    color:  #9f9f9fab;
+
+.formadicionar option:invalid {
+    color: #9f9f9fab;
 }
-.formadicionar select:valid{
+
+.formadicionar select:valid {
     color: black;
 }
-.formadicionar #name{
+
+.formadicionar #name {
     width: 200px;
 }
-.tamanho{
+
+.tamanho {
     padding-left: 2em;
 }
-.ptamanho{
+
+.ptamanho {
     color: #030f23;
     font-size: 22px;
     font-weight: 700;
 }
-.tamanho_escolha{
+
+.tamanho_escolha {
     display: flex;
     flex-wrap: wrap;
-    align-items:center;
+    align-items: center;
     width: 300px;
-    cursor:pointer;
+    cursor: pointer;
 }
-.tamanho_escolha li{
+
+.tamanho_escolha li {
     background-color: #030f23;
     color: black;
     text-align: center;
@@ -389,29 +445,35 @@ main .bt-pesquisa{
     width: 50px;
     height: 45px;
 }
-.tamanho_escolha li:hover,.tamanho_escolha li:visited{
+
+.tamanho_escolha li:hover,
+.tamanho_escolha li:visited {
     background-color: #030f23;
     color: white;
 }
-.button_selecionar{
+
+.button_selecionar {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
     padding-right: 2em;
     align-items: center;
 }
-.button_selecionar input[type=file]{
+
+.button_selecionar input[type=file] {
     display: none;
 }
-.button_selecionar label{
-    background-color:#77A1D9;
-    padding:0.9rem;
+
+.button_selecionar label {
+    background-color: #77A1D9;
+    padding: 0.9rem;
     font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
     color: white;
 }
-.button_selecionar input[type="submit"]{
+
+.button_selecionar input[type="submit"] {
     background-color: #334D01;
     color: white;
     border: none;
@@ -422,27 +484,34 @@ main .bt-pesquisa{
     width: 170px;
     height: 50px;
 }
-.button_selecionar input[type="submit"]:hover{
+
+.button_selecionar input[type="submit"]:hover {
     cursor: pointer;
     background-color: #273a03;
 }
-@media (max-width : 930px){
-    .formjunto{
+
+@media (max-width: 930px) {
+    .formjunto {
         display: block;
     }
-    .seljunto1,.seljunto2,.seljunto3{
-        padding:8px 0;
+    .seljunto1,
+    .seljunto2,
+    .seljunto3 {
+        padding: 8px 0;
     }
-    .seljunto4{
-        padding:8px 0;
+    .seljunto4 {
+        padding: 8px 0;
     }
-    
 }
+
+
 /*************************Listar produtos***********************/
-.container-listar-produtos .cabecalho-topico{
+
+.container-listar-produtos .cabecalho-topico {
     margin-top: 20px;
 }
-.botão_submit{
+
+.botão_submit {
     display: flex;
     width: 84%;
     margin: 0 auto;
@@ -451,8 +520,9 @@ main .bt-pesquisa{
     margin-top: 10px;
     margin-bottom: 5px;
 }
-.botão_submit #deletar{
-    width:160px;
+
+.botão_submit #deletar {
+    width: 160px;
     margin-right: 15px;
     height: 50px;
     border-radius: 5px;
@@ -462,12 +532,14 @@ main .bt-pesquisa{
     font-weight: 400;
     color: white;
 }
-.botão_submit #deletar:hover{
+
+.botão_submit #deletar:hover {
     cursor: pointer;
     background-color: rgb(95, 3, 3);
 }
-.botão_submit #Desativar{
-    width:170px;
+
+.botão_submit #Desativar {
+    width: 170px;
     height: 50px;
     text-align: center;
     border: none;
@@ -477,15 +549,18 @@ main .bt-pesquisa{
     background-color: #4A5F7C;
     color: white;
 }
-.botão_submit #Desativar:hover{
+
+.botão_submit #Desativar:hover {
     cursor: pointer;
     background-color: #2f4058;
 }
-.voltar{
+
+.voltar {
     display: flex;
     justify-content: flex-end;
 }
-.voltar .linkvoltar{
+
+.voltar .linkvoltar {
     background-color: #334D01;
     display: flex;
     align-items: center;
@@ -499,128 +574,213 @@ main .bt-pesquisa{
     color: white;
     cursor: pointer;
 }
-.voltar .linkvoltar:hover{
+
+.voltar .linkvoltar:hover {
     cursor: pointer;
     background-color: #273a03;
 }
-.container-input-cb{
+
+.container-input-cb {
     position: absolute;
     width: max-content;
     padding: 6px 0 0 12px;
 }
-.container-input-cb input{
+
+.container-input-cb input {
     width: 20px;
     height: 20px;
 }
+
+
 /******************************Visalizar produto*************************/
-section.info-camisa{
+
+.mySlides {
+    display: none;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section.info-camisa {
     display: flex;
 }
-section.info-camisa .imagens-laterais{
-    width: 16%;
-    padding: 0 1.5rem;
+
+section.info-camisa .imagens-laterais {
+    width: 13%;
+    padding: 0 1.5rem 0 1.75rem;
 }
-section.info-camisa .imagens-laterais img{
-    width: 180px;
+
+section.info-camisa .imagens-laterais .demo {
+    opacity: 0.6;
+    width: 135px;
 }
-section.info-camisa .imagem-principal{
+
+.active,
+section.info-camisa .imagens-laterais .demo:hover {
+    opacity: 1;
+}
+
+section.info-camisa .imagem-principal {
     width: 42%;
 }
-section.info-camisa .imagem-principal img{
+
+section.info-camisa .imagem-principal img {
     width: 540px;
 }
-section.info-camisa .tamanho{
+
+section.info-camisa .tamanho {
     padding: 0;
 }
-section.info-camisa .tamanho p{
+
+section.info-camisa .tamanho p {
     font-weight: 700;
     margin-bottom: .5rem;
 }
-section.info-camisa .tamanho ol{
+
+section.info-camisa .tamanho ol {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
     width: 20em;
 }
-section.info-camisa .tamanho li{
-    width: 2rem;
+
+section.info-camisa .tamanho li {
+    width: 3rem;
     border: 2px solid #030F26;
     border-radius: 5px;
-    padding: .5rem .7rem;
+    padding: .5rem .5rem;
     margin: .2rem;
     box-sizing: content-box;
     text-align: center;
 }
-section.info-camisa .tamanho li:hover, .info-camisa .tamanho li:hover a{
+
+section.info-camisa .tamanho li:hover,
+.info-camisa .tamanho li:hover label {
     background-color: #030F26;
     color: #fff;
     cursor: pointer;
 }
-section.info-camisa .tamanho a{
+
+section.info-camisa .tamanho input {
+    display: none;
+}
+
+section.info-camisa .tamanho label {
+    margin: 0;
     color: #030F26;
     font-weight: 700;
     text-decoration: none;
 }
-section.info-camisa .container-avaliacoes{
+
+section.info-camisa .container-avaliacoes {
     width: 15rem;
     display: flex;
     flex-direction: column;
 }
-section.info-camisa .container-avaliacoes p{
+
+section.info-camisa .container-avaliacoes p {
     margin: 0;
     font-weight: 700;
 }
-section.info-camisa .avaliacoes{
+
+section.info-camisa .avaliacoes {
     width: 25rem;
     display: flex;
     flex-wrap: wrap;
     margin-top: -15px;
 }
-section.info-camisa .avaliacao{
+
+section.info-camisa .avaliacao {
     line-height: 3.5rem;
 }
-section.info-camisa .avaliacoes .nota{
+
+section.info-camisa .avaliacoes .nota {
     font-size: 3.3rem;
 }
-section.info-camisa .avaliacao > input{
+
+section.info-camisa .avaliacao>input {
     display: none;
 }
-section.info-camisa .avaliacao > label::before{
+
+section.info-camisa .avaliacao>label::before {
     margin: 0 5px;
     font-size: 1.5rem;
     display: inline-block;
     content: "\f005";
 }
-section.info-camisa .avaliacao .half-star::before{
-    content: "\f089"; 
-    position: absolute;
-}
-section.info-camisa .avaliacao > label{
+
+section.info-camisa .avaliacao>label {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color: #CDCDCD; 
-    float: right; 
+    color: #CDCDCD;
+    float: right;
     cursor: pointer;
-}   
-.avaliacao > input:checked ~ label, /* show gold star when clicked */
-.avaliacao:not(:checked) > label:hover, /* hover current star */
-.avaliacao:not(:checked) > label:hover ~ label { color: #FED42D;  } /* hover previous stars in list */
+}
 
-.avaliacao > input:checked + label:hover, /* hover current star when changing rating */
-.avaliacao > input:checked ~ label:hover,
-.avaliacao > label:hover ~ input:checked ~ label, /* lighten current selection */
-.avaliacao > input:checked ~ label:hover ~ label { color: #FED42D;  } 
+.avaliacao>input:checked~label,
+.avaliacao:not(:checked)>label:hover,
+.avaliacao:not(:checked)>label:hover~label {
+    color: #FED42D;
+}
 
-.n-avaliacoes{
+.avaliacao>input:checked+label:hover,
+.avaliacao>input:checked~label:hover,
+.avaliacao>label:hover~input:checked~label,
+.avaliacao>input:checked~label:hover~label {
+    color: #f5e08c;
+}
+
+.n-avaliacoes {
     display: block;
     width: 100%;
     margin-top: -37px;
     margin-left: 5rem;
     font-size: 16px;
 }
+
+.lista-produtos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tamanho-carrinho select {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.tamanho-carrinho button {
+    width: 100%;
+    background-color: #888888;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tamanho-carrinho button img {
+    width: 30px;
+}
+
+.descricao-camisa td {
+    border: none !important;
+    padding-left: .5rem!important;
+}
+
+
 /******************************************Gerenciar pedidos*************************/
 
-.pedidos_titulo1{
+.pedidos_titulo1 {
     display: flex;
     justify-content: space-between;
     background-color: #77A1D9;
@@ -633,230 +793,268 @@ section.info-camisa .avaliacao > label{
     padding-left: 20px;
     padding-right: 30px;
 }
-.itens_listar{
+
+.itens_listar {
     width: 100%;
 }
-.pedido{
+
+.pedido {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #030f23;
-    padding:25px 25px 10px 25px;
+    padding: 25px 25px 10px 25px;
 }
-.pedido .pedido_foto{
+
+.pedido .pedido_foto {
     display: flex;
     flex-wrap: wrap;
     margin-left: 13px;
 }
-.pedido .conf_cancel{
+
+.pedido .conf_cancel {
     margin-right: 10px;
     margin-top: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.pedido_ultimo{
+
+.pedido_ultimo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:25px 25px 10px 25px;
+    padding: 25px 25px 10px 25px;
 }
-.pedido_ultimo .pedido_foto{
+
+.pedido_ultimo .pedido_foto {
     display: flex;
     flex-wrap: wrap;
     margin-left: 13px;
 }
-.pedido_ultimo .conf_cancel{
+
+.pedido_ultimo .conf_cancel {
     margin-right: 10px;
     margin-top: 120px;
 }
-.pedido_datavalor{
+
+.pedido_datavalor {
     margin-top: 50px;
 }
 
-.inforpedido .nomecpf{
+.inforpedido .nomecpf {
     font-size: 17px;
     font-weight: 400;
     margin-left: 20px;
     margin-bottom: 10px;
 }
-.inforpedido .nomecpf b{
+
+.inforpedido .nomecpf b {
     font-size: 20px;
     font-weight: 700;
 }
 
-.inforpedido .endere{
+.inforpedido .endere {
     font-size: 12px;
     font-weight: 300;
     margin-left: 20px;
 }
-.inforpedido .endere b{
+
+.inforpedido .endere b {
     font-size: 16px;
     font-weight: 500;
 }
-.imgcartao{
+
+.imgcartao {
     display: flex;
     margin-top: 15px;
 }
-.imgcartao .imgc{
-    font-size:10px;
+
+.imgcartao .imgc {
+    font-size: 10px;
     font-weight: 300;
     margin-left: 10px;
 }
-.imgcartao img{
-    margin-left:20px ;
+
+.imgcartao img {
+    margin-left: 20px;
 }
-.imgcartao .imgc b{
+
+.imgcartao .imgc b {
     font-size: 10px;
     font-weight: 700;
 }
-.pedido_datavalor .datahora{
+
+.pedido_datavalor .datahora {
     font-size: 14px;
     font-weight: 300;
 }
-.pedido_datavalor .datahora b{
+
+.pedido_datavalor .datahora b {
     font-size: 17px;
     font-weight: 500;
 }
-.pedido_datavalor .totalped{
+
+.pedido_datavalor .totalped {
     font-size: 14px;
     font-weight: 300;
 }
-.pedido_datavalor .totalped b{
+
+.pedido_datavalor .totalped b {
     font-size: 17px;
     font-weight: 500;
 }
-.pedido_datavalor .totalped a{
+
+.pedido_datavalor .totalped a {
     color: #030f23;
 }
-.pedido_datavalor .preço{
+
+.pedido_datavalor .preço {
     font-size: 23px;
     font-weight: 500;
 }
-.outroped{
+
+.outroped {
     display: flex;
     flex-wrap: wrap;
 }
-.outro_foto{
+
+.outro_foto {
     display: flex;
     flex-wrap: wrap;
     padding-top: 2.5em;
 }
-.outro_foto img{
+
+.outro_foto img {
     width: 125px;
-    margin-left:38px;
+    margin-left: 38px;
 }
-.outro_foto .img2{
-    margin-left:120px ;
+
+.outro_foto .img2 {
+    margin-left: 120px;
 }
-.outronome{
+
+.outronome {
     display: flex;
     flex-wrap: wrap;
 }
-.outronome p{
+
+.outronome p {
     font-size: 14px;
     padding-bottom: 12px;
     padding-left: 12px;
 }
-.outronome p b{
+
+.outronome p b {
     font-size: 24px;
 }
-.tamanhotipo{
+
+.tamanhotipo {
     display: flex;
 }
-.tamanhotipo p{
+
+.tamanhotipo p {
     padding-left: 12px;
 }
-.generopreço{
+
+.generopreço {
     display: flex;
     padding-top: 0.8em;
 }
-.generopreço p{
+
+.generopreço p {
     padding-left: 12px;
     padding-bottom: 12px;
 }
-.tipo{
-    margin-left:20px;
+
+.tipo {
+    margin-left: 20px;
 }
-.indic{
-    margin-left:12px;
+
+.indic {
+    margin-left: 12px;
 }
-.preço{
+
+.preço {
     margin-top: 16px;
     margin-left: 10px;
-    font-size:23px;
+    font-size: 23px;
 }
+
 .statuspedido {
     position: relative;
-    float:right;
-    left:120px;
-    bottom:15px;
+    float: right;
+    left: 120px;
+    bottom: 15px;
     font-size: 12px;
     font-weight: 300;
     border-bottom: 1px solid #030f23;
 }
-.statuspedido b{
+
+.statuspedido b {
     font-size: 17px;
     font-weight: 700;
 }
-.pedido_ultimo .conf{
+
+.pedido_ultimo .conf {
     margin-right: 35px;
 }
-.status{
+
+.status {
     font-size: 13px;
     font-weight: 300;
     position: relative;
-    right:4px;
+    right: 4px;
     bottom: 15px;
 }
-.status b{
+
+.status b {
     font-size: 17px;
     font-weight: 700;
 }
-@media (max-width: 1300px){
-    .outro_foto .img2{
-        margin-left:38px ;
+
+@media (max-width: 1300px) {
+    .outro_foto .img2 {
+        margin-left: 38px;
     }
 }
 
-@media (max-width:930px){
-    
-    .pedido_foto{
+@media (max-width:930px) {
+    .pedido_foto {
         display: block;
     }
-    .pedido_datavalor{
+    .pedido_datavalor {
         margin-top: 130px;
     }
-    .pedido_foto .fotousi{
+    .pedido_foto .fotousi {
         margin-left: 20px;
     }
-    .outroped{
+    .outroped {
         display: block;
     }
-    .status{
-        margin-top:75px;
+    .status {
+        margin-top: 75px;
     }
-    
 }
-@media (max-width:810px){
-    .pedido{
+
+@media (max-width:810px) {
+    .pedido {
         display: block;
     }
-    .pedido_ultimo{
+    .pedido_ultimo {
         display: block;
-        
     }
-    .pedido_datavalor{
+    .pedido_datavalor {
         margin-top: 30px;
-        margin-left:30px ;
+        margin-left: 30px;
     }
-    .pedido_foto figure .fotousi{
+    .pedido_foto figure .fotousi {
         width: 50%;
     }
-    .conf_cancel{
-        margin-left:30px;
+    .conf_cancel {
+        margin-left: 30px;
     }
-    .conf_cancel img{
+    .conf_cancel img {
         width: 40px;
     }
     .statuspedido {
@@ -865,15 +1063,16 @@ section.info-camisa .avaliacao > label{
         bottom: 0;
         top: 24px;
     }
-    .status{
+    .status {
         margin-left: 33px;
     }
 }
-@media (max-width : 560px){
-    .informação_outroped{
+
+@media (max-width: 560px) {
+    .informação_outroped {
         margin-left: 25px;
     }
-    .informação_ultoutroped{
+    .informação_ultoutroped {
         margin-left: 0;
     }
     .statuspedido {
@@ -882,33 +1081,34 @@ section.info-camisa .avaliacao > label{
         bottom: 0;
         top: 24px;
     }
-    .preço{
+    .preço {
         margin-left: 0;
     }
 }
-@media (max-width : 411px){
-    .pedidos_titulo1{
+
+@media (max-width: 411px) {
+    .pedidos_titulo1 {
         font-size: 20px;
     }
-    .informação_outroped .generopreço{
+    .informação_outroped .generopreço {
         display: block;
     }
-    .informação_outroped .generopreço .indic{
+    .informação_outroped .generopreço .indic {
         margin-left: 2px;
     }
-    .informação_outroped .generopreço .preço{
+    .informação_outroped .generopreço .preço {
         margin-left: 2px;
     }
-    .status{
+    .status {
         margin-top: 40px;
     }
 }
-@media (max-width : 375px){
-    .pedidos_titulo1{
+
+@media (max-width: 375px) {
+    .pedidos_titulo1 {
         font-size: 20px;
     }
 }
 
+
 /**********************************Responsividade////////////////////////////*
-
-

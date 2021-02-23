@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg" href="imagens/logo-icon.svg"/>
+    <link rel="icon" type="image/svg" href="imagens/logo-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css”>
     <link rel="stylesheet" href="estilo/header-footer.css">
+    <link rel="stylesheet" href="estilo/resultado_pesquisa.css">
     <link rel="stylesheet" href="estilo/Paginasadm.css">
+    <link rel="stylesheet" href="estilo/main.css">
     <link rel="stylesheet" href="Bootstrap/css/boosts.css">
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <title>Futshirt</title>
 </head>
+
 <body>
     <div class="efeito">
         <div class="login">
@@ -28,15 +29,15 @@
                         <label for="login">E-mail</label>
                         <input type="email" id="login" required/>
                     </div>
-                    
+
                     <div>
                         <label for="senha">Senha</label>
                         <input type="password" id="senha" required/>
                     </div>
-                    
+
                     <a href="">Esqueci minha senha</a>
                 </div>
-                
+
                 <div class="container-entrar-cadastre-se">
                     <input type="submit" id="entrar_login" value="Entrar">
                     <a href="dados_pessoais.html">Cadastre-se</a>
@@ -50,15 +51,17 @@
             <a href="ajuda.html"><img src="imagens/question-mark-inside-a-circle.svg" alt=""></a>
             <p><a href="ajuda.html">Atendimento</a></p>
         </div>
-        
+
         <div class="header-principal">
-            <h1><a href=""><img src="imagens/logo.svg" alt="logotipo"></a></h1>
-            
+            <h1>
+                <a href=""><img src="imagens/logo.svg" alt="logotipo"></a>
+            </h1>
+
             <form action="" class="barra-de-pesquisa">
                 <input type="search" name="buscar" placeholder="Buscar">
                 <input class="bt-pesquisa" type="submit" value="">
             </form>
-            
+
             <div>
                 <div class="area-de-acesso">
                     <img src="imagens/avatar.svg" alt="user">
@@ -67,8 +70,8 @@
                         <a href="dados_pessoais.html">Cadastre-se</a>
                     </div>
                 </div>
-                
-                <a href="carrinho.html" class="sacola"><img src="imagens/sacola-de-compras.svg" alt="sacola de compras"/></a>
+
+                <a href="carrinho.html" class="sacola"><img src="imagens/sacola-de-compras.svg" alt="sacola de compras" /></a>
             </div>
         </div>
         <nav id="navegacao01">
@@ -81,27 +84,84 @@
     </header>
     <main>
         <section class="info-camisa">
-            <div class="imagens-laterais">
-                <img src="imagens/camisa_flamengo.png" alt="Foto da camisa"/>
-                <img src="imagens/camisa_flamengo.png" alt="Foto da camisa"/>
-                <img src="imagens/camisa_flamengo.png" alt="Foto da camisa"/>
+            <!-- <div class="imagens-laterais">
+                <img src="imagens/camisa_flamengo.png" alt="Foto da camisa" />
+                <img src="imagens/camisa_flamengo.png" alt="Foto da camisa" />
+                <img src="imagens/camisa_flamengo.png" alt="Foto da camisa" />
             </div>
             <div class="imagem-principal">
-                <img src="imagens/camisa_flamengo.png" alt="Foto principal da camisa"/>
+                <img src="imagens/camisa_flamengo.png" alt="Foto principal da camisa" />
+            </div> -->
+            <!-- Container for the image gallery -->
+            <div class="imagens-laterais">
+                <div class="row">
+                    <img class="demo cursor-pointer" src="imagens/camisa_flamengo.png" onclick="currentSlide(1)" alt="Camisa do flamengo">
+                </div>
+                <div class="row">
+                    <img class="demo cursor-pointer" src="imagens/camisa_flamengo.png" onclick="currentSlide(2)" alt="Camisa do flamengo">
+                </div>
+                <div class="row">
+                    <img class="demo cursor-pointer" src="imagens/camisa_flamengo.png" onclick="currentSlide(3)" alt="Camisa do flamengo">
+                </div>
+                <div class="row">
+                    <img class="demo cursor-pointer" src="imagens/camisa_flamengo.png" onclick="currentSlide(4)" alt="Camisa do flamengo">
+                </div>
             </div>
+            <div class="imagem-principal">
+                <div class="mySlides">
+                    <img src="imagens/camisa_flamengo.png">
+                </div>
+
+                <div class="mySlides">
+                    <img src="imagens/camisa_flamengo.png">
+                </div>
+
+                <div class="mySlides">
+                    <img src="imagens/camisa_flamengo.png">
+                </div>
+
+                <div class="mySlides">
+                    <img src="imagens/camisa_flamengo.png">
+                </div>
+            </div>
+
+            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+
             <div class="conteudo-produto">
                 <h3>Flamengo Home Masculina - 2020</h3>
                 <p>Status - Disponivel</p>
                 <div class="tamanho">
                     <p>Tamanho</p>
                     <ol>
-                        <li><a href="#">PP</a></li>
-                        <li><a href="#">P</a></li>
-                        <li><a href="#">M</a></li>
-                        <li><a href="#">G</a></li>
-                        <li><a href="#">GG</a></li>
-                        <li><a href="#">EG</a></li>
-                        <li><a href="#">EEG</a></li>
+                        <li>
+                            <input type="radio" id="camisa-pp" name="tamanho-camisa" value="pp">
+                            <label for="camisa-pp">PP</label><br>
+                        </li>
+                        <li>
+                            <input type="radio" id="camisa-p" name="tamanho-camisa" value="p">
+                            <label for="camisa-p">P</label><br>
+                        </li>
+                        <li>
+                            <input type="radio" id="camisa-m" name="tamanho-camisa" value="m">
+                            <label for="camisa-m">M</label><br>
+                        </li>
+                        <li>
+                            <input type="radio" id="camisa-g" name="tamanho-camisa" value="g">
+                            <label for="camisa-g">G</label><br>
+                        </li>
+                        <li>
+                            <input type="radio" id="camisa-gg" name="tamanho-camisa" value="gg">
+                            <label for="camisa-gg">GG</label><br>
+                        </li>
+                        <li>
+                            <input type="radio" id="camisa-eg" name="tamanho-camisa" value="eg">
+                            <label for="camisa-eg">EG</label><br>
+                        </li>
+                        <li>
+                            <input type="radio" id="camisa-eeg" name="tamanho-camisa" value="eeg">
+                            <label for="camisa-eeg">EEG</label><br>
+                        </li>
                     </ol>
                 </div>
                 <div class="container-avaliacoes">
@@ -109,21 +169,135 @@
                     <div class="avaliacoes">
                         <span class="nota">3.5</span>
                         <div class="avaliacao">
-                            <input id="rating10" type="radio" name="avaliacao" value="5"><label for="rating10" class="full-star"></label>  
-                            <input id="rating9" type="radio" name="avaliacao" value="4.5"><label for="rating9" class="half-star"></label>
-                            <input id="rating8" type="radio" name="avaliacao" value="4"><label for="rating8" class="full-star"></label>
-                            <input id="rating7" type="radio" name="avaliacao" value="3.5"><label for="rating7" class="half-star"></label>
-                            <input id="rating6" type="radio" name="avaliacao" value="3"><label for="rating6" class="full-star"></label>
-                            <input id="rating5" type="radio" name="avaliacao" value="2.5"><label for="rating5" class="half-star"></label>
-                            <input id="rating4" type="radio" name="avaliacao" value="2"><label for="rating4" class="full-star"></label>
-                            <input id="rating3" type="radio" name="avaliacao" value="1.5"><label for="rating3" class="half-star"></label>
-                            <input id="rating2" type="radio" name="avaliacao" value="1"><label for="rating2" class="full-star"></label>
-                            <input id="rating1" type="radio" name="avaliacao" value="0.5"><label for="rating1" class="half-star"></label>
+                            <input id="rating5" type="radio" name="avaliacao" value="5"><label for="rating5" class="full-star"></label>
+                            <input id="rating4" type="radio" name="avaliacao" value="4"><label for="rating4" class="full-star"></label>
+                            <input id="rating3" type="radio" name="avaliacao" value="3"><label for="rating3" class="full-star"></label>
+                            <input id="rating2" type="radio" name="avaliacao" value="2"><label for="rating2" class="full-star"></label>
+                            <input id="rating1" type="radio" name="avaliacao" value="1"><label for="rating1" class="full-star"></label>
                         </div>
                         <span class="n-avaliacoes">5000 Avaliações</span>
                     </div>
                 </div>
+                <div>
+                    <button type="submit" name="comprar" class="btn btn-primario mb-1 mt-2">Comprar</button>
+                    <button type="submit" name="carrinho" class="btn btn-segundario d-block">Adicionar ao carrinho</button>
+                </div>
+                <div class="consulte-cep mt-3">
+                    <h6 class="mb-1">Consulte o valor da entrega</h6>
+                    <input class="form-control w-auto d-inline" type="text" placeholder="Insira o cep" />
+                    <button class="btn btn-primario" type="submit">Consultar</button>
+                </div>
             </div>
+        </section>
+        <h4 class="mt-5 ml-2">Você também pode gostar</h4>
+        <hr>
+        <section class="pl-2">
+            <ul class="lista-produtos">
+                <!--  -->
+                <li>
+                    <div class="item">
+                        <div class="foto-item">
+                            <div>
+                                <button id="addDesejos"></button>
+                            </div>
+                            <a href="#">
+                                <img src="./imagens/camisa_flamengo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <div class="info-item">
+                                <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                <div class="preco">
+                                    <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                    <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                    <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tamanho-carrinho">
+                            <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                            <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <div class="foto-item">
+                            <div>
+                                <button id="addDesejos"></button>
+                            </div>
+                            <a href="#">
+                                <img src="./imagens/camisa_flamengo.png" alt="">
+                            </a>
+                        </div>
+                        <div>
+                            <div class="info-item">
+                                <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                <div class="preco">
+                                    <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                    <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                    <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tamanho-carrinho">
+                            <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                            <button><img src="imagens/sacola-de-compras.svg" alt=""></button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h4 class="ml-2">Descrição</h4>
+            <p class="pl-2">
+                Outro patamar de manto! Chegou a nova Camisa do Flamengo I 20/21 Torcedor Adidas. Inspirada no uniforme de 1987 e 1992, a nova camisa titular do Flamengo traz listras Rubro-Negras mais grossas e com trechos do hino do Mengão estampados. Tua glória é lutar!
+                Garanta a sua Camisa I do Flamengo 2020 Adidas!
+            </p>
+
+            <table class="w-100 table descricao-camisa">
+                <tbody>
+                    <tr>
+                        <td><strong>Nome:</strong> Home Masculina - 2020</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time:</strong> Home Masculina - 2020</td>
+                        <td><strong>Tipo:</strong> Home Masculina - 2020</td>
+                        <td><strong>Escudo:</strong> Home Masculina - 2020</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clube:</strong> Home Masculina - 2020</td>
+                        <td><strong>Material:</strong> Home Masculina - 2020</td>
+                        <td><strong>Número:</strong> Home Masculina - 2020</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Indicada para:</strong> Home Masculina - 2020</td>
+                        <td><strong>Gola:</strong> Home Masculina - 2020</td>
+                        <td><strong>Origem:</strong> Home Masculina - 2020</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gênero:</strong> Home Masculina - 2020</td>
+                        <td><strong>Manga:</strong> Home Masculina - 2020</td>
+                        <td><strong>Nome:</strong> Home Masculina - 2020</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
         </section>
     </main>
     <footer>
@@ -206,9 +380,15 @@
                 <li>
                     <p class="destaque">Redes Sociais</p>
                     <ol class="redes-sociais">
-                        <li><a href="#"><img src="imagens/logotipo-do-instagram.svg" alt=""></a></li>
-                        <li><a href="#"><img src="imagens/facebook.svg" alt=""></a></li>
-                        <li><a href="#"><img src="imagens/twitter.svg" alt=""></a></li>
+                        <li>
+                            <a href="#"><img src="imagens/logotipo-do-instagram.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="imagens/facebook.svg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="imagens/twitter.svg" alt=""></a>
+                        </li>
                     </ol>
                 </li>
             </ol>
@@ -221,6 +401,37 @@
 <script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>
 
 </html>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-<!-- >>>>>>> f635444457bb52c167eb7a53463f76076ee185b8 -->
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>

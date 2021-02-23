@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutShirt.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace FutShirt.Controllers
 {
     public class CadastroController : Controller
     {
+        private UsuarioContext usuarioContext = new UsuarioContext();
         // GET: Cadastro
         public ActionResult Index()
         {

@@ -63,7 +63,7 @@ main section.container-meus-dados .dados{
 main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
     padding: 3em 2em 3em 1.5em;
 }
-main section.container-meus-dados .dados div div, main section.container-enderecos div{
+main section.container-meus-dados .dados div div{
     display: flex;
     flex-direction: column;
     margin: 1.5em 0;
@@ -72,7 +72,7 @@ main .dados h4{
     font-size: 900;
     font-size: 22px;
 }
-main .dados input[type="text"], main .dados input[type="email"], main .dados input[type="password"], main section.container-enderecos input[type="text"]{
+main .container-meus-dados .dados input[type="text"], main .container-meus-dados .dados input[type="email"], main .container-meus-dados .dados input[type="password"]{
     width: 22em;
     outline: none;
     padding: 5px;
@@ -128,10 +128,6 @@ main section.container-meus-dados input[type="submit"], main section.container-e
 main section.container-enderecos{
     width: 100%;
 }
-main section.container-enderecos form{
-    width: max-content;
-    padding-left: 1.2em;
-}
 main section.container-enderecos input[type="submit"]{
     float: none;
     margin-top: 10px;
@@ -139,7 +135,85 @@ main section.container-enderecos input[type="submit"]{
 main section.container-enderecos form.panel input[type="submit"]{
     margin-bottom: 20px;
 }
+main .dados{
+    max-width: 30rem;
+    width: 25em;
+    margin: 2em auto 0 20%;
+}
 
+main .dados-cadastro{
+    text-align: left;
+}
+
+main .dados-cadastro label{
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+main .dados-cadastro .dados-preencher {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+main .dados-preencher .icon {
+    padding: 12px 0; 
+    min-width: 50px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-right: none;
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+main .dados-preencher .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 1.2rem;
+    height: 3rem;
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+  }
+  main .dados-preencher .input-field:focus {
+    outline: 0;
+  }
+  main .dados-preencher .select-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 1.2rem;
+    height: 3rem;
+    border: 1px solid #ced4da;
+    border-left: none;
+    border-radius: 0px 5px 5px 0px;
+  }
+  main .dados-preencher .select-field:focus {
+    outline: 0;
+  }
+.bt-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+}
+main .dados input[type=submit]{    
+    font-size: 1.1rem;
+    width: 170px;
+    height: 50px;
+    outline: none;
+    background-color:#334D01;
+    border: none;
+    border-radius: 6px;
+    color: #fefefe;
+}
+main .dados input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #273a03;
+}
 @media (max-width: 460px){
     main section.container-enderecos form{
         width: 100%;

@@ -92,39 +92,91 @@
                 </ol>
             </nav>
             <section class="container-enderecos">
-                <h3>Endereços</h3>
+                <div class="cabecalho-topico">
+                    <h3>Endereços</h3>
+                </div>
                 
-                <form action="">
-                    <div>
+                <form action="" class="dados">
+                    <div class="dados-cadastro">
                         <label for="cep">CEP</label>
-                        <input type="text" id="cep" required value="00000-000">
+                        <div class="dados-preencher">                            
+                            <i class="fas fa-map-marker-alt icon"></i>
+                            <input type="text" class="input-field" name="cep" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}"/>
+                        </div>
                     </div>
-                    <div>
-                        <label for="logradouro">Logradouro</label>
-                        <input type="text" id="logradouro" required value="Rua das Flores">
+                    <div class="dados-cadastro">
+                        <label for="UF">Estado</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-map-marked-alt icon"></i>
+                            <select name="estado" id="estado" class="select-field" required>
+                                <option value="" class="sel" disabled="disabled" selected="selected">Selecione seu Estado</option> 
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
                     </div>
-                    <div>
-                        <label for="bairro">Bairro</label>
-                        <input type="text" id="bairro" required value="Tirol">
+                    <div class="dados-cadastro">
+                        <label for="cid">Cidade</label>
+                        <div class="dados-preencher">     
+                            <i class="fas fa-map-marked-alt icon"></i>
+                            <input type="text" class="input-field" name="cidade" id="cidade">
+                        </div>
                     </div>
-                    <div>
-                        <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" required value="Natal">
+                    <div class="dados-cadastro">
+                        <label for="log">Bairro</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-road icon"></i>
+                            <input type="text" id="bairro" class="input-field" name="bairro" placeholder="Digite seu bairro" autocomplete="off" >
+                        </div>
                     </div>
-                    <div>
-                        <label for="estado">Estado</label>
-                        <input type="text" id="estado" required value="Rio Grande do Norte">
+                    <div class="dados-cadastro">
+                        <label for="log">Logradouro</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-road icon"></i>
+                            <input type="text" name="logradouro" id="logradouro" class="input-field" placeholder="Digite seu Logradouro" autocomplete="off" >
+                        </div>
                     </div>
-                    <div>
-                        <label for="numero">Número</label>
-                        <input type="text" id="numero" required value="000">
+                    <div class="dados-cadastro">
+                        <label for="num">Numero</label>
+                        <div class="dados-preencher">  
+                            <i class="fas fa-home icon"></i>                          
+                            <input type="text" name="numero" id="numero" class="input-field" maxlength="4" placeholder="0000" autocomplete="off" required>
+                        </div>
                     </div>
-                    <div>
-                        <label for="complemento">Complemento</label>
-                        <input type="text" id="complemento" required value="Próximo ao Midway">
+                    <div class="dados-cadastro">
+                        <label for="comp">Complemento</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-info icon  "></i>
+                            <input type="text" name="complemento" id="comp" class="input-field" placeholder="Digite o Complemento" autocomplete="off"  >
+                        </div>
                     </div>
-                    <div class="bt-submit-container">
-                        <input type="submit" value="Salvar alterações">
+                    <div class="bt-container">
+                        <input type="submit" id="conf" value="Salvar alterações">
                     </div>
                 </form>
                 
@@ -132,37 +184,87 @@
                     <input type="checkbox" id="chck1">
                     <label for="chck1">Adicionar endereço</label>
                     
-                    <form class="panel" action="">
-                        <div>
+                    <form action="" class="dados panel">
+                        <div class="dados-cadastro">
                             <label for="cep">CEP</label>
-                            <input type="text" id="cep" required>
+                            <div class="dados-preencher">                            
+                                <i class="fas fa-map-marker-alt icon"></i>
+                                <input type="text" class="input-field" name="cep" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}"/>
+                            </div>
                         </div>
-                        <div>
-                            <label for="logradouro">Logradouro</label>
-                            <input type="text" id="logradouro" required>
+                        <div class="dados-cadastro">
+                            <label for="UF">Estado</label>
+                            <div class="dados-preencher">
+                                <i class="fas fa-map-marked-alt icon"></i>
+                                <select name="estado" id="estado" class="select-field" required>
+                                    <option value="" class="sel" disabled="disabled" selected="selected">Selecione seu Estado</option> 
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
                         </div>
-                        <div>
-                            <label for="bairro">Bairro</label>
-                            <input type="text" id="bairro" required>
+                        <div class="dados-cadastro">
+                            <label for="cid">Cidade</label>
+                            <div class="dados-preencher">     
+                                <i class="fas fa-map-marked-alt icon"></i>
+                                <input type="text" class="input-field" name="cidade" id="cidade">
+                            </div>
                         </div>
-                        <div>
-                            <label for="cidade">Cidade</label>
-                            <input type="text" id="cidade" required>
+                        <div class="dados-cadastro">
+                            <label for="log">Bairro</label>
+                            <div class="dados-preencher">
+                                <i class="fas fa-road icon"></i>
+                                <input type="text" id="bairro" class="input-field" name="bairro" placeholder="Digite seu bairro" autocomplete="off" >
+                            </div>
                         </div>
-                        <div>
-                            <label for="estado">Estado</label>
-                            <input type="text" id="estado" required>
+                        <div class="dados-cadastro">
+                            <label for="log">Logradouro</label>
+                            <div class="dados-preencher">
+                                <i class="fas fa-road icon"></i>
+                                <input type="text" name="logradouro" id="logradouro" class="input-field" placeholder="Digite seu Logradouro" autocomplete="off" >
+                            </div>
                         </div>
-                        <div>
-                            <label for="numero">Número</label>
-                            <input type="text" id="numero" required>
+                        <div class="dados-cadastro">
+                            <label for="num">Numero</label>
+                            <div class="dados-preencher">  
+                                <i class="fas fa-home icon"></i>                          
+                                <input type="text" name="numero" id="numero" class="input-field" maxlength="4" placeholder="0000" autocomplete="off" required>
+                            </div>
                         </div>
-                        <div>
-                            <label for="complemento">Complemento</label>
-                            <input type="text" id="complemento" required>   
+                        <div class="dados-cadastro">
+                            <label for="comp">Complemento</label>
+                            <div class="dados-preencher">
+                                <i class="fas fa-info icon  "></i>
+                                <input type="text" name="complemento" id="comp" class="input-field" placeholder="Digite o Complemento" autocomplete="off"  >
+                            </div>
                         </div>
-                        <div class="bt-submit-container">
-                            <input type="submit" value="Salvar alterações">
+                        <div class="bt-container">
+                            <input type="submit" id="conf" value="Adicionar">
                         </div>
                     </form>
                 </div>

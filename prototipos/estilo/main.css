@@ -38,6 +38,7 @@ main .accordion>label {
 
 main section .cabecalho-topico {
     justify-content: start;
+    flex-direction: row !important;
 }
 
 main .cabecalho-topico button,

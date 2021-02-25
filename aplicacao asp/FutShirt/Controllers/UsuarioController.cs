@@ -68,10 +68,19 @@ namespace FutShirt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateStepThree(Usuario usuario, Endereco endereco)
+        public ActionResult CreateStepThree([Bind(Exclude = "VerificacaoEmail, CodigoAtivacao")] Usuario usuario, Endereco endereco)
         {
             try
             {
+                //Validação do modelo
+
+                //Email já existente
+
+                //Gerar código de ativação
+
+                //Criptografar Senha
+
+                //Salvar Usuario
                 usuarioContext.Usuarios.Add(usuario);
                 usuarioContext.Enderecos.Add(endereco);
                 usuarioContext.SaveChanges();

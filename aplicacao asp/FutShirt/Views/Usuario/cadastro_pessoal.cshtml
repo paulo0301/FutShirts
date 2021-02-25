@@ -23,78 +23,88 @@
         </div>
         <article>
 
-            @if(ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+            @if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
             {
-
+                {
+                    <div class="alert alert-success">
+                        <strong>Sucesso!</strong>
+                    </div>
+                }
             }
             else
             {
+                @using (Html.BeginForm("CreateStepOne", "Usuario", FormMethod.Post, new { @class = "dados" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="dados-cadastro">
+                        @Html.LabelFor(model => model.Nome)
+                        <div class="dados-preencher">
+                            <i class="fas fa-user icon"></i>
+                            @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @type = "text", id = "name", @class = "input-field", autocomplete = "off", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="dados-cadastro">
+                        <label for="email">Email</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-at icon"></i>
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "email", id = "email", @class = "input-field", autocomplete = "off", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="dados-cadastro">
+                        <label for="tel">Telefone</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-phone-alt icon"></i>
+                            @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @type = "tel", id = "telefone", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "(00) 00000-0000", maxlength = "13", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="dados-cadastro">
+                        <label for="cpf">CPF</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-id-card icon"></i>
+                            @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @type = "text", id = "cpf", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "000.000.000-00", maxlength = "14", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Cpf, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="dados-cadastro">
+                        <label for="nasc">Data de nascimento</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-calendar-alt icon"></i>
+                            @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @type = "text", id = "nascimento", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '##/##/####')", placeholder = "00/00/0000", maxlength = "10", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="dados-cadastro">
+                        <label for="senha">Senha</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-unlock-alt icon"></i>
+                            @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { id = "senha", @type = "password", @class = "input-field", autocomplete = "off", placeholder = "Digite sua senha", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="dados-cadastro">
+                        <label for="confsenha">Confirmar senha</label>
+                        <div class="dados-preencher">
+                            <i class="fas fa-unlock-alt icon"></i>
+                            @Html.EditorFor(model => model.ConfirmarSenha, new { htmlAttributes = new { id = "confsenha", @type = "password", @class = "input-field", autocomplete = "off", placeholder = "Digite novamente sua senha", required = "required" } })
+                            @Html.ValidationMessageFor(model => model.ConfirmarSenha, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="bt-container">
+                        <input type="submit" id="conf" value="Prosseguir" onclick="proseg(event)" />
+                    </div>
+                }
+                if (ViewBag.Message != null)
+                {
+                    <div class="alert alert-danger">
+                        <strong>@ViewBag.Message</strong>
+                    </div>
+                }
+            }
 
-            }
-            @using (Html.BeginForm("CreateStepOne", "Usuario", FormMethod.Post, new { @class = "dados" }))
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="dados-cadastro">
-                    @Html.LabelFor(model => model.Nome)
-                    <div class="dados-preencher">
-                        <i class="fas fa-user icon"></i>
-                        @Html.EditorFor(model => model.Nome, new{htmlAttributes = new { @type="text", id="name", @class = "input-field", autocomplete = "off", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="email">Email</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-at icon"></i>
-                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "email", id = "email", @class = "input-field", autocomplete = "off", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="tel">Telefone</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-phone-alt icon"></i>
-                        @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @type = "tel", id = "telefone", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "(00) 00000-0000", maxlength = "13", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="cpf">CPF</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-id-card icon"></i>
-                        @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @type = "text", id = "cpf", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "000.000.000-00", maxlength = "14", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.Cpf, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="nasc">Data de nascimento</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-calendar-alt icon"></i>
-                        @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @type = "text", id = "nascimento", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '##/##/####')", placeholder = "00/00/0000", maxlength = "10", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.DataNascimento, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="senha">Senha</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-unlock-alt icon"></i>
-                        @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { id = "senha", @type="password", @class = "input-field", autocomplete = "off", placeholder = "Digite sua senha", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" }) 
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="confsenha">Confirmar senha</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-unlock-alt icon"></i>
-                        @Html.EditorFor(model => model.ConfirmarSenha, new { htmlAttributes = new { id = "confsenha", @type = "password", @class = "input-field", autocomplete = "off", placeholder = "Digite novamente sua senha", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.ConfirmarSenha, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-                <div class="bt-container">
-                    <input type="submit" id="conf" value="Prosseguir" onclick="proseg(event)" />
-                </div>
-            }
         </article>
     </main>
 </body>

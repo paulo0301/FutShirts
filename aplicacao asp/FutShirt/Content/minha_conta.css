@@ -4,33 +4,44 @@ main > div{
     height: 100%;
 }
 /***************************** MENU DO LADO ESQUERDO *********************/
-main h2{
+main div h2{
     background-color: #030F26;
     color: #fff;
     width: 100%;   
 }
-main nav{
+main div nav{
     background-image: linear-gradient(to right,#030F26 60px, #fff 20%);
     min-width: 200px;
     border-right: 1px solid #030F26;
     padding: 120px 0 0;
 }
-main nav a{
+main div nav a{
     color: #000;
     font-weight: bold;
     display: flex;
     align-items: center;
     padding: 8px 0;
 }
-main nav a img{
+main div nav a img{
     margin-right: 4px;
     width: 30px;
     padding: 0 15px;
     box-sizing: content-box;
 }
-main nav a:hover, main nav a.active{
+main div nav a:hover, main div nav a.active{
     background-color: #030F26;
     color: #fff;
+}
+nav.voltar-index{
+    display: none;
+}
+@media (max-width: 745px){
+    main div nav{
+        display: none;
+    }
+    nav.voltar-index{
+        display: block;
+    }
 }
 /************************** SECTION MEUS DADOS *****************************/
 main div.cabecalho{
@@ -38,18 +49,6 @@ main div.cabecalho{
 }
 main section.container-meus-dados{
     width: 100%;
-}
-main section h3, main .accordion > label{
-    background-color: #77A1D9;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    margin-top: 70px;
-    font-size: 23px;
-    height: 50px;
-    padding-left: 20px;
-    justify-content: space-between;
-    padding-right: 30px;
 }
 main h3 img{
     width: 15px;
@@ -63,9 +62,6 @@ main section.container-meus-dados .dados{
 }
 main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
     padding: 3em 2em 3em 1.5em;
-} 
-main section.container-meus-dados .dados .dados-acesso form:nth-child(3){
-    margin-top: 50px;
 }
 main section.container-meus-dados .dados div div, main section.container-enderecos div{
     display: flex;
@@ -106,13 +102,34 @@ main section.container-meus-dados input[type="submit"], main section.container-e
     float: right;
     cursor: pointer;
 }
-
+@media (max-width: 1105px){
+    main section.container-meus-dados .dados{
+        flex-wrap: wrap;
+    }
+    main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
+        padding: 0 2em 3em 1.5em;
+    }
+}
+@media (max-width: 455px){
+    main section.container-meus-dados .dados{
+        width: 100%;
+        justify-content: center;
+        width: 100%;
+    }
+    main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
+        padding: 0 1em 1em;
+        width: 100%;
+    }
+    main .dados input[type="text"], main .dados input[type="email"], main .dados input[type="password"], main section.container-enderecos input[type="text"]{
+        width: 100%;
+    }
+}
 /*********************** SECTION ENDERECOS *************************/
 main section.container-enderecos{
     width: 100%;
 }
 main section.container-enderecos form{
-    width: 50%;
+    width: max-content;
     padding-left: 1.2em;
 }
 main section.container-enderecos input[type="submit"]{
@@ -122,36 +139,13 @@ main section.container-enderecos input[type="submit"]{
 main section.container-enderecos form.panel input[type="submit"]{
     margin-bottom: 20px;
 }
-main section .accordion > label{
-    margin: 0 0 20px 0;
-    cursor: inherit;
-}
-main section .accordion > label::after{
-    content: "\276F";
-    text-align: center;
-    transition: all .35s;
-}
-main section .accordion > label:hover{
-    background-color: #5088d3;
-}
-main section .accordion > input{
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-}
-main section .accordion > input:checked + label{
-    background-color: #5088d3;
-}
-main section .accordion > input:checked + label::after{
-    transform: rotate(90deg);
-}
-main section .accordion > input:checked ~ form.panel{
-    display: block;
-}
-main section.container-enderecos form.panel{
-    display: none;
-}
 
+@media (max-width: 460px){
+    main section.container-enderecos form{
+        width: 100%;
+        padding: 0 1em 0;
+    }
+}
 /************************* SECTION MEUS PEDIDOS **********************/
 main section.container-meus-pedidos{
     width: 100%;
@@ -189,7 +183,19 @@ main section.container-meus-pedidos .container-pedido .container-descricao .prec
     font-weight: bold;
     font-size: 23px;
 }
-
+@media (max-width: 455px){
+    main section.container-meus-pedidos .container-pedido figure img, main section.container-meus-favoritos .container-favorito figure img{
+        max-width: 150px;
+    }
+    main section.container-meus-pedidos .container-pedido .container-descricao p, main section.container-meus-favoritos .container-favorito .container-descricao p{
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 370px){
+    main section.container-meus-pedidos .container-pedido figure img, main section.container-meus-favoritos .container-favorito figure img{
+        max-width: 120px;
+    }
+}
 /************************* SECTION MEUS FAVORITOS **********************/
 main section.container-meus-favoritos{
     width: 100%;
@@ -204,7 +210,11 @@ main section.container-meus-favoritos button{
 main section.container-meus-favoritos .lixeira{
     width: 40px;
 }
-
+@media (max-width: 455px){
+    main section.container-meus-favoritos button{
+        margin-top: 0;
+    }
+}
 /************************* SECTION MEUS CARTOES **********************/
 main section.container-meus-cartoes{
     width: 100%;
@@ -250,8 +260,8 @@ main section.container-meus-cartoes .cartoes-cadastrados{
 }
 
 .container-meus-cartoes form{
-    width: 80%;
-    margin: 0 auto;
+    width: max-content;
+    margin: 0 1.5em;
     display: none;
 }
 .container-meus-cartoes form div{
@@ -264,8 +274,8 @@ main section.container-meus-cartoes .cartoes-cadastrados{
     font-size: 18px;
     margin-bottom: 3px;
 }
-.container-meus-cartoes form div input{
-    width: 50%;
+.container-meus-cartoes form div input[type="text"]{
+    width: 22em;
     padding: 2px 3px;
     font-size: 17px;
     border: none;
@@ -280,4 +290,34 @@ main section.container-meus-cartoes .cartoes-cadastrados{
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+@media (max-width: 510px){
+    main section.container-meus-cartoes .cartoes-cadastrados{
+        width: 100%;
+    }
+}
+@media (max-width: 425px){
+    .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-1, .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-2, .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-3{
+        font-size: 15px;
+    }
+    .container-meus-cartoes form{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .container-meus-cartoes form div input[type="text"]{
+        width: 100%;
+    }
+}
+@media (max-width: 375px){
+    .cartoes-cadastrados .cartao-cadastrado > div{
+        align-items: flex-start;
+    }
+}
+/* bt submit */
+main .bt-submit-container{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    flex-direction: row !important;
+    margin: 0 !important;
 }

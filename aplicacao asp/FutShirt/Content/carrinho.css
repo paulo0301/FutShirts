@@ -4,7 +4,6 @@
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 h2#titulo{
     font-size: 25px;
     color: white;
@@ -48,35 +47,41 @@ div.descricao-item p#desc{
 div.descricao-item img{
     max-width: 35px;
 }
-div.container-tamanho p, div.container-genero p{
+div.container-tamanho p, div.container-cor p{
     font-weight: 400;
     font-size: 18px;
 }
-div.container-tamanho span, div.container-genero span{
+div.container-tamanho span, div.container-cor span{
     font-weight: 700;
     font-weight: 18px;
 }
-div#right{
+div.informacoes-valores-item{
     display: flex;
-	flex-direction: column;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: space-between;
     height: 200px;
+    font-size: 18px;
+    font-weight: 500;
+}
+div.informacoes-valores-item button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 5px 10px 0;
+}
+div.informacoes-valores-item img{
+    max-width: 20px;
 }
 
-div#right img{
-    max-width: 1em;
-}
-
-div#right div#quant{
+div.informacoes-valores-item div#quant{
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: flex-start;
-	align-content: stretch;
+    flex-direction: column;
+    align-items: center;
+    min-width: 92px;
 }
 
-div#right p#valor{
+div.informacoes-valores-item p#valor{
     font-size: 25px;
     font-weight: bold;
 }
@@ -108,8 +113,10 @@ p#parcela{
     padding-right: 3em;
 }
 .container-bt-confirmar{
-    position: relative;
-    height: 5em;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+    margin-bottom: 25px;
 }
 button#confirmar{
     color: white;
@@ -118,8 +125,6 @@ button#confirmar{
     font-size: 20px;
     padding: 0.6em 1.5em;
     margin-top: 1em;
-    position: absolute;
-    right: 40px;
     border-radius: 5px;
 }
 
@@ -131,4 +136,52 @@ button#confirmar:hover{
 button#confirmar a{
     color: white;
     text-decoration: none;
+}
+@media (max-width: 670px){
+    div.container-produto{
+        flex-direction: column;
+    }
+    div.informacoes-valores-item{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        height: max-content;
+        align-items: center;
+    }
+    div.informacoes-valores-item div#quant {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    div.informacoes-valores-item{
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+@media (max-width: 500px){
+    main figure img{
+        width: 150px;
+    }
+    div.descricao-item{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 440px){
+    div#tt{
+        padding-right: 12px;
+    }
+    p#parcela{
+        padding-right: 12px;
+    }
+}
+@media (max-width: 400px){
+    p#valor-total{
+        font-size: 22px;
+    }
+    div#tt p#txt{
+        font-size: 18px;
+    }
+    button#confirmar{
+        font-size: 16px;
+    }
 }

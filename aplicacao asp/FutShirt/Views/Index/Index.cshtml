@@ -8,210 +8,218 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg" href="~/Content/Images/logo-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/Content/glider.css">
+    <link rel="stylesheet" href="~/Content/Glider.js-master/glider.css">
+    <link rel="stylesheet" href="~/Content/owl/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/owl/css/owl.theme.default.min.css">
+    <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css”>
     <link rel="stylesheet" href="~/Content/index.css">
 </head>
 <body>
-    <section class="banner">
-        <a href="#"><img src="~/Content/Images/banner2.png" alt=""></a>
-    </section>
-    <section>
-        <div class="glider-contain">
-            <div class="glider">
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a></div>
-                <div><a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a></div>
+    <!-- MAIN -->
+    <main>
+        <section class="banner">
+            <a href="#"><img src="~/Content/Images/banner2.png" alt=""></a>
+        </section>
+        <section class="container-times">
+            <div class="glider-contain">
+                <div class="glider" id="glider01">
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/flamengo.png" alt=""></a>
+                    <a href="#"><img src="~/Content/Images/corinthians.png" alt=""></a>
+                </div>
+
+                <button aria-label="Previous" class="glider-prev" id="glider-prev01"><i class="fas fa-angle-left"></i></button>
+                <button aria-label="Next" class="glider-next" id="glider-next01"><i class="fas fa-angle-right"></i></button>
             </div>
+        </section>
 
-            <button aria-label="Previous" class="glider-prev">«</button>
-            <button aria-label="Next" class="glider-next">»</button>
-            <div role="tablist" class="dots"></div>
-        </div>
-    </section>
+        <section class="container-campeonatos owl-carousel owl-theme" id="owl-carousel01">
+            <a href="#"><img src="~/Content/Images/brasileirao.png" alt=""></a>
+            <a href="#"><img src="~/Content/Images/champions_league.png" alt=""></a>
+            <a href="#"><img src="~/Content/Images/euro2020.png" alt=""></a>
+            <a href="#"><img src="~/Content/Images/premier_league.png" alt=""></a>
+        </section>
 
-    <section class="container-campeonatos">
-        <a href="#"><img src="~/Content/Images/brasileirao.png" alt=""></a>
-        <a href="#"><img src="~/Content/Images/champions_league.png" alt=""></a>
-        <a href="#"><img src="~/Content/Images/euro2020.png" alt=""></a>
-        <a href="#"><img src="~/Content/Images/premier_league.png" alt=""></a>
-    </section>
+        <section class="mais-populares">
+            <h2>Mais Populares</h2>
 
-    <section class="mais-populares">
-        <h2>Mais Populares</h2>
-
-        <div class="container-produtos">
-            <ul class="lista-produtos">
-                <!--  -->
-                <li>
-                    <div class="item">
-                        <div class="foto-item">
+            <div class="container-produtos">
+                <ul class="lista-produtos owl-carousel owl-theme" id="owl-carousel02">
+                    <!--  -->
+                    <li>
+                        <div class="item">
+                            <div class="foto-item">
+                                <div>
+                                    <button id="addDesejos"></button>
+                                </div>
+                                <a href="#">
+                                    <img src="~/Content/Images/camisa_flamengo.png" alt="">
+                                </a>
+                            </div>
                             <div>
-                                <input type="button" value="">
+                                <div class="info-item">
+                                    <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                    <div class="preco">
+                                        <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                        <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                        <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#">
-                                <img src="~/Content/Images/camisa_flamengo.png" alt="">
-                            </a>
-                        </div>
-                        <a href="#">
-                            <div class="info-item">
-                                <p class="nome-item">Camisa Adidas Flamengo</p>
-                                <span class="preco">
-                                    <p class="preco-item">R$ 249,99</p>
-                                    <p class="preco-promocional-item">R$ 219,90</p>
-                                    <p class="parcelas">5x de R$ 43,98</p>
-                                </span>
+                            <div class="tamanho-carrinho">
+                                <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                                <button><img src="~/Content/Images/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </a>
-                        <div class="tamanho-carrinho">
-                            <select name="tamanho" id="tamanho">
-                                <option value="0">Selecione o tamanho</option>
-                                <option value="PP">PP</option>
-                                <option value="P">P</option>
-                                <option value="M">M</option>
-                                <option value="G">G</option>
-                                <option value="GG">G</option>
-                            </select>
-                            <button><img src="~/Content/Images/sacola-de-compras.svg" alt=""></button>
                         </div>
-                    </div>
-                </li>
-                <!--  -->
-                <li>
-                    <div class="item">
-                        <div class="foto-item">
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div class="item">
+                            <div class="foto-item">
+                                <div>
+                                    <button id="addDesejos"></button>
+                                </div>
+                                <a href="#">
+                                    <img src="~/Content/Images/camisa_flamengo.png" alt="">
+                                </a>
+                            </div>
                             <div>
-                                <input type="button" value="">
+                                <div class="info-item">
+                                    <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                    <div class="preco">
+                                        <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                        <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                        <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#">
-                                <img src="~/Content/Images/camisa_flamengo.png" alt="">
-                            </a>
-                        </div>
-                        <a href="#">
-                            <div class="info-item">
-                                <p class="nome-item">Camisa Adidas Flamengo</p>
-                                <span class="preco">
-                                    <p class="preco-item">R$ 249,99</p>
-                                    <p class="preco-promocional-item">R$ 219,90</p>
-                                    <p class="parcelas">5x de R$ 43,98</p>
-                                </span>
+                            <div class="tamanho-carrinho">
+                                <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                                <button><img src="~/Content/Images/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </a>
-                        <div class="tamanho-carrinho">
-                            <select name="tamanho" id="tamanho">
-                                <option value="0">Selecione o tamanho</option>
-                                <option value="PP">PP</option>
-                                <option value="P">P</option>
-                                <option value="M">M</option>
-                                <option value="G">G</option>
-                                <option value="GG">G</option>
-                            </select>
-                            <button><img src="~/Content/Images/sacola-de-compras.svg" alt=""></button>
                         </div>
-                    </div>
-                </li>
-                <!--  -->
-                <li>
-                    <div class="item">
-                        <div class="foto-item">
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div class="item">
+                            <div class="foto-item">
+                                <div>
+                                    <button id="addDesejos"></button>
+                                </div>
+                                <a href="#">
+                                    <img src="~/Content/Images/camisa_flamengo.png" alt="">
+                                </a>
+                            </div>
                             <div>
-                                <input type="button" value="">
+                                <div class="info-item">
+                                    <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                    <div class="preco">
+                                        <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                        <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                        <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#">
-                                <img src="~/Content/Images/camisa_flamengo.png" alt="">
-                            </a>
-                        </div>
-                        <a href="#">
-                            <div class="info-item">
-                                <p class="nome-item">Camisa Adidas Flamengo</p>
-                                <span class="preco">
-                                    <p class="preco-item">R$ 249,99</p>
-                                    <p class="preco-promocional-item">R$ 219,90</p>
-                                    <p class="parcelas">5x de R$ 43,98</p>
-                                </span>
+                            <div class="tamanho-carrinho">
+                                <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                                <button><img src="~/Content/Images/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </a>
-                        <div class="tamanho-carrinho">
-                            <select name="tamanho" id="tamanho">
-                                <option value="0">Selecione o tamanho</option>
-                                <option value="PP">PP</option>
-                                <option value="P">P</option>
-                                <option value="M">M</option>
-                                <option value="G">G</option>
-                                <option value="GG">G</option>
-                            </select>
-                            <button><img src="~/Content/Images/sacola-de-compras.svg" alt=""></button>
                         </div>
-                    </div>
-                </li>
-                <!--  -->
-                <li>
-                    <div class="item">
-                        <div class="foto-item">
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div class="item">
+                            <div class="foto-item">
+                                <div>
+                                    <button id="addDesejos"></button>
+                                </div>
+                                <a href="#">
+                                    <img src="~/Content/Images/camisa_flamengo.png" alt="">
+                                </a>
+                            </div>
                             <div>
-                                <input type="button" value="">
+                                <div class="info-item">
+                                    <p class="nome-item"><a href="#">Camisa Adidas Flamengo</a></p>
+                                    <div class="preco">
+                                        <p class="preco-item"><a href="#">R$ 249,99</a></p>
+                                        <p class="preco-promocional-item"><a href="#">R$ 219,90</a></p>
+                                        <p class="parcelas"><a href="#">5x de R$ 43,98</a></p>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#">
-                                <img src="~/Content/Images/camisa_flamengo.png" alt="">
-                            </a>
-                        </div>
-                        <a href="#">
-                            <div class="info-item">
-                                <p class="nome-item">Camisa Adidas Flamengo</p>
-                                <span class="preco">
-                                    <p class="preco-item">R$ 249,99</p>
-                                    <p class="preco-promocional-item">R$ 219,90</p>
-                                    <p class="parcelas">5x de R$ 43,98</p>
-                                </span>
+                            <div class="tamanho-carrinho">
+                                <select name="tamanho" id="tamanho">
+                                    <option value="0">Selecione o tamanho</option>
+                                    <option value="PP">PP</option>
+                                    <option value="P">P</option>
+                                    <option value="M">M</option>
+                                    <option value="G">G</option>
+                                    <option value="GG">G</option>
+                                </select>
+                                <button><img src="~/Content/Images/sacola-de-compras.svg" alt=""></button>
                             </div>
-                        </a>
-                        <div class="tamanho-carrinho">
-                            <select name="tamanho" id="tamanho">
-                                <option value="0">Selecione o tamanho</option>
-                                <option value="PP">PP</option>
-                                <option value="P">P</option>
-                                <option value="M">M</option>
-                                <option value="G">G</option>
-                                <option value="GG">G</option>
-                            </select>
-                            <button><img src="~/Content/Images/sacola-de-compras.svg" alt=""></button>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    <section class="banner-2-elite">
-        <a href="#"><img src="~/Content/Images/banner_elite.png" alt=""></a>
-        <a href="#"><img src="~/Content/Images/banner_elite.png" alt=""></a>
-    </section>
+        <section class="banner-2-elite">
+            <a href="#"><img src="~/Content/Images/banner_elite.png" alt=""></a>
+            <a href="#"><img src="~/Content/Images/banner_elite.png" alt=""></a>
+        </section>
 
-    <section class="banner-regiao">
-        <a href="#"><img src="~/Content/Images/selecao.png" alt=""></a>
-        <a href="#"><img src="~/Content/Images/internacional.png" alt=""></a>
-        <a href="#"><img src="~/Content/Images/nacional.png" alt=""></a>
-    </section>
+        <section class="banner-regiao owl-carousel" id="owl-carousel04">
+            <a href="#"><img src="~/Content/Images/selecao.png" alt=""></a>
+            <a href="#"><img src="~/Content/Images/internacional.png" alt=""></a>
+            <a href="#"><img src="~/Content/Images/nacional.png" alt=""></a>
+        </section>
+    </main>
+<script src="~/Content/Glider.js-master/glider.js"></script>
+<script src="~/Content/js/jquery-3.5.1.min.js"></script>
+<script src="~/Content/owl/js/owl.carousel.min.js"></script>
+<script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>
+<script src="~/Content/js/config_glider.js"></script>
+<script src="~/Content/js/main.js"></script>
 </body>
 </html>
-<script src="~/Scripts/main_js/login.js"></script>
-<script src="~/Scripts/main_js/Glider.js-master/glider.js"></script>
-<script src="~/Scripts/main_js/config_glider.js"></script>

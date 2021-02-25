@@ -1,17 +1,18 @@
-﻿using FutShirt.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
+using FutShirt.Models;
 
 namespace FutShirt.Context
 {
     public class UsuarioContext : DbContext
     {
-        public UsuarioContext() : base("FutShirt") {
-            //Database.SetInitializer<UsuarioContext>(
-            //new DropCreateDatabaseIfModelChanges<UsuarioContext>());
+        public UsuarioContext() : base("FutShirt")
+        {
+            Database.SetInitializer<UsuarioContext>(
+            new DropCreateDatabaseIfModelChanges<UsuarioContext>());
         }
 
         public DbSet<Usuario> Usuarios { get; set; }

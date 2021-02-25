@@ -11,7 +11,9 @@
 <body>
     <div class="efeito">
         <div class="login">
-            <input type="submit" id="fechar" value="x" />
+            <button id="fechar" onclick="fechar()">
+                <span aria-hidden="true">&times;</span>
+            </button>
             <form>
                 <div class="container">
                     <h2>Já sou cliente</h2>
@@ -27,60 +29,55 @@
 
                     <a href="">Esqueci minha senha</a>
                 </div>
+
                 <div class="container-entrar-cadastre-se">
                     <input type="submit" id="entrar_login" value="Entrar">
-                    <a href="@Url.Action("Index", "Cadastro")">Cadastre-se</a>
+                    <a href="dados_pessoais.html">Cadastre-se</a>
                 </div>
             </form>
         </div>
     </div>
-    <header>
+    <!-- ***************************************************************** -->
+    <header id="header-desktop">
         <div class="link-atendimento">
-            <a href="#">
-                <img src="~/Content/Images/question-mark-inside-a-circle.svg" alt="">
-                <p>Atendimento</p>
-            </a>
+            <a href="ajuda.html"><img src="~/Content/Images/question-mark-inside-a-circle.svg" alt=""></a>
+            <p><a href="ajuda.html">Atendimento</a></p>
         </div>
+
         <div class="header-principal">
-            <a href="@Url.Action("Index", "Index")"><figure class="logotipo"><img src="~/Content/Images/logo.svg" alt="logotipo"></figure></a>
+            <h1><a href=""><img src="~/Content/Images/logo.svg" alt="logotipo"></a></h1>
 
             <form action="" class="barra-de-pesquisa">
-                <input type="text" name="buscar" id="buscar" placeholder="Buscar">
-                <img src="~/Content/Images/ampliacao.svg" alt="">
+                <input type="search" name="buscar" placeholder="Buscar">
+                <input class="bt-pesquisa" type="submit" value="">
             </form>
 
             <div>
                 <div class="area-de-acesso">
-                    <figure>
-                        <img src="~/Content/Images/avatar.svg" alt="user">
-                    </figure>
+                    <img src="~/Content/Images/avatar.svg" alt="user">
                     <div>
-                        <input type="submit" id="entrar" value="Entrar">
-                        <a href="@Url.Action("Index", "Cadastro")">Cadastre-se</a>
+                        <button id="entrar" onclick="abrir()">Entrar</button>
+                        <a href="dados_pessoais.html">Cadastre-se</a>
                     </div>
                 </div>
 
-                <a href="#">
-                    <figure class="sacola">
-                        <img src="~/Content/Images/sacola-de-compras.svg" alt="sacola de compras">
-                    </figure>
-                </a>
+                <a href="carrinho.html" class="sacola"><img src="~/Content/Images/sacola-de-compras.svg" alt="sacola de compras" /></a>
             </div>
         </div>
+        <nav id="navegacao01">
+            <ol>
+                <li><a href="#">Masculino</a></li>
+                <li><a href="#">Feminino</a></li>
+                <li><a href="#">Infantil</a></li>
+            </ol>
+        </nav>
     </header>
-    <nav>
-        <ol>
-            <li><a href="#">Masculino</a></li>
-            <li><a href="#">Feminino</a></li>
-            <li><a href="#">Infantil</a></li>
-        </ol>
-    </nav>
     <main>
         @RenderBody()
     </main>
     <footer>
         <section class="vantagens">
-            <ul>
+            <ul class="owl-carousel owl-theme">
                 <li>
                     <figure>
                         <img src="~/Content/Images/bags.svg" alt="">

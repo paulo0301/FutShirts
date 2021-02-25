@@ -1,7 +1,5 @@
-﻿@{
-    ViewBag.Title = "FutShirt";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@{ ViewBag.Title = "FutShirt";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,62 +11,74 @@
     <link rel="stylesheet" href="~/Content/cadastro.css">
 </head>
 <body>
-    <div class="cabecalho">
-        <h2>Dados Pessoais</h2>
-        <div class="breadcrumbs">
-            <a href="#" class="active">Dados Pessoais</a>
-            <a href="#">Confirmar Email</a>
-            <a href="#">Endereço</a>
+    <main>
+        <div class="cabecalho">
+            <h2>Dados Pessoais</h2>
+            <div class="breadcrumbs">
+                <a href="#" class="active">Dados Pessoais</a>
+                <a href="#">Confirmar Email</a>
+                <a href="#">Endereço</a>
+            </div>
         </div>
-    </div>
-    <article>
-        <form action="@Url.Action("ConfirmarCadastro", "Cadastro")" class="dados">
-            <div class="dados-cadastro">
-                <label for="name">Nome Completo</label>
-                <div class="dados-preencher">
-                    <input type="text" id="name" name="nome" placeholder="Digite seu nome completo" autocomplete="off" required>
+        <article>
+            <form action="confirmar_cadastro.html" class="dados">
+                <div class="dados-cadastro">
+                    <label for="name">Nome Completo</label>
+                    <div class="dados-preencher">
+                        <i class="fas fa-user icon"></i>
+                        <input type="text" class="input-field" id="name" placeholder="Digite seu nome completo" autocomplete="off" required>
+                    </div>
                 </div>
-            </div>
-            <div class="dados-cadastro">
-                <label for="email">Email</label>
-                <div class="dados-preencher">
-                    <input type="email" id="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+                <div class="dados-cadastro">
+                    <label for="email">Email</label>
+                    <div class="dados-preencher">
+                        <i class="fas fa-at icon"></i>
+                        <input type="email" class="input-field" id="email" placeholder="Digite seu email" autocomplete="off" required>
+                    </div>
                 </div>
-            </div>
-            <div class="dados-cadastro">
-                <label for="tel">Telefone</label>
-                <div class="dados-preencher">
-                    <input type="tel" id="tel" name="telefone" onkeypress="mascara(this, '## #####-####')" placeholder="(00) 00000-0000" maxlength="13" autocomplete="off" required>
+                <div class="dados-cadastro">
+                    <label for="tel">Telefone</label>
+                    <div class="dados-preencher">
+                        <i class="fas fa-phone-alt icon"></i>
+                        <input type="tel" class="input-field" id="tel" onkeypress="mascara(this, '## #####-####')" placeholder="(00) 00000-0000" maxlength="13" autocomplete="off" required>
+                    </div>
                 </div>
-            </div>
-            <div class="dados-cadastro">
-                <label for="cpf">CPF</label>
-                <div class="dados-preencher">
-                    <input type="text" id="cpf" name="cpf" onkeypress="mascara(this, '###.###.###-##')" placeholder="000.000.000-00" maxlength="14" autocomplete="off" required>
+                <div class="dados-cadastro">
+                    <label for="cpf">CPF</label>
+                    <div class="dados-preencher">
+                        <i class="fas fa-id-card icon"></i>
+                        <input type="text" class="input-field" id="cpf" onkeypress="mascara(this, '###.###.###-##')" placeholder="000.000.000-00" maxlength="14" autocomplete="off" required>
+                    </div>
                 </div>
-            </div>
-            <div class="dados-cadastro">
-                <label for="nasc">Data de nascimento</label>
-                <div class="dados-preencher">
-                    <input type="text" id="nasc" name="data_nascimento" onkeypress="mascara(this, '##/##/####')" placeholder="00/00/0000" maxlength="10" autocomplete="off" required>
+                <div class="dados-cadastro">
+                    <label for="nasc">Data de nascimento</label>
+                    <div class="dados-preencher">
+                        <i class="fas fa-calendar-alt icon"></i>
+                        <input type="text" class="input-field" id="nasc" onkeypress="mascara(this, '##/##/####')" placeholder="00/00/0000" maxlength="10" autocomplete="off" required>
+                    </div>
                 </div>
-            </div>
-            <div class="dados-cadastro">
-                <label for="senha">Senha</label>
-                <div class="dados-preencher">
-                    <input type="password" id="password" name="senha" placeholder="Digite sua senha" autocomplete="off" required>
+                <div class="dados-cadastro">
+                    <label for="senha">Senha</label>
+                    <div class="dados-preencher">
+                        <i class="fas fa-unlock-alt icon"></i>
+                        <input type="password" class="input-field" id="password" placeholder="Digite sua senha" autocomplete="off" required>
+                    </div>
                 </div>
-            </div>
-            <div class="dados-cadastro">
-                <label for="confsenha">Confirmar senha</label>
-                <div class="dados-preencher">
-                    <input type="password" id="confpassword" name="confsenha" placeholder="Digite novamente sua senha" autocomplete="off" required>
+                <div class="dados-cadastro">
+                    <label for="confsenha">Confirmar senha</label>
+                    <div class="dados-preencher">
+                        <i class="fas fa-unlock-alt icon"></i>
+                        <input type="password" class="input-field" id="confpassword" placeholder="Digite novamente sua senha" autocomplete="off" required>
+                    </div>
                 </div>
-            </div>
-            <input type="submit" id="conf" value="Prosseguir">
-        </form>
-    </article>
+                <div class="bt-container">
+                    <input type="submit" id="conf" value="Prosseguir" onclick="proseg()" />
+                </div>
+            </form>
+        </article>
+    </main>
 </body>
 </html>
-<script src="~/Scripts/main_js/login.js"></script>
-<script src="~/Scripts/main_js/endereço-dadospessoais.js"></script>
+<script src="~/Content/js/main.js"></script>
+<script src="~/Content/js/endereço-dadospessoais.js"></script>
+<script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>

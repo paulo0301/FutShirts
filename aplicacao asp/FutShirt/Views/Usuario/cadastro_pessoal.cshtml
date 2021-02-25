@@ -30,7 +30,7 @@
                     @Html.LabelFor(model => model.nome)
                     <div class="dados-preencher">
                         <i class="fas fa-user icon"></i>
-                        @Html.EditorFor(model => model.nome, new{htmlAttributes = new { id="name", @class = "input-field", autocomplete = "off" }})
+                        @Html.EditorFor(model => model.nome, new{htmlAttributes = new { @type="text", id="name", @class = "input-field", autocomplete = "off", required = "required" } })
                         @Html.ValidationMessageFor(model => model.nome, "nome invalido", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                     <label for="email">Email</label>
                     <div class="dados-preencher">
                         <i class="fas fa-at icon"></i>
-                        @Html.EditorFor(model => model.email, new { htmlAttributes = new { id = "email", @class = "input-field", autocomplete = "off" } })
+                        @Html.EditorFor(model => model.email, new { htmlAttributes = new { @type = "email", id = "email", @class = "input-field", autocomplete = "off", required = "required" } })
                         @Html.ValidationMessageFor(model => model.email, "email invalido", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     <label for="tel">Telefone</label>
                     <div class="dados-preencher">
                         <i class="fas fa-phone-alt icon"></i>
-                        @Html.EditorFor(model => model.telefone, new { htmlAttributes = new { id = "telefone", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "(00) 00000-0000", maxlength = "13" } })
+                        @Html.EditorFor(model => model.telefone, new { htmlAttributes = new { @type = "tel", id = "telefone", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "(00) 00000-0000", maxlength = "13", required = "required" } })
                         @Html.ValidationMessageFor(model => model.telefone, "telefone invalido", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                     <label for="cpf">CPF</label>
                     <div class="dados-preencher">
                         <i class="fas fa-id-card icon"></i>
-                        @Html.EditorFor(model => model.cpf, new { htmlAttributes = new { id = "cpf", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "000.000.000-00", maxlength = "14" } })
+                        @Html.EditorFor(model => model.cpf, new { htmlAttributes = new { @type = "text", id = "cpf", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "000.000.000-00", maxlength = "14", required = "required" } })
                         @Html.ValidationMessageFor(model => model.cpf, "cpf invalido", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                     <label for="nasc">Data de nascimento</label>
                     <div class="dados-preencher">
                         <i class="fas fa-calendar-alt icon"></i>
-                        @Html.EditorFor(model => model.nascimento, new { htmlAttributes = new { id = "nascimento", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '##/##/####')", placeholder = "00/00/0000", maxlength = "10" } })
+                        @Html.EditorFor(model => model.nascimento, new { htmlAttributes = new { @type = "text", id = "nascimento", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '##/##/####')", placeholder = "00/00/0000", maxlength = "10", required = "required" } })
                         @Html.ValidationMessageFor(model => model.nascimento, "nascimento invalido", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -70,18 +70,20 @@
                     <label for="senha">Senha</label>
                     <div class="dados-preencher">
                         <i class="fas fa-unlock-alt icon"></i>
-                        @Html.EditorFor(model => model.senha, new { htmlAttributes = new { id = "senha", @type="password", @class = "input-field", autocomplete = "off", placeholder = "Digite sua senha" } })
-                        @Html.ValidationMessageFor(model => model.senha, "senha invalido", new { @class = "text-danger" }) </div>
+                        @Html.EditorFor(model => model.senha, new { htmlAttributes = new { id = "senha", @type="password", @class = "input-field", autocomplete = "off", placeholder = "Digite sua senha", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.senha, "senha invalido", new { @class = "text-danger" }) 
+                    </div>
                 </div>
                 <div class="dados-cadastro">
                     <label for="confsenha">Confirmar senha</label>
                     <div class="dados-preencher">
                         <i class="fas fa-unlock-alt icon"></i>
-                        <input type="password" class="input-field" id="confpassword" placeholder="Digite novamente sua senha" autocomplete="off" required>
+                        @Html.EditorFor(model => model.senha, new { htmlAttributes = new { id = "confsenha", @type = "password", @class = "input-field", autocomplete = "off", placeholder = "Digite novamente sua senha", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.senha, "senha invalido", new { @class = "text-danger" })
                     </div>
                 </div>
                 <div class="bt-container">
-                    <input type="submit" id="conf" value="Prosseguir" onclick="proseg()" />
+                    <input type="submit" id="conf" value="Prosseguir" onclick="proseg(event)" />
                 </div>
             }
         </article>

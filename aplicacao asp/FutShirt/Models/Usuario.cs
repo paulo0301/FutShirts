@@ -5,36 +5,39 @@ using System.Web;
 
 namespace FutShirt.Models
 {
-    public class Usuario
+    public partial class Usuario
     {
         //Cadastro dados pessoais
-        public string nome { get; set; }
-        public string email { get; set; }
-        public int cpf { get; set; }
-        public string telefone { get; set; }
-        public string senha { get; set; }
-        public DateTime nascimento { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public int Cpf { get; set; }
+        public string Telefone { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public string Senha { get; set; }
+        public bool VerificacaoEmail { get; set; }
+        public Guid CodigoAtivacao { get; set; }
     }
     public class Cartao
     {
         //Cadastro cartão
-        public long id { get; set; }
-        public string titular { get; set; }
-        public string cpf_titular { get; set; }
-        public string numero { get; set; }
-        public string cvc { get; set; }
-        public DateTime vencimento { get; set; }
+        public long Id { get; set; }
+        public string Titular { get; set; }
+        public string CpfTitular { get; set; }
+        public string Numero { get; set; }
+        public string Cvc { get; set; }
+        public DateTime DataVencimento { get; set; }
     }
     public class Endereco
     {
         //Cadastro endereço
-        public long id { get; set; }
-        public string cep { get; set; }
-        public string estado { get; set; }
-        public string cidade { get; set; }
-        public string bairro { get; set; }
-        public string logradouro { get; set; }
-        public string numero { get; set; }
-        public string complemento{ get; set; }
+        public long Id { get; set; }
+        public string Cep { get; set; }
+        public string Estado { get; set; }
+        public string Cidade { get; set; }
+        public string Bairro { get; set; }
+        public string Logradouro { get; set; }
+        public string Numero { get; set; }
+        public string Complemento{ get; set; }
     }
 }

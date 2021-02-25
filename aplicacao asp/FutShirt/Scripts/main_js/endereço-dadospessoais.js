@@ -8,15 +8,16 @@ function mascara(t, mask){
 }
 var conf = document.getElementById("conf");
 
-conf.onclick = function(){
-    var senha = document.getElementById("password").value;
-    var confSenha = document.getElementById("confpassword").value;
+conf.onclick = function(e){
+    var senha = document.getElementById("senha").value;
+    var confSenha = document.getElementById("confsenha").value;
 
     if(senha == confSenha && senha.length >= 6){
         alert('Aguarde o codigo de confirmação para validar o cadastro!');
     }
     else {
         alert("As senhas não conferem!");
+        e.preventDefault();
     }
 }
 

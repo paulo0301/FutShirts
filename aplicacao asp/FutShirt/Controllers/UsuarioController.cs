@@ -30,7 +30,9 @@ namespace FutShirt.Controllers
         {
             try
             {
-                TempData["User"] = usuario;
+                if (Session["User"] == null) { 
+                    Session["User"] = usuario;
+                }
                 return RedirectToAction("CreateStepTwo", "Usuario");
             }
             catch
@@ -41,10 +43,6 @@ namespace FutShirt.Controllers
 
         public ActionResult CreateStepTwo()
         {
-            if(Session["User"] == null)
-            {
-                Session["User"]= (Usuario)TempData["User"];
-            }
                 return View("~/Views/Usuario/confirmar_cadastro.cshtml", Session["User"]);
         }
 
@@ -54,7 +52,7 @@ namespace FutShirt.Controllers
         {
             try
             {
-                TempData["User"] = usuario;
+                Session["User"] = usuario;
                 return RedirectToAction("CreateStepThree", "Usuario");
             }
             catch
@@ -65,10 +63,6 @@ namespace FutShirt.Controllers
 
         public ActionResult CreateStepThree()
         {
-            if (Session["User"] == null)
-            {
-                Session["User"] = (Usuario)TempData["User"];
-            }
             return View("~/Views/Usuario/cadastro_endereco.cshtml", Session["User"]);
         }
 

@@ -32,7 +32,7 @@
 
                 <div class="container-entrar-cadastre-se">
                     <input type="submit" id="entrar_login" value="Entrar">
-                    <a href="dados_pessoais.html">Cadastre-se</a>
+                    <a href="@Url.Action("CreateStepOne", "Usuario")">Cadastre-se</a>
                 </div>
             </form>
         </div>
@@ -57,7 +57,7 @@
                     <img src="~/Content/Images/avatar.svg" alt="user">
                     <div>
                         <button id="entrar" onclick="abrir()">Entrar</button>
-                        <a href="dados_pessoais.html">Cadastre-se</a>
+                        <a href="@Url.Action("CreateStepOne", "Usuario")">Cadastre-se</a>
                     </div>
                 </div>
 

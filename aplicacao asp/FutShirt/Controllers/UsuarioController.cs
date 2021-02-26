@@ -3,7 +3,10 @@ using FutShirt.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 
 namespace FutShirt.Controllers
@@ -26,14 +29,61 @@ namespace FutShirt.Controllers
         // POST: Usuario/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateStepOne(Usuario usuario)
+        public ActionResult CreateStepOne([Bind(Exclude = "VerificacaoEmail, CodigoAtivacao")] Usuario usuario)
         {
+            //try
+            //{
+            //    if (Session["User"] == null) { 
+            //        Session["User"] = usuario;
+            //    }
+            //    return RedirectToAction("CreateStepTwo", "Usuario");
+            //}
             try
             {
-                if (Session["User"] == null) { 
-                    Session["User"] = usuario;
+                bool Status = false;
+                string mensagem = "";
+                //Validação do modelo
+                if (ModelState.IsValid)
+                {
+                    #region //Email existe
+                    var emailCheck = ChecarEmail(usuario.Email);
+                    if (emailCheck)
+                    {
+                        ModelState.AddModelError("EmailExistente", "Email inserido já existe");
+                        return View(usuario);
+                    }
+                    #endregion
+
+                    #region //Gerar código de ativação
+                    usuario.CodigoAtivacao = Guid.NewGuid();
+                    #endregion
+
+                    #region //Criptografia de senha
+                    usuario.Senha = Crypto.Hash(usuario.Senha);
+                    usuario.ConfirmarSenha = Crypto.Hash(usuario.ConfirmarSenha);
+                    #endregion
+                    usuario.VerificacaoEmail = false;
+
+                    #region //Salvar no banco de dados
+                    usuarioContext.Usuarios.Add(usuario);
+                    usuarioContext.SaveChanges();
+                    #endregion
+
+                    #region //Enviar email de validação
+                    EnviarEmail(usuario.Email, usuario.CodigoAtivacao.ToString());
+                    mensagem = "Conta registrada com sucesso. Um email de ativação foi enviada para você.";
+                    Status = true;
+                    #endregion
+
                 }
-                return RedirectToAction("CreateStepTwo", "Usuario");
+                else
+                {
+                    mensagem = "Requisição inválida.";
+                }
+                ViewBag.Message = mensagem;
+                ViewBag.Status = Status;
+                usuarioContext.SaveChanges();
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -68,46 +118,10 @@ namespace FutShirt.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateStepThree([Bind(Exclude = "VerificacaoEmail, CodigoAtivacao")] Usuario usuario, Endereco endereco)
+        public ActionResult CreateStepThree(Usuario usuario, Endereco endereco)
         {
             try
             {
-                bool Status = false;
-                string mensagem = "";
-                //Validação do modelo
-                if (ModelState.IsValid)
-                {
-                    #region //Email existe
-                    var emailCheck = ChecarEmail(usuario.Email);
-                    if (emailCheck)
-                    {
-                        ModelState.AddModelError("EmailExistente", "Email inserido já existe");
-                        return View(usuario);
-                    }
-                    #endregion
-
-                    #region //Gerar código de ativação
-                    usuario.CodigoAtivacao = Guid.NewGuid();
-                    #endregion
-
-                    #region //Criptografia de senha
-
-                    #endregion
-                }
-                else
-                {
-                    mensagem = "Requisição inválida.";
-                }
-                //Email já existente
-
-                //Gerar código de ativação
-
-                //Criptografar Senha
-
-                //Salvar Usuario
-                usuarioContext.Usuarios.Add(usuario);
-                usuarioContext.Enderecos.Add(endereco);
-                usuarioContext.SaveChanges();
                 return RedirectToAction("Index");
             }
             catch
@@ -120,6 +134,35 @@ namespace FutShirt.Controllers
         {
             var check = usuarioContext.Usuarios.Where(u => u.Email == email).FirstOrDefault();
             return check != null;
+        }
+        [NonAction]
+        public void EnviarEmail(string email, string codigoAtivacao)
+        {
+            var VerificarUrl = "Usuario/VerificarConta" + codigoAtivacao;
+            var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, VerificarUrl);
+
+            var fromEmail = new MailAddress("email@email.com.br", "FutShirt");
+            var toEmail = new MailAddress(email);
+            var fromPassword = "123";
+            string subject = "Sua conta foi criada com sucesso";
+            string body = "<br/><br/> Verifique sua conta: <a href='" + link + "'>"+ link +"<a/>";
+
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false
+                //Credentials = new NetworkCredential(fromEmail.Address, fromPassword)
+            };
+
+            var emailMensagem = new MailMessage(fromEmail, toEmail);
+            emailMensagem.Subject = subject;
+            emailMensagem.Body = body;
+            emailMensagem.IsBodyHtml = true;
+            smtp.Send(emailMensagem);
+
         }
     }
 }

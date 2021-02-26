@@ -85,6 +85,14 @@ namespace FutShirt.Controllers
                         return View(usuario);
                     }
                     #endregion
+
+                    #region //Gerar código de ativação
+                    usuario.CodigoAtivacao = Guid.NewGuid();
+                    #endregion
+
+                    #region //Criptografia de senha
+
+                    #endregion
                 }
                 else
                 {

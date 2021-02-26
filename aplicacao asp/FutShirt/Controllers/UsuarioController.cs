@@ -17,9 +17,8 @@ namespace FutShirt.Controllers
         // GET: Usuario
         public ActionResult Index()
         {
-            return View();
+            return View(usuarioContext.Usuarios.OrderBy(c => c.Nome));
         }
-
         // GET: Usuario/Create
         public ActionResult CreateStepOne()
         {

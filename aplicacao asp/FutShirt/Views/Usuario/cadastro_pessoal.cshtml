@@ -33,7 +33,7 @@
             }
             else
             {
-                @using (Html.BeginForm("CreateStepOne", "Usuario", FormMethod.Post, new { @class = "dados" }))
+                using (Html.BeginForm("CreateStepOne", "Usuario", FormMethod.Post, new { @class = "dados" }))
                 {
                     @Html.AntiForgeryToken()
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -51,6 +51,7 @@
                             <i class="fas fa-at icon"></i>
                             @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "email", id = "email", @class = "input-field", autocomplete = "off", required = "required" } })
                             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            @Html.ValidationMessage("EmailExistente", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="dados-cadastro">

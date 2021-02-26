@@ -72,8 +72,24 @@ namespace FutShirt.Controllers
         {
             try
             {
+                bool Status = false;
+                string mensagem = "";
                 //Validação do modelo
-
+                if (ModelState.IsValid)
+                {
+                    #region //Email existe
+                    var emailCheck = ChecarEmail(usuario.Email);
+                    if (emailCheck)
+                    {
+                        ModelState.AddModelError("EmailExistente", "Email inserido já existe");
+                        return View(usuario);
+                    }
+                    #endregion
+                }
+                else
+                {
+                    mensagem = "Requisição inválida.";
+                }
                 //Email já existente
 
                 //Gerar código de ativação
@@ -90,6 +106,12 @@ namespace FutShirt.Controllers
             {
                 return View();
             }
+        }
+        [NonAction]
+        public bool ChecarEmail(string email)
+        {
+            var check = usuarioContext.Usuarios.Where(u => u.Email == email).FirstOrDefault();
+            return check != null;
         }
     }
 }

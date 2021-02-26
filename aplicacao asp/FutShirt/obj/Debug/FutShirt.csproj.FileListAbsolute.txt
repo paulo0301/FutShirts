@@ -243,13 +243,21 @@ C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\obj\Debug\FutShirt.
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\obj\Debug\FutShirt.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\obj\Debug\FutShirt.pdb
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\csc.exe
+C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.SqlServer.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.xml
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.SqlServer.xml
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Buffers.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Memory.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\csc.exe.config
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\csc.rsp
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\csi.exe
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\csi.exe.config
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\csi.rsp
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
@@ -259,8 +267,12 @@ C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsof
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsoft.Managed.Core.targets
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Buffers.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Memory.dll
+C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Numerics.Vectors.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Text.Encoding.CodePages.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Threading.Tasks.Extensions.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\vbc.exe
@@ -268,15 +280,3 @@ C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\vbc.exe.
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\vbc.rsp
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\VBCSCompiler.exe
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.dll
-C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.SqlServer.dll
-C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.xml
-C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.SqlServer.xml
-C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Buffers.dll
-C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Memory.dll
-C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Numerics.Vectors.dll
-C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Buffers.dll
-C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Memory.dll
-C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Numerics.Vectors.dll
-C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll

@@ -22,7 +22,7 @@ namespace FutShirt.Controllers
         // GET: Usuario/Create
         public ActionResult CreateStepOne()
         {
-            return View("~/Views/Usuario/cadastro_pessoal.cshtml");
+            return View("CreateStepOne");
         }
 
         // POST: Usuario/Create
@@ -38,7 +38,7 @@ namespace FutShirt.Controllers
             //    return RedirectToAction("CreateStepTwo", "Usuario");
             //}
             try
-            {
+                {
                 bool Status = false;
                 string mensagem = "";
                 //Validação do modelo
@@ -92,7 +92,7 @@ namespace FutShirt.Controllers
 
         public ActionResult CreateStepTwo()
         {
-                return View("~/Views/Usuario/confirmar_cadastro.cshtml", Session["User"]);
+                return View("CreateStepTwo", Session["User"]);
         }
 
         [HttpPost]
@@ -112,7 +112,7 @@ namespace FutShirt.Controllers
 
         public ActionResult CreateStepThree()
         {
-            return View("~/Views/Usuario/cadastro_endereco.cshtml", Session["User"]);
+            return View("CreateStepThree", Session["User"]);
         }
 
         [HttpPost]
@@ -131,8 +131,9 @@ namespace FutShirt.Controllers
         [NonAction]
         public bool ChecarEmail(string email)
         {
-            var check = usuarioContext.Usuarios.Where(u => u.Email == email).FirstOrDefault();
-            return check != null;
+            var check = usuarioContext.Usuarios.Any(u => u.Email == email);
+            if (check) return true;
+            return false;
         }
         [NonAction]
         public void EnviarEmail(string email, string codigoAtivacao)

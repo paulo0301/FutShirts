@@ -13,7 +13,7 @@ namespace FutShirt.Controllers
 {
     public class UsuarioController : Controller
     {
-        private UsuarioContext usuarioContext = new UsuarioContext();
+        private EFContext usuarioContext = new EFContext();
         // GET: Usuario
         public ActionResult Index()
         {
@@ -82,8 +82,8 @@ namespace FutShirt.Controllers
                 }
                 ViewBag.Message = mensagem;
                 ViewBag.Status = Status;
-                usuarioContext.SaveChanges();
-                return RedirectToAction("Index");
+                Session["User"] = usuario;
+                return RedirectToAction("CreateStepTwo", "Usuario", Session["User"]);
             }
             catch
             {

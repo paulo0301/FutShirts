@@ -24,15 +24,14 @@ namespace FutShirt.Models
 		public string Email { get; set; }
 
 		[Display(Name = "CPF")]
-		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{000.000.000-00}")]
+		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:###.###.###-##}")]
 		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar um cpf válido.")]
-		[DataType(DataType.EmailAddress)]
 		public string Cpf { get; set; }
 
 		[Display(Name = "Telefone")]
-		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{(00) 00000-0000}")]
+		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:(##) #####-####}")]
 		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar um número de telefone.")]
-		[DataType(DataType.EmailAddress)]
+		[DataType(DataType.PhoneNumber)]
 		public string Telefone { get; set; }
 
 		[Display(Name = "Data de Nascimento")]

@@ -58,7 +58,7 @@
                         <label for="tel">Telefone</label>
                         <div class="dados-preencher">
                             <i class="fas fa-phone-alt icon"></i>
-                            @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @type = "tel", id = "telefone", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "(00) 00000-0000", maxlength = "13", required = "required" } })
+                            @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @type = "tel", id = "telefone", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '## #####-####')", placeholder = "(00) 00000-0000", maxlength = "13", required = "required" } })
                             @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
                         </div>
                     </div>

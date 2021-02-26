@@ -29,7 +29,7 @@
 
             @using (Html.BeginForm("CreateStepThree", "Usuario", FormMethod.Post, new { @class = "confirmar-cadastro" }))
             {
-                @Html.EditorFor(model => model.nome, new{htmlAttributes = new { @class = "form-control", disabled = "disabled" }})
+                @Html.EditorFor(model => model.Nome, new{htmlAttributes = new { @class = "form-control", disabled = "disabled" }})
                 <input type="text" name="codigoEmail" maxlength="6" required autocomplete="off">
                 <div>
                     <input type="submit" value="Confirmar">

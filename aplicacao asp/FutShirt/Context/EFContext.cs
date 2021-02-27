@@ -9,7 +9,10 @@ namespace FutShirt.Context
 {
     public class EFContext : DbContext
     {
-        public EFContext(): base("Banco_FutShirt") {}
+        public EFContext(): base("Banco_FutShirt") {
+            Database.SetInitializer<EFContext>(
+            new DropCreateDatabaseIfModelChanges<EFContext>());
+        }
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Cartao> Cartaos { get; set; }

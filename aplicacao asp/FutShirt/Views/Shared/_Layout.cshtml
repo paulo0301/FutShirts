@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model FutShirt.Models.Usuario
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -14,27 +15,30 @@
             <button id="fechar" onclick="fechar()">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <form>
-                <div class="container">
-                    <h2>Já sou cliente</h2>
-                    <div>
-                        <label for="login">E-mail</label>
-                        <input type="email" id="login" required />
-                    </div>
-
-                    <div>
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha" required />
-                    </div>
-
-                    <a href="">Esqueci minha senha</a>
+            @using (Html.BeginForm("Login", "Usuario", FormMethod.Post)) 
+            { 
+            <div class="container">
+                <h2>Já sou cliente</h2>
+                <div>
+                    <label for="login">E-mail</label>
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "text", datatype="emailadrress", id = "userEmail", autocomplete = "off", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                 </div>
 
-                <div class="container-entrar-cadastre-se">
-                    <input type="submit" id="entrar_login" value="Entrar">
-                    <a href="@Url.Action("CreateStepOne", "Usuario")">Cadastre-se</a>
+                <div>
+                    <label for="senha">Senha</label>
+                    @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @type = "password", id = "userPassword", autocomplete = "off", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
                 </div>
-            </form>
+
+                <a href="">Esqueci minha senha</a>
+            </div>
+
+            <div class="container-entrar-cadastre-se">
+                <input type="submit" id="entrar_login" value="Entrar">
+                <a href="@Url.Action("CreateStepOne", "Usuario")">Cadastre-se</a>
+            </div>
+            }
         </div>
     </div>
     <!-- ***************************************************************** -->

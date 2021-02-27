@@ -8,6 +8,8 @@ using System.Net.Mail;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
+using System.Data.Entity;
+using System.Web.Security;
 
 namespace FutShirt.Controllers
 {
@@ -30,6 +32,7 @@ namespace FutShirt.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult CreateStepOne([Bind(Exclude = "VerificacaoEmail, CodigoAtivacao")] Usuario usuario)
         {
+            #region
             //try
             //{
             //    if (Session["User"] == null) { 
@@ -37,31 +40,32 @@ namespace FutShirt.Controllers
             //    }
             //    return RedirectToAction("CreateStepTwo", "Usuario");
             //}
+            #endregion
             try
-                {
+            {
                 bool Status = false;
                 string mensagem = "";
                 //Validação do modelo
                 if (ModelState.IsValid)
                 {
                     #region //Email existe
-                    var emailCheck = ChecarEmail(usuario.Email);
-                    if (emailCheck)
-                    {
-                        ModelState.AddModelError("EmailExistente", "Email inserido já existe");
-                        return View(usuario);
-                    }
+                    //var emailCheck = ChecarEmail(usuario.Email);
+                    //if (emailCheck)
+                    //{
+                    //    ModelState.AddModelError("EmailExistente", "Email inserido já existe");
+                    //    return View(usuario);
+                    //}
                     #endregion
 
                     #region //Gerar código de ativação
-                    usuario.CodigoAtivacao = Guid.NewGuid();
+                    //usuario.CodigoAtivacao = Guid.NewGuid();
                     #endregion
 
                     #region //Criptografia de senha
-                    usuario.Senha = Crypto.Hash(usuario.Senha);
-                    usuario.ConfirmarSenha = Crypto.Hash(usuario.ConfirmarSenha);
+                    //usuario.Senha = Crypto.Hash(usuario.Senha);
+                    //usuario.ConfirmarSenha = Crypto.Hash(usuario.ConfirmarSenha);
                     #endregion
-                    usuario.VerificacaoEmail = false;
+                    //usuario.VerificacaoEmail = false;
 
                     #region //Salvar no banco de dados
                     usuarioContext.Usuarios.Add(usuario);
@@ -69,9 +73,9 @@ namespace FutShirt.Controllers
                     #endregion
 
                     #region //Enviar email de validação
-                    EnviarEmail(usuario.Email, usuario.CodigoAtivacao.ToString());
-                    mensagem = "Conta registrada com sucesso. Um email de ativação foi enviada para você.";
-                    Status = true;
+                    // EnviarEmail(usuario.Email, usuario.CodigoAtivacao.ToString());
+                    //mensagem = "Conta registrada com sucesso. Um email de ativação foi enviada para você.";
+                    //Status = true;
                     #endregion
 
                 }
@@ -88,6 +92,35 @@ namespace FutShirt.Controllers
             {
                 return View();
             }
+        }
+
+        //Login POST
+        [HttpPost]
+        public ActionResult Login(Usuario login)
+        {
+            string message = "";
+
+            var v = usuarioContext.Usuarios.Where(a => a.Email == login.Email).FirstOrDefault();
+            if (v != null)
+            {
+                if (string.Compare(login.Senha, v.Senha) == 0)
+                {
+                    return RedirectToAction("Index", "Usuario");
+                }
+                else
+                {
+                    message = "E-mail ou senha inválida";
+                }
+            }
+            else
+            {
+                message = "E-mail ou senha inválida";
+            }
+
+
+            ViewBag.Message = message;
+
+            return View();
         }
 
         public ActionResult CreateStepTwo()
@@ -128,6 +161,11 @@ namespace FutShirt.Controllers
                 return View();
             }
         }
+        //Verificar conta
+        
+        
+
+        //
         [NonAction]
         public bool ChecarEmail(string email)
         {

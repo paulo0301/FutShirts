@@ -418,6 +418,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -432,9 +433,6 @@
     <Content Include="Scripts\main_js\Glider.js-master\package.json" />
     <Content Include="Scripts\main_js\Glider.js-master\README.md" />
     <Content Include="Scripts\main_js\Glider.js-master\yarn.lock" />
-    <Content Include="Views\Cadastro\Index.cshtml" />
-    <Content Include="Views\Cadastro\ConfirmarCadastro.cshtml" />
-    <Content Include="Views\Cadastro\CadastrarEndereco.cshtml" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
     <Content Include="Views\Usuario\CreateStepOne.cshtml" />

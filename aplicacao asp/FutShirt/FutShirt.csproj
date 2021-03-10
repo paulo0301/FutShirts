@@ -163,6 +163,7 @@
     <Content Include="Content\Images\carteirinha.svg" />
     <Content Include="Content\Images\cartoes.svg" />
     <Content Include="Content\Images\champions_league.png" />
+    <Content Include="Content\Images\check-solid.svg" />
     <Content Include="Content\Images\contorno-da-sacola-de-compras.svg" />
     <Content Include="Content\Images\corinthians.png" />
     <Content Include="Content\Images\credit-card.svg" />
@@ -214,6 +215,7 @@
     <Content Include="Content\Images\seta_baixo.svg" />
     <Content Include="Content\Images\seta_direita.svg" />
     <Content Include="Content\Images\tag.svg" />
+    <Content Include="Content\Images\times-solid.svg" />
     <Content Include="Content\Images\titleprod.svg" />
     <Content Include="Content\Images\titulo2.svg" />
     <Content Include="Content\Images\trophy.svg" />
@@ -224,7 +226,6 @@
     <Content Include="Content\Images\whatsapp2.svg" />
     <Content Include="Content\index.css" />
     <Content Include="Content\js\cep_auto.js" />
-    <Content Include="Content\js\confcadastro.js" />
     <Content Include="Content\js\config_glider.js" />
     <Content Include="Content\js\endereço-dadospessoais.js" />
     <Content Include="Content\js\jquery-3.5.1.min.js" />
@@ -418,7 +419,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

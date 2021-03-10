@@ -24,12 +24,10 @@
         <div class="instrucoes-cadastro">
             <p>
                 <b>Digite o código que enviamos por email</b><br />Para confirmar de que se trata de seu<br />email,
-                enviamos para<br /><b>usuario@email.com.</b> Caso não o<br />encontre, confira sua pasta de spam.
+                enviamos para<br /><b>@Html.LabelFor(model => model.Email)</b> Caso não o<br />encontre, confira sua pasta de spam.
             </p>
-
-            @using (Html.BeginForm("CreateStepThree", "Usuario", FormMethod.Post, new { @class = "confirmar-cadastro" }))
+            @using (Html.BeginForm("CreateStepTwo", "Usuario", FormMethod.Post, new { @class = "confirmar-cadastro" }))
             {
-                @Html.EditorFor(model => model.Nome, new{htmlAttributes = new { @class = "form-control", disabled = "disabled" }})
                 <input type="text" name="codigoEmail" maxlength="6" required autocomplete="off">
                 <div>
                     <input type="submit" value="Confirmar">

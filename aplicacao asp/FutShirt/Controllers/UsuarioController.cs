@@ -48,35 +48,54 @@ namespace FutShirt.Controllers
                 //Validação do modelo
                 if (ModelState.IsValid)
                 {
-                    #region //Email existe
-                    //var emailCheck = ChecarEmail(usuario.Email);
-                    //if (emailCheck)
-                    //{
-                    //    ModelState.AddModelError("EmailExistente", "Email inserido já existe");
-                    //    return View(usuario);
-                    //}
-                    #endregion
+                    var checkEmail = usuarioContext.Usuarios.FirstOrDefault(e => e.Email == usuario.Email);
+                    var checkCpf = usuarioContext.Usuarios.FirstOrDefault(e => e.Cpf == usuario.Cpf);
+                        if (checkEmail == null && checkCpf == null)
+                    {
+                        #region Gerar código de ativação
+                        Random random = new Random();
+                        string numeroAleatorio = string.Empty;
+                        for(int i = 0; i < 6; i++)
+                        {
+                            numeroAleatorio += random.Next(1, 10).ToString();
+                        }
+                        usuario.CodigoAtivacao = numeroAleatorio;
+                        #endregion
 
-                    #region //Gerar código de ativação
-                    //usuario.CodigoAtivacao = Guid.NewGuid();
-                    #endregion
+                        #region Criptografia de senha
+                        usuario.Senha = Crypto.Hash(usuario.Senha);
+                        usuario.ConfirmarSenha = Crypto.Hash(usuario.ConfirmarSenha);
+                        #endregion
 
-                    #region //Criptografia de senha
-                    //usuario.Senha = Crypto.Hash(usuario.Senha);
-                    //usuario.ConfirmarSenha = Crypto.Hash(usuario.ConfirmarSenha);
-                    #endregion
-                    //usuario.VerificacaoEmail = false;
+                        usuario.VerificacaoEmail = false;
 
-                    #region //Salvar no banco de dados
-                    usuarioContext.Usuarios.Add(usuario);
-                    usuarioContext.SaveChanges();
-                    #endregion
+                        #region Salvar no banco de dados
+                        usuarioContext.Usuarios.Add(usuario);
+                        usuarioContext.SaveChanges();
+                        #endregion
 
-                    #region //Enviar email de validação
-                    // EnviarEmail(usuario.Email, usuario.CodigoAtivacao.ToString());
-                    //mensagem = "Conta registrada com sucesso. Um email de ativação foi enviada para você.";
-                    //Status = true;
-                    #endregion
+                        #region Enviar email de validação
+                        EnviarEmail(usuario.Email, usuario.CodigoAtivacao);
+                        #endregion
+                    }
+                    else
+                    {
+                        if (checkEmail != null)
+                        {
+                            ModelState.AddModelError("EmailExistente", "● Email inserido já cadastrado");
+                        }
+                        if (checkCpf != null)
+                        {
+                            ModelState.AddModelError("CPFExistente", "● CPF inserido já cadastrado");
+                        }
+                        return View();
+                    }
+                    
+                    
+                   
+                    mensagem = "Conta registrada com sucesso. Um email de ativação foi enviada para você.";
+                    Status = true;
+                    
 
                 }
                 else
@@ -163,44 +182,30 @@ namespace FutShirt.Controllers
         }
         //Verificar conta
         
-        
-
-        //
-        [NonAction]
-        public bool ChecarEmail(string email)
-        {
-            var check = usuarioContext.Usuarios.Any(u => u.Email == email);
-            if (check) return true;
-            return false;
-        }
+                
         [NonAction]
         public void EnviarEmail(string email, string codigoAtivacao)
         {
-            var VerificarUrl = "Usuario/VerificarConta" + codigoAtivacao;
-            var link = Request.Url.AbsoluteUri.Replace(Request.Url.PathAndQuery, VerificarUrl);
+            MailMessage _mailMessage = new MailMessage();
+            
+            _mailMessage.From = new MailAddress("futshirts0@gmail.com");
 
-            var fromEmail = new MailAddress("email@email.com.br", "FutShirt");
-            var toEmail = new MailAddress(email);
-            var fromPassword = "123";
-            string subject = "Sua conta foi criada com sucesso";
-            string body = "<br/><br/> Verifique sua conta: <a href='" + link + "'>"+ link +"<a/>";
 
-            var smtp = new SmtpClient
-            {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false
-                //Credentials = new NetworkCredential(fromEmail.Address, fromPassword)
-            };
+            _mailMessage.CC.Add(email);
+            _mailMessage.Subject = "Código de ativação - FutShirts";
+            _mailMessage.IsBodyHtml = true;
+            _mailMessage.Body = "<h2>Seja bem vindo ao FutShirts</h2><p>Confirme seu email, seu código de ativação é <b>"+ codigoAtivacao +"</b></p>";
 
-            var emailMensagem = new MailMessage(fromEmail, toEmail);
-            emailMensagem.Subject = subject;
-            emailMensagem.Body = body;
-            emailMensagem.IsBodyHtml = true;
-            smtp.Send(emailMensagem);
+            //Configuração com porta
+            SmtpClient _smtpClient = new SmtpClient("smtp.gmail.com", Convert.ToInt32("587"));
 
+            //Credencial para envio por SMTP seguro
+            _smtpClient.UseDefaultCredentials = false;
+            _smtpClient.Credentials = new NetworkCredential("futshirts0@gmail.com", "futinfoweb");
+
+            _smtpClient.EnableSsl = true;
+
+            _smtpClient.Send(_mailMessage);
         }
     }
 }

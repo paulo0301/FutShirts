@@ -72,7 +72,8 @@ main .dados-cadastro .dados-preencher {
     display: flex;
     width: 100%;
     margin-bottom: 15px;
-  }
+    position: relative;
+}
   
 main .dados-preencher .icon {
     padding: 12px 0; 
@@ -228,4 +229,28 @@ main .instrucoes-cadastro input[type="submit"]:hover{
     main .confirmar-cadastro > input{
         width: 1.6rem;
     }
+}
+
+.input-valido{
+    box-shadow: 0px 1px 4px #92dbab;
+    border: 1px solid green !important;
+    border-radius: 5px;
+}
+.input-valido::after{
+    content: url("../imagens/check-solid.svg");
+    position: absolute;
+    transform: translateY(50%);
+    right: 10px;
+}
+
+.input-invalido{
+    box-shadow: 0px 1px 4px #eb2424;
+    border: 1px solid red !important;
+    border-radius: 5px;
+}
+.input-invalido::after{
+    content: url("../imagens/times-solid.svg");
+    position: absolute;
+    transform: translateY(45%);
+    right: 10px;
 }

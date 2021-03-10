@@ -16,7 +16,7 @@ namespace FutShirt.Models
         public DateTime DataNascimento { get; set; }
         public string Senha { get; set; }
         public bool VerificacaoEmail { get; set; }
-        public Guid CodigoAtivacao { get; set; }
+        public string CodigoAtivacao { get; set; }
     }
     public class Cartao
     {

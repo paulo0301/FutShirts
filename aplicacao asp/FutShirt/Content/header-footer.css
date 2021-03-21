@@ -62,7 +62,7 @@ header form input[type='search'] {
 }
 
 header .bt-pesquisa {
-    background: url("../imagens/ampliacao.svg") no-repeat center;
+    background: url("Images/ampliacao.svg") no-repeat center;
     position: relative;
     cursor: pointer;
     background-color: transparent;

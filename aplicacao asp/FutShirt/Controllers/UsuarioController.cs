@@ -57,7 +57,7 @@ namespace FutShirt.Controllers
                         string numeroAleatorio = string.Empty;
                         for(int i = 0; i < 6; i++)
                         {
-                            numeroAleatorio += random.Next(1, 10).ToString();
+                            numeroAleatorio += random.Next(0, 10).ToString();
                         }
                         usuario.CodigoAtivacao = numeroAleatorio;
                         #endregion
@@ -144,7 +144,7 @@ namespace FutShirt.Controllers
 
         public ActionResult CreateStepTwo()
         {
-                return View("CreateStepTwo", Session["User"]);
+            return View("CreateStepTwo", Session["User"]);
         }
 
         [HttpPost]

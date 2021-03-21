@@ -244,6 +244,10 @@
     <Content Include="Content\resultado_pesquisa.css" />
     <Content Include="Global.asax" />
     <Compile Include="Criptografia.cs" />
+    <Compile Include="Models\Cartao.cs" />
+    <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Models\Metadados\Cartao.cs" />
+    <Compile Include="Models\Metadados\Endereco.cs" />
     <Compile Include="Models\Metadados\Usuario.cs" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />

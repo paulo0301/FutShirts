@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutShirt", "FutShirt\FutShirt.csproj", "{FA87800D-8D5E-47A5-A278-254DEC622954}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{76F39C66-5089-482C-A4B9-D118B6B48DFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{7D30CD67-2D41-471A-BD85-811CBDABC273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servico", "Servicos\Servico.csproj", "{2FEBC6C0-D3E6-4F88-8ED1-8F1F7A38B74A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{FA87800D-8D5E-47A5-A278-254DEC622954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA87800D-8D5E-47A5-A278-254DEC622954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA87800D-8D5E-47A5-A278-254DEC622954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76F39C66-5089-482C-A4B9-D118B6B48DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F39C66-5089-482C-A4B9-D118B6B48DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76F39C66-5089-482C-A4B9-D118B6B48DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F39C66-5089-482C-A4B9-D118B6B48DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D30CD67-2D41-471A-BD85-811CBDABC273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D30CD67-2D41-471A-BD85-811CBDABC273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D30CD67-2D41-471A-BD85-811CBDABC273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D30CD67-2D41-471A-BD85-811CBDABC273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FEBC6C0-D3E6-4F88-8ED1-8F1F7A38B74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FEBC6C0-D3E6-4F88-8ED1-8F1F7A38B74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FEBC6C0-D3E6-4F88-8ED1-8F1F7A38B74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FEBC6C0-D3E6-4F88-8ED1-8F1F7A38B74A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

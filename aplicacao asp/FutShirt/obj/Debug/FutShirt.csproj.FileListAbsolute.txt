@@ -280,3 +280,10 @@ C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\vbc.exe.
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\vbc.rsp
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\VBCSCompiler.exe
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Modelo.dll
+C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Modelo.pdb
+C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Servicos.dll
+C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Persistencia.dll
+C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Servicos.pdb
+C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Persistencia.pdb
+C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Persistencia.dll.config

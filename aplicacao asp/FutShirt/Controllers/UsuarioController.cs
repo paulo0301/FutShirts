@@ -1,5 +1,5 @@
-﻿using FutShirt.Context;
-using FutShirt.Models;
+﻿using Modelo.Tabelas;
+using Servicos.Tabelas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +10,17 @@ using System.Web.Helpers;
 using System.Web.Mvc;
 using System.Data.Entity;
 using System.Web.Security;
+using System.Text.RegularExpressions;
 
 namespace FutShirt.Controllers
 {
     public class UsuarioController : Controller
     {
-        private EFContext usuarioContext = new EFContext();
+        private UsuarioServico usuarioServico = new UsuarioServico();
         // GET: Usuario
         public ActionResult Index()
         {
-            return View(usuarioContext.Usuarios.OrderBy(c => c.Nome));
+            return View(usuarioServico.GetUsuariosByNome());
         }
         // GET: Usuario/Create
         public ActionResult CreateStepOne()
@@ -48,8 +49,8 @@ namespace FutShirt.Controllers
                 //Validação do modelo
                 if (ModelState.IsValid)
                 {
-                    var checkEmail = usuarioContext.Usuarios.FirstOrDefault(e => e.Email == usuario.Email);
-                    var checkCpf = usuarioContext.Usuarios.FirstOrDefault(e => e.Cpf == usuario.Cpf);
+                    var checkEmail = usuarioServico.GetUsuariosByEmail().FirstOrDefault(e => e.Email == usuario.Email);
+                    var checkCpf = usuarioServico.GetUsuariosByCpf().FirstOrDefault(e => e.Cpf == usuario.Cpf);
                         if (checkEmail == null && checkCpf == null)
                     {
                         #region Gerar código de ativação
@@ -67,11 +68,15 @@ namespace FutShirt.Controllers
                         usuario.ConfirmarSenha = Crypto.Hash(usuario.ConfirmarSenha);
                         #endregion
 
+                        #region Validação de campos
+                        usuario.Telefone = Regex.Replace(usuario.Telefone, @"[^0-9a-zA-Z]+", "", RegexOptions.None, TimeSpan.FromSeconds(1.5));
+                        usuario.Cpf = Regex.Replace(usuario.Cpf, @"[^0-9a-zA-Z]+", "", RegexOptions.None, TimeSpan.FromSeconds(1.5));
+                        #endregion
+
                         usuario.VerificacaoEmail = false;
 
                         #region Salvar no banco de dados
-                        usuarioContext.Usuarios.Add(usuario);
-                        usuarioContext.SaveChanges();
+                        usuarioServico.SaveUsuario(usuario);
                         #endregion
 
                         #region Enviar email de validação
@@ -90,12 +95,9 @@ namespace FutShirt.Controllers
                         }
                         return View();
                     }
-                    
-                    
-                   
+
                     mensagem = "Conta registrada com sucesso. Um email de ativação foi enviada para você.";
                     Status = true;
-                    
 
                 }
                 else
@@ -105,7 +107,7 @@ namespace FutShirt.Controllers
                 ViewBag.Message = mensagem;
                 ViewBag.Status = Status;
                 Session["User"] = usuario;
-                return RedirectToAction("CreateStepTwo", "Usuario", Session["User"]);
+                return RedirectToAction("CreateStepTwo", "Usuario", new Usuario().CodigoAtivacao);
             }
             catch
             {
@@ -119,7 +121,7 @@ namespace FutShirt.Controllers
         {
             string message = "";
 
-            var v = usuarioContext.Usuarios.Where(a => a.Email == login.Email).FirstOrDefault();
+            var v = usuarioServico.GetUsuariosByEmail().Where(a => a.Email == login.Email).FirstOrDefault();
             if (v != null)
             {
                 if (string.Compare(login.Senha, v.Senha) == 0)

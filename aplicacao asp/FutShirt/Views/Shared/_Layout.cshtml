@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg" href="~/Content/Images/logo-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/main.css">
     <link rel="stylesheet" href="~/Content/header-footer.css">
+    @RenderSection("styles", false)
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -76,9 +78,7 @@
             </ol>
         </nav>
     </header>
-    <main>
-        @RenderBody()
-    </main>
+    @RenderBody()
     <footer>
         <section class="vantagens">
             <ul class="owl-carousel owl-theme">
@@ -168,5 +168,6 @@
             <p class="destaque">Copyright ©2020 FutShirt Todos direitos reservados</p>
         </section>
     </footer>
+    @RenderSection("scripts", false)
 </body>
 </html>

@@ -1,0 +1,97 @@
+﻿@model Modelo.Tabelas.Usuario
+
+@{
+    ViewBag.Title = "Meus Dados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <link rel="stylesheet" href="~/Content/minha_conta.css">
+}
+<main>
+    <div class="cabecalho">
+        <h2>Minha Conta</h2>
+    </div>
+    <nav class="voltar-index">
+        <h2><a href="index.html"><i class="fas fa-angle-left"></i>voltar</a></h2>
+    </nav>
+    <div>
+        <nav>
+            <ol>
+                <li><a href="meus_dados.html" class="active"><img src="~/Content/Images/carteirinha.svg" alt="">Meus dados</a></li>
+                <li><a href="enderecos_minha_conta.html"><img src="~/Content/Images/enderecos.svg" alt="">Endereços</a></li>
+                <li><a href="meus_pedidos.html"><img src="~/Content/Images/camisa_pedidos.svg" alt="">Meus pedidos</a></li>
+                <li><a href="meus_favoritos.html"><img src="~/Content/Images/estrela.svg" alt="">Favoritos</a></li>
+                <li><a href="meus_cartoes.html"><img src="~/Content/Images/cartoes.svg" alt="">Meus cartões</a></li>
+            </ol>
+        </nav>
+        <section class="container-meus-dados">
+            <div class="cabecalho-topico">
+                <h3>Meus dados</h3>
+            </div>
+
+            <div class="dados">
+                <div class="dados-pessoais">
+                    <h4>Dados pessoais</h4>
+                    <form action="">
+                        <div>
+                            <label for="nome-completo">Nome completo</label>
+                            <input type="text" value="José Fulano da Silva" name="nome-completo" id="nome-completo" maxlength="130" required>
+                        </div>
+                        <div>
+                            <label for="data-nascimento">Data de nascimento</label>
+                            <input type="text" name="data-nascimento" value="DD/MM/AAAA" id="data-nascimento" required>
+                        </div>
+                        <div>
+                            <label for="cpf">CPF</label>
+                            <input type="text" name="cpf" disabled maxlength="11" value="000.000.000-00" required id="cpf">
+                        </div>
+                        <div>
+                            <label for="sexo">Sexo</label>
+                            <div class="container-sexo">
+                                <label for="masculino"><input type="radio" name="sexo" id="masculino"> Masculino</label>
+                                <label for="feminino"><input type="radio" name="sexo" id="feminino"> Feminino</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="telefone">Telefone</label>
+                            <input type="text" name="telefone" id="telefone" value="(00) 000000000" required>
+                        </div>
+                        <input type="submit" value="Salvar informações">
+                    </form>
+                </div>
+                <div class="dados-acesso">
+                    <h4>Dados de acesso</h4>
+                    <form action="">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" value="email@email.com" id="email">
+                        </div>
+                        <div class="bt-submit-container">
+                            <input type="submit" name="email" value="Alterar email">
+                        </div>
+                    </form>
+                    <form action="">
+                        <div>
+                            <label for="senha-atual">Senha atual</label>
+                            <input type="password" name="senha-atual" placeholder="***********" id="senha-atual">
+                        </div>
+                        <div>
+                            <label for="senha-nova">Senha nova</label>
+                            <input type="password" name="senha-nova" id="senha-nova">
+                        </div>
+                        <div>
+                            <label for="confirmar-senha-nova">Confirmar senha</label>
+                            <input type="password" name="senha-nova" id="confirmar-senha-nova">
+                        </div>
+                        <input type="submit" value="Alterar senha">
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</main>
+@section scripts{
+    <script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>
+    <script src="~/Content/js/main.js"></script>
+}

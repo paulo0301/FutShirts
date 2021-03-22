@@ -12,3 +12,17 @@ C:\Users\pedro\source\repos\FutShirts\aplicacao asp\Servicos\obj\Debug\Servico.c
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\Servicos\obj\Debug\Servico.csproj.CopyComplete
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\Servicos\obj\Debug\Servicos.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\Servicos\obj\Debug\Servicos.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Servicos.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Servicos.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Modelo.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Persistencia.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\EntityFramework.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Modelo.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Persistencia.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Persistencia.dll.config
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\EntityFramework.xml
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servico.csprojAssemblyReference.cache
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servico.csproj.CoreCompileInputs.cache
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servico.csproj.CopyComplete
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servicos.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servicos.pdb

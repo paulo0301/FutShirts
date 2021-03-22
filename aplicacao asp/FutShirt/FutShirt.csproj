@@ -243,6 +243,7 @@
     <Content Include="Content\produto_individual.css" />
     <Content Include="Content\resultado_pesquisa.css" />
     <Content Include="Global.asax" />
+    <Compile Include="Controllers\MinhaContaController.cs" />
     <Compile Include="Criptografia.cs" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -436,6 +437,7 @@
     <Content Include="Views\Usuario\CreateStepTwo.cshtml" />
     <Content Include="Views\Usuario\CreateStepThree.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\MinhaConta\MeusDados.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

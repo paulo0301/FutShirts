@@ -287,3 +287,10 @@ C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Persistencia.dl
 C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Servicos.pdb
 C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Persistencia.pdb
 C:\Users\pedro\Source\Repos\FutShirts\aplicacao asp\FutShirt\bin\Persistencia.dll.config
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\Modelo.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\Servicos.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\Persistencia.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\Modelo.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\Servicos.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\Persistencia.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\bin\Persistencia.dll.config

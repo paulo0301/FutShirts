@@ -140,7 +140,34 @@ main .dados{
     width: 25em;
     margin: 2em auto 0 20%;
 }
-
+.container-enderecos-cadastrados{
+    display: flex;
+    margin: 1.5em 5% 0;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.container-enderecos-cadastrados .endereco-cadastrado{
+    padding: 25px;
+    margin: 0 10px 20px;
+    padding-bottom: 10px;
+    border: 2px solid #030F26;
+    border-radius: 6px;
+}
+.endereco-cadastrado .cep{
+    font-weight: 700;
+}
+.endereco-cadastrado button{
+    float: right;
+    margin-top: 6px;
+    background-color: #030F26;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    outline: none;
+    cursor: pointer;
+}
 main .dados-cadastro{
     text-align: left;
 }

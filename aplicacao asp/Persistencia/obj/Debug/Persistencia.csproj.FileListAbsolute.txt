@@ -12,3 +12,17 @@ C:\Users\pedro\source\repos\FutShirts\aplicacao asp\Persistencia\obj\Debug\Persi
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\bin\Debug\Persistencia.dll.config
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\bin\Debug\EntityFramework.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\bin\Debug\Modelo.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\bin\Debug\Modelo.pdb
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\bin\Debug\EntityFramework.xml
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Persistencia\obj\Debug\Persistencia.pdb

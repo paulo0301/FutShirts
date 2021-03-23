@@ -156,7 +156,7 @@ namespace FutShirt.Controllers
             try
             {
                 //usuario.CodigoAtivacao comparar com session["user"];
-                Session["User"] = usuario;
+                Session[User] = usuario;
                 return RedirectToAction("CreateStepThree", "Usuario");
             }
             catch

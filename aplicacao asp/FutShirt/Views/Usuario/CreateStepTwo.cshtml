@@ -19,11 +19,15 @@
         <div class="instrucoes-cadastro">
             <p>
                 <b>Digite o código que enviamos por email</b><br />Para confirmar de que se trata de seu<br />email,
-                enviamos para<br /><b>@Html.DisplayNameFor(model => model.Email)</b> Caso não o<br />encontre, confira sua pasta de spam.
+                enviamos para<br /><b>@Html.LabelFor(model => model.Email)</b> Caso não o<br />encontre, confira sua pasta de spam.
             </p>
-            @using (Html.BeginForm("CreateStepTwo", "Usuario", FormMethod.Get, new { @class = "confirmar-cadastro" }))
+            @using (Html.BeginForm("CreateStepTwo", "Usuario", FormMethod.Post, new { @class = "confirmar-cadastro" }))
             {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
                 @Html.EditorFor(model => model.CodigoAtivacao, new { htmlAttributes = new { @type = "text", id = "codigoAtivacao", @class = "input-field", autocomplete = "off", maxlength = "6", required = "required" } })
+                @Html.ValidationMessageFor(model => model.CodigoAtivacao, "", new { @class = "text-danger" })
                 <div>
                     <input type="submit" value="Confirmar">
                 </div>

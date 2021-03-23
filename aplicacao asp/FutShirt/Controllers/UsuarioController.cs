@@ -106,7 +106,7 @@ namespace FutShirt.Controllers
                 ViewBag.Message = mensagem;
                 ViewBag.Status = Status;
                 Session["User"] = usuario;
-                return RedirectToAction("CreateStepTwo", "Usuario", new Usuario().CodigoAtivacao);
+                return RedirectToAction("CreateStepTwo", "Usuario");
             }
             catch
             {
@@ -145,7 +145,8 @@ namespace FutShirt.Controllers
 
         public ActionResult CreateStepTwo()
         {
-            return View("CreateStepTwo", Session["User"]);
+            Usuario UserCode = new Usuario();
+            return View("CreateStepTwo", UserCode);
         }
 
         [HttpPost]
@@ -154,6 +155,7 @@ namespace FutShirt.Controllers
         {
             try
             {
+                //usuario.CodigoAtivacao comparar com session["user"];
                 Session["User"] = usuario;
                 return RedirectToAction("CreateStepThree", "Usuario");
             }

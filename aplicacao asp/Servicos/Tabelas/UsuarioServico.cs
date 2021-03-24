@@ -24,6 +24,11 @@ namespace Servicos.Tabelas
         {
             return usuarioDal.GetUsuariosByCpf();
         }
+        public long? GetLastUsuario()
+        {
+            return usuarioDal.GetLastUsuarioId();
+        }
+
 
         //Save Usuario
         public void SaveUsuario(Usuario usuario)

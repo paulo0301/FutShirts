@@ -18,9 +18,6 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ConfirmarSenha)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
@@ -39,6 +36,9 @@
                 @Html.DisplayNameFor(model => model.Senha)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.ConfirmarSenha)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.VerificacaoEmail)
             </th>
             <th>
@@ -49,9 +49,6 @@
     
     @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConfirmarSenha)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
@@ -69,6 +66,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Senha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConfirmarSenha)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.VerificacaoEmail)

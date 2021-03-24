@@ -4,12 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace FutShirt.Controllers
+namespace FutShirt.Areas.Usuarios.Controllers
 {
-    public class MinhaContaController : Controller
+    public class IndexController : Controller
     {
-        // GET: MinhaConta
-        public ActionResult MeusDados()
+        // GET: Index
+        public ActionResult Index()
         {
             return View();
         }

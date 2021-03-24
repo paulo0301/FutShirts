@@ -243,8 +243,10 @@
     <Content Include="Content\produto_individual.css" />
     <Content Include="Content\resultado_pesquisa.css" />
     <Content Include="Global.asax" />
-    <Compile Include="Controllers\MinhaContaController.cs" />
-    <Compile Include="Criptografia.cs" />
+    <Compile Include="Areas\Usuarios\AreasAreaRegistration.cs" />
+    <Compile Include="Areas\Usuarios\Controllers\IndexController.cs" />
+    <Compile Include="Areas\Usuarios\Controllers\MinhaContaController.cs" />
+    <Compile Include="Areas\Usuarios\Controllers\UsuarioController.cs" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -303,6 +305,14 @@
     <Content Include="Content\Glider.js-master\docs\_config.yml" />
     <Content Include="Content\Glider.js-master\package.json" />
     <Content Include="Content\Glider.js-master\README.md" />
+    <Content Include="Areas\Usuarios\Views\web.config" />
+    <Content Include="Areas\Usuarios\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Usuario\Index.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Usuario\CreateStepOne.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Usuario\CreateStepTwo.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Usuario\CreateStepThree.cshtml" />
+    <Content Include="Areas\Usuarios\Views\MinhaConta\MeusDados.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Index\Index.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -408,24 +418,18 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\IndexController.cs" />
-    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
-    <Content Include="Views\Index\Index.cshtml" />
     <Content Include="Scripts\main_js\Glider.js-master\.editorconfig" />
     <Content Include="Scripts\main_js\Glider.js-master\package-lock.json" />
     <Content Include="Scripts\main_js\Glider.js-master\package.json" />
@@ -433,11 +437,6 @@
     <Content Include="Scripts\main_js\Glider.js-master\yarn.lock" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
-    <Content Include="Views\Usuario\CreateStepOne.cshtml" />
-    <Content Include="Views\Usuario\CreateStepTwo.cshtml" />
-    <Content Include="Views\Usuario\CreateStepThree.cshtml" />
-    <Content Include="Views\Usuario\Index.cshtml" />
-    <Content Include="Views\MinhaConta\MeusDados.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -447,8 +446,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Usuarios\Data\" />
     <Folder Include="Context\" />
+    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

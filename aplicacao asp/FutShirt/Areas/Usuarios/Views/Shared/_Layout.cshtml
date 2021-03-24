@@ -17,29 +17,29 @@
             <button id="fechar" onclick="fechar()">
                 <span aria-hidden="true">&times;</span>
             </button>
-            @using (Html.BeginForm("Login", "Usuario", FormMethod.Post)) 
-            { 
-            <div class="container">
-                <h2>Já sou cliente</h2>
-                <div>
-                    <label for="login">E-mail</label>
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "text", datatype="emailadrress", id = "userEmail", autocomplete = "off", required = "required" } })
-                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            @using (Html.BeginForm("Login", "Usuario", FormMethod.Post))
+            {
+                <div class="container">
+                    <h2>Já sou cliente</h2>
+                    <div>
+                        <label for="login">E-mail</label>
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "text", datatype = "emailadrress", id = "userEmail", autocomplete = "off", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div>
+                        <label for="senha">Senha</label>
+                        @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @type = "password", id = "userPassword", autocomplete = "off", required = "required" } })
+                        @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+                    </div>
+
+                    <a href="">Esqueci minha senha</a>
                 </div>
 
-                <div>
-                    <label for="senha">Senha</label>
-                    @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @type = "password", id = "userPassword", autocomplete = "off", required = "required" } })
-                    @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+                <div class="container-entrar-cadastre-se">
+                    <input type="submit" id="entrar_login" value="Entrar">
+                    @Html.ActionLink("Cadastre-se","CreateStepOne", "Usuario", new { Area= "Usuarios" }, null)
                 </div>
-
-                <a href="">Esqueci minha senha</a>
-            </div>
-
-            <div class="container-entrar-cadastre-se">
-                <input type="submit" id="entrar_login" value="Entrar">
-                <a href="@Url.Action("CreateStepOne", "Usuario")">Cadastre-se</a>
-            </div>
             }
         </div>
     </div>
@@ -63,7 +63,7 @@
                     <img src="~/Content/Images/avatar.svg" alt="user">
                     <div>
                         <button id="entrar" onclick="abrir()">Entrar</button>
-                        <a href="@Url.Action("CreateStepOne", "Usuario")">Cadastre-se</a>
+                        @Html.ActionLink("Cadastre-se", "CreateStepOne", "Usuario", new { Area = "Usuarios" }, null)
                     </div>
                 </div>
 

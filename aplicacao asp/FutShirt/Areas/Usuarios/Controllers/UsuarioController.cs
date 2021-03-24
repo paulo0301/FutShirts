@@ -12,11 +12,12 @@ using System.Data.Entity;
 using System.Web.Security;
 using System.Text.RegularExpressions;
 
-namespace FutShirt.Controllers
+namespace FutShirt.Areas.Usuarios.Controllers
 {
     public class UsuarioController : Controller
     {
         private UsuarioServico usuarioServico = new UsuarioServico();
+        private EnderecoServico enderecoServico = new EnderecoServico();
         // GET: Usuario
         public ActionResult Index()
         {
@@ -55,7 +56,7 @@ namespace FutShirt.Controllers
                         #region Gerar código de ativação
                         Random random = new Random();
                         string numeroAleatorio = string.Empty;
-                        for(int i = 0; i < 6; i++)
+                        for (int i = 0; i < 6; i++)
                         {
                             numeroAleatorio += random.Next(0, 10).ToString();
                         }
@@ -75,7 +76,7 @@ namespace FutShirt.Controllers
                         usuario.VerificacaoEmail = false;
 
                         #region Salvar no banco de dados
-                        usuarioServico.SaveUsuario(usuario);
+                        //usuarioServico.SaveUsuario(usuario);
                         #endregion
 
                         #region Enviar email de validação
@@ -97,11 +98,11 @@ namespace FutShirt.Controllers
 
                     mensagem = "Conta registrada com sucesso. Um email de ativação foi enviada para você.";
                     Status = true;
-
                 }
                 else
                 {
                     mensagem = "Requisição inválida.";
+                    return View();
                 }
                 ViewBag.Message = mensagem;
                 ViewBag.Status = Status;
@@ -123,8 +124,10 @@ namespace FutShirt.Controllers
             var v = usuarioServico.GetUsuariosByEmail().Where(a => a.Email == login.Email).FirstOrDefault();
             if (v != null)
             {
+                login.Senha = Crypto.Hash(login.Senha);
                 if (string.Compare(login.Senha, v.Senha) == 0)
                 {
+                    Session["User"] = login;
                     return RedirectToAction("Index", "Usuario");
                 }
                 else
@@ -139,13 +142,15 @@ namespace FutShirt.Controllers
 
 
             ViewBag.Message = message;
-
             return View();
         }
 
         public ActionResult CreateStepTwo()
         {
             Usuario UserCode = new Usuario();
+            Usuario emailUser = (Usuario)Session["User"];
+            UserCode.Email = emailUser.Email;
+            
             return View("CreateStepTwo", UserCode);
         }
 
@@ -155,8 +160,26 @@ namespace FutShirt.Controllers
         {
             try
             {
-                //usuario.CodigoAtivacao comparar com session["user"];
-                Session["User"] = usuario;
+                bool Status = false;
+                string mensagem = "";
+
+                //Validação do código de ativação
+                Usuario u = (Usuario)Session["User"];
+                if (u.CodigoAtivacao == usuario.CodigoAtivacao)
+                {
+                    mensagem = "Conta ativada com sucesso!";
+                    Status = true;
+                }
+                else
+                {
+                    mensagem = "Código de verificação inválido.";
+                    ViewBag.Message = mensagem;
+                    ViewBag.Status = Status;
+                    ModelState.AddModelError("CodigoInvalido", "● Código inválido");
+                    return View();
+                }
+                ViewBag.Message = mensagem;
+                ViewBag.Status = Status;
                 return RedirectToAction("CreateStepThree", "Usuario");
             }
             catch
@@ -193,18 +216,34 @@ namespace FutShirt.Controllers
                 new {Name = "Roraima", Value = "RR" },
                 new {Name = "Santa Catarina", Value = "SC" },
                 new {Name = "São Paulo", Value = "SP" },
-                new {Name = "Sergipe", Value = "SE" },    
+                new {Name = "Sergipe", Value = "SE" },
                 new {Name = "Tocantins", Value = "TO" },
             }, "Value", "Name");
-            return View("CreateStepThree", Session["User"]);
+            return View("CreateStepThree");
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateStepThree(Usuario usuario, Endereco endereco)
+        public ActionResult CreateStepThree(Endereco endereco)
         {
             try
             {
+                if (ModelState.IsValid)
+                {
+                    Usuario usuario = (Usuario)Session["User"];
+                    usuarioServico.SaveUsuario(usuario);
+                    var idLastUser = usuarioServico.GetLastUsuario();
+                    if (idLastUser != null)
+                    {
+                        endereco.UsuarioId = (long)idLastUser;
+                        enderecoServico.SaveEndereco(endereco);
+                    }
+                }
+                else
+                {
+                   return View();
+                }
+
                 return RedirectToAction("Index");
             }
             catch
@@ -213,20 +252,18 @@ namespace FutShirt.Controllers
             }
         }
         //Verificar conta
-        
-                
         [NonAction]
-        public void EnviarEmail(string email, string codigoAtivacao)
+        private void EnviarEmail(string email, string codigoAtivacao)
         {
             MailMessage _mailMessage = new MailMessage();
-            
+
             _mailMessage.From = new MailAddress("futshirts0@gmail.com");
 
 
             _mailMessage.CC.Add(email);
             _mailMessage.Subject = "Código de ativação - FutShirts";
             _mailMessage.IsBodyHtml = true;
-            _mailMessage.Body = "<h2>Seja bem vindo ao FutShirts</h2><p>Confirme seu email, seu código de ativação é <b>"+ codigoAtivacao +"</b></p>";
+            _mailMessage.Body = "<h2>Seja bem vindo ao FutShirts</h2><p>Confirme seu email, seu código de ativação é <b>" + codigoAtivacao + "</b></p>";
 
             //Configuração com porta
             SmtpClient _smtpClient = new SmtpClient("smtp.gmail.com", Convert.ToInt32("587"));

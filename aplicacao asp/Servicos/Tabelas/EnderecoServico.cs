@@ -15,5 +15,9 @@ namespace Servicos.Tabelas
         {
             return enderecoDal.GetEnderecosByLogradouro();
         }
+        public void SaveEndereco(Endereco endereco)
+        {
+            enderecoDal.SaveEndereco(endereco);
+        }
     }
 }

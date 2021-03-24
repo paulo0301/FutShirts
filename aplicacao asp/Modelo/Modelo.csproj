@@ -45,9 +45,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tabelas\Cartao.cs" />
     <Compile Include="Tabelas\Endereco.cs" />
-    <Compile Include="Tabelas\Metadados\Cartao.cs" />
-    <Compile Include="Tabelas\Metadados\Endereco.cs" />
-    <Compile Include="Tabelas\Metadados\Usuario.cs" />
     <Compile Include="Tabelas\Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

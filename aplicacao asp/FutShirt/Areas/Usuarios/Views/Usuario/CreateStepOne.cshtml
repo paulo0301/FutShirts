@@ -1,7 +1,8 @@
 ﻿@model Modelo.Tabelas.Usuario
-@{ ViewBag.Title = "FutShirt";
-    Layout = "~/Views/Shared/_Layout.cshtml"; }
-
+@{
+    ViewBag.Title = "Cadastro FutShirt";
+    Layout = "~/Areas/Usuarios/Views/Shared/_Layout.cshtml";
+}
 @section styles{
     <link rel="stylesheet" href="~/Content/cadastro.css">
 }
@@ -16,20 +17,10 @@
     </div>
     <article>
 
-        @if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
-        {
-            {
-                <div class="alert alert-success">
-                    <strong>Sucesso!</strong>
-                </div>
-            }
-        }
-        else
-        {
-            using (Html.BeginForm("CreateStepOne", "Usuario", FormMethod.Post, new { @class = "dados" }))
+            @using (Html.BeginForm("CreateStepOne", "Usuario", FormMethod.Post, new { @class = "dados" }))
             {
                 @Html.AntiForgeryToken()
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.ValidationSummary(true, "Cheque os seguintes erros:", new { @class = "text-danger" })
                 <div class="dados-cadastro">
                     @Html.LabelFor(model => model.Nome)
                     <div class="dados-preencher">
@@ -102,13 +93,12 @@
                     <input type="submit" id="conf" value="Prosseguir" onclick="verificar(event)" />
                 </div>
             }
-            if (ViewBag.Message != null)
+            @if (ViewBag.Message != null)
             {
                 <div class="alert alert-danger">
                     <strong>@ViewBag.Message</strong>
                 </div>
             }
-        }
 
     </article>
 </main>

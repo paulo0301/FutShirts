@@ -45,5 +45,6 @@ namespace Modelo.Tabelas
 		public string ConfirmarSenha { get; set; }
         public bool VerificacaoEmail { get; set; }
         public string CodigoAtivacao { get; set; }
-    }
+		public virtual ICollection<Endereco> Enderecos { get; set; }
+	}
 }

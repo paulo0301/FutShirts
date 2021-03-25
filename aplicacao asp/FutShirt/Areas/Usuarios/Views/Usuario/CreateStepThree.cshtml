@@ -25,15 +25,18 @@
                 @Html.LabelFor(model => model.Cep)
                 <div class="dados-preencher">
                     <i class="fas fa-map-marker-alt icon"></i>
-                    @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @type = "text", id = "cep", @class = "input-field", autocomplete = "off", placeholder = "Digite seu CEP", onkeypress = "mascara(this, '#####-###')", maxlength = "9", required = "required" } })
+                    @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @type = "text", id = "cep", @class = "input-field", autocomplete = "off", placeholder = "Digite seu CEP", onkeypress = "mascara(this, '#####-###')", maxlength = "9", required = "required" , } })
+                </div>
+                <div>
                     @Html.ValidationMessageFor(model => model.Cep, "", new { @class = "text-danger" })
+                    <span id="errorCep">● O CEP digitado não foi encontrado, por favor digite um CEP válido.</span>
                 </div>
             </div>
             <div class="dados-cadastro">
                 @Html.LabelFor(model => model.Estado)
                 <div class="dados-preencher">
                     <i class="fas fa-map-marked-alt icon"></i>
-                    @Html.DropDownListFor(model => model.Estado, (SelectList)ViewBag.estados, "Selecione um estado", new { @class = "form-control" })
+                    @Html.DropDownListFor(model => model.Estado, (SelectList)ViewBag.estados, "Selecione um estado", new { @class = "form-control select-field"})
                 </div>
             </div>
             <div class="dados-cadastro">
@@ -41,6 +44,8 @@
                 <div class="dados-preencher">
                     <i class="fas fa-map-marked-alt icon"></i>
                     @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @type = "text", id = "cidade", @class = "input-field", autocomplete = "off", placeholder = "Digite sua cidade", required = "required" } })
+                </div>
+                <div>
                     @Html.ValidationMessageFor(model => model.Cidade, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -49,6 +54,8 @@
                 <div class="dados-preencher">
                     <i class="fas fa-road icon"></i>
                     @Html.EditorFor(model => model.Bairro, new { htmlAttributes = new { @type = "text", id = "bairro", @class = "input-field", autocomplete = "off", placeholder = "Digite seu estado", required = "required" } })
+                </div>
+                <div>
                     @Html.ValidationMessageFor(model => model.Bairro, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -57,6 +64,8 @@
                 <div class="dados-preencher">
                     <i class="fas fa-road icon"></i>
                     @Html.EditorFor(model => model.Logradouro, new { htmlAttributes = new { @type = "text", id = "logradouro", @class = "input-field", autocomplete = "off", placeholder = "Digite seu logradouro", required = "required" } })
+                </div>
+                <div>
                     @Html.ValidationMessageFor(model => model.Logradouro, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -65,6 +74,8 @@
                 <div class="dados-preencher">
                     <i class="fas fa-home icon"></i>
                     @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @type = "text", id = "numero", @class = "input-field", autocomplete = "off", placeholder = "Digite aqui", required = "required" } })
+                </div>
+                <div>
                     @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -72,12 +83,14 @@
                 @Html.LabelFor(model => model.Complemento)
                 <div class="dados-preencher">
                     <i class="fas fa-info icon  "></i>
-                    @Html.EditorFor(model => model.Complemento, new { htmlAttributes = new { @type = "text", id = "comp", @class = "input-field", autocomplete = "off", placeholder = "Digite aqui", required = "required" } })
+                    @Html.EditorFor(model => model.Complemento, new { htmlAttributes = new { @type = "text", id = "comp", @class = "input-field", autocomplete = "off", placeholder = "Digite aqui" } })
+                </div>
+                <div>
                     @Html.ValidationMessageFor(model => model.Complemento, "", new { @class = "text-danger" })
                 </div>
             </div>
             <div class="bt-container">
-                <input type="submit" id="conf" value="Finalizar">
+                <input type="submit" id="conf" onclick="validarCEP(event)" value="Finalizar">
             </div>
         }
     </article>

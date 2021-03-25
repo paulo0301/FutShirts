@@ -26,6 +26,8 @@
                     <div class="dados-preencher">
                         <i class="fas fa-user icon"></i>
                         @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @type = "text", id = "name", @class = "input-field", autocomplete = "off", placeholder = "Digite seu nome", required = "required" } })
+                    </div>
+                    <div>
                         @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -45,6 +47,8 @@
                     <div class="dados-preencher">
                         <i class="fas fa-phone-alt icon"></i>
                         @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @type = "tel", id = "telefone", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '## #####-####')", placeholder = "(00) 00000-0000", maxlength = "13", required = "required" } })
+                    </div>
+                    <div>
                         @Html.ValidationMessageFor(model => model.Telefone, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -86,6 +90,8 @@
                     <div class="dados-preencher" id="containerInputConfSenha">
                         <i class="fas fa-unlock-alt icon"></i>
                         @Html.EditorFor(model => model.ConfirmarSenha, new { htmlAttributes = new { id = "confsenha", @type = "password", @class = "input-field", autocomplete = "off", placeholder = "Digite novamente sua senha", required = "required" } })
+                    </div>
+                    <div>
                         @Html.ValidationMessageFor(model => model.ConfirmarSenha, "", new { @class = "text-danger" })
                     </div>
                 </div>

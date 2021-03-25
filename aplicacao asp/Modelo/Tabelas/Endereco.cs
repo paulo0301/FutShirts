@@ -40,6 +40,6 @@ namespace Modelo.Tabelas
         [Required(AllowEmptyStrings = true)]
         public string Complemento { get; set; }
         public long UsuarioId { get; set; }
-        
+        public Usuario Usuario { get; set; }
     }
 }

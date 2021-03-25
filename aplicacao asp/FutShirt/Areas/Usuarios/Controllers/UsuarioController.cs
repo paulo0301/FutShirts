@@ -231,13 +231,8 @@ namespace FutShirt.Areas.Usuarios.Controllers
                 if (ModelState.IsValid)
                 {
                     Usuario usuario = (Usuario)Session["User"];
-                    usuarioServico.SaveUsuario(usuario);
-                    var idLastUser = usuarioServico.GetLastUsuario();
-                    if (idLastUser != null)
-                    {
-                        endereco.UsuarioId = (long)idLastUser;
-                        enderecoServico.SaveEndereco(endereco);
-                    }
+                    endereco.Usuario = usuario;
+                    enderecoServico.SaveEndereco(endereco);
                 }
                 else
                 {

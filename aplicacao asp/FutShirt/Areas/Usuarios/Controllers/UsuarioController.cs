@@ -191,7 +191,6 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
         public ActionResult CreateStepThree()
         {
-            ViewBag.estados = retornarEstados();
             return View("CreateStepThree");
         }
 
@@ -199,7 +198,6 @@ namespace FutShirt.Areas.Usuarios.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult CreateStepThree(Endereco endereco)
         {
-            ViewBag.estados = retornarEstados();
 
             try
             {

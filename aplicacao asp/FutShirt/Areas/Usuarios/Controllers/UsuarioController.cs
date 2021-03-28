@@ -279,5 +279,10 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
             return estados;
         }
+
+        public ActionResult MeusEnderecos(Usuario usuario)
+        {
+            return View("MeusEnderecos");
+        }
     }
 }

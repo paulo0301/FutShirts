@@ -313,6 +313,7 @@
     <Content Include="Areas\Usuarios\Views\Usuario\CreateStepThree.cshtml" />
     <Content Include="Areas\Usuarios\Views\MinhaConta\MeusDados.cshtml" />
     <Content Include="Areas\Usuarios\Views\Index\Index.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Usuario\MeusEnderecos.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

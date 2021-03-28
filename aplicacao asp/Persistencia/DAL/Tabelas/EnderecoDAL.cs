@@ -16,6 +16,10 @@ namespace Persistencia.DAL.Tabelas
         {
             return context.Enderecos.OrderBy(e => e.Logradouro);
         }
+        public IQueryable<Endereco> GetEnderecosByIdUsuario(long IdUsuario)
+        {
+            return context.Enderecos.Where(e => e.UsuarioId == IdUsuario);
+        }
         public void SaveEndereco(Endereco endereco)
         {
             if (endereco.Id == null)

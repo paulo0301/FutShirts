@@ -15,6 +15,10 @@ namespace Servicos.Tabelas
         {
             return enderecoDal.GetEnderecosByLogradouro();
         }
+        public IQueryable<Endereco> GetEnderecosByIdUsuario(long Id)
+        {
+            return enderecoDal.GetEnderecosByIdUsuario(Id);
+        }
         public void SaveEndereco(Endereco endereco)
         {
             enderecoDal.SaveEndereco(endereco);

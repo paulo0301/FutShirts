@@ -1,14 +1,14 @@
 var v = false;
-$("#cep").focusout(function () {
+$(".cep").focusout(function () {
     $.ajax({
         url: 'https://viacep.com.br/ws/' + $(this).val() + '/json/unicode/',
         dataType: 'json',
         success: function (resposta) {
-            $("#logradouro").val(resposta.logradouro);
-            $("#complemento").val(resposta.complemento);
-            $("#bairro").val(resposta.bairro);
-            $("#cidade").val(resposta.localidade);
-            $("#Estado").val(resposta.uf);
+            $(".logradouro").val(resposta.logradouro);
+            $(".complemento").val(resposta.complemento);
+            $(".bairro").val(resposta.bairro);
+            $(".cidade").val(resposta.localidade);
+            $(".estado").val(resposta.uf);
 
             if (resposta.erro == true) {
                 $("#errorCep").css('display', 'inline-block');
@@ -16,7 +16,7 @@ $("#cep").focusout(function () {
             }
             else {
                 $("#errorCep").css('display', 'none');
-                $("#numero").focus();
+                $(".numero").focus();
                 v = true;
             }
         }

@@ -4,6 +4,7 @@
     ViewBag.Title = "MeusEnderecos";
     Layout = "~/Areas/Usuarios/Views/Shared/_Layout.cshtml";
 }
+
 @section styles{
     <link rel="stylesheet" href="~/Content/minha_conta.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -31,11 +32,12 @@
             </div>
 
             <div class="container-enderecos-cadastrados">
-                @foreach(var item in Model) {
+                @foreach (var item in Model)
+                {
                     <div class="endereco-cadastrado">
                         <p class="cep">@item.Cep</p>
                         <p class="descricao-1">@item.Logradouro, @item.Numero @item.Complemento, @item.Bairro</p>
-                        <p class="descricao-2">@item.Cidade - @item.Estado</p>
+                        <p class="descricao-2">@item.Cidade - @item.Estado</p>s
 
                         <a class="btn btn-primary" role="button">Editar</a>
                         <a class="btn btn-danger" role="button">Apagar</a>
@@ -127,7 +129,7 @@
                 </div>
             </form>-->
 
-            
+
         </section>
     </div>
 </main>
@@ -138,4 +140,5 @@
     <script src="~/Content/js/endereço-dadospessoais.js"></script>
     <script src="~/Content/js/main.js"></script>
 }
+
 

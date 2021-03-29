@@ -14,7 +14,7 @@ namespace Persistencia.DAL.Tabelas
         private EFContext context = new EFContext();
         public IQueryable<Endereco> GetEnderecosByLogradouro()
         {
-            return context.Enderecos.OrderBy(e => e.Logradouro);
+            return context.Enderecos.Include(e => e.Usuario).OrderBy(e => e.Logradouro);
         }
         public IQueryable<Endereco> GetEnderecosByIdUsuario(long IdUsuario)
         {

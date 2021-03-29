@@ -17,11 +17,6 @@ namespace FutShirt.Areas.Usuarios.Controllers
             return View();
         }
 
-        public ActionResult MeusEnderecos()
-        {
-            int id = 10006;
-
-            return View(enderecoServico.GetEnderecosByIdUsuario(id));
-        }
+        
     }
 }

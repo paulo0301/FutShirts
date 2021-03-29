@@ -39,7 +39,8 @@ namespace Modelo.Tabelas
         [Display(Name = "Complemento")]
         public string Complemento { get; set; }
 
-        public long UsuarioId { get; set; }
+        
+        public long? UsuarioId { get; set; }
         public Usuario Usuario { get; set; }
     }
 }

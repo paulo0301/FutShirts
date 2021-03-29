@@ -46,6 +46,7 @@
     <Compile Include="Tabelas\Cartao.cs" />
     <Compile Include="Tabelas\Endereco.cs" />
     <Compile Include="Tabelas\Usuario.cs" />
+    <Compile Include="Tabelas\ViewEndereco.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,12 +33,6 @@
                 @Html.DisplayNameFor(model => model.DataNascimento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Senha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ConfirmarSenha)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.VerificacaoEmail)
             </th>
             <th>
@@ -65,21 +59,10 @@
                 @Html.DisplayFor(modelItem => item.DataNascimento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Senha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConfirmarSenha)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.VerificacaoEmail)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CodigoAtivacao)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
             </td>
         </tr>
     }

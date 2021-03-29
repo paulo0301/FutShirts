@@ -244,6 +244,7 @@
     <Content Include="Content\resultado_pesquisa.css" />
     <Content Include="Global.asax" />
     <Compile Include="Areas\Usuarios\AreasAreaRegistration.cs" />
+    <Compile Include="Areas\Usuarios\Controllers\EnderecoController.cs" />
     <Compile Include="Areas\Usuarios\Controllers\IndexController.cs" />
     <Compile Include="Areas\Usuarios\Controllers\MinhaContaController.cs" />
     <Compile Include="Areas\Usuarios\Controllers\UsuarioController.cs" />
@@ -309,7 +310,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Areas\Usuarios\Views\MinhaConta\MeusEnderecos.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Endereco\MeusEnderecos.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />

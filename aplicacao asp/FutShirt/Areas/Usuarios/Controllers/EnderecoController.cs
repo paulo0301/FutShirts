@@ -14,9 +14,10 @@ namespace FutShirt.Areas.Usuarios.Controllers
         // GET: Usuarios/Endereco
         public ActionResult MeusEnderecos()
         {
-            int id = 10008;
+            long id = 10020;
             IEnumerable<Endereco> teste = enderecoServico.GetEnderecosByIdUsuario(id);
-            return View(teste);
+            var teste2 = "123";
+            return View(teste); 
         }
     }
 }

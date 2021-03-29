@@ -15,7 +15,7 @@ namespace Persistencia.DAL.Tabelas
         //GET Usuarios
         public IQueryable<Usuario> GetUsuariosByNome()
         {
-            return context.Usuarios.Include(c => c.Enderecos).OrderBy(u => u.Nome);
+            return context.Usuarios.OrderBy(u => u.Nome);
         }
         public IQueryable<Usuario> GetUsuariosByEmail()
         {

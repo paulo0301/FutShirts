@@ -278,7 +278,11 @@ main .dados input[type="submit"]:hover {
     cursor: pointer;
     background-color: #273a03;
 }
-
+#errorCep {
+    display: none;
+    font-size: 15px;
+    color: red;
+}
 @media (max-width: 460px) {
     main section.container-enderecos form {
         width: 100%;

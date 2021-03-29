@@ -269,3 +269,9 @@ main .instrucoes-cadastro input[type="submit"]:hover{
 .visivel-inline{
     display: inline;
 }
+
+#errorCep{
+    display: none;
+    font-size: 15px;
+    color: red;
+}

@@ -168,6 +168,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
                 if (u.CodigoAtivacao == usuario.CodigoAtivacao)
                 {
                     mensagem = "Conta ativada com sucesso!";
+                    u.VerificacaoEmail = true;
                     Status = true;
                 }
                 else
@@ -190,35 +191,6 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
         public ActionResult CreateStepThree()
         {
-            ViewBag.estados = new SelectList(new object[]
-            {
-                new {Name = "Acre", Value = "AC" },
-                new {Name = "Alagoas", Value = "AL" },
-                new {Name = "Amapá", Value = "AP" },
-                new {Name = "Amazonas", Value = "AM" },
-                new {Name = "Bahia", Value = "BA" },
-                new {Name = "Ceará", Value = "CE" },
-                new {Name = "Distrito Federal", Value = "DF" },
-                new {Name = "Espírito Santo", Value = "ES" },
-                new {Name = "Goiás", Value = "GO" },
-                new {Name = "Maranhão", Value = "MA" },
-                new {Name = "Mato Grosso", Value = "MT" },
-                new {Name = "Mato Grosso do Sul", Value = "MS" },
-                new {Name = "Minas Gerais", Value = "MG" },
-                new {Name = "Pará", Value = "PA" },
-                new {Name = "Paraná", Value = "PR" },
-                new {Name = "Pernambuco", Value = "PE" },
-                new {Name = "Piauí", Value = "PI" },
-                new {Name = "Rio de Janeiro", Value = "RJ" },
-                new {Name = "Rio Grande do Norte", Value = "RN" },
-                new {Name = "Rio Grande do Sul", Value = "RS" },
-                new {Name = "Rondônia", Value = "RO" },
-                new {Name = "Roraima", Value = "RR" },
-                new {Name = "Santa Catarina", Value = "SC" },
-                new {Name = "São Paulo", Value = "SP" },
-                new {Name = "Sergipe", Value = "SE" },
-                new {Name = "Tocantins", Value = "TO" },
-            }, "Value", "Name");
             return View("CreateStepThree");
         }
 
@@ -226,6 +198,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult CreateStepThree(Endereco endereco)
         {
+
             try
             {
                 if (ModelState.IsValid)
@@ -271,5 +244,42 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
             _smtpClient.Send(_mailMessage);
         }
+
+        private SelectList retornarEstados()
+        {
+            var estados = new SelectList(new object[]
+            {
+                new {Name = "Acre", Value = "AC" },
+                new {Name = "Alagoas", Value = "AL" },
+                new {Name = "Amapá", Value = "AP" },
+                new {Name = "Amazonas", Value = "AM" },
+                new {Name = "Bahia", Value = "BA" },
+                new {Name = "Ceará", Value = "CE" },
+                new {Name = "Distrito Federal", Value = "DF" },
+                new {Name = "Espírito Santo", Value = "ES" },
+                new {Name = "Goiás", Value = "GO" },
+                new {Name = "Maranhão", Value = "MA" },
+                new {Name = "Mato Grosso", Value = "MT" },
+                new {Name = "Mato Grosso do Sul", Value = "MS" },
+                new {Name = "Minas Gerais", Value = "MG" },
+                new {Name = "Pará", Value = "PA" },
+                new {Name = "Paraná", Value = "PR" },
+                new {Name = "Pernambuco", Value = "PE" },
+                new {Name = "Piauí", Value = "PI" },
+                new {Name = "Rio de Janeiro", Value = "RJ" },
+                new {Name = "Rio Grande do Norte", Value = "RN" },
+                new {Name = "Rio Grande do Sul", Value = "RS" },
+                new {Name = "Rondônia", Value = "RO" },
+                new {Name = "Roraima", Value = "RR" },
+                new {Name = "Santa Catarina", Value = "SC" },
+                new {Name = "São Paulo", Value = "SP" },
+                new {Name = "Sergipe", Value = "SE" },
+                new {Name = "Tocantins", Value = "TO" },
+            }, "Value", "Name");
+
+            return estados;
+        }
+
+        
     }
 }

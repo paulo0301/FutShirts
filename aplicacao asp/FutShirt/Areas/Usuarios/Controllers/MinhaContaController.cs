@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Servicos.Tabelas;
+using Modelo.Tabelas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,13 @@ namespace FutShirt.Areas.Usuarios.Controllers
 {
     public class MinhaContaController : Controller
     {
+        private EnderecoServico enderecoServico = new EnderecoServico();
         // GET: MinhaConta
         public ActionResult MeusDados()
         {
             return View();
         }
+
+        
     }
 }

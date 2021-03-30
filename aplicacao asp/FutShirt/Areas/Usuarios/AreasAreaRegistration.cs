@@ -2,7 +2,7 @@
 
 namespace FutShirt.Areas.Usuarios
 {
-    public class UsuarioAreaRegistration : AreaRegistration 
+    public class AreasAreaRegistration : AreaRegistration 
     {
         public override string AreaName 
         {

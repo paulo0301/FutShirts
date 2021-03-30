@@ -1,6 +1,4 @@
-﻿@model Modelo.Tabelas.Usuario
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -12,38 +10,6 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div class="efeito">
-        <div class="login">
-            <button id="fechar" onclick="fechar()">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            @using (Html.BeginForm("Login", "Usuario", FormMethod.Post))
-            {
-                <div class="container">
-                    <h2>Já sou cliente</h2>
-                    <div>
-                        <label for="login">E-mail</label>
-                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "text", datatype = "emailadrress", id = "userEmail", autocomplete = "off", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                    </div>
-
-                    <div>
-                        <label for="senha">Senha</label>
-                        @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @type = "password", id = "userPassword", autocomplete = "off", required = "required" } })
-                        @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
-                    </div>
-
-                    <a href="">Esqueci minha senha</a>
-                </div>
-
-                <div class="container-entrar-cadastre-se">
-                    <input type="submit" id="entrar_login" value="Entrar">
-                    @Html.ActionLink("Cadastre-se", "CreateStepOne", "Usuario", new { Area = "Usuarios" }, null)
-                </div>
-            }
-        </div>
-    </div>
-    <!-- ***************************************************************** -->
     <header id="header-desktop">
         <div class="link-atendimento">
             <a href="ajuda.html"><img src="~/Content/Images/question-mark-inside-a-circle.svg" alt=""></a>
@@ -168,7 +134,6 @@
             <p class="destaque">Copyright ©2020 FutShirt Todos direitos reservados</p>
         </section>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
     @RenderSection("scripts", false)
 </body>
 </html>

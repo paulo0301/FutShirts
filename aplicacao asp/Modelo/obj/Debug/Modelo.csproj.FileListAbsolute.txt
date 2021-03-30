@@ -10,3 +10,9 @@ C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Modelo\obj\Debug\Modelo.
 C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Modelo\obj\Debug\Modelo.dll
 C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\Modelo\obj\Debug\Modelo.pdb
+C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\bin\Debug\Modelo.dll
+C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\bin\Debug\Modelo.pdb
+C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\obj\Debug\Modelo.dll
+C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\obj\Debug\Modelo.pdb

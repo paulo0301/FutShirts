@@ -59,7 +59,7 @@
                         @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @type = "text", id = "cpf", @class = "input-field", autocomplete = "off", onkeypress = "mascara(this, '###.###.###-##')", placeholder = "000.000.000-00", maxlength = "14", required = "required" } })
                     </div>
                     <div>
-                        @Html.ValidationMessageFor(model => model.Cpf, "    ", new { @class = "text-danger" })
+                        @Html.ValidationMessageFor(model => model.Cpf, "", new { @class = "text-danger" })
                         @Html.ValidationMessage("CPFExistente", new { @class = "text-danger" })
                     </div>
                 </div>

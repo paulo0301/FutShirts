@@ -1,0 +1,56 @@
+nav{
+    border-bottom: 8px solid #030F26;
+}
+/* Área de login */
+main div.login {
+    background-color: white;
+    width: 20em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    margin: 4em auto;
+}
+main form .container div {
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+}
+main form .container input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    padding: 8px 4px;
+    outline: none;
+}
+
+main form .container h2 {
+    color: #000000;
+    font-size: 2em;
+    margin-bottom: 0.8em;
+    font-weight: 400;
+}
+
+main a {
+    text-decoration: none;
+    margin: 9px 0;
+}
+
+
+main input[type="submit"]{
+    background-color: #334D01;
+    color: white;
+    width: 100%;
+    padding: 0.5em 1em;
+    border: none;
+    font-size: 18px;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+main input[type="submit"]:hover{
+    background-color: #253603;
+}

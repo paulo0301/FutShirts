@@ -62,7 +62,7 @@ header form input[type='search'] {
 }
 
 header .bt-pesquisa {
-    background: url("Images/ampliacao.svg") no-repeat center;
+    background: url("../imagens/ampliacao.svg") no-repeat center;
     position: relative;
     cursor: pointer;
     background-color: transparent;
@@ -330,106 +330,4 @@ footer p {
     footer section.vantagens ul li {
         margin: 12px 0;
     }
-}
-
-
-/* Área de login */
-
-div.efeito {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    z-index: 111111;
-    left: 0;
-    top: 0;
-    background-color: rgba(15, 15, 15, 0.70);
-    /* visibility: hidden; */
-    position: fixed;
-    overflow: hidden;
-}
-
-div.login {
-    background-color: white;
-    width: 28em;
-    height: 18em;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row-reverse;
-}
-
-form .container {
-    margin-left: 68px;
-}
-
-form .container div {
-    margin: 8px 0;
-}
-
-form .container input {
-    width: 19em;
-    padding: 8px 4px;
-    border-radius: 5px;
-    border: 1px solid black;
-}
-
-form .container h2 {
-    margin-left: 48px;
-    color: #000000;
-    font-size: 1.5em;
-}
-
-a {
-    text-decoration: none;
-}
-
-.container-entrar-cadastre-se {
-    margin-top: 20px;
-    margin-left: 116px;
-}
-
-.container-entrar-cadastre-se input[type="submit"],
-form a {
-    background-color: #334D01;
-    color: white;
-    width: max-content;
-    padding: 0.5em 1em;
-    border: none;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 300;
-}
-
-.container-entrar-cadastre-se input[type="submit"]:hover,
-form a:hover {
-    background-color: #253603;
-}
-
-form div.container a {
-    background-color: transparent;
-    padding: 0;
-    color: #3B5AC9;
-    font-size: 15px;
-    margin-left: 50px;
-}
-
-form div.container a {
-    text-decoration: underline;
-}
-
-button#fechar {
-    background-color: transparent;
-    color: black;
-    border: none;
-    font-weight: 600;
-    font-size: 28px;
-    cursor: pointer;
-    position: relative;
-    outline: none;
-    margin-bottom: 255px;
-    margin-right: 10px;
 }

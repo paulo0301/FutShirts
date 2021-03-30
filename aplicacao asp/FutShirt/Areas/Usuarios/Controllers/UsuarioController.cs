@@ -115,9 +115,14 @@ namespace FutShirt.Areas.Usuarios.Controllers
             }
         }
 
+        public ActionResult Login()
+        {
+            return View();
+        }
         //Login POST
         [HttpPost]
-        public ActionResult Login(Usuario login)
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(ViewLogin login)
         {
             string message = "";
 

@@ -1,4 +1,4 @@
-var v = false;
+var v = true;
 $(".cep").focusout(function () {
     $.ajax({
         url: 'https://viacep.com.br/ws/' + $(this).val() + '/json/unicode/',

@@ -1,92 +1,79 @@
-main > div {
+main > div{
     display: flex;
     width: 100%;
     height: 100%;
 }
 /***************************** MENU DO LADO ESQUERDO *********************/
-main div h2 {
+main div h2{
     background-color: #030F26;
     color: #fff;
-    width: 100%;
+    width: 100%;   
 }
-
-main div nav {
+main div nav{
     background-image: linear-gradient(to right,#030F26 60px, #fff 20%);
     min-width: 200px;
     border-right: 1px solid #030F26;
     padding: 120px 0 0;
 }
-
-    main div nav a {
-        color: #000;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        padding: 8px 0;
-    }
-
-        main div nav a img {
-            margin-right: 4px;
-            width: 30px;
-            padding: 0 15px;
-            box-sizing: content-box;
-        }
-
-        main div nav a:hover, main div nav a.active {
-            background-color: #030F26;
-            color: #fff;
-        }
-
-nav.voltar-index {
+main div nav a{
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    text-decoration: none;
+}
+main div nav a img{
+    margin-right: 4px;
+    width: 30px;
+    padding: 0 15px;
+    box-sizing: content-box;
+}
+main div nav a:hover, main div nav a.active{
+    background-color: #030F26;
+    color: #fff;
+}
+nav.voltar-index{
     display: none;
 }
-
-@media (max-width: 745px) {
-    main div nav {
+@media (max-width: 745px){
+    main div nav{
         display: none;
     }
-
-    nav.voltar-index {
+    nav.voltar-index{
         display: block;
     }
 }
 /************************** SECTION MEUS DADOS *****************************/
-main div.cabecalho {
+main div.cabecalho{
     margin-bottom: 0;
 }
-
-main section.container-meus-dados {
+main section.container-meus-dados{
     width: 100%;
 }
-
-main h3 img {
+main h3 img{
     width: 15px;
 }
-
-main section.container-meus-dados .dados {
+main section.container-meus-dados .dados{
     display: flex;
     width: 85%;
     border-radius: 8px;
-    margin: 1em 0 0 0;
+    margin: 1em 0 0 0 ;
     justify-content: left;
 }
-
-    main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso {
-        padding: 3em 2em 3em 1.5em;
-    }
-
-    main section.container-meus-dados .dados div div {
-        display: flex;
-        flex-direction: column;
-        margin: 1.5em 0;
-    }
-
-main .dados h4 {
+main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
+    padding: 3em 2em 3em 1.5em;
+}
+main section.container-meus-dados .dados div div{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em 0;
+}
+main .dados h4{
     font-size: 900;
     font-size: 22px;
 }
-
-main .container-meus-dados .dados input[type="text"], main .container-meus-dados .dados input[type="email"], main .container-meus-dados .dados input[type="password"] {
+main .container-meus-dados .dados input[type="text"], main .container-meus-dados .dados input[type="email"], main .container-meus-dados .dados input[type="password"]{
     width: 22em;
     outline: none;
     padding: 5px;
@@ -94,22 +81,18 @@ main .container-meus-dados .dados input[type="text"], main .container-meus-dados
     border: none;
     border-bottom: 1px solid black;
 }
-
-main .dados label, main section.container-enderecos label {
+main .dados label, main section.container-enderecos label{
     font-size: 19px;
     font-weight: 500;
 }
-
-main section.container-meus-dados .dados div div .container-sexo {
+main section.container-meus-dados .dados div div .container-sexo{
     flex-direction: row;
     margin: 0;
 }
-
-    main section.container-meus-dados .dados div div .container-sexo label {
-        margin: 0 10px;
-    }
-
-main section.container-meus-dados input[type="submit"], main section.container-enderecos input[type="submit"] {
+main section.container-meus-dados .dados div div .container-sexo label{
+    margin: 0 10px;
+}
+main section.container-meus-dados input[type="submit"], main section.container-enderecos input[type="submit"]{
     padding: 10px;
     background-color: #334D01;
     border: none;
@@ -120,74 +103,63 @@ main section.container-meus-dados input[type="submit"], main section.container-e
     float: right;
     cursor: pointer;
 }
-
-@media (max-width: 1105px) {
-    main section.container-meus-dados .dados {
+@media (max-width: 1105px){
+    main section.container-meus-dados .dados{
         flex-wrap: wrap;
     }
-
-        main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso {
-            padding: 0 2em 3em 1.5em;
-        }
+    main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
+        padding: 0 2em 3em 1.5em;
+    }
 }
-
-@media (max-width: 455px) {
-    main section.container-meus-dados .dados {
+@media (max-width: 455px){
+    main section.container-meus-dados .dados{
         width: 100%;
         justify-content: center;
         width: 100%;
     }
-
-        main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso {
-            padding: 0 1em 1em;
-            width: 100%;
-        }
-
-    main .dados input[type="text"], main .dados input[type="email"], main .dados input[type="password"], main section.container-enderecos input[type="text"] {
+    main section.container-meus-dados .dados .dados-pessoais, main section.container-meus-dados .dados .dados-acesso{
+        padding: 0 1em 1em;
+        width: 100%;
+    }
+    main .dados input[type="text"], main .dados input[type="email"], main .dados input[type="password"], main section.container-enderecos input[type="text"]{
         width: 100%;
     }
 }
 /*********************** SECTION ENDERECOS *************************/
-main section.container-enderecos {
+main section.container-enderecos{
     width: 100%;
 }
-
-    main section.container-enderecos input[type="submit"] {
-        float: none;
-        margin-top: 10px;
-    }
-
-    main section.container-enderecos form.panel input[type="submit"] {
-        margin-bottom: 20px;
-    }
-
-main .dados {
+main section.container-enderecos input[type="submit"]{
+    float: none;
+    margin-top: 10px;
+}
+main section.container-enderecos form.panel input[type="submit"]{
+    margin-bottom: 20px;
+}
+main .dados{
     max-width: 30rem;
     width: 25em;
     margin: 2em auto 0 20%;
 }
-
-.container-enderecos-cadastrados {
+.container-enderecos-cadastrados{
     display: flex;
     margin: 1.5em 5% 0;
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
 }
-
-    .container-enderecos-cadastrados .endereco-cadastrado {
-        padding: 25px;
-        margin: 0 10px 20px;
-        padding-bottom: 10px;
-        border: 2px solid #030F26;
-        border-radius: 6px;
-    }
-
-.endereco-cadastrado .cep {
+.container-enderecos-cadastrados .endereco-cadastrado{
+    padding: 25px;
+    min-width: 360px;
+    margin: 0 10px 20px;
+    padding-bottom: 10px;
+    border: 2px solid #030F26;
+    border-radius: 6px;
+}
+.endereco-cadastrado .cep{
     font-weight: 700;
 }
-
-.endereco-cadastrado button {
+.endereco-cadastrado button{
     float: right;
     margin-top: 6px;
     background-color: #030F26;
@@ -198,24 +170,23 @@ main .dados {
     outline: none;
     cursor: pointer;
 }
-
-main .dados-cadastro {
+main .dados-cadastro{
     text-align: left;
 }
 
-    main .dados-cadastro label {
-        font-size: 1.2rem;
-        display: inline-block;
-    }
+main .dados-cadastro label{
+    font-size: 1.2rem;
+    display: inline-block;
+}
 
-    main .dados-cadastro .dados-preencher {
-        display: flex;
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
+main .dados-cadastro .dados-preencher {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
 main .dados-preencher .icon {
-    padding: 12px 0;
+    padding: 12px 0; 
     min-width: 50px;
     text-align: center;
     font-size: 1.4rem;
@@ -224,8 +195,8 @@ main .dados-preencher .icon {
     border: 1px solid #ced4da;
     border-right: none;
     border-radius: 5px 0px 0px 5px;
-}
-
+  }
+  
 main .dados-preencher .input-field {
     width: 100%;
     padding: 10px;
@@ -235,13 +206,11 @@ main .dados-preencher .input-field {
     border: 1px solid #ced4da;
     border-left: none;
     border-radius: 0px 5px 5px 0px;
-}
-
-    main .dados-preencher .input-field:focus {
-        outline: 0;
-    }
-
-main .dados-preencher .select-field {
+  }
+  main .dados-preencher .input-field:focus {
+    outline: 0;
+  }
+  main .dados-preencher .select-field {
     width: 100%;
     padding: 10px;
     outline: none;
@@ -250,246 +219,230 @@ main .dados-preencher .select-field {
     border: 1px solid #ced4da;
     border-left: none;
     border-radius: 0px 5px 5px 0px;
-}
-
-    main .dados-preencher .select-field:focus {
-        outline: 0;
-    }
-
-.bt-container {
+  }
+  main .dados-preencher .select-field:focus {
+    outline: 0;
+  }
+.bt-container{
     display: flex;
     width: 100%;
     justify-content: flex-end;
     margin-bottom: 1em;
 }
-
-main .dados input[type=submit] {
+main .dados input[type=submit]{    
     font-size: 1.1rem;
     width: 170px;
     height: 50px;
     outline: none;
-    background-color: #334D01;
+    background-color:#334D01;
     border: none;
     border-radius: 6px;
     color: #fefefe;
 }
-
-main .dados input[type="submit"]:hover {
+main .dados input[type="submit"]:hover{
     cursor: pointer;
     background-color: #273a03;
 }
-#errorCep {
-    display: none;
-    font-size: 15px;
-    color: red;
+main .endereco-cadastrado div{
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+    main .endereco-cadastrado div a{
+        text-decoration: none;
+    }
+    main .endereco-cadastrado div a:first-child {
+        margin-right: 5px;
+    }
+main .btn-editar {
+    padding: 8px 15px;
+    background-color: #030F26;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+main .btn-apagar {
+    padding: 8px 15px;
+    background-color: darkred;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
 }
 @media (max-width: 460px) {
-    main section.container-enderecos form {
+    main section.container-enderecos form{
         width: 100%;
         padding: 0 1em 0;
     }
 }
 /************************* SECTION MEUS PEDIDOS **********************/
-main section.container-meus-pedidos {
+main section.container-meus-pedidos{
     width: 100%;
 }
-
-    main section.container-meus-pedidos .container-pedido, main section.container-meus-favoritos .container-favorito {
-        display: flex;
-        margin: 1em 0 20px 1.2em;
-    }
-
-        main section.container-meus-pedidos .container-pedido .container-descricao, main section.container-meus-favoritos .container-favorito .container-descricao {
-            margin-left: 20px;
-        }
-
-            main section.container-meus-pedidos .container-pedido .container-descricao p, main section.container-meus-favoritos .container-favorito .container-descricao p {
-                margin-bottom: 30px;
-            }
-
-            main section.container-meus-pedidos .container-pedido .container-descricao .titulo, main section.container-meus-favoritos .container-favorito .container-descricao .titulo {
-                font-weight: bold;
-                font-size: 25px;
-                letter-spacing: 2px;
-            }
-
-            main section.container-meus-pedidos .container-pedido .container-descricao .data-de-compra, main section.container-meus-favoritos .container-favorito .container-descricao .data-de-compra {
-                font-weight: 500;
-                font-size: 20px;
-            }
-
-            main section.container-meus-pedidos .container-pedido .container-descricao .status, main section.container-meus-favoritos .container-favorito .container-descricao .status {
-                font-size: 20px;
-                font-weight: 400;
-            }
-
-                main section.container-meus-pedidos .container-pedido .container-descricao .status .recebido, main section.container-meus-favoritos .container-favorito .container-descricao .status .recebido {
-                    color: green;
-                }
-
-                main section.container-meus-pedidos .container-pedido .container-descricao .status .nao-recebido, main section.container-meus-favoritos .container-favorito .container-descricao .status .nao-recebido {
-                    color: red;
-                }
-
-            main section.container-meus-pedidos .container-pedido .container-descricao .preco, main section.container-meus-favoritos .container-favorito .container-descricao .preco {
-                font-weight: bold;
-                font-size: 23px;
-            }
-
-@media (max-width: 455px) {
-    main section.container-meus-pedidos .container-pedido figure img, main section.container-meus-favoritos .container-favorito figure img {
+main section.container-meus-pedidos .container-pedido, main section.container-meus-favoritos .container-favorito{
+    display: flex;
+    margin: 1em 0 20px 1.2em;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao, main section.container-meus-favoritos .container-favorito .container-descricao{
+    margin-left: 20px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao p, main section.container-meus-favoritos .container-favorito .container-descricao p{
+    margin-bottom: 30px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .titulo, main section.container-meus-favoritos .container-favorito .container-descricao .titulo{
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .data-de-compra, main section.container-meus-favoritos .container-favorito .container-descricao .data-de-compra{
+    font-weight: 500;
+    font-size: 20px;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .status, main section.container-meus-favoritos .container-favorito .container-descricao .status{
+    font-size: 20px;
+    font-weight: 400;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .status .recebido, main section.container-meus-favoritos .container-favorito .container-descricao .status .recebido{
+    color: green;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .status .nao-recebido, main section.container-meus-favoritos .container-favorito .container-descricao .status .nao-recebido{
+    color: red;
+}
+main section.container-meus-pedidos .container-pedido .container-descricao .preco, main section.container-meus-favoritos .container-favorito .container-descricao .preco{
+    font-weight: bold;
+    font-size: 23px;
+}
+@media (max-width: 455px){
+    main section.container-meus-pedidos .container-pedido figure img, main section.container-meus-favoritos .container-favorito figure img{
         max-width: 150px;
     }
-
-    main section.container-meus-pedidos .container-pedido .container-descricao p, main section.container-meus-favoritos .container-favorito .container-descricao p {
+    main section.container-meus-pedidos .container-pedido .container-descricao p, main section.container-meus-favoritos .container-favorito .container-descricao p{
         margin-bottom: 5px;
     }
 }
-
-@media (max-width: 370px) {
-    main section.container-meus-pedidos .container-pedido figure img, main section.container-meus-favoritos .container-favorito figure img {
+@media (max-width: 370px){
+    main section.container-meus-pedidos .container-pedido figure img, main section.container-meus-favoritos .container-favorito figure img{
         max-width: 120px;
     }
 }
 /************************* SECTION MEUS FAVORITOS **********************/
-main section.container-meus-favoritos {
+main section.container-meus-favoritos{
     width: 100%;
 }
-
-    main section.container-meus-favoritos button {
-        background-color: transparent;
-        border: none;
-        outline: none;
-        margin-top: 37px;
-        cursor: pointer;
-    }
-
-    main section.container-meus-favoritos .lixeira {
-        width: 40px;
-    }
-
-@media (max-width: 455px) {
-    main section.container-meus-favoritos button {
+main section.container-meus-favoritos button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-top: 37px;
+    cursor: pointer;
+}
+main section.container-meus-favoritos .lixeira{
+    width: 40px;
+}
+@media (max-width: 455px){
+    main section.container-meus-favoritos button{
         margin-top: 0;
     }
 }
 /************************* SECTION MEUS CARTOES **********************/
-main section.container-meus-cartoes {
+main section.container-meus-cartoes{
     width: 100%;
 }
-
-    main section.container-meus-cartoes .cartoes-cadastrados {
-        width: 80%;
-        margin: 1em 0;
-        border-radius: 5px;
-        padding: 1em 1.2em;
-    }
-
-.cartoes-cadastrados .cartao-cadastrado {
+main section.container-meus-cartoes .cartoes-cadastrados{
+    width: 80%;
+    margin: 1em 0;
+    border-radius: 5px;
+    padding: 1em 1.2em;
+}
+.cartoes-cadastrados .cartao-cadastrado{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 1em 0;
     padding-bottom: 10px;
 }
-
-    .cartoes-cadastrados .cartao-cadastrado > div {
-        display: flex;
-        align-items: center;
-    }
-
-    .cartoes-cadastrados .cartao-cadastrado .bandeira {
-        margin-right: 10px;
-    }
-
-        .cartoes-cadastrados .cartao-cadastrado .bandeira img {
-            width: 100px;
-            vertical-align: middle;
-        }
-
-.cartao-cadastrado .lixeira-editar button {
+.cartoes-cadastrados .cartao-cadastrado > div{
+    display: flex;
+    align-items: center;
+}
+.cartoes-cadastrados .cartao-cadastrado .bandeira{
+    margin-right: 10px;
+}
+.cartoes-cadastrados .cartao-cadastrado .bandeira img{
+    width: 100px;
+    vertical-align: middle;
+}
+.cartao-cadastrado .lixeira-editar button{
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
 }
-
-.cartao-cadastrado .lixeira-editar img {
+.cartao-cadastrado .lixeira-editar img{
     width: 35px;
     margin: 0 5px;
     vertical-align: middle;
 }
-
-.cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-1 {
+.cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-1{
     font-weight: 800;
     font-size: 18px;
 }
 
-.container-meus-cartoes form {
+.container-meus-cartoes form{
     width: max-content;
     margin: 0 1.5em;
     display: none;
 }
-
-    .container-meus-cartoes form div {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-    }
-
-        .container-meus-cartoes form div label {
-            font-weight: 600;
-            font-size: 18px;
-            margin-bottom: 3px;
-        }
-
-        .container-meus-cartoes form div input[type="text"] {
-            width: 22em;
-            padding: 2px 3px;
-            font-size: 17px;
-            border: none;
-            border-bottom: 1px solid #030F26;
-            outline: none;
-        }
-
-    .container-meus-cartoes form input[type="submit"] {
-        padding: 8px 20px;
-        font-weight: 600;
-        background-color: #334D01;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        margin-bottom: 20px;
-    }
-
-@media (max-width: 510px) {
-    main section.container-meus-cartoes .cartoes-cadastrados {
+.container-meus-cartoes form div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.container-meus-cartoes form div label{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.container-meus-cartoes form div input[type="text"]{
+    width: 22em;
+    padding: 2px 3px;
+    font-size: 17px;
+    border: none;
+    border-bottom: 1px solid #030F26;
+    outline: none;
+}
+.container-meus-cartoes form input[type="submit"]{
+    padding: 8px 20px;
+    font-weight: 600;
+    background-color: #334D01;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+@media (max-width: 510px){
+    main section.container-meus-cartoes .cartoes-cadastrados{
         width: 100%;
     }
 }
-
-@media (max-width: 425px) {
-    .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-1, .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-2, .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-3 {
+@media (max-width: 425px){
+    .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-1, .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-2, .cartoes-cadastrados .cartao-cadastrado .informacoes-cartao .informacao-3{
         font-size: 15px;
     }
-
-    .container-meus-cartoes form {
+    .container-meus-cartoes form{
         width: 90%;
         margin: 0 auto;
     }
-
-        .container-meus-cartoes form div input[type="text"] {
-            width: 100%;
-        }
+    .container-meus-cartoes form div input[type="text"]{
+        width: 100%;
+    }
 }
-
-@media (max-width: 375px) {
-    .cartoes-cadastrados .cartao-cadastrado > div {
+@media (max-width: 375px){
+    .cartoes-cadastrados .cartao-cadastrado > div{
         align-items: flex-start;
     }
 }
 /* bt submit */
-main .bt-submit-container {
+main .bt-submit-container{
     display: flex;
     width: 100%;
     justify-content: flex-end;

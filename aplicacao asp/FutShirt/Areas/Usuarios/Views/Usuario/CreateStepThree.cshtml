@@ -25,7 +25,7 @@
                 @Html.LabelFor(model => model.Cep)
                 <div class="dados-preencher">
                     <i class="fas fa-map-marker-alt icon"></i>
-                    @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @type = "text", id = "cep", @class = "input-field", autocomplete = "off", placeholder = "Digite seu CEP", onkeypress = "mascara(this, '#####-###')", maxlength = "9", required = "required" , } })
+                    @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @type = "text", id = "cep", @class = "input-field cep", autocomplete = "off", placeholder = "Digite seu CEP", onkeypress = "mascara(this, '#####-###')", maxlength = "9", required = "required" , } })
                 </div>
                 <div>
                     @Html.ValidationMessageFor(model => model.Cep, "", new { @class = "text-danger" })
@@ -36,14 +36,14 @@
                 @Html.LabelFor(model => model.Estado)
                 <div class="dados-preencher">
                     <i class="fas fa-map-marked-alt icon"></i>
-                    @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @type = "text", id = "Estado", @class = "input-field", @readonly = "readonly", autocomplete = "off", placeholder = "Estado", required = "required" } })
+                    @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @type = "text", id = "estado", @class = "input-field estado", @readonly = "readonly", autocomplete = "off", placeholder = "Estado", required = "required" } })
                 </div>
             </div>
             <div class="dados-cadastro">
                 @Html.LabelFor(model => model.Cidade)
                 <div class="dados-preencher">
                     <i class="fas fa-map-marked-alt icon"></i>
-                    @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @type = "text", id = "cidade", @class = "input-field", @readonly="readonly", autocomplete = "off", placeholder = "Cidade", required = "required" } })
+                    @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @type = "text", id = "cidade", @class = "input-field cidade", @readonly="readonly", autocomplete = "off", placeholder = "Cidade", required = "required" } })
                 </div>
                 <div>
                     @Html.ValidationMessageFor(model => model.Cidade, "", new { @class = "text-danger" })
@@ -53,7 +53,7 @@
                 @Html.LabelFor(model => model.Bairro)
                 <div class="dados-preencher">
                     <i class="fas fa-road icon"></i>
-                    @Html.EditorFor(model => model.Bairro, new { htmlAttributes = new { @type = "text", id = "bairro", @class = "input-field", @readonly = "readonly", autocomplete = "off", placeholder = "Bairro", required = "required" } })
+                    @Html.EditorFor(model => model.Bairro, new { htmlAttributes = new { @type = "text", id = "bairro", @class = "input-field bairro", @readonly = "readonly", autocomplete = "off", placeholder = "Bairro", required = "required" } })
                 </div>
                 <div>
                     @Html.ValidationMessageFor(model => model.Bairro, "", new { @class = "text-danger" })
@@ -63,7 +63,7 @@
                 @Html.LabelFor(model => model.Logradouro)
                 <div class="dados-preencher">
                     <i class="fas fa-road icon"></i>
-                    @Html.EditorFor(model => model.Logradouro, new { htmlAttributes = new { @type = "text", id = "logradouro", @class = "input-field", @readonly = "readonly", autocomplete = "off", placeholder = "Logradouro", required = "required" } })
+                    @Html.EditorFor(model => model.Logradouro, new { htmlAttributes = new { @type = "text", id = "logradouro", @class = "input-field logradouro", @readonly = "readonly", autocomplete = "off", placeholder = "Logradouro", required = "required" } })
                 </div>
                 <div>
                     @Html.ValidationMessageFor(model => model.Logradouro, "", new { @class = "text-danger" })

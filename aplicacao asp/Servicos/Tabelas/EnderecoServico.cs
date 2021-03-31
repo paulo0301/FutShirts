@@ -15,11 +15,11 @@ namespace Servicos.Tabelas
         {
             return enderecoDal.GetEnderecosByLogradouro();
         }
-        public Endereco GetEnderecosById(long Id)
+        public Endereco GetEnderecosById(long? Id)
         {
             return enderecoDal.GetEnderecosById(Id);
         }
-        public IQueryable<Endereco> GetEnderecosByIdUsuario(long Id)
+        public IQueryable<Endereco> GetEnderecosByIdUsuario(long? Id)
         {
             return enderecoDal.GetEnderecosByIdUsuario(Id);
         }

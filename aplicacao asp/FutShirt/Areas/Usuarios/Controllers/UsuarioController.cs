@@ -18,6 +18,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
     {
         private UsuarioServico usuarioServico = new UsuarioServico();
         private EnderecoServico enderecoServico = new EnderecoServico();
+        
         // GET: Usuario
         public ActionResult Index()
         {
@@ -126,14 +127,14 @@ namespace FutShirt.Areas.Usuarios.Controllers
         {
             string message = "";
 
-            var v = usuarioServico.GetUsuariosByEmail().Where(a => a.Email == login.Email).FirstOrDefault();
+            Usuario v = usuarioServico.GetUsuariosByEmail().Where(a => a.Email == login.Email).FirstOrDefault();
             if (v != null)
             {
                 login.Senha = Crypto.Hash(login.Senha);
                 if (string.Compare(login.Senha, v.Senha) == 0)
                 {
-                    Session["User"] = login;
-                    return RedirectToAction("Index", "Usuario");
+                    Session["User"] = v;
+                    return RedirectToAction("Index", "Index");
                 }
                 else
                 {

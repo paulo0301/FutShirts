@@ -16,11 +16,11 @@ namespace Persistencia.DAL.Tabelas
         {
             return context.Enderecos.Include(e => e.Usuario).OrderBy(e => e.Logradouro);
         }
-        public Endereco GetEnderecosById(long Id)
+        public Endereco GetEnderecosById(long? Id)
         {
             return context.Enderecos.Where(e => e.Id == Id).First();
         }
-        public IQueryable<Endereco> GetEnderecosByIdUsuario(long IdUsuario)
+        public IQueryable<Endereco> GetEnderecosByIdUsuario(long? IdUsuario)
         {
             return context.Enderecos.Where(e => e.UsuarioId == IdUsuario).Include(e => e.Usuario).OrderBy(e => e.Id);
         }

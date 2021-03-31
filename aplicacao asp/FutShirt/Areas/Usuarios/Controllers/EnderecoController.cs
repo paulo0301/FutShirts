@@ -14,7 +14,8 @@ namespace FutShirt.Areas.Usuarios.Controllers
         // GET: Usuarios/Endereco
         public ActionResult MeusEnderecos()
         {
-            long id = 10009;
+            Usuario usuario = (Usuario)Session["User"];
+            long? id = usuario.Id;
             IEnumerable<Endereco> teste = enderecoServico.GetEnderecosByIdUsuario(id);
             return View(teste); 
         }
@@ -71,7 +72,8 @@ namespace FutShirt.Areas.Usuarios.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    endereco.UsuarioId = 10009;
+                    Usuario usuario = (Usuario)Session["User"];
+                    endereco.UsuarioId = usuario.Id;
                     enderecoServico.SaveEndereco(endereco);
                 }
                 else

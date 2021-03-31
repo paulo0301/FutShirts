@@ -26,14 +26,13 @@
             </form>
 
             <div>
-                <div class="area-de-acesso">
-                    <img src="~/Content/Images/avatar.svg" alt="user">
-                    <div>
-                        @Html.ActionLink("Entre", "Login", "Usuario", new { Area = "Usuarios" }, null)
-                        @Html.ActionLink("Cadastre-se", "CreateStepOne", "Usuario", new { Area = "Usuarios" }, null)
+                    <div class="area-de-acesso">
+                        <img src="~/Content/Images/avatar.svg" alt="user">
+                        <div>
+                            @Html.ActionLink("Entre", "Login", "Usuario", new { Area = "Usuarios" }, null)
+                            @Html.ActionLink("Cadastre-se", "CreateStepOne", "Usuario", new { Area = "Usuarios" }, null)
+                        </div>
                     </div>
-                </div>
-
                 <a href="carrinho.html" class="sacola"><img src="~/Content/Images/sacola-de-compras.svg" alt="sacola de compras" /></a>
             </div>
         </div>

@@ -25,7 +25,30 @@
                 <input class="bt-pesquisa" type="submit" value="">
             </form>
 
-            <div>
+            <div> 
+                @if (Request.IsAuthenticated)
+                {
+                    <div>
+                        <ul>
+                            <li>
+                                <img src="~/Content/Images/avatar.svg" alt="user">
+                                <a>Minha conta</a>
+                                <ul>
+                                    <li><a href="#">Meus dados</a></li>
+                                    <li><a href="@Url.Action("MeusEnderecos", "Endereco")">Meus endereços</a></li>
+                                    <li>
+                                        @using (Html.BeginForm("LogOff", "Usuario", FormMethod.Post))
+                                        {
+                                        <span><input type="submit" value="Sair"/></span>
+                                        }
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                                        }
+                else
+                                        {
                     <div class="area-de-acesso">
                         <img src="~/Content/Images/avatar.svg" alt="user">
                         <div>
@@ -33,6 +56,7 @@
                             @Html.ActionLink("Cadastre-se", "CreateStepOne", "Usuario", new { Area = "Usuarios" }, null)
                         </div>
                     </div>
+                }
                 <a href="carrinho.html" class="sacola"><img src="~/Content/Images/sacola-de-compras.svg" alt="sacola de compras" /></a>
             </div>
         </div>

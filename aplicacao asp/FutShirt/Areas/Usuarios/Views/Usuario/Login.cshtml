@@ -9,7 +9,7 @@
 }
 <main>
     <div class="login">
-        @using (Html.BeginForm("Login", "Usuario", FormMethod.Post))
+        @using (Html.BeginForm("Login", "Usuario", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
         {
         <div class="container">
             <h2>Entre e aproveite!</h2>

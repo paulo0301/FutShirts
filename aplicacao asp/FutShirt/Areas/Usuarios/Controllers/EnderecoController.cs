@@ -12,12 +12,85 @@ namespace FutShirt.Areas.Usuarios.Controllers
     {
         private EnderecoServico enderecoServico = new EnderecoServico();
         // GET: Usuarios/Endereco
+        [Authorize]
         public ActionResult MeusEnderecos()
         {
-            long id = 10020;
+            Usuario usuario = (Usuario)Session["User"];
+            long? id = usuario.Id;
             IEnumerable<Endereco> teste = enderecoServico.GetEnderecosByIdUsuario(id);
-            var teste2 = "123";
             return View(teste); 
+        }
+
+        [Authorize]
+        public ActionResult CreateEndereco()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateEndereco(Endereco endereco)
+        {
+            return GravarEndereco(endereco);
+        }
+
+        [Authorize]
+        public ActionResult EditEndereco(long Id)
+        {
+            Endereco endereco = enderecoServico.GetEnderecosById(Id);
+            return View(endereco);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditEndereco(Endereco endereco)
+        {
+            return GravarEndereco(endereco);
+        }
+
+        [Authorize]
+        public ActionResult DeleteEndereco(long Id)
+        {
+            Endereco endereco = enderecoServico.GetEnderecosById(Id);
+            return View(endereco);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteEnderecoP(long Id)
+        {
+            try { 
+                enderecoServico.EliminarProdutoPorId(Id);
+                return RedirectToAction("MeusEnderecos");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        public ActionResult GravarEndereco(Endereco endereco)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Usuario usuario = (Usuario)Session["User"];
+                    endereco.UsuarioId = usuario.Id;
+                    enderecoServico.SaveEndereco(endereco);
+                }
+                else
+                {
+                    return View();
+                }
+
+                return RedirectToAction("MeusEnderecos");
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }

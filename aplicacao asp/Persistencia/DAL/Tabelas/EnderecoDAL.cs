@@ -16,9 +16,12 @@ namespace Persistencia.DAL.Tabelas
         {
             return context.Enderecos.Include(e => e.Usuario).OrderBy(e => e.Logradouro);
         }
-        public IQueryable<Endereco> GetEnderecosByIdUsuario(long IdUsuario)
+        public Endereco GetEnderecosById(long? Id)
         {
-            var teste = "123";
+            return context.Enderecos.Where(e => e.Id == Id).First();
+        }
+        public IQueryable<Endereco> GetEnderecosByIdUsuario(long? IdUsuario)
+        {
             return context.Enderecos.Where(e => e.UsuarioId == IdUsuario).Include(e => e.Usuario).OrderBy(e => e.Id);
         }
         public void SaveEndereco(Endereco endereco)
@@ -32,6 +35,14 @@ namespace Persistencia.DAL.Tabelas
                 context.Entry(endereco).State = EntityState.Modified;
             }
             context.SaveChanges();
+        }
+
+        public Endereco EliminarProdutoPorId(long id)
+        {
+            Endereco endereco = GetEnderecosById(id);
+            context.Enderecos.Remove(endereco);
+            context.SaveChanges();
+            return endereco;
         }
     }
 }

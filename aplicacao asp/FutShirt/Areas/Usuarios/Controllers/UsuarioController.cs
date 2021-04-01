@@ -18,12 +18,15 @@ namespace FutShirt.Areas.Usuarios.Controllers
     {
         private UsuarioServico usuarioServico = new UsuarioServico();
         private EnderecoServico enderecoServico = new EnderecoServico();
+        
         // GET: Usuario
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(usuarioServico.GetUsuariosByNome());
         }
         // GET: Usuario/Create
+        [AllowAnonymous]
         public ActionResult CreateStepOne()
         {
             return View("CreateStepOne");
@@ -31,6 +34,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
         // POST: Usuario/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult CreateStepOne([Bind(Exclude = "VerificacaoEmail, CodigoAtivacao")] Usuario usuario)
         {
             #region
@@ -114,37 +118,9 @@ namespace FutShirt.Areas.Usuarios.Controllers
                 return View();
             }
         }
+        
 
-        //Login POST
-        [HttpPost]
-        public ActionResult Login(Usuario login)
-        {
-            string message = "";
-
-            var v = usuarioServico.GetUsuariosByEmail().Where(a => a.Email == login.Email).FirstOrDefault();
-            if (v != null)
-            {
-                login.Senha = Crypto.Hash(login.Senha);
-                if (string.Compare(login.Senha, v.Senha) == 0)
-                {
-                    Session["User"] = login;
-                    return RedirectToAction("Index", "Usuario");
-                }
-                else
-                {
-                    message = "E-mail ou senha inválida";
-                }
-            }
-            else
-            {
-                message = "E-mail ou senha inválida";
-            }
-
-
-            ViewBag.Message = message;
-            return View();
-        }
-
+        [AllowAnonymous]
         public ActionResult CreateStepTwo()
         {
             Usuario UserCode = new Usuario();
@@ -156,6 +132,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult CreateStepTwo(Usuario usuario)
         {
             try
@@ -189,6 +166,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
             }
         }
 
+        [AllowAnonymous]
         public ActionResult CreateStepThree()
         {
             return View("CreateStepThree");
@@ -196,6 +174,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult CreateStepThree(Endereco endereco)
         {
 
@@ -218,6 +197,61 @@ namespace FutShirt.Areas.Usuarios.Controllers
             {
                 return View();
             }
+        }
+
+        [AllowAnonymous]
+        public ActionResult Login(string returnUrl)
+        {
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
+        }
+
+        //Login POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [AllowAnonymous]
+        public ActionResult Login(ViewLogin login, string returnUrl)
+        {
+            string message = "";
+
+            Usuario v = usuarioServico.GetUsuariosByEmail().Where(a => a.Email == login.Email).FirstOrDefault();
+            if (v != null)
+            {
+                login.Senha = Crypto.Hash(login.Senha);
+                if (string.Compare(login.Senha, v.Senha) == 0)
+                {
+                    FormsAuthentication.SetAuthCookie(login.Email, false);
+                    Session["User"] = v;
+                    if (Url.IsLocalUrl(returnUrl))
+                    {
+                        return Redirect(returnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Index");
+                    }
+                }
+                else
+                {
+                    message = "E-mail ou senha inválida";
+                }
+            }
+            else
+            {
+                message = "E-mail ou senha inválida";
+            }
+
+
+            ViewBag.Message = message;
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult LogOff()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Index");
         }
         //Verificar conta
         [NonAction]
@@ -243,43 +277,6 @@ namespace FutShirt.Areas.Usuarios.Controllers
             _smtpClient.EnableSsl = true;
 
             _smtpClient.Send(_mailMessage);
-        }
-
-        private SelectList retornarEstados()
-        {
-            var estados = new SelectList(new object[]
-            {
-                new {Name = "Acre", Value = "AC" },
-                new {Name = "Alagoas", Value = "AL" },
-                new {Name = "Amapá", Value = "AP" },
-                new {Name = "Amazonas", Value = "AM" },
-                new {Name = "Bahia", Value = "BA" },
-                new {Name = "Ceará", Value = "CE" },
-                new {Name = "Distrito Federal", Value = "DF" },
-                new {Name = "Espírito Santo", Value = "ES" },
-                new {Name = "Goiás", Value = "GO" },
-                new {Name = "Maranhão", Value = "MA" },
-                new {Name = "Mato Grosso", Value = "MT" },
-                new {Name = "Mato Grosso do Sul", Value = "MS" },
-                new {Name = "Minas Gerais", Value = "MG" },
-                new {Name = "Pará", Value = "PA" },
-                new {Name = "Paraná", Value = "PR" },
-                new {Name = "Pernambuco", Value = "PE" },
-                new {Name = "Piauí", Value = "PI" },
-                new {Name = "Rio de Janeiro", Value = "RJ" },
-                new {Name = "Rio Grande do Norte", Value = "RN" },
-                new {Name = "Rio Grande do Sul", Value = "RS" },
-                new {Name = "Rondônia", Value = "RO" },
-                new {Name = "Roraima", Value = "RR" },
-                new {Name = "Santa Catarina", Value = "SC" },
-                new {Name = "São Paulo", Value = "SP" },
-                new {Name = "Sergipe", Value = "SE" },
-                new {Name = "Tocantins", Value = "TO" },
-            }, "Value", "Name");
-
-            return estados;
-        }
-
-        
+        }        
     }
 }

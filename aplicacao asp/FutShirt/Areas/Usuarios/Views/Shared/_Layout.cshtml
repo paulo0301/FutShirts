@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg" href="~/Content/Images/logo-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" />-->
     <link rel="stylesheet" href="~/Content/main.css">
     <link rel="stylesheet" href="~/Content/header-footer.css">
     @RenderSection("styles", false)
@@ -24,15 +25,38 @@
                 <input class="bt-pesquisa" type="submit" value="">
             </form>
 
-            <div>
-                <div class="area-de-acesso">
-                    <img src="~/Content/Images/avatar.svg" alt="user">
+            <div> 
+                @if (Request.IsAuthenticated)
+                {
                     <div>
-                        <button id="entrar" onclick="abrir()">Entrar</button>
-                        @Html.ActionLink("Cadastre-se", "CreateStepOne", "Usuario", new { Area = "Usuarios" }, null)
+                        <ul>
+                            <li>
+                                <img src="~/Content/Images/avatar.svg" alt="user">
+                                <a>Minha conta</a>
+                                <ul>
+                                    <li><a href="#">Meus dados</a></li>
+                                    <li><a href="@Url.Action("MeusEnderecos", "Endereco")">Meus endereços</a></li>
+                                    <li>
+                                        @using (Html.BeginForm("LogOff", "Usuario", FormMethod.Post))
+                                        {
+                                        <span><input type="submit" value="Sair"/></span>
+                                        }
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-
+                                        }
+                else
+                                        {
+                    <div class="area-de-acesso">
+                        <img src="~/Content/Images/avatar.svg" alt="user">
+                        <div>
+                            @Html.ActionLink("Entre", "Login", "Usuario", new { Area = "Usuarios" }, null)
+                            @Html.ActionLink("Cadastre-se", "CreateStepOne", "Usuario", new { Area = "Usuarios" }, null)
+                        </div>
+                    </div>
+                }
                 <a href="carrinho.html" class="sacola"><img src="~/Content/Images/sacola-de-compras.svg" alt="sacola de compras" /></a>
             </div>
         </div>
@@ -134,6 +158,8 @@
             <p class="destaque">Copyright ©2020 FutShirt Todos direitos reservados</p>
         </section>
     </footer>
+    <script src="@Url.Content("~/Scripts/jquery-3.6.0.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
     @RenderSection("scripts", false)
 </body>
 </html>

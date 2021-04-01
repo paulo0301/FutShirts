@@ -15,13 +15,23 @@ namespace Servicos.Tabelas
         {
             return enderecoDal.GetEnderecosByLogradouro();
         }
-        public IQueryable<Endereco> GetEnderecosByIdUsuario(long Id)
+        public Endereco GetEnderecosById(long? Id)
+        {
+            return enderecoDal.GetEnderecosById(Id);
+        }
+        public IQueryable<Endereco> GetEnderecosByIdUsuario(long? Id)
         {
             return enderecoDal.GetEnderecosByIdUsuario(Id);
         }
         public void SaveEndereco(Endereco endereco)
         {
             enderecoDal.SaveEndereco(endereco);
+        }
+        public Endereco EliminarProdutoPorId(long id)
+        {
+            Endereco endereco = enderecoDal.GetEnderecosById(id);
+            enderecoDal.EliminarProdutoPorId(id);
+            return endereco;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿@model Modelo.Tabelas.Endereco
+
 @{
-    ViewBag.Title = "Cadastro FutShirt";
+    ViewBag.Title = "EditEndereco";
     Layout = "~/Areas/Usuarios/Views/Shared/_Layout.cshtml";
 }
 @section styles{
@@ -13,14 +14,14 @@
     </div>
 
     <article>
-        @using (Html.BeginForm("CreateStepThree", "Usuario", FormMethod.Post, new { @class = "dados" }))
+        @using (Html.BeginForm("EditEndereco", "Endereco", FormMethod.Post, new { @class = "dados" }))
         {
             @Html.AntiForgeryToken()
             <div class="dados-cadastro">
                 @Html.LabelFor(model => model.Cep)
                 <div class="dados-preencher">
                     <i class="fas fa-map-marker-alt icon"></i>
-                    @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @type = "text", id = "cep", @class = "input-field cep", autocomplete = "off", placeholder = "Digite seu CEP", onkeypress = "mascara(this, '#####-###')", maxlength = "9", required = "required" , } })
+                    @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @type = "text", id = "cep", @class = "input-field cep", autocomplete = "off", placeholder = "Digite seu CEP", onkeypress = "mascara(this, '#####-###')", maxlength = "9", required = "required", } })
                 </div>
                 <div>
                     @Html.ValidationMessageFor(model => model.Cep, "", new { @class = "text-danger" })
@@ -38,7 +39,7 @@
                 @Html.LabelFor(model => model.Cidade)
                 <div class="dados-preencher">
                     <i class="fas fa-map-marked-alt icon"></i>
-                    @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @type = "text", id = "cidade", @class = "input-field cidade", @readonly="readonly", autocomplete = "off", placeholder = "Cidade", required = "required" } })
+                    @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @type = "text", id = "cidade", @class = "input-field cidade", @readonly = "readonly", autocomplete = "off", placeholder = "Cidade", required = "required" } })
                 </div>
                 <div>
                     @Html.ValidationMessageFor(model => model.Cidade, "", new { @class = "text-danger" })
@@ -85,7 +86,7 @@
                 </div>
             </div>
             <div class="bt-container">
-                <input type="submit" id="conf" onclick="validarCEP(event)" value="Finalizar">
+                <input type="submit" id="conf" onclick="validarCEP(event)" value="Salvar">
             </div>
         }
     </article>

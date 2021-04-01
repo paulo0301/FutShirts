@@ -9,6 +9,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
     public class IndexController : Controller
     {
         // GET: Index
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();

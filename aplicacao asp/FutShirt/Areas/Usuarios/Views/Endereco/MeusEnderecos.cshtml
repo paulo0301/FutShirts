@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Modelo.Tabelas.Endereco>
 
 @{
-    ViewBag.Title = "MeusEnderecos";
+    ViewBag.Title = "Meus Endereços";
     Layout = "~/Areas/Usuarios/Views/Shared/_Layout.cshtml";
 }
 
 @section styles{
-    <link rel="stylesheet" href="~/Content/minha_conta.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Content/minha_conta.css">
 }
 <main>
     <div class="cabecalho">
@@ -30,110 +30,31 @@
             <div class="cabecalho-topico">
                 <h3>Endereços</h3>
             </div>
-
+            <div class="container-btn-criar">
+                <a href="@Url.Action("CreateEndereco", "Endereco")" class="btn-criar">Adicionar Endereço</a>
+            </div>
             <div class="container-enderecos-cadastrados">
                 @foreach (var item in Model)
                 {
                     <div class="endereco-cadastrado">
-                        <p class="cep">@item.Cep</p>
+                        <p class="cep">CEP: @item.Cep</p>
                         <p class="descricao-1">@item.Logradouro, @item.Numero @item.Complemento, @item.Bairro</p>
-                        <p class="descricao-2">@item.Cidade - @item.Estado</p>s
+                        <p class="descricao-2">@item.Cidade - @item.Estado</p>
 
-                        <a class="btn btn-primary" role="button">Editar</a>
-                        <a class="btn btn-danger" role="button">Apagar</a>
+                        <div>
+                            @Html.ActionLink("Alterar", "EditEndereco", new { id = item.Id }, new { @class= "btn-editar" })
+                            @Html.ActionLink("Eliminar", "DeleteEndereco", new { id = item.Id }, new { @class = "btn-apagar" })
+                        </div>
                     </div>
                 }
             </div>
 
-            <!-- <form action="" class="dados" style="display: none;">
-                <div class="dados-cadastro">
-                    <label for="cep">CEP</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-map-marker-alt icon"></i>
-                        <input type="text" class="input-field" name="cep" id="cep" onkeypress="mascara(this, '#####-###')" maxlength="9" placeholder="000000-000" autocomplete="off" required pattern="\d{5}-\d{3}" />
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="UF">Estado</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-map-marked-alt icon"></i>
-                        <select name="estado" id="estado" class="select-field" required>
-                            <option value="" class="sel" disabled="disabled" selected="selected">Selecione seu Estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="cid">Cidade</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-map-marked-alt icon"></i>
-                        <input type="text" class="input-field" name="cidade" id="cidade">
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="log">Bairro</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-road icon"></i>
-                        <input type="text" id="bairro" class="input-field" name="bairro" placeholder="Digite seu bairro" autocomplete="off">
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="log">Logradouro</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-road icon"></i>
-                        <input type="text" name="logradouro" id="logradouro" class="input-field" placeholder="Digite seu Logradouro" autocomplete="off">
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="num">Numero</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-home icon"></i>
-                        <input type="text" name="numero" id="numero" class="input-field" maxlength="4" placeholder="0000" autocomplete="off" required>
-                    </div>
-                </div>
-                <div class="dados-cadastro">
-                    <label for="comp">Complemento</label>
-                    <div class="dados-preencher">
-                        <i class="fas fa-info icon  "></i>
-                        <input type="text" name="complemento" id="comp" class="input-field" placeholder="Digite o Complemento" autocomplete="off">
-                    </div>
-                </div>
-                <div class="bt-container">
-                    <input type="submit" id="conf" value="Salvar alterações">
-                </div>
-            </form>-->
-
-
+            
         </section>
     </div>
 </main>
 @section scripts{
+    <script src="~/Scripts/bootbox.min.js"></script>
     <script src="~/Content/js/jquery-3.5.1.min.js"></script>
     <script src="~/Content/js/cep_auto.js"></script>
     <script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>

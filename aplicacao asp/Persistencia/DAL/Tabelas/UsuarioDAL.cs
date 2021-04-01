@@ -31,6 +31,11 @@ namespace Persistencia.DAL.Tabelas
             return context.Usuarios.Max(u => u.Id);
         }
 
+        public Usuario GetUsuarioById(long id)
+        {
+            return context.Usuarios.Where(u => u.Id == id).First();
+        }
+
         //Save Usuarios
         public void SaveUsuario(Usuario usuario)
         {

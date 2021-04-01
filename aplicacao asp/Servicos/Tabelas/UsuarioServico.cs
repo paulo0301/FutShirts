@@ -29,6 +29,11 @@ namespace Servicos.Tabelas
             return usuarioDal.GetLastUsuarioId();
         }
 
+        public Usuario GetUsuarioById(long id)
+        {
+            return usuarioDal.GetUsuarioById(id);
+        }
+
 
         //Save Usuario
         public void SaveUsuario(Usuario usuario)

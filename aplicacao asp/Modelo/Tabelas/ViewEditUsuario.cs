@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Modelo.Tabelas
 {
-    public partial class Usuario
+    public class ViewEditUsuario
     {
 		//Cadastro dados pessoais
 		public long? Id { get; set; }
@@ -33,19 +34,5 @@ namespace Modelo.Tabelas
 		[DataType(DataType.Date)]
 		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
 		public DateTime DataNascimento { get; set; }
-
-		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar uma senha.")]
-		[DataType(DataType.Password)]
-		[MinLength(8, ErrorMessage = "A senha deve possuir no mínimo 8 caracteres.")]
-		public string Senha { get; set; }
-
-		[Display(Name = "Confirmar Senha")]
-		[DataType(DataType.Password)]
-		[Compare("Senha", ErrorMessage = "As senhas não conferem.")]
-		public string ConfirmarSenha { get; set; }
-        public bool VerificacaoEmail { get; set; }
-        public string CodigoAtivacao { get; set; }
-		public bool ContaAtiva { get; set; }
-		public virtual ICollection<Endereco> Enderecos { get; set; }
 	}
 }

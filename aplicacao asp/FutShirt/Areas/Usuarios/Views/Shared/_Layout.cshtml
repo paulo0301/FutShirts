@@ -34,10 +34,10 @@
                                 <img src="~/Content/Images/avatar.svg" alt="user">
                                 <a>Minha conta</a>
                                 <ul>
-                                    <li><a href="#">Meus dados</a></li>
+                                    <li><a href="@Url.Action("MeusDados", "Usuario")">Meus dados</a></li>
                                     <li><a href="@Url.Action("MeusEnderecos", "Endereco")">Meus endereços</a></li>
                                     <li>
-                                        @using (Html.BeginForm("LogOff", "Usuario", FormMethod.Post))
+                                        @using (Html.BeginForm("LogOff", "Login", FormMethod.Post))
                                         {
                                         <span><input type="submit" value="Sair"/></span>
                                         }
@@ -52,8 +52,8 @@
                     <div class="area-de-acesso">
                         <img src="~/Content/Images/avatar.svg" alt="user">
                         <div>
-                            @Html.ActionLink("Entre", "Login", "Usuario", new { Area = "Usuarios" }, null)
-                            @Html.ActionLink("Cadastre-se", "CreateStepOne", "Usuario", new { Area = "Usuarios" }, null)
+                            @Html.ActionLink("Entre", "Login", "Login", new { Area = "Usuarios" }, null)
+                            @Html.ActionLink("Cadastre-se", "CreateStepOne", "Cadastro", new { Area = "Usuarios" }, null)
                         </div>
                     </div>
                 }

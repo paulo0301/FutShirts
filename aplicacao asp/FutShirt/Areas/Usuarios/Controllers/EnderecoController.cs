@@ -16,9 +16,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
         public ActionResult MeusEnderecos()
         {
             Usuario usuario = (Usuario)Session["User"];
-            long? id = usuario.Id;
-            IEnumerable<Endereco> teste = enderecoServico.GetEnderecosByIdUsuario(id);
-            return View(teste); 
+            return View(enderecoServico.GetEnderecosByIdUsuario(usuario.Id)); 
         }
 
         [Authorize]

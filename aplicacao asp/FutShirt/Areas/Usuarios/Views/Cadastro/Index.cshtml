@@ -1,8 +1,6 @@
 ﻿@model IEnumerable<Modelo.Tabelas.Usuario>
 
-@{
-    Layout = null;
-}
+@{ Layout = null; }
 
 <!DOCTYPE html>
 
@@ -13,11 +11,11 @@
 </head>
 <body>
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Voltar página inicial", "Index", "Index")
     </p>
     <table class="table">
         <tr>
-            <th>
+            <th>    
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
             <th>
@@ -40,33 +38,33 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cpf)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataNascimento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VerificacaoEmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodigoAtivacao)
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Cpf)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Telefone)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DataNascimento)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.VerificacaoEmail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CodigoAtivacao)
+    </td>
+</tr>}
+
     </table>
 </body>
 </html>

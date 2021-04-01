@@ -1,0 +1,44 @@
+﻿@model Modelo.Tabelas.ViewLogin
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/Usuarios/Views/Shared/_Layout.cshtml";
+}
+@section styles{
+    <link rel="stylesheet" href="~/Content/login.css">
+}
+<main>
+    <div class="login">
+        @using (Html.BeginForm("Login", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+        {
+            <div class="container">
+                <h2>Entre e aproveite!</h2>
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "Cheque os seguintes erros:", new { @class = "text-danger" })
+                <div>
+                    <label for="login">E-mail</label>
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @type = "email", autocomplete = "on", placeholder = "Insira seu email para entrar", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+
+                <div>
+                    <label for="senha">Senha</label>
+                    @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @type = "password", placeholder = "Insira sua senha para entrar", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <input type="submit" id="entrar_login" value="Entrar">
+        }
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert alert-danger">
+                <strong>@ViewBag.Message</strong>
+            </div>
+         }
+
+        <a href="">Esqueci minha senha</a>
+
+        <span>Não possui conta? @Html.ActionLink("Cadastre-se", "CreateStepOne", "Cadastro", new { Area = "Usuarios" }, null)</span>
+    </div>
+</main>

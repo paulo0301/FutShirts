@@ -73,7 +73,7 @@ main .dados h4{
     font-size: 900;
     font-size: 22px;
 }
-main .container-meus-dados .dados input[type="text"], main .container-meus-dados .dados input[type="email"], main .container-meus-dados .dados input[type="password"]{
+main .container-meus-dados .dados input[type="text"], main .container-meus-dados .dados input[type="email"], main .container-meus-dados .dados input[type="password"], main .container-meus-dados .dados input[type="tel"] {
     width: 22em;
     outline: none;
     padding: 5px;

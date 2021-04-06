@@ -1,4 +1,4 @@
-﻿using Modelo.Tabelas;
+﻿    using Modelo.Tabelas;
 using Servicos.Tabelas;
 using System;
 using System.Collections.Generic;
@@ -29,49 +29,46 @@ namespace FutShirt.Areas.Usuarios.Controllers
         public ActionResult Login(ViewLogin login, string returnUrl)
         {
             string message = "";
-
-            Usuario v = usuarioServico.GetUsuariosByEmail().Where(a => a.Email == login.Email).FirstOrDefault();
-            if (v != null)
+            if (ModelState.IsValid)
             {
-                if (v.ContaAtiva) { 
-                    login.Senha = Crypto.Hash(login.Senha);
-                    if (string.Compare(login.Senha, v.Senha) == 0)
-                    {
-
-                        //FormsAuthentication.SetAuthCookie(login.Email, false);
-                        string perfil;
-                        if (v.IsAdmin == true) perfil = "Gerente";
-                        else perfil = "Cliente";
-                        var ticket = FormsAuthentication.Encrypt(new FormsAuthenticationTicket(
-                            1, login.Email, DateTime.Now, DateTime.Now.AddHours(12), false, perfil));
-                        var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, ticket);
-                        Response.Cookies.Add(cookie);
-                        Session["User"] = v;
-                        if (Url.IsLocalUrl(returnUrl))
-                        {
-                            return Redirect(returnUrl);
+                Usuario usuarioLogin = usuarioServico.GetUsuariosByEmail().Where(a => a.Email == login.Email).FirstOrDefault();
+                if (usuarioLogin != null)
+                {
+                    if (usuarioLogin.ContaAtiva) { 
+                        login.Senha = Crypto.Hash(login.Senha);
+                        if (string.Compare(login.Senha, usuarioLogin.Senha) == 0)
+                        {   
+                            string perfil = "Cliente";
+                            if (usuarioLogin.IsAdmin == true) perfil = "Gerente";
+                            FormsAuthentication.SignOut();
+                            var ticket = FormsAuthentication.Encrypt(new FormsAuthenticationTicket(1, login.Email, DateTime.Now, DateTime.Now.AddHours(12), false, perfil));
+                            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, ticket);
+                            Response.Cookies.Add(cookie);
+                            Session["User"] = usuarioLogin;
+                            if (Url.IsLocalUrl(returnUrl))
+                            {
+                                return Redirect(returnUrl);
+                            }
+                            else
+                            {
+                                return RedirectToAction("Index", "Index");
+                            }
                         }
                         else
                         {
-                            return RedirectToAction("Index", "Index");
+                            message = "E-mail ou senha inválida";
                         }
                     }
                     else
                     {
-                        message = "E-mail ou senha inválida";
+                        message = "Conta desativada.";
                     }
                 }
                 else
                 {
-                    message = "Conta desativada.";
+                    message = "E-mail ou senha inválida";
                 }
             }
-            else
-            {
-                message = "E-mail ou senha inválida";
-            }
-
-
             ViewBag.Message = message;
             return View();
         }

@@ -249,6 +249,7 @@
     <Compile Include="Areas\Usuarios\Controllers\EnderecoController.cs" />
     <Compile Include="Areas\Usuarios\Controllers\IndexController.cs" />
     <Compile Include="Areas\Usuarios\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Usuarios\Controllers\ProdutosController.cs" />
     <Compile Include="Areas\Usuarios\Controllers\UsuarioController.cs" />
     <Content Include="Scripts\bootbox.all.js" />
     <Content Include="Scripts\bootbox.all.min.js" />
@@ -323,6 +324,7 @@
     <Content Include="Areas\Usuarios\Views\Cadastro\CreateStepThree.cshtml" />
     <Content Include="Areas\Usuarios\Views\Login\Login.cshtml" />
     <Content Include="Areas\Usuarios\Views\Usuario\MeusDados.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Produtos\ProdutosCadastrados.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />

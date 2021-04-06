@@ -37,7 +37,15 @@ namespace FutShirt.Areas.Usuarios.Controllers
                     login.Senha = Crypto.Hash(login.Senha);
                     if (string.Compare(login.Senha, v.Senha) == 0)
                     {
-                        FormsAuthentication.SetAuthCookie(login.Email, false);
+
+                        //FormsAuthentication.SetAuthCookie(login.Email, false);
+                        string perfil;
+                        if (v.IsAdmin == true) perfil = "Gerente";
+                        else perfil = "Cliente";
+                        var ticket = FormsAuthentication.Encrypt(new FormsAuthenticationTicket(
+                            1, login.Email, DateTime.Now, DateTime.Now.AddHours(12), false, perfil));
+                        var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, ticket);
+                        Response.Cookies.Add(cookie);
                         Session["User"] = v;
                         if (Url.IsLocalUrl(returnUrl))
                         {

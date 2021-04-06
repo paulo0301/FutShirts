@@ -17,6 +17,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
     public class UsuarioController : Controller
     {
         private UsuarioServico usuarioServico = new UsuarioServico();
+        [Authorize]
         public ActionResult MeusDados()
         {
             Usuario usuario = (Usuario)Session["User"];
@@ -25,6 +26,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult EditarUsuario(Usuario usuario)
         {
             try
@@ -42,6 +44,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
             }
         }
 
+        [Authorize]
         public ActionResult DesativarConta(long? id)
         {
             try

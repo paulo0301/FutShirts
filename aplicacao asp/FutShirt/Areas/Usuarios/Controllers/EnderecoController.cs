@@ -8,18 +8,17 @@ using System.Web.Mvc;
 
 namespace FutShirt.Areas.Usuarios.Controllers
 {
+    [Authorize]
     public class EnderecoController : Controller
     {
         private EnderecoServico enderecoServico = new EnderecoServico();
         // GET: Usuarios/Endereco
-        [Authorize]
         public ActionResult MeusEnderecos()
         {
             Usuario usuario = (Usuario)Session["User"];
             return View(enderecoServico.GetEnderecosByIdUsuario(usuario.Id)); 
         }
 
-        [Authorize]
         public ActionResult CreateEndereco()
         {
             return View();
@@ -32,7 +31,6 @@ namespace FutShirt.Areas.Usuarios.Controllers
             return GravarEndereco(endereco);
         }
 
-        [Authorize]
         public ActionResult EditEndereco(long Id)
         {
             Endereco endereco = enderecoServico.GetEnderecosById(Id);
@@ -47,7 +45,6 @@ namespace FutShirt.Areas.Usuarios.Controllers
             return GravarEndereco(endereco);
         }
 
-        [Authorize]
         public ActionResult DeleteEndereco(long Id)
         {
             Endereco endereco = enderecoServico.GetEnderecosById(Id);

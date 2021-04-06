@@ -46,6 +46,7 @@ namespace Modelo.Tabelas
         public bool VerificacaoEmail { get; set; }
         public string CodigoAtivacao { get; set; }
 		public bool ContaAtiva { get; set; }
+		public bool IsAdmin { get; set; }
 		public virtual ICollection<Endereco> Enderecos { get; set; }
 	}
 }

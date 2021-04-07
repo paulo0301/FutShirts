@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\EFContext.cs" />
+    <Compile Include="DAL\Produtos\ProdutoDAL.cs" />
     <Compile Include="DAL\Tabelas\CartaoDAL.cs" />
     <Compile Include="DAL\Tabelas\EnderecoDAL.cs" />
     <Compile Include="DAL\Tabelas\UsuarioDAL.cs" />

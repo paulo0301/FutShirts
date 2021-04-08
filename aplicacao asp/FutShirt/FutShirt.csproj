@@ -325,7 +325,13 @@
     <Content Include="Areas\Usuarios\Views\Login\Login.cshtml" />
     <Content Include="Areas\Usuarios\Views\Usuario\MeusDados.cshtml" />
     <Content Include="Areas\Usuarios\Views\Produtos\ProdutosCadastrados.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Shared\_LayoutDados.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
+    <Content Include="Scripts\inputmask\inputmask.js" />
+    <Content Include="Scripts\inputmask\inputmask.min.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.min.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
     <Content Include="Scripts\jquery-3.6.0.slim.js" />

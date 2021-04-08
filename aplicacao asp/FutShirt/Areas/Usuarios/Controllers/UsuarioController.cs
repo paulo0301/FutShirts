@@ -23,6 +23,20 @@ namespace FutShirt.Areas.Usuarios.Controllers
             Usuario usuario = (Usuario)Session["User"];
             return View(usuarioServico.GetUsuarioById((long)usuario.Id));
         }
+        private ActionResult EditarUsuario(long? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(
+                HttpStatusCode.BadRequest);
+            }
+            Usuario usuario = usuarioServico.GetUsuarioById((long)id);
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+            return View(usuario);
+        }
 
         [HttpPost]
         [ValidateAntiForgeryToken]

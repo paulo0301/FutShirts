@@ -25,7 +25,7 @@
                 <input class="bt-pesquisa" type="submit" value="">
             </form>
 
-            <div> 
+            <div>
                 @if (Request.IsAuthenticated)
                 {
                     <div>
@@ -39,16 +39,16 @@
                                     <li>
                                         @using (Html.BeginForm("LogOff", "Login", FormMethod.Post))
                                         {
-                                        <span><input type="submit" value="Sair"/></span>
+                                            <span><input type="submit" value="Sair" /></span>
                                         }
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                                        }
+                }
                 else
-                                        {
+                {
                     <div class="area-de-acesso">
                         <img src="~/Content/Images/avatar.svg" alt="user">
                         <div>
@@ -160,6 +160,7 @@
     </footer>
     <script src="@Url.Content("~/Scripts/jquery-3.6.0.js")"></script>
     <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+    <script src="@Url.Content("~/Scripts/inputmask/jquery.inputmask.min.js")"></script>
     @RenderSection("scripts", false)
 </body>
 </html>

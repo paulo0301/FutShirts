@@ -9,11 +9,14 @@
 <section class="container-meus-dados">
     <div class="cabecalho-topico">
         <h3>Meus dados</h3>
-        <a class="btn-icon-edit" href="@Url.Action("EditarUsuario", "Usuario", new { id = Model.Id })"><i class="far fa-edit"></i></a>
+        <button class="btn-icon-edit"><i class="far fa-edit"></i></button>
     </div>
+
     <div class="dados">
-        <div class="dados-pessoais">
-            <h4>Dados pessoais</h4>
+        @using (Html.BeginForm("EditarUsuario", "Usuario", FormMethod.Post))
+        {
+            <div class="dados-pessoais">
+                <h4>Dados pessoais</h4>
                 @Html.AntiForgeryToken()
                 @Html.HiddenFor(model => model.Id)
                 @Html.HiddenFor(model => model.Email)
@@ -22,31 +25,30 @@
                 @Html.HiddenFor(model => model.ContaAtiva)
                 <div>
                     <label for="nome-completo">Nome completo</label>
-                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "input-display", @id = "nome-completo", @type = "text", maxlength = "130", @readonly = "readonly" } })
+                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @id = "nome-completo", @type = "text", maxlength = "130" } })
                 </div>
                 <div>
                     <label for="data-nascimento">Data de nascimento</label>
-                    @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "input-display", @id = "data-nascimento", @type = "text", @readonly = "readonly" } })
+                    @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @id = "data-nascimento", @type = "text" } })
                 </div>
                 <div>
                     <label for="cpf">CPF</label>
-                    @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @class = "input-display", @id = "cpf", onloadeddata = "mascara(this, '###.###.###-##')", @type = "text", maxlength = "14", @readonly = "readonly" } })
+                    @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @id = "cpf", onloadeddata = "mascara(this, '###.###.###-##')", @type = "text", maxlength = "14" } })
                 </div>
                 <div>
                     <label for="telefone">Telefone</label>
-                    @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @class = "input-display", @id = "telefone", @type = "text", maxlength = "130", @readonly = "readonly" } })
+                    @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @id = "telefone", @type = "text", maxlength = "130" } })
                 </div>
-        </div>
-        <div class="dados-acesso">
-            <h4>Dados de acesso</h4>
+            </div>
+            <div class="dados-acesso">
+                <h4>Dados de acesso</h4>
                 <div>
                     <label for="email">Email</label>
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "input-display", @id = "email", @type = "text", @readonly = "readonly" } })
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @id = "email", @type = "text" } })
                 </div>
-                <div class="account-disable">
-                    @Html.ActionLink("Desativar conta", "DesativarConta", new { id = Model.Id })
-                </div>
-        </div>
+            </div>
+            <input type="submit" value="Salvar informações">
+        }
     </div>
 </section>
 @section scripts{

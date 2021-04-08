@@ -326,6 +326,7 @@
     <Content Include="Areas\Usuarios\Views\Usuario\MeusDados.cshtml" />
     <Content Include="Areas\Usuarios\Views\Produtos\ProdutosCadastrados.cshtml" />
     <Content Include="Areas\Usuarios\Views\Shared\_LayoutDados.cshtml" />
+    <Content Include="Areas\Usuarios\Views\Usuario\EditarUsuario.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
     <Content Include="Scripts\inputmask\inputmask.js" />

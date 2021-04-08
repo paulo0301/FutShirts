@@ -1,17 +1,25 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    Layout = "~/Areas/Usuarios/Views/Shared/_Layout.cshtml";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>_LayoutDados</title>
-</head>
-<body>
-    <div> 
+@RenderSection("styles", false)
+<main>
+    <div class="cabecalho">
+        <h2>Minha Conta</h2>
     </div>
-</body>
-</html>
+    <nav class="voltar-index">
+        <h2><a href="index.html"><i class="fas fa-angle-left"></i>voltar</a></h2>
+    </nav>
+    <div>
+        <nav>
+            <ol>
+                <li><a href="@Url.Action("MeusDados", "Usuario")" class="active"><img src="~/Content/Images/carteirinha.svg" alt="">Meus dados</a></li>
+                <li><a href="@Url.Action("MeusEnderecos", "Endereco")"><img src="~/Content/Images/enderecos.svg" alt="">Endereços</a></li>
+                <li><a href="meus_pedidos.html"><img src="~/Content/Images/camisa_pedidos.svg" alt="">Meus pedidos</a></li>
+                <li><a href="meus_favoritos.html"><img src="~/Content/Images/estrela.svg" alt="">Favoritos</a></li>
+                <li><a href="meus_cartoes.html"><img src="~/Content/Images/cartoes.svg" alt="">Meus cartões</a></li>
+            </ol>
+        </nav>
+        @RenderBody()
+    </div>
+</main>
+@RenderSection("scripts", false)

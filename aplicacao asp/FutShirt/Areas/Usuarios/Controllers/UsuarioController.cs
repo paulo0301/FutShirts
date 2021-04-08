@@ -23,7 +23,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
             Usuario usuario = (Usuario)Session["User"];
             return View(usuarioServico.GetUsuarioById((long)usuario.Id));
         }
-        private ActionResult EditarUsuario(long? id)
+        public ActionResult EditarUsuario(long? id)
         {
             if (id == null)
             {

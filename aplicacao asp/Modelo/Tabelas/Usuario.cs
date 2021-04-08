@@ -43,6 +43,7 @@ namespace Modelo.Tabelas
 		[DataType(DataType.Password)]
 		[Compare("Senha", ErrorMessage = "As senhas não conferem.")]
 		public string ConfirmarSenha { get; set; }
+
         public bool VerificacaoEmail { get; set; }
         public string CodigoAtivacao { get; set; }
 		public bool ContaAtiva { get; set; }

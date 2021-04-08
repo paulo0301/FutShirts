@@ -45,6 +45,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
                             var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, ticket);
                             Response.Cookies.Add(cookie);
                             Session["User"] = usuarioLogin;
+                            Session["UserName"] = usuarioLogin.Nome.Split(' ')[0];
                             if (Url.IsLocalUrl(returnUrl))
                             {
                                 return Redirect(returnUrl);

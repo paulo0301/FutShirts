@@ -6,15 +6,24 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
+using Servicos.Tabelas;
+using Modelo.Tabelas;
 
 namespace FutShirt
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        UsuarioServico usuarioServico = new UsuarioServico();
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+        }
+
+        protected void GetUsuario()
+        {
+            Usuario usuario = usuarioServico.GetUsuariosByEmail().Where(a => a.Email == User.Identity.Name).FirstOrDefault();
+            Session["UserName"] = usuario.Nome.Split(' ')[0];
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)

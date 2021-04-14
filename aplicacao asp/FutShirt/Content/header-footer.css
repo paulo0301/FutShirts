@@ -180,12 +180,53 @@ i.fa-bars {
     }
 }
 
-
-/* ************************************** */
-
-header>nav {
-    font-family: 'Roboto', sans-serif;
+.nome-user:hover .menu-user {
+    display: block;
 }
+
+.li-menu-user {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 10;
+}
+    .li-menu-user a, .menu-user input{
+        font-size: 16px;
+    }
+    .li-menu-user img {
+        width: 30px;
+        margin-right: 5px;
+    }
+.menu-user {
+    position: absolute;
+    display: none;
+    top: 97px;
+    background: #030F26;
+    border-radius: 3px;
+    z-index: 10;
+}
+.menu-user li{
+    padding: 10px 10px;
+    border-bottom: 1px solid #fff; 
+}
+    .menu-user li input {
+        text-decoration: none;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+        outline: none;
+    }
+    .seta-user{
+        width: 7px;
+        height: 7px;
+    }
+    /* ************************************** */
+    header > nav {
+        font-family: 'Roboto', sans-serif;
+    }
 
 header>nav a {
     display: inline-block;

@@ -29,17 +29,20 @@
                 @if (Request.IsAuthenticated)
                 {
                     <div>
-                        <ul>
-                            <li>
-                                <img src="~/Content/Images/avatar.svg" alt="user">
-                                <a>Minha conta</a>
-                                <ul>
+                        <ul class="nome-user">
+                            <li class="li-menu-user">
+                                <div>
+                                    <img src="~/Content/Images/avatar.svg" alt="user">
+                                    <a>@Session["UserName"]</a>
+                                    <img class="seta-user" src="~/Content/Images/seta_baixo.svg" alt="user">
+                                </div>
+                                <ul class="menu-user">
                                     <li><a href="@Url.Action("MeusDados", "Usuario")">Meus dados</a></li>
                                     <li><a href="@Url.Action("MeusEnderecos", "Endereco")">Meus endereços</a></li>
                                     <li>
                                         @using (Html.BeginForm("LogOff", "Login", FormMethod.Post))
                                         {
-                                            <span><input type="submit" value="Sair" /></span>
+                                            <span><input type="submit" value="Sair"/></span>
                                         }
                                     </li>
                                 </ul>

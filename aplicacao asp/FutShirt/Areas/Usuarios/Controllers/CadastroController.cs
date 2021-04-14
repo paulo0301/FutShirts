@@ -184,7 +184,13 @@ namespace FutShirt.Areas.Usuarios.Controllers
                     usuario.ContaAtiva = true;
                     endereco.Usuario = usuario;
                     enderecoServico.SaveEndereco(endereco);
-                    FormsAuthentication.SetAuthCookie(usuario.Email, false);
+                    string perfil = "Cliente";
+                    if (usuario.IsAdmin == true) perfil = "Gerente";
+                    FormsAuthentication.SignOut();
+                    var ticket = FormsAuthentication.Encrypt(new FormsAuthenticationTicket(1, usuario.Email, DateTime.Now, DateTime.Now.AddHours(12), false, perfil));
+                    var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, ticket);
+                    Response.Cookies.Add(cookie);
+                    Session["UserName"] = usuario.Nome.Split(' ')[0];
                 }
                 else
                 {

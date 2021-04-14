@@ -34,5 +34,20 @@ namespace Modelo.Tabelas
 		[DataType(DataType.Date)]
 		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
 		public DateTime DataNascimento { get; set; }
+
+		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar uma senha.")]
+		[DataType(DataType.Password)]
+		[MinLength(8, ErrorMessage = "A senha deve possuir no mínimo 8 caracteres.")]
+		public string Senha { get; set; }
+
+		[Display(Name = "Confirmar Senha")]
+		[DataType(DataType.Password)]
+		[MinLength(8, ErrorMessage = "A senha deve possuir no mínimo 8 caracteres.")]
+		public string SenhaNova { get; set; }
+
+		[Display(Name = "Confirmar Senha")]
+		[DataType(DataType.Password)]
+		[Compare("SenhaNova", ErrorMessage = "As senhas não conferem.")]
+		public string ConfirmarSenhaNova { get; set; }
 	}
 }

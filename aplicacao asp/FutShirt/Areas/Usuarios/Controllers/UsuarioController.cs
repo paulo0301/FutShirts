@@ -21,6 +21,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
         public ActionResult MeusDados()
         {
             Usuario usuario = (Usuario)Session["User"];
+            
             return View(usuarioServico.GetUsuarioById((long)usuario.Id));
         }
         public ActionResult EditarUsuario(long? id)

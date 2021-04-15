@@ -65,6 +65,8 @@ namespace FutShirt.Areas.Usuarios.Controllers
             }
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult GravarEndereco(Endereco endereco)
         {
             try
@@ -72,7 +74,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
                 if (ModelState.IsValid)
                 {
                     Usuario usuario = (Usuario)Session["User"];
-                    endereco.UsuarioId = usuario.Id;
+                    endereco.Usuario = usuario;
                     enderecoServico.SaveEndereco(endereco);
                 }
                 else
@@ -82,9 +84,10 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
                 return RedirectToAction("MeusEnderecos");
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                ViewBag.Error = ex.Message;
+                return View("MeusEnderecos");
             }
         }
     }

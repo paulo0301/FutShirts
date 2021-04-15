@@ -114,12 +114,13 @@ main section.container-meus-dados .dados div div .container-sexo{
 main section.container-meus-dados .dados div div .container-sexo label{
     margin: 0 10px;
 }
-main section.container-meus-dados input[type="submit"], main section.container-enderecos input[type="submit"]{
+main section.container-meus-dados input[type="submit"], main section.container-enderecos input[type="submit"] {
     padding: 10px;
+    margin-left: 1rem;
     background-color: #334D01;
     border: none;
     outline: none;
-    border-radius: 6px;
+    border-radius: 4px;
     color: #fff;
     font-weight: 400;
     float: right;
@@ -148,14 +149,38 @@ main section.container-meus-dados input[type="submit"], main section.container-e
     }
 }
 /*********************** SECTION ENDERECOS *************************/
+.dados-endereco {
+    padding: 1rem;
+}
+.dados-endereco div{
+    margin: 1rem 0;
+}
+.dados-endereco label{
+    display: block;
+    margin-bottom: .5rem;
+}
+.dados-endereco input{
+    width: 20rem;
+    border: none;
+    height: 2rem;
+    outline: none;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #030F26;
+}
 main section.container-enderecos{
     width: 100%;
 }
 main section.container-enderecos input[type="submit"]{
     float: none;
-    margin-top: 10px;
+    margin: 10px;
+    width: 20rem;
+    font-size: 1rem
 }
-main section.container-enderecos form.panel input[type="submit"]{
+input[type="submit"]:hover {
+    background-color: #273a03 !important;
+}
+
+main section.container-enderecos form.panel input[type="submit"] {
     margin-bottom: 20px;
 }
 main .dados{
@@ -176,7 +201,7 @@ main .dados{
     margin: 0 10px 20px;
     padding-bottom: 10px;
     border: 2px solid #030F26;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 .endereco-cadastrado .cep{
     font-weight: 700;
@@ -258,7 +283,7 @@ main .dados input[type=submit]{
     outline: none;
     background-color:#334D01;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     color: #fefefe;
 }
 main .dados input[type="submit"]:hover{

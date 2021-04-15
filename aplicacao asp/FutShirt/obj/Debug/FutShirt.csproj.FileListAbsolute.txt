@@ -209,7 +209,6 @@ C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\obj\Debug\FutSh
 C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\obj\Debug\FutShirt.csproj.CopyComplete
 C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\obj\Debug\FutShirt.dll
 C:\Users\Paulo Daniel\Documents\FutShirts\aplicacao asp\FutShirt\obj\Debug\FutShirt.pdb
-C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\FutShirt.dll.config
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\FutShirt.dll
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\FutShirt.pdb
 C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\EntityFramework.dll
@@ -364,3 +363,4 @@ C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\FutShirt\obj\Debug\FutS
 C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\FutShirt\obj\Debug\FutShirt.csproj.CopyComplete
 C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\FutShirt\obj\Debug\FutShirt.dll
 C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\FutShirt\obj\Debug\FutShirt.pdb
+C:\Users\pedro\source\repos\FutShirts\aplicacao asp\FutShirt\bin\FutShirt.dll.config

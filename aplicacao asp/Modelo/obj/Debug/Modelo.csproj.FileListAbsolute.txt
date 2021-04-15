@@ -15,4 +15,3 @@ C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\obj\Debug\Modelo
 C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\obj\Debug\Modelo.dll
 C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Modelo\obj\Debug\Modelo.pdb
-C:\Users\pedro\source\repos\FutShirts\aplicacao asp\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache

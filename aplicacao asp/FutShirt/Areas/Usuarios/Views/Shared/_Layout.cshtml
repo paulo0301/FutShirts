@@ -38,8 +38,7 @@
                                 </div>
                                 <ul class="menu-user">
                                     <li><a href="@Url.Action("MeusDados", "Usuario")">Meus dados</a></li>
-                                    <li><a href="@Url.Action("MeusEnderecos", "Endereco")">Meus endereços</a></li>
-                                    <li>
+                                    <li class="logout">
                                         @using (Html.BeginForm("LogOff", "Login", FormMethod.Post))
                                         {
                                             <span><input type="submit" value="Sair"/></span>

@@ -191,13 +191,13 @@ i.fa-bars {
     cursor: pointer;
     z-index: 10;
 }
-    .li-menu-user a, .menu-user input{
-        font-size: 16px;
-    }
-    .li-menu-user img {
-        width: 30px;
-        margin-right: 5px;
-    }
+.li-menu-user a, .menu-user input{
+    font-size: 16px;
+}
+.li-menu-user img {
+    width: 30px;
+    margin-right: 5px;
+}
 .menu-user {
     position: absolute;
     display: none;
@@ -206,27 +206,53 @@ i.fa-bars {
     border-radius: 3px;
     z-index: 10;
 }
-.menu-user li{
-    padding: 10px 10px;
-    border-bottom: 1px solid #fff; 
+.menu-user li.logout {
+    padding: 0 !important;
 }
-    .menu-user li input {
-        text-decoration: none;
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        font-size: 15px;
-        cursor: pointer;
-        outline: none;
-    }
-    .seta-user{
-        width: 7px;
-        height: 7px;
-    }
-    /* ************************************** */
-    header > nav {
-        font-family: 'Roboto', sans-serif;
-    }
+
+.menu-user li.logout form{
+    padding: 13px 20px !important; 
+}
+.menu-user li.logout span, li.logout input{
+    text-align: left;
+    width: 100%
+}
+
+.menu-user li.logout:hover > * {
+    background-color: #efefef;
+}
+
+.menu-user li {
+    padding: 13px 20px !important; 
+}
+
+
+.menu-user li input {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+.menu-user li:hover{
+    background-color: #efefef;
+}
+.menu-user li:hover input {
+    color: #030f26 !important;
+}
+.menu-user li:hover > * {
+    color: #030f26 !important;
+}
+.seta-user{
+    width: 7px;
+    height: 7px;
+}
+/* ************************************** */
+header > nav {
+    font-family: 'Roboto', sans-serif;
+}
 
 header>nav a {
     display: inline-block;

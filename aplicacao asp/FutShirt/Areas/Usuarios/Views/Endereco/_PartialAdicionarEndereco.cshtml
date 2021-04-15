@@ -1,0 +1,40 @@
+﻿@model Modelo.Tabelas.Endereco
+<div class="content">
+    <style>
+    </style>
+    @using (Html.BeginForm("GravarEndereco", "Endereco", FormMethod.Post))
+    {
+        <div class="dados-endereco">
+            @Html.AntiForgeryToken()
+            <div>
+                <label for="logradouro">Logradouro</label>
+                @Html.EditorFor(model => model.Logradouro, new { htmlAttributes = new {  @id = "logradouro", @type = "text", maxlength = "130", @placeholder= "Digite seu logradouro" } })
+            </div>
+            <div>
+                <label for="bairro">Bairro</label>
+                @Html.EditorFor(model => model.Bairro, new { htmlAttributes = new {  @id = "bairro", @type = "text", @placeholder= "Digite seu bairro" } })
+            </div>
+            <div>
+                <label for="estado">Estado</label>
+                @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @id = "estado", @type = "text", @placeholder = "Selecione seu estado" } })
+            </div>
+            <div>
+                <label for="cidade">Cidade</label>
+                @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @id = "cidade", @type = "text", @placeholder = "Selecione sua cidade" } })
+            </div>
+            <div>
+                <label for="numero">Número</label>
+                @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @id = "numero", @type = "text", @placeholder = "0000" } })
+            </div>
+            <div>
+                <label for="complemento">Complemento</label>
+                @Html.EditorFor(model => model.Complemento, new { htmlAttributes = new { @id = "complemento", @type = "text", @placeholder = "Digite um complemento" } })
+            </div>
+            <div>
+                <label for="cep">CEP</label>
+                @Html.EditorFor(model => model.Cep, new { htmlAttributes = new { @id = "cep", @type = "text", @placeholder = "000000-000" } })
+            </div>
+        </div>
+        <input type="submit" value="Adicionar Endereço">
+    }
+</div>

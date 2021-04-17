@@ -24,9 +24,9 @@
         line-height: 1rem;
     }
 
-    .active, .collapsible:hover {
-        background-color: #638bbf;
-    }
+        button.active, .collapsible:hover {
+            background-color: #638bbf;
+        }
 
     .content {
         padding: 0 18px;
@@ -37,16 +37,15 @@
     }
 
     .collapsible:after {
-        content: '\f107'; 
+        content: '\f107';
         font-size: 1.7rem;
         float: right;
         margin-left: 5px;
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-
     }
 
-    .active:after {
+    button.active:after {
         content: "\f106";
     }
 </style>
@@ -54,21 +53,32 @@
     <div class="cabecalho-topico">
         <h3>Endereços</h3>
     </div>
-    <div class="container-btn-criar">
-        <a href="@Url.Action("CreateEndereco", "Endereco")" class="btn-criar">Adicionar Endereço</a>
-    </div>
+    @*<div class="container-btn-criar">
+            <a href="@Url.Action("CreateEndereco", "Endereco")" class="btn-criar">Adicionar Endereço</a>
+        </div>*@
     <div class="container-enderecos-cadastrados">
         <p>@ViewBag.Error</p>
         @foreach (var item in Model)
         {
             <div class="endereco-cadastrado">
-                <p class="cep">CEP: @item.Cep</p>
-                <p class="descricao-1">@item.Logradouro, @item.Numero @item.Complemento, @item.Bairro</p>
-                <p class="descricao-2">@item.Cidade - @item.Estado</p>
-
                 <div>
-                    @Html.ActionLink("Alterar", "EditEndereco", new { id = item.Id }, new { @class = "btn-editar" })
-                    @Html.ActionLink("Eliminar", "DeleteEndereco", new { id = item.Id }, new { @class = "btn-apagar" })
+                    <input hidden class="id-endereco" value="@item.Id" />
+                    <p class="title">@item.Logradouro, @item.Numero</p>
+                    <p class="descricao-1">@item.Cidade - @item.Estado (@item.Cep)</p>
+                    <p class="descricao-2">@item.Complemento, @item.Bairro</p>
+                </div>
+                <div>
+                    <nav class="vertical">
+                        <ul>
+                            <li class="inside-vertical">
+                                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                <ul>
+                                    <li>@Html.ActionLink("Alterar", "EditEndereco", new { id = item.Id })</li>
+                                    <li><a class="btn-delete">Eliminar</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         }
@@ -83,6 +93,7 @@
     <script src="https://kit.fontawesome.com/27079de5c2.js" crossorigin="anonymous"></script>
     <script src="~/Content/js/endereço-dadospessoais.js"></script>
     <script src="~/Content/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
         $(function () {
             console.log($('.active'));
@@ -104,6 +115,37 @@
                 }
             });
         }
+
+        $('.btn-delete').on('click', function () {
+
+            Swal.fire({
+                title: 'Tem certeza?',
+                text: "Caso removido, não será possível recuperar este endereço!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#334D01',
+                cancelButtonColor: '#b10404',
+                confirmButtonText: 'Remover',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Endereço deletado com sucesso!',
+                        'success'
+                    )
+                    $.ajax({
+                        url: "RemoverEndereco",
+                        data: { Id: idEndereco },
+                        type: "post",
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {},
+                        success: function (data, textStatus, XMLHttpRequest) {
+                            location.reload();
+                        }
+                    });
+                }
+            })
+        })
     </script>
 }
 

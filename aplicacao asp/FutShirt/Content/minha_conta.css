@@ -188,22 +188,121 @@ main .dados{
     width: 25em;
     margin: 2em auto 0 20%;
 }
-.container-enderecos-cadastrados{
-    display: flex;
-    margin: 1.5em 5% 0;
-    align-items: center;
-    justify-content: left;
-    flex-wrap: wrap;
+.container-enderecos-cadastrados {
+    margin: 1rem 2rem 0 1.25rem;
 }
 .container-enderecos-cadastrados .endereco-cadastrado{
-    padding: 25px;
     min-width: 360px;
     margin: 0 10px 20px;
-    padding-bottom: 10px;
-    border: 2px solid #030F26;
-    border-radius: 4px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
 }
-.endereco-cadastrado .cep{
+.container-enderecos-cadastrados .endereco-cadastrado:last-child{
+    border: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 16px/1 sans-serif
+}
+
+
+/*VERTICAL MENU*/
+nav.vertical {
+    position: relative;
+    width: 200px;
+    background-image: none;
+    min-width: 0;
+    border-right: 0;
+    padding: 0;
+    display: inline;
+}
+
+/* ALL UL */
+nav.vertical ul {
+    list-style: none;
+    display: inline-block;
+}
+/* ALL LI */
+nav.vertical li {
+    position: relative;
+    display: inline-block;
+}
+/* ALL A */
+nav.vertical a {
+    cursor: pointer;
+    background-color: none !important;
+    margin-right: 0 !important;
+    width: 1rem;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.2s;
+}
+nav.vertical a:hover {
+    background-color: inherit;
+    color: #030F26;
+}
+/* ALL A HOVER */
+nav.vertical li:hover > a {
+/*    background: #778;*/
+}
+
+/* INNER UL HIDE */
+nav.vertical ul ul {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 1px 1px rgb(0, 0, 0, 0.2);
+    position: absolute;
+    right: 0%;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.2s;
+    transform: translateX(50px);
+}
+nav.vertical ul ul li{
+    cursor: pointer;
+    margin: 0;
+    width: 100%;
+}
+nav.vertical ul ul li:first-child{
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+nav.vertical ul ul li:last-child{
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+nav.vertical ul ul li:hover{
+    background-color: #030F26;
+    color: #fff;
+}
+nav.vertical ul ul li:hover a{
+    color: #fff;
+}
+nav.vertical ul ul a{
+    width: 100%;
+    padding: 10px 11px;
+}
+/* INNER UL SHOW */
+nav.vertical li:hover > ul {
+    right: 100%;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+    width: 5rem;
+}
+
+.endereco-cadastrado .title {
+    margin: 0.5rem 0;
     font-weight: 700;
 }
 .endereco-cadastrado button{
@@ -290,17 +389,18 @@ main .dados input[type="submit"]:hover{
     cursor: pointer;
     background-color: #273a03;
 }
-main .endereco-cadastrado div{
-    margin-top: 15px;
+main .endereco-cadastrado div p{
+    margin: .4rem 0;
+/*    margin-top: 15px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;*/
 }
-    main .endereco-cadastrado div a{
-        text-decoration: none;
-    }
-    main .endereco-cadastrado div a:first-child {
-        margin-right: 5px;
-    }
+main .endereco-cadastrado div a{
+    text-decoration: none;
+}
+main .endereco-cadastrado div a:first-child {
+    margin-right: 5px;
+}
 main .btn-editar {
     padding: 8px 15px;
     background-color: #030F26;

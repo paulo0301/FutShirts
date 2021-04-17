@@ -26,15 +26,23 @@ namespace Persistencia.DAL.Tabelas
         }
         public void SaveEndereco(Endereco endereco)
         {
-            if (endereco.Id == null)
+            try
             {
-                context.Enderecos.Add(endereco);
+                if (endereco.Id == null)
+                {
+                    context.Enderecos.Add(endereco);
+                }
+                else
+                {
+                    context.Entry(endereco).State = EntityState.Modified;
+                }
+                context.SaveChanges();
             }
-            else
+            catch (Exception ex)
             {
-                context.Entry(endereco).State = EntityState.Modified;
+                var teste = ex.Message;
+                var x = "13";
             }
-            context.SaveChanges();
         }
 
         public Endereco EliminarProdutoPorId(long id)

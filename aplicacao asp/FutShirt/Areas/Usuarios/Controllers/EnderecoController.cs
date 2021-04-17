@@ -52,16 +52,16 @@ namespace FutShirt.Areas.Usuarios.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteEnderecoP(long Id)
+        public string RemoverEndereco(long? Id)
         {
-            try { 
-                enderecoServico.EliminarProdutoPorId(Id);
-                return RedirectToAction("MeusEnderecos");
+            try
+            {
+                enderecoServico.EliminarProdutoPorId((long)Id);
+                return "ok";
             }
             catch
             {
-                return View();
+                return "af";
             }
         }
 
@@ -74,7 +74,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
                 if (ModelState.IsValid)
                 {
                     Usuario usuario = (Usuario)Session["User"];
-                    endereco.Usuario = usuario;
+                    endereco.UsuarioId = usuario.Id;
                     enderecoServico.SaveEndereco(endereco);
                 }
                 else

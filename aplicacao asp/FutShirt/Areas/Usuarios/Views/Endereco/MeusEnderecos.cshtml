@@ -48,6 +48,23 @@
     button.active:after {
         content: "\f106";
     }
+    .invisivel {
+        display: none;
+    }
+
+    .visivel-inline {
+        display: inline;
+    }
+
+    #errorCep {
+        display: none;
+        font-size: 15px;
+        color: red;
+    }
+    .bt-container input{
+        width: 12em !important;
+        height: 2.5em !important;
+    }
 </style>
 <section class="container-enderecos">
     <div class="cabecalho-topico">
@@ -61,8 +78,9 @@
                 <div>
                     <input hidden class="id-endereco" value="@item.Id" />
                     <p class="title">@item.Logradouro, @item.Numero</p>
+                    <p class="descricao-1">@item.Complemento</p>
                     <p class="descricao-1">@item.Cidade - @item.Estado (@item.Cep)</p>
-                    <p class="descricao-2">@item.Complemento, @item.Bairro</p>
+                    <p class="descricao-2">@item.Bairro</p>
                 </div>
                 <div>
                     <nav class="vertical">
@@ -82,7 +100,7 @@
         }
     </div>
     <button type="button" class="collapsible">Adicionar Endereço</button>
-    @Html.Partial("~/Areas/Usuarios/Views/Endereco/_PartialAdicionarEndereco.cshtml", new Modelo.Tabelas.Endereco());
+    @Html.Partial("~/Areas/Usuarios/Views/Endereco/_PartialAdicionarEndereco.cshtml", new Modelo.Tabelas.Endereco())
 </section>
 @section scripts{
     <script src="~/Scripts/bootbox.min.js"></script>

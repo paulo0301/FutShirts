@@ -65,6 +65,10 @@ namespace FutShirt.Areas.Usuarios.Controllers
                         return View(editUsuario);
                     }
                 }
+                else
+                {
+                    ModelState.AddModelError("SenhaAtualErrada", "● A senha digitada não confere com a senha atual");
+                }
                 return View(editUsuario);
             }
             catch (Exception excecao)

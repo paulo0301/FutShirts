@@ -40,3 +40,17 @@ C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Servicos\obj\Debug\Serv
 C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Servicos\obj\Debug\Servico.csproj.CopyComplete
 C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Servicos\obj\Debug\Servicos.dll
 C:\Users\pedro\source\repos\FutShirt - End\aplicacao asp\Servicos\obj\Debug\Servicos.pdb
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Servicos.dll
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Servicos.pdb
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Modelo.dll
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Persistencia.dll
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\EntityFramework.dll
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Modelo.pdb
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Persistencia.pdb
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\Persistencia.dll.config
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\bin\Debug\EntityFramework.xml
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servico.csprojAssemblyReference.cache
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servico.csproj.CoreCompileInputs.cache
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servico.csproj.CopyComplete
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servicos.dll
+C:\Users\pdani\Documents\FutShirts\aplicacao asp\Servicos\obj\Debug\Servicos.pdb

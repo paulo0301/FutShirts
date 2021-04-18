@@ -244,6 +244,7 @@
     <Content Include="Content\produto_individual.css" />
     <Content Include="Content\resultado_pesquisa.css" />
     <Content Include="Global.asax" />
+    <Compile Include="App_Start\UserConfig.cs" />
     <Compile Include="Areas\Usuarios\AreasAreaRegistration.cs" />
     <Compile Include="Areas\Usuarios\Controllers\CadastroController.cs" />
     <Compile Include="Areas\Usuarios\Controllers\EnderecoController.cs" />

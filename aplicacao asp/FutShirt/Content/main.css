@@ -22,12 +22,12 @@ div.cabecalho h2 {
 }
 
 main .cabecalho-topico,
-main .accordion>label {
+main .accordion > label {
     background-color: #77A1D9;
     color: #fff;
     display: flex;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 40px;
     font-size: 23px !important;
     height: 50px;
     padding-left: 20px;

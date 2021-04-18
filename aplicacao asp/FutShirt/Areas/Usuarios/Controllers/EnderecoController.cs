@@ -31,7 +31,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
             return GravarEndereco(endereco);
         }
 
-        public ActionResult EditEndereco(long Id)
+        public ActionResult EditarEndereco(long Id)
         {
             Endereco endereco = enderecoServico.GetEnderecosById(Id);
             return View(endereco);
@@ -40,7 +40,7 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditEndereco(Endereco endereco)
+        public ActionResult EditarEndereco(Endereco endereco)
         {
             return GravarEndereco(endereco);
         }
@@ -52,16 +52,14 @@ namespace FutShirt.Areas.Usuarios.Controllers
         }
 
         [HttpPost]
-        public string RemoverEndereco(long? Id)
+        public void RemoverEndereco(long? Id)
         {
             try
             {
                 enderecoServico.EliminarProdutoPorId((long)Id);
-                return "ok";
             }
             catch
             {
-                return "af";
             }
         }
 
@@ -84,9 +82,9 @@ namespace FutShirt.Areas.Usuarios.Controllers
 
                 return RedirectToAction("MeusEnderecos");
             }
-            catch (Exception ex)
+            catch (Exception excecao)
             {
-                ViewBag.Error = ex.Message;
+                ViewBag.Error = excecao.Message;
                 return View("MeusEnderecos");
             }
         }

@@ -53,9 +53,6 @@
     <div class="cabecalho-topico">
         <h3>Endereços</h3>
     </div>
-    @*<div class="container-btn-criar">
-            <a href="@Url.Action("CreateEndereco", "Endereco")" class="btn-criar">Adicionar Endereço</a>
-        </div>*@
     <div class="container-enderecos-cadastrados">
         <p>@ViewBag.Error</p>
         @foreach (var item in Model)
@@ -73,8 +70,9 @@
                             <li class="inside-vertical">
                                 <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                                 <ul>
-                                    <li>@Html.ActionLink("Alterar", "EditEndereco", new { id = item.Id })</li>
+                                    <li>@Html.ActionLink("Alterar", "EditarEndereco", new { id = item.Id })</li>
                                     <li><a class="btn-delete">Eliminar</a></li>
+
                                 </ul>
                             </li>
                         </ul>
@@ -134,6 +132,8 @@
                         'Endereço deletado com sucesso!',
                         'success'
                     )
+                    var mainContainer = $(this).closest('.endereco-cadastrado');
+                    var idEndereco = $(mainContainer).find('.id-endereco').val();
                     $.ajax({
                         url: "RemoverEndereco",
                         data: { Id: idEndereco },

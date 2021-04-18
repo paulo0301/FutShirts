@@ -32,30 +32,45 @@ namespace FutShirt.Areas.Usuarios.Controllers
                 HttpStatusCode.BadRequest);
             }
             Usuario usuario = usuarioServico.GetUsuarioById((long)id);
+            ViewEditUsuario editUsuario = new ViewEditUsuario();
             if (usuario == null)
             {
                 return HttpNotFound();
             }
-            return View(usuario);
+            editUsuario.Usuario = usuario;
+            return View(editUsuario);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult EditarUsuario(Usuario usuario)
+        public ActionResult EditarUsuario(ViewEditUsuario editUsuario)
         {
             try
             {
-                if (ModelState.IsValid)
+                Usuario usuario = usuarioServico.GetUsuarioById((long)editUsuario.Usuario.Id);
+                editUsuario.SenhaAntiga = Crypto.Hash(editUsuario.SenhaAntiga);
+                if (editUsuario.SenhaAntiga == usuario.Senha)
                 {
-                    usuarioServico.SaveUsuario(usuario);
-                    return RedirectToAction("MeusDados");
+                    usuario = editUsuario.Usuario;
+                    usuario.Senha = Crypto.Hash(editUsuario.SenhaNova);
+                    usuario.ConfirmarSenha = Crypto.Hash(editUsuario.ConfirmarSenhaNova);
+                    if (ModelState.IsValid)
+                    {
+                        usuarioServico.SaveUsuario(usuario);
+                        return RedirectToAction("MeusDados");
+                    }
+                    else
+                    {
+                        return View(editUsuario);
+                    }
                 }
-                return View(usuario);
+                return View(editUsuario);
             }
-            catch
+            catch (Exception excecao)
             {
-                return View(usuario);
+                ViewBag.Error = excecao.Message;
+                return View(editUsuario);
             }
         }
 

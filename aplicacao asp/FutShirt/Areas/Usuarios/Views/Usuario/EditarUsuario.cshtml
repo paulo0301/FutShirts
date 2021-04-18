@@ -1,4 +1,4 @@
-﻿@model Modelo.Tabelas.Usuario
+﻿@model Modelo.Tabelas.ViewEditUsuario
 @{
     ViewBag.Title = "FutShirt - Meus dados";
     Layout = "~/Areas/Usuarios/Views/Shared/_LayoutDados.cshtml";
@@ -13,41 +13,55 @@
     </div>
 
     <div class="dados">
-        @using (Html.BeginForm("EditarUsuario", "Usuario", FormMethod.Post))
+        @using (Html.BeginForm("EditarUsuario", "Usuario", FormMethod.Post, new { @class = "content-flex" }))
         {
             <div class="dados-pessoais">
                 <h4>Dados pessoais</h4>
                 @Html.AntiForgeryToken()
-                @Html.HiddenFor(model => model.Id)
-                @Html.HiddenFor(model => model.Email)
-                @Html.HiddenFor(model => model.Senha)
-                @Html.HiddenFor(model => model.ConfirmarSenha)
-                @Html.HiddenFor(model => model.ContaAtiva)
+                @Html.HiddenFor(model => model.Usuario.Id)
+                @Html.HiddenFor(model => model.Usuario.Email)
+                @Html.HiddenFor(model => model.Usuario.Senha)
+                @Html.HiddenFor(model => model.Usuario.ConfirmarSenha)
+                @Html.HiddenFor(model => model.Usuario.ContaAtiva)
                 <div>
                     <label for="nome-completo">Nome completo</label>
-                    @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @id = "nome-completo", @type = "text", maxlength = "130" } })
+                    @Html.EditorFor(model => model.Usuario.Nome, new { htmlAttributes = new { @id = "nome-completo", @type = "text", maxlength = "130" } })
                 </div>
                 <div>
                     <label for="data-nascimento">Data de nascimento</label>
-                    @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @id = "data-nascimento", @type = "text" } })
+                    @Html.EditorFor(model => model.Usuario.DataNascimento, new { htmlAttributes = new { @id = "data-nascimento", @type = "text" } })
                 </div>
                 <div>
                     <label for="cpf">CPF</label>
-                    @Html.EditorFor(model => model.Cpf, new { htmlAttributes = new { @id = "cpf", onloadeddata = "mascara(this, '###.###.###-##')", @type = "text", maxlength = "14" } })
+                    @Html.EditorFor(model => model.Usuario.Cpf, new { htmlAttributes = new { @id = "cpf", onloadeddata = "mascara(this, '###.###.###-##')", @type = "text", maxlength = "14" } })
                 </div>
                 <div>
                     <label for="telefone">Telefone</label>
-                    @Html.EditorFor(model => model.Telefone, new { htmlAttributes = new { @id = "telefone", @type = "text", maxlength = "130" } })
+                    @Html.EditorFor(model => model.Usuario.Telefone, new { htmlAttributes = new { @id = "telefone", @type = "text", maxlength = "130" } })
                 </div>
             </div>
             <div class="dados-acesso">
                 <h4>Dados de acesso</h4>
                 <div>
                     <label for="email">Email</label>
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @id = "email", @type = "text" } })
+                    @Html.EditorFor(model => model.Usuario.Email, new { htmlAttributes = new { @id = "email", @type = "text" } })
+                </div>
+                <div>
+                    <label for="senhaAntiga">Senha Antiga</label>
+                    @Html.EditorFor(model => model.SenhaAntiga, new { htmlAttributes = new { @id = "senhaAntiga", @type = "password", @minlength = "8" } })
+                </div>
+                <div>
+                    <label for="novaSenha">Senha</label>
+                    @Html.EditorFor(model => model.SenhaNova, new { htmlAttributes = new { @id = "novaSenha", @type = "password", @minlength = "8"} })
+                </div>
+                <div>
+                    <label for="confirmarNovaSenha">Senha</label>
+                    @Html.EditorFor(model => model.ConfirmarSenhaNova, new { htmlAttributes = new { @id = "confirmarNovaSenha", @type = "password", @minlength = "8" } })
+                </div>
+                <div>
+                    <input type="submit" value="Salvar informações">
                 </div>
             </div>
-            <input type="submit" value="Salvar informações">
         }
     </div>
 </section>

@@ -40,8 +40,6 @@ namespace Persistencia.DAL.Tabelas
             }
             catch (Exception ex)
             {
-                var teste = ex.Message;
-                var x = "13";
             }
         }
 

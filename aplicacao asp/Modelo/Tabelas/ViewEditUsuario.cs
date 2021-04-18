@@ -9,45 +9,20 @@ namespace Modelo.Tabelas
 {
     public class ViewEditUsuario
     {
-		//Cadastro dados pessoais
-		public long? Id { get; set; }
-		[Display(Name = "Nome")]
-		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar um nome.")]
-		public string Nome { get; set; }
-
-		[Display(Name = "Email")]
-		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar um email.")]
-		[DataType(DataType.EmailAddress)]
-		public string Email { get; set; }
-
-		[Display(Name = "CPF")]
-		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar um cpf válido.")]
-		public string Cpf { get; set; }
-
-		[Display(Name = "Telefone")]
-		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar um número de telefone.")]
-		[DataType(DataType.PhoneNumber)]
-		public string Telefone { get; set; }
-
-		[Display(Name = "Data de Nascimento")]
-		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar uma data de nascimento.")]
-		[DataType(DataType.Date)]
-		[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-		public DateTime DataNascimento { get; set; }
-
-		[Required(AllowEmptyStrings = false, ErrorMessage = "É necessário informar uma senha.")]
+		[Display(Name = "Senha Antiga")]
 		[DataType(DataType.Password)]
-		[MinLength(8, ErrorMessage = "A senha deve possuir no mínimo 8 caracteres.")]
-		public string Senha { get; set; }
+		public string SenhaAntiga { get; set; }
 
-		[Display(Name = "Confirmar Senha")]
+		[Display(Name = "Nova Senha")]
 		[DataType(DataType.Password)]
 		[MinLength(8, ErrorMessage = "A senha deve possuir no mínimo 8 caracteres.")]
 		public string SenhaNova { get; set; }
 
-		[Display(Name = "Confirmar Senha")]
+		[Display(Name = "Confirmar Senha Nova")]
 		[DataType(DataType.Password)]
-		[Compare("SenhaNova", ErrorMessage = "As senhas não conferem.")]
+		[MinLength(8, ErrorMessage = "A senha deve possuir no mínimo 8 caracteres.")]
 		public string ConfirmarSenhaNova { get; set; }
+
+		public Usuario Usuario { get; set; }
 	}
 }

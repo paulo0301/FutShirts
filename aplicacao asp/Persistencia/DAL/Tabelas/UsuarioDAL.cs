@@ -39,12 +39,14 @@ namespace Persistencia.DAL.Tabelas
         //Save Usuarios
         public void SaveUsuario(Usuario usuario)
         {
+            var local = context.Usuarios.Local.FirstOrDefault(f => f.Id == usuario.Id);
             if (usuario.Id == null)
             {
                 context.Usuarios.Add(usuario);
             }
             else
             {
+                context.Entry(local).State = EntityState.Detached;
                 context.Entry(usuario).State = EntityState.Modified;
             }
             context.SaveChanges();

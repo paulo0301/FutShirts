@@ -24,6 +24,9 @@ main > div {
 .padding-1 {
     padding: 1rem !important;
 }
+.padding-x-08 {
+    padding: 0 0.8rem !important;
+}
 /***************************** MENU DO LADO ESQUERDO *********************/
 main div h2{
     background-color: #030F26;
@@ -99,6 +102,12 @@ main section.container-meus-dados .dados div div{
 main .dados h4{
     font-size: 22px;
 }
+
+main .dados-collapse {
+    max-width: 30rem;
+    width: 25em;
+    margin: 2em auto 0 0.75rem;
+}
 main .container-meus-dados .dados input[type="text"], main .container-meus-dados .dados input[type="email"], main .container-meus-dados .dados input[type="password"], main .container-meus-dados .dados input[type="tel"] {
     width: 20rem;
     outline: none;
@@ -155,6 +164,11 @@ main section.container-meus-dados input[type="submit"], main section.container-e
 .content-flex{
     display: flex;
 }
+.icon-endereco {
+    font-size: 1.45rem;
+    padding: 0.38rem;
+    margin: 0;
+}
 .button-edit-endereco {
     margin: 25px 0 !important;
     width: 100% !important;
@@ -184,8 +198,8 @@ main section.container-enderecos{
 main section.container-enderecos input[type="submit"]{
     float: none;
     margin: 10px;
-    width: 20rem;
-    font-size: 1rem
+    width: 24rem;
+    font-size: 1rem;
 }
 input[type="submit"]:hover {
     background-color: #273a03 !important;
@@ -271,7 +285,7 @@ nav.vertical ul ul {
     border-radius: 3px;
     box-shadow: 1px 1px rgb(0, 0, 0, 0.2);
     position: absolute;
-    right: 0%;
+    right: 200%;
     top: 0;
     width: 100%;
     visibility: hidden;
